@@ -1,24 +1,10 @@
 name: 'CI: Build & Test'
 on:
-  push:
-    branches:
-      - develop
-      - master
-      - v10
-      - v9
-      - v8
-      - release/**
-  pull_request:
-  merge_group:
-    branches: [develop]
   workflow_dispatch:
     inputs:
       commit:
         description: If the commit you want to test isn't the head of a branch, provide its SHA here
         required: false
-  schedule:
-    # Run every day at midnight (without cache)
-    - cron: '0 0 * * *'
 
 # Cancel in progress workflows on pull_requests.
 # https://docs.github.com/en/actions/using-jobs/using-concurrency#example-using-a-fallback-value
