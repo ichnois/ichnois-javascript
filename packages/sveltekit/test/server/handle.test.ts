@@ -1,4 +1,4 @@
-import * as NodeSDK from '@sentry/node';
+import * as NodeSDK from '@ichnois/node';
 import { describe, expect, it, vi } from 'vitest';
 import { initCloudflareSentryHandle, sentryHandle } from '../../src/server';
 

@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
 import type { FastifyIntegration, FastifyReply, FastifyRequest } from './types';
 import { instrumentFastify } from './instrumentation';
 import { defaultShouldHandleError, INTEGRATION_NAME } from './utils';
@@ -60,7 +60,7 @@ const _fastifyIntegration = (({ shouldHandleError }: Partial<FastifyIntegrationO
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@ichnois/node');
  *
  * Sentry.init({
  *   integrations: [Sentry.fastifyIntegration()],

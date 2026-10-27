@@ -1,5 +1,5 @@
-import type { Client } from '@sentry/core';
-import { WINDOW } from '@sentry/react';
+import type { Client } from '@ichnois/core';
+import { WINDOW } from '@ichnois/react';
 import { JSDOM } from 'jsdom';
 import type { NEXT_DATA } from 'next/dist/shared/lib/utils';
 import Router from 'next/router';

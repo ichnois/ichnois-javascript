@@ -8,8 +8,8 @@ import type {
   TransportMakeRequestResponse,
   TransportRequest,
   TransportRequestExecutor,
-} from '@sentry/core';
-import { consoleSandbox, createTransport, suppressTracing } from '@sentry/core';
+} from '@ichnois/core';
+import { consoleSandbox, createTransport, suppressTracing } from '@ichnois/core';
 import { HttpsProxyAgent } from '../proxy';
 import type { HTTPModule } from './http-module';
 

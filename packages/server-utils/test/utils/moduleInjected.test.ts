@@ -1,5 +1,5 @@
-import type { Client, Integration } from '@sentry/core';
-import { getCurrentScope, GLOBAL_OBJ } from '@sentry/core';
+import type { Client, Integration } from '@ichnois/core';
+import { getCurrentScope, GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { orchestrionModuleInjected } from '../../src/utils/moduleInjected';
 

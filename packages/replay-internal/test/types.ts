@@ -1,3 +1,3 @@
-import type { HandlerDataDom } from '@sentry/browser-utils';
+import type { HandlerDataDom } from '@ichnois/browser-utils';
 
 export type DomHandler = (data: HandlerDataDom) => void;

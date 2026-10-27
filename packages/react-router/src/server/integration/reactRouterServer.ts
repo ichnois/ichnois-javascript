@@ -1,4 +1,4 @@
-import { defineIntegration } from '@sentry/core';
+import { defineIntegration } from '@ichnois/core';
 import { registerServerBuildGlobal } from '../serverBuild';
 
 const INTEGRATION_NAME = 'ReactRouterServer' as const;

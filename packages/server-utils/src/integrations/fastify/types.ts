@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
 
 type HandlerOriginal =
   | ((request: FastifyRequest, reply: FastifyReply, done: HookHandlerDoneFunction) => Promise<void>)

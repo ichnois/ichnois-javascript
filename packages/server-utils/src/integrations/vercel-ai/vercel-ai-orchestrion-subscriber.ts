@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   addNonEnumerableProperty,
   debug,
@@ -7,7 +7,7 @@ import {
   isObjectLike,
   SPAN_STATUS_ERROR,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import type { OrchestrionChannelContext } from '../../orchestrion/types';
 import { CHANNELS } from '../../orchestrion/channels';

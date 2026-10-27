@@ -1,4 +1,4 @@
-import { parseSemver } from '@sentry/core';
+import { parseSemver } from '@ichnois/core';
 import * as fs from 'fs';
 import { createRequire } from 'module';
 import * as path from 'path';

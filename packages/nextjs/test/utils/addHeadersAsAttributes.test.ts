@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { describe, expect, it, vi } from 'vitest';
 import { addHeadersAsAttributes } from '../../src/common/utils/addHeadersAsAttributes';
 

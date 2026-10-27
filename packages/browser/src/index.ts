@@ -9,7 +9,7 @@ export { contextLinesIntegration } from './integrations/contextlines';
 export { graphqlClientIntegration } from './integrations/graphqlClient';
 export { viewHierarchyIntegration } from './integrations/view-hierarchy';
 
-export { replayIntegration, getReplay } from '@sentry/replay';
+export { replayIntegration, getReplay } from '@ichnois/replay';
 export type {
   ReplayEventType,
   ReplayEventWithTime,
@@ -20,11 +20,11 @@ export type {
   ReplayFrameEvent,
   ReplaySpanFrame,
   ReplaySpanFrameEvent,
-} from '@sentry/replay';
+} from '@ichnois/replay';
 
-export { replayCanvasIntegration } from '@sentry/replay-canvas';
+export { replayCanvasIntegration } from '@ichnois/replay-canvas';
 export { feedbackAsyncIntegration, feedbackSyncIntegration, feedbackSyncIntegration as feedbackIntegration };
-export { getFeedback, sendFeedback } from '@sentry/feedback';
+export { getFeedback, sendFeedback } from '@ichnois/feedback';
 
 export { defaultRequestInstrumentationOptions, instrumentOutgoingRequests } from './tracing/request';
 export {
@@ -32,7 +32,7 @@ export {
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
 } from './tracing/browserTracingIntegration';
-export { elementTimingIntegration, getAbsoluteUrl, isBotUserAgent } from '@sentry/browser-utils';
+export { elementTimingIntegration, getAbsoluteUrl, isBotUserAgent } from '@ichnois/browser-utils';
 export { normalizeStringifyValue } from './normalizeStringifyValue';
 export { reportPageLoaded } from './tracing/reportPageLoaded';
 export { setActiveSpanInBrowser } from './tracing/setActiveSpan';
@@ -47,8 +47,8 @@ export {
   resolveCurrentRoute,
   resolveRoute,
   setRouteProvider,
-} from '@sentry/browser-utils';
-export type { CachedRouteProvider, RouteProvider } from '@sentry/browser-utils';
+} from '@ichnois/browser-utils';
+export type { CachedRouteProvider, RouteProvider } from '@ichnois/browser-utils';
 export { interactionsIntegration } from './integrations/interactions';
 
 export type { RequestInstrumentationOptions } from './tracing/request';
@@ -79,9 +79,9 @@ export {
   logger,
   metrics,
   spanStreamingIntegration,
-} from '@sentry/core';
-export { startSpan, startInactiveSpan, startSpanManual } from '@sentry/core/browser';
-export type { Span, FeatureFlagsIntegration } from '@sentry/core';
+} from '@ichnois/core';
+export { startSpan, startInactiveSpan, startSpanManual } from '@ichnois/core/browser';
+export type { Span, FeatureFlagsIntegration } from '@ichnois/core';
 export { makeBrowserOfflineTransport } from './transports/offline';
 export { browserProfilingIntegration } from './profiling/integration';
 export { spotlightBrowserIntegration } from './integrations/spotlight';

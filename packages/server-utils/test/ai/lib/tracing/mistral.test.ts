@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { getMainCarrier, setCurrentClient, spanToStaticSpanJSON } from '@sentry/core';
-import type { Span } from '@sentry/core';
+import { getMainCarrier, setCurrentClient, spanToStaticSpanJSON } from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import {
   GEN_AI_AGENT_NAME,
   GEN_AI_OPERATION_NAME,

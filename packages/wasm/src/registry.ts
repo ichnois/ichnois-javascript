@@ -1,4 +1,4 @@
-import type { DebugImage } from '@sentry/core';
+import type { DebugImage } from '@ichnois/core';
 import { parseNameSectionModuleName } from './wasmNameSection';
 
 export type RegisteredWasmImage = Extract<DebugImage, { type: 'wasm' }> & {

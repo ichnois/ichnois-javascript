@@ -1,4 +1,4 @@
-import { type CachedRouteProvider, createCachedRouteProvider } from '@sentry/browser';
+import { type CachedRouteProvider, createCachedRouteProvider } from '@ichnois/browser';
 
 /**
  * The route provider for Remix 3.

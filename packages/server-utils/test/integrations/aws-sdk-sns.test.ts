@@ -1,4 +1,4 @@
-import { setCurrentClient } from '@sentry/core';
+import { setCurrentClient } from '@ichnois/core';
 import { afterEach, describe, expect, it } from 'vitest';
 import { SnsServiceExtension } from '../../src/integrations/aws-sdk/services/sns';
 import type { RequestMetadata } from '../../src/integrations/aws-sdk/types';

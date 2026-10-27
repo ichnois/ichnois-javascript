@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import type { Client } from '@sentry/core';
-import * as core from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import * as core from '@ichnois/core';
 
 vi.mock('../../src/utils/utils', () => ({
   storeFormDataKeys: vi.fn(),

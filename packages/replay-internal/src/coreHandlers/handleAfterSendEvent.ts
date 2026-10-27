@@ -1,5 +1,5 @@
-import type { ErrorEvent, Event, TransactionEvent, TransportMakeRequestResponse } from '@sentry/core';
-import { setTimeout } from '@sentry/browser-utils';
+import type { ErrorEvent, Event, TransactionEvent, TransportMakeRequestResponse } from '@ichnois/core';
+import { setTimeout } from '@ichnois/browser-utils';
 import type { ReplayContainer } from '../types';
 import { isErrorEvent, isTransactionEvent } from '../util/eventUtils';
 import { addSegmentDetailsToContext } from './util/addSegmentDetailsToContext';

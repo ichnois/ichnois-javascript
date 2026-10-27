@@ -1,6 +1,6 @@
 import type { PassThrough } from 'node:stream';
 import { Transform } from 'node:stream';
-import { getTraceMetaTags } from '@sentry/core';
+import { getTraceMetaTags } from '@ichnois/core';
 
 /**
  * Injects Sentry trace meta tags into the HTML response by piping through a transform stream.

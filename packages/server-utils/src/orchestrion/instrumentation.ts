@@ -1,6 +1,6 @@
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { Client } from '@sentry/core';
-import { addNonEnumerableProperty, debug, GLOBAL_OBJ, waitForTracingChannelBinding } from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import { addNonEnumerableProperty, debug, GLOBAL_OBJ, waitForTracingChannelBinding } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { getOrchestrionInjectedModules } from './detect';
 

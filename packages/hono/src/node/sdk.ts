@@ -1,6 +1,6 @@
-import type { Client } from '@sentry/core';
-import { _INTERNAL_getActiveClient, applySdkMetadata, debug } from '@sentry/core';
-import { init as initNode } from '@sentry/node';
+import type { Client } from '@ichnois/core';
+import { _INTERNAL_getActiveClient, applySdkMetadata, debug } from '@ichnois/core';
+import { init as initNode } from '@ichnois/node';
 import type { HonoNodeOptions } from './middleware';
 import { buildFilteredIntegrations } from '../shared/buildFilteredIntegrations';
 import { LOW_QUALITY_TRANSACTION_PATTERNS } from '../shared/lowQualityTransactionPatterns';

@@ -1,8 +1,8 @@
 import { HTTP_REQUEST_METHOD, SENTRY_SEGMENT_NAME_SOURCE, URL_FULL, URL_PATH } from '@sentry/conventions/attributes';
-import type { Client, Span } from '@sentry/core';
+import type { Client, Span } from '@ichnois/core';
 
-import * as SentryCore from '@sentry/core';
-import * as SentryNode from '@sentry/node';
+import * as SentryCore from '@ichnois/core';
+import * as SentryNode from '@ichnois/node';
 import type { APIContext } from 'astro';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { handleRequest, interpolateRouteFromUrlAndParams } from '../../src/server/middleware';

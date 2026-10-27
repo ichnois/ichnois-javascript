@@ -1,6 +1,6 @@
-import type { Scope } from '@sentry/core';
-import { debug } from '@sentry/core';
-import { captureException, captureMessage, flush, getCurrentScope, withScope } from '@sentry/node';
+import type { Scope } from '@ichnois/core';
+import { debug } from '@ichnois/core';
+import { captureException, captureMessage, flush, getCurrentScope, withScope } from '@ichnois/node';
 import type { Context, Handler, StreamifyHandler } from 'aws-lambda';
 import { performance } from 'perf_hooks';
 import { types } from 'util';

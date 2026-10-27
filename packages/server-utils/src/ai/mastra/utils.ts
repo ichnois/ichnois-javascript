@@ -1,5 +1,5 @@
-import type { SpanAttributeValue } from '@sentry/core';
-import { stringify } from '@sentry/core';
+import type { SpanAttributeValue } from '@ichnois/core';
+import { stringify } from '@ichnois/core';
 import {
   ERROR_TYPE,
   GEN_AI_AGENT_NAME,

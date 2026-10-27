@@ -2,15 +2,15 @@
  * @vitest-environment jsdom
  */
 
-import { getRouteProvider, resolveCurrentRoute, setRouteProvider } from '@sentry/browser-utils';
-import * as SentryCore from '@sentry/core';
-import { debug, getCurrentScope, makeSession, setCurrentClient } from '@sentry/core';
+import { getRouteProvider, resolveCurrentRoute, setRouteProvider } from '@ichnois/browser-utils';
+import * as SentryCore from '@ichnois/core';
+import { debug, getCurrentScope, makeSession, setCurrentClient } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { applyDefaultOptions, BrowserClient } from '../src/client';
 import { WINDOW } from '../src/helpers';
 import { getDefaultBrowserClientOptions } from './helper/browser-client-options';
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const actual = await importOriginal<typeof SentryCore>();
   return { ...actual, timestampInSeconds: vi.fn(actual.timestampInSeconds) };
 });

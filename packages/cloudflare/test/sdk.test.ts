@@ -1,6 +1,6 @@
-import * as SentryCore from '@sentry/core';
-import type { Envelope, Integration } from '@sentry/core';
-import { getClient, startSpan } from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
+import type { Envelope, Integration } from '@ichnois/core';
+import { getClient, startSpan } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import type { CloudflareOptions } from '../src/client';
 import { CloudflareClient } from '../src/client';
@@ -410,7 +410,7 @@ describe('getDefaultIntegrations', () => {
     // Mirror what the snippet the vite plugin injects into each instrumented
     // module does at runtime: import its factory and `.set` it on the marker map,
     // keyed by module name (so a package split across files registers once).
-    const { mysqlIntegration, postgresIntegration, lruMemoizerIntegration } = await import('@sentry/server-utils');
+    const { mysqlIntegration, postgresIntegration, lruMemoizerIntegration } = await import('@ichnois/server-utils');
     globalThis.__SENTRY_ORCHESTRION__ = {
       bundler: new Set(['mysql', 'pg', 'lru-memoizer']),
       integrations: new Map([
@@ -429,7 +429,7 @@ describe('getDefaultIntegrations', () => {
 
   test('installs an integration registered after init via the module-injected event', async () => {
     resetSdk();
-    const { mysqlIntegration } = await import('@sentry/server-utils');
+    const { mysqlIntegration } = await import('@ichnois/server-utils');
     const client = init({});
     expect(client?.getIntegrationByName('Mysql')).toBeUndefined();
 
@@ -446,7 +446,7 @@ describe('getDefaultIntegrations', () => {
 
   test('keeps a channel integration the user configured instead of the registered default', async () => {
     resetSdk();
-    const { mysqlIntegration } = await import('@sentry/server-utils');
+    const { mysqlIntegration } = await import('@ichnois/server-utils');
     globalThis.__SENTRY_ORCHESTRION__ = {
       bundler: new Set(['mysql']),
       integrations: new Map([['mysql', mysqlIntegration]]),
@@ -462,7 +462,7 @@ describe('getDefaultIntegrations', () => {
     const DSN = 'https://public@dsn.ingest.sentry.io/1337';
 
     async function loadMysqlLate(client: CloudflareClient | undefined): Promise<void> {
-      const { mysqlIntegration } = await import('@sentry/server-utils');
+      const { mysqlIntegration } = await import('@ichnois/server-utils');
       globalThis.__SENTRY_ORCHESTRION__ = {
         bundler: new Set(['mysql']),
         integrations: new Map([['mysql', mysqlIntegration]]),
@@ -562,7 +562,7 @@ describe('getDefaultIntegrations', () => {
 
   test('keeps a channel integration the user configured when its module loads after init', async () => {
     resetSdk();
-    const { mysqlIntegration } = await import('@sentry/server-utils');
+    const { mysqlIntegration } = await import('@ichnois/server-utils');
     const userInstance = exportedMysqlIntegration();
     const client = init({ dsn: 'https://public@dsn.ingest.sentry.io/1337', integrations: [userInstance] });
 

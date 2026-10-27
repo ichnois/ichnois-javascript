@@ -14,4 +14,4 @@
  *
  * @module
  */
-import '@sentry/server-runtime-injection/import-hook';
+import '@ichnois/server-runtime-injection/import-hook';

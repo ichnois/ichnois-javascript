@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   getMainCarrier,
   SentrySpan,
@@ -12,7 +12,7 @@ import {
   TRACING_DEFAULTS,
   updateSpanName,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import * as performanceObserver from '../../src/instrumentation/performanceObserver';
 import { interactionsIntegration } from '../../src/performance/interactions';

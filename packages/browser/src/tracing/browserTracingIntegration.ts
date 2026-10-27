@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { Client, IntegrationFn, RequestHookInfo, ResponseHookInfo, Span, StartSpanOptions } from '@sentry/core';
+import type { Client, IntegrationFn, RequestHookInfo, ResponseHookInfo, Span, StartSpanOptions } from '@ichnois/core';
 import {
   addNonEnumerableProperty,
   consoleSandbox,
@@ -24,8 +24,8 @@ import {
   timestampInSeconds,
   TRACING_DEFAULTS,
   browserPerformanceTimeOrigin,
-} from '@sentry/core';
-import { _INTERNAL_ensureBrowserSpanStreaming, startIdleSpan, startInactiveSpan } from '@sentry/core/browser';
+} from '@ichnois/core';
+import { _INTERNAL_ensureBrowserSpanStreaming, startIdleSpan, startInactiveSpan } from '@ichnois/core/browser';
 import {
   addHistoryInstrumentationHandler,
   addPerformanceEntries,
@@ -33,10 +33,10 @@ import {
   isBotUserAgent,
   startTrackingLongAnimationFrames,
   startTrackingLongTasks,
-} from '@sentry/browser-utils';
+} from '@ichnois/browser-utils';
 import { BROWSER_NAVIGATION_TYPE } from '@sentry/conventions/attributes';
 import { DEBUG_BUILD } from '../debug-build';
-import { filterCollectedUrl } from '@sentry/core';
+import { filterCollectedUrl } from '@ichnois/core';
 import { getHttpRequestData, WINDOW } from '../helpers';
 import type { WebVitalsOptions } from '../integrations/webVitals';
 import { WEB_VITALS_INTEGRATION_NAME, webVitalsIntegration } from '../integrations/webVitals';

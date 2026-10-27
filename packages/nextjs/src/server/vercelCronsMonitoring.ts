@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { _INTERNAL_safeDateNow, captureCheckIn, debug, getIsolationScope, spanToJSON } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { _INTERNAL_safeDateNow, captureCheckIn, debug, getIsolationScope, spanToJSON } from '@ichnois/core';
 import { DEBUG_BUILD } from '../common/debug-build';
 import type { VercelCronsConfig } from '../common/types';
 

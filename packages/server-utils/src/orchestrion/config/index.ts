@@ -1,6 +1,6 @@
 import type { InstrumentationConfig } from '../apmTypes';
 
-import { uniq } from '@sentry/core';
+import { uniq } from '@ichnois/core';
 
 import { awsSdkConfig } from './aws-sdk';
 import { amqplibConfig } from './amqplib';

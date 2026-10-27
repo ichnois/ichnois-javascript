@@ -1,6 +1,6 @@
 import type { Debugger } from 'node:inspector';
-import type { CollectBehavior } from '@sentry/core';
-import { _INTERNAL_filterKeyValueData } from '@sentry/core';
+import type { CollectBehavior } from '@ichnois/core';
+import { _INTERNAL_filterKeyValueData } from '@ichnois/core';
 
 export type Variables = Record<string, unknown>;
 

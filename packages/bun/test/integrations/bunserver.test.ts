@@ -4,8 +4,8 @@ import {
   SERVER_ADDRESS,
   URL_PATH_PARAMETER_KEY_BASE,
 } from '@sentry/conventions/attributes';
-import type { AggregationCounts, Envelope, RequestEventData } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { AggregationCounts, Envelope, RequestEventData } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, spyOn, test } from 'bun:test';
 import type { BunOptions } from '../../src';
 import { bunServerIntegration, getDefaultIntegrationsWithoutPerformance, init } from '../../src';

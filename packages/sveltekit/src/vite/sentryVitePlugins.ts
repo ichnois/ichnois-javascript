@@ -1,5 +1,5 @@
-import { consoleSandbox, warnOnRemovedBuildOptions } from '@sentry/core';
-import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/vite';
+import { consoleSandbox, warnOnRemovedBuildOptions } from '@ichnois/core';
+import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/vite';
 import * as fs from 'fs';
 import * as path from 'path';
 import type { Plugin } from 'vite';
@@ -169,7 +169,7 @@ function makeBuildFlagPlugin(): Plugin {
 }
 
 // A bare subpath (not a relative import) so this plugin's `resolveId` can intercept it.
-const BROWSER_TRACING_VARIANT_ID = '@sentry/sveltekit/browser-tracing-variant';
+const BROWSER_TRACING_VARIANT_ID = '@ichnois/sveltekit/browser-tracing-variant';
 
 /**
  * Redirects the browser-tracing variant import to the Svelte 4 (`$app/stores`) or Svelte 5
@@ -184,7 +184,7 @@ function makeBrowserTracingVariantResolverPlugin(): Plugin {
     // redirect the import (not needed for build).
     config(_config, { command }) {
       if (command === 'serve') {
-        return { optimizeDeps: { exclude: ['@sentry/sveltekit'] } };
+        return { optimizeDeps: { exclude: ['@ichnois/sveltekit'] } };
       }
       return undefined;
     },
@@ -198,7 +198,7 @@ function makeBrowserTracingVariantResolverPlugin(): Plugin {
         : 'svelte4BrowserTracing';
 
       // Point at the variant file next to the SDK's resolved entry (absolute path, so it stays internal).
-      const sdkEntry = await this.resolve('@sentry/sveltekit', undefined, { skipSelf: true });
+      const sdkEntry = await this.resolve('@ichnois/sveltekit', undefined, { skipSelf: true });
       if (!sdkEntry) {
         return null;
       }
@@ -209,7 +209,7 @@ function makeBrowserTracingVariantResolverPlugin(): Plugin {
 }
 
 const OTEL_API_ID = '@opentelemetry/api';
-const OTEL_API_REEXPORT_ID = '@sentry/sveltekit/opentelemetry-api';
+const OTEL_API_REEXPORT_ID = '@ichnois/sveltekit/opentelemetry-api';
 const OTEL_API_REEXPORT_FILE_REGEX = /[\\/]opentelemetryApi\.js$/;
 
 /**

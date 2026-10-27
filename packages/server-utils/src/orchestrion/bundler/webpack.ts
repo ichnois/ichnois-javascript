@@ -1,7 +1,7 @@
 // Orchestrion code-transform loader + webpack plugin. The loader is exposed
 // separately because Turbopack can only take webpack loaders (via `turbopack.rules`), not plugins.
 
-import { SDK_VERSION } from '@sentry/core';
+import { SDK_VERSION } from '@ichnois/core';
 import type { Compiler } from 'webpack';
 import type { InstrumentationConfig } from '../apmTypes';
 

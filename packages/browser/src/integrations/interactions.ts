@@ -1,1 +1,1 @@
-export { interactionsIntegration } from '@sentry/browser-utils';
+export { interactionsIntegration } from '@ichnois/browser-utils';

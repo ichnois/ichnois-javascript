@@ -2,8 +2,8 @@
  * @vitest-environment jsdom
  */
 
-import type * as SentryCore from '@sentry/core';
-import { spanToJSON } from '@sentry/core';
+import type * as SentryCore from '@ichnois/core';
+import { spanToJSON } from '@ichnois/core';
 import type { MockInstance } from 'vitest';
 import { afterEach, beforeEach, describe, expect, it as baseIt, vi } from 'vitest';
 import type { App, Component, Ref } from 'vue';
@@ -11,7 +11,7 @@ import { createApp, defineAsyncComponent, h, nextTick, ref } from 'vue';
 import * as Sentry from '../../src';
 import type { Options, TracingOptions } from '../../src/types';
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   return {
     ...(await importOriginal<typeof SentryCore>()),
     timestampInSeconds: () => Date.now() / 1000,

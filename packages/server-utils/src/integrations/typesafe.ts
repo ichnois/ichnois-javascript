@@ -1,6 +1,6 @@
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
 import type { GenAiOptions } from '../ai/core/utils';
 import { resolveAIRecordingOptions } from '../ai/core/utils';
 import { addResponseAttributes, onSystemOneResponse, startDecideSpan } from '../ai/typesafe';

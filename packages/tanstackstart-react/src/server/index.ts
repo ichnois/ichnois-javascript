@@ -1,9 +1,9 @@
 // import/export got a false positive, and affects most of our index barrel files
 // can be removed once following issue is fixed: https://github.com/import-js/eslint-plugin-import/issues/703
 /* eslint-disable import/export */
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
 
-export * from '@sentry/node';
+export * from '@ichnois/node';
 
 export { init } from './sdk';
 export { wrapFetchWithSentry } from './wrapFetchWithSentry';

@@ -1,4 +1,4 @@
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 const { registerDiagnosticsChannelInjection, detectOrchestrionSetup } = vi.hoisted(() => ({
@@ -6,10 +6,10 @@ const { registerDiagnosticsChannelInjection, detectOrchestrionSetup } = vi.hoist
   detectOrchestrionSetup: vi.fn(),
 }));
 
-vi.mock('@sentry/server-runtime-injection/register', () => ({
+vi.mock('@ichnois/server-runtime-injection/register', () => ({
   registerDiagnosticsChannelInjection,
 }));
-vi.mock('@sentry/server-utils', async importOriginal => {
+vi.mock('@ichnois/server-utils', async importOriginal => {
   const actual = (await importOriginal()) as Record<string, unknown>;
   return { ...actual, detectOrchestrionSetup };
 });

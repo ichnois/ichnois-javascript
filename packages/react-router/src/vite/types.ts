@@ -1,4 +1,4 @@
-import type { BuildTimeOptionsBase, ReactComponentAnnotationOptions } from '@sentry/core';
+import type { BuildTimeOptionsBase, ReactComponentAnnotationOptions } from '@ichnois/core';
 
 /**
  * `resolveSourceMap` is a bundler-plugin hook, applied during the plugin's own debug ID upload.

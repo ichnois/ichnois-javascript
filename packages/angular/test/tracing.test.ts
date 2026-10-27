@@ -1,6 +1,6 @@
 import { ElementRef } from '@angular/core';
 import type { ActivatedRouteSnapshot } from '@angular/router';
-import { getCurrentScope, getMainCarrier, SentrySpan, spanToJSON, startSpan } from '@sentry/core';
+import { getCurrentScope, getMainCarrier, SentrySpan, spanToJSON, startSpan } from '@ichnois/core';
 import { beforeEach, describe, it } from 'vitest';
 import { browserTracingIntegration, init, TraceClass, TraceDirective } from '../src/index';
 import { _updateSpanAttributesForParametrizedUrl, getParameterizedRouteFromSnapshot } from '../src/tracing';

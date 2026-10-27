@@ -10,7 +10,7 @@ import {
 } from '@sentry/conventions/attributes';
 import { EventEmitter } from 'node:events';
 import { describe, expect, it } from 'vitest';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import { addResponseAttributes } from '../../../../src/ai/anthropic-ai';
 import { instrumentAsyncIterableStream, instrumentMessageStream } from '../../../../src/ai/anthropic-ai/streaming';
 import type { AnthropicAiStreamingEvent } from '../../../../src/ai/anthropic-ai/types';

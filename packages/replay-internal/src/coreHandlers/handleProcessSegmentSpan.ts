@@ -1,4 +1,4 @@
-import type { StreamedSpanJSON } from '@sentry/core';
+import type { StreamedSpanJSON } from '@ichnois/core';
 import type { ReplayContainer } from '../types';
 import { addSegmentDetailsToContext } from './util/addSegmentDetailsToContext';
 

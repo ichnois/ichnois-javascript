@@ -1,5 +1,5 @@
-import { getAbsoluteUrl } from '@sentry/browser';
-import type { Span } from '@sentry/core';
+import { getAbsoluteUrl } from '@ichnois/browser';
+import type { Span } from '@ichnois/core';
 import {
   getClient,
   GLOBAL_OBJ,
@@ -7,7 +7,7 @@ import {
   isObjectLike,
   NAVIGATION_SPAN_NAME_FALLBACK,
   filterCollectedUrl,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { SENTRY_SEGMENT_NAME_SOURCE, URL_FULL, URL_PATH, URL_TEMPLATE } from '@sentry/conventions/attributes';
 import type { DataRouter, RouterState } from 'react-router';
 

@@ -1,4 +1,4 @@
-import type { CloudflareOptions } from '@sentry/cloudflare';
+import type { CloudflareOptions } from '@ichnois/cloudflare';
 import type { Handle } from '@sveltejs/kit';
 import { init } from './sdk';
 

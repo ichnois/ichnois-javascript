@@ -1,4 +1,4 @@
-import { resetInstrumentationHandlers } from '@sentry/core';
+import { resetInstrumentationHandlers } from '@ichnois/core';
 import { vi } from 'vitest';
 import type { Replay as ReplayIntegration } from '../../src/integration';
 import type { ReplayContainer } from '../../src/replay';
@@ -23,7 +23,7 @@ export async function resetSdkMock({ replayOptions, sentryOptions, autoStart }: 
   // Clear all handlers that have been registered
   resetInstrumentationHandlers();
 
-  const SentryBrowserUtils = await import('@sentry/browser-utils');
+  const SentryBrowserUtils = await import('@ichnois/browser-utils');
   vi.spyOn(SentryBrowserUtils, 'addClickKeypressInstrumentationHandler').mockImplementation(handler => {
     domHandler = handler;
   });

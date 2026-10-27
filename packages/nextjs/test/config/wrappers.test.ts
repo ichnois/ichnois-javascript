@@ -1,5 +1,5 @@
-import type { Client } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import type { IncomingMessage, ServerResponse } from 'http';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import {

@@ -1,5 +1,5 @@
-import { SDK_VERSION } from '@sentry/core';
-import * as SentryNode from '@sentry/node';
+import { SDK_VERSION } from '@ichnois/core';
+import * as SentryNode from '@ichnois/node';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { init as nestInit } from '../src/sdk';
 

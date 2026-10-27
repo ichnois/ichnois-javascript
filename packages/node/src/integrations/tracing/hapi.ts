@@ -1,4 +1,4 @@
-import { attachHapiErrorHandler } from '@sentry/server-utils';
+import { attachHapiErrorHandler } from '@ichnois/server-utils';
 
 /**
  * Add a Hapi plugin to capture errors to Sentry.

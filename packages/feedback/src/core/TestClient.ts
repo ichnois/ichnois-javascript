@@ -1,6 +1,6 @@
-import type { ClientOptions, Event, SeverityLevel } from '@sentry/core';
-import type { BrowserClientReplayOptions } from '@sentry/core/browser';
-import { Client, createTransport, initAndBind, resolvedSyncPromise } from '@sentry/core';
+import type { ClientOptions, Event, SeverityLevel } from '@ichnois/core';
+import type { BrowserClientReplayOptions } from '@ichnois/core/browser';
+import { Client, createTransport, initAndBind, resolvedSyncPromise } from '@ichnois/core';
 
 export interface TestClientOptions extends ClientOptions, BrowserClientReplayOptions {}
 

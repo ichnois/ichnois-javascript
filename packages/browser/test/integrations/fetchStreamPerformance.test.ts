@@ -1,6 +1,6 @@
-import type { Client, HandlerDataFetch } from '@sentry/core';
-import * as utils from '@sentry/core';
-import * as coreBrowser from '@sentry/core/browser';
+import type { Client, HandlerDataFetch } from '@ichnois/core';
+import * as utils from '@ichnois/core';
+import * as coreBrowser from '@ichnois/core/browser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { fetchStreamPerformanceIntegration } from '../../src/integrations/fetchStreamPerformance';
 

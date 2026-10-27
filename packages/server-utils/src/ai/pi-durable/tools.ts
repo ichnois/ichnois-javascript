@@ -1,4 +1,4 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   captureException,
   isObjectLike,
@@ -9,7 +9,7 @@ import {
   startSpanManual,
   stringify,
   timestampInSeconds,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   GEN_AI_CONVERSATION_ID,
   GEN_AI_OPERATION_NAME,

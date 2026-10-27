@@ -9,7 +9,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { CACHE_GET, CACHE_PUT, CACHE_REMOVE } from '@sentry/conventions/op';
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { instrumentKV } from '../../../src/instrumentations/worker/instrumentKV';
 

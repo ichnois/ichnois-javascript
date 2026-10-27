@@ -1,4 +1,4 @@
-import { _INTERNAL_shouldSkipAiProviderWrapping, _INTERNAL_skipAiProviderWrapping } from '@sentry/core';
+import { _INTERNAL_shouldSkipAiProviderWrapping, _INTERNAL_skipAiProviderWrapping } from '@ichnois/core';
 import { ANTHROPIC_AI_INTEGRATION_NAME } from '../anthropic-ai/constants';
 import { GOOGLE_GENAI_INTEGRATION_NAME } from '../google-genai/constants';
 import { OPENAI_INTEGRATION_NAME } from '../openai/constants';

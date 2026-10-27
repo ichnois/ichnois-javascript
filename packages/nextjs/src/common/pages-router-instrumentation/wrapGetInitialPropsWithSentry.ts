@@ -1,4 +1,4 @@
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 import type { NextPage } from 'next';
 import { isBuild } from '../utils/isBuild';
 import { withErrorInstrumentation, withTracedServerSideDataFetcher } from '../utils/wrapperUtils';

@@ -7,7 +7,7 @@ import {
   startSpan,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { describe, expect, it, vi } from 'vitest';
 import { mockSdkInit } from '../helpers/mockSdkInit';
 

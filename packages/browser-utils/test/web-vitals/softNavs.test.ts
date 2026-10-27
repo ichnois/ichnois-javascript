@@ -1,12 +1,12 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { BROWSER_NAVIGATION_ID } from '@sentry/conventions/attributes';
 
 const windowListeners = vi.hoisted(() => new Map<string, (event: unknown) => void>());
 const performanceHandlers = vi.hoisted(() => new Map<string, (data: { entries: unknown[] }) => void>());
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return { ...actual, spanToJSON: vi.fn() };
 });
 

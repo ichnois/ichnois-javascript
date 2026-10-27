@@ -1,5 +1,5 @@
-import type { DynamicSamplingContext } from '@sentry/core';
-import { dynamicSamplingContextToSentryBaggageHeader } from '@sentry/core';
+import type { DynamicSamplingContext } from '@ichnois/core';
+import { dynamicSamplingContextToSentryBaggageHeader } from '@ichnois/core';
 import { SENTRY_TRACE_STATE_DSC, SENTRY_TRACE_STATE_SAMPLED_NOT_RECORDING } from '../constants';
 import { TraceState } from './TraceState';
 

@@ -1,11 +1,11 @@
 import { describe, expect, it } from '@effect/vitest';
-import * as sentryCore from '@sentry/core';
+import * as sentryCore from '@ichnois/core';
 import { Effect, Logger } from 'effect';
 import * as References from 'effect/References';
 import { afterEach, vi } from 'vitest';
 import { SentryEffectLogger } from '../src/logger';
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const original = await importOriginal<typeof sentryCore>();
   return {
     ...original,

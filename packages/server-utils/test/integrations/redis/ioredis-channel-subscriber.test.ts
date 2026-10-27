@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, type MockInstance, vi } from 'vitest';
 import { startIORedisCommandSpan } from '../../../src/integrations/redis/ioredis-channel-subscriber';
 

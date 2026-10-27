@@ -2,7 +2,7 @@ export { httpIntegration } from './integrations/http';
 export { nativeNodeFetchIntegration } from './integrations/node-fetch';
 export { fsIntegration } from './integrations/fs';
 // oxlint-disable-next-line typescript/no-deprecated
-export { expressErrorHandler, setupExpressErrorHandler } from '@sentry/server-utils';
+export { expressErrorHandler, setupExpressErrorHandler } from '@ichnois/server-utils';
 export {
   amqplibIntegration,
   anthropicAIIntegration,
@@ -44,7 +44,7 @@ export {
   redisIntegration,
   tediousIntegration,
   vercelAIIntegration,
-} from '@sentry/server-utils';
+} from '@ichnois/server-utils';
 export {
   openTelemetryIntegration,
   getOtlpTracesEndpoint,
@@ -63,7 +63,7 @@ export {
   fastifyIntegration,
   // oxlint-disable-next-line typescript/no-deprecated
   setupFastifyErrorHandler,
-} from '@sentry/server-utils';
+} from '@ichnois/server-utils';
 // oxlint-disable-next-line typescript/no-deprecated
 export { setupHapiErrorHandler } from './integrations/tracing/hapi';
 // oxlint-disable-next-line typescript/no-deprecated -- deprecated but still re-exported for backwards compatibility
@@ -89,7 +89,7 @@ export { getAutoPerformanceIntegrations } from './integrations/tracing';
 
 export type { NodeOptions } from './types';
 
-export { setOpenTelemetryContextAsyncContextStrategy } from '@sentry/opentelemetry';
+export { setOpenTelemetryContextAsyncContextStrategy } from '@ichnois/opentelemetry';
 
 export {
   addBreadcrumb,
@@ -174,8 +174,8 @@ export {
   createConsolaReporter,
   featureFlagsIntegration,
   spanStreamingIntegration,
-} from '@sentry/core';
-export { trpcMiddleware, wrapMcpServerWithSentry } from '@sentry/core/server';
+} from '@ichnois/core';
+export { trpcMiddleware, wrapMcpServerWithSentry } from '@ichnois/core/server';
 
 export type {
   Breadcrumb,
@@ -200,14 +200,14 @@ export type {
   FeatureFlagsIntegration,
   ExclusiveEventHintOrCaptureContext,
   CaptureContext,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export {
   metrics,
   withStaticSpan,
   // oxlint-disable-next-line typescript/no-deprecated
   withStreamedSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 export * as logger from './logs/exports';
 
 export { childProcessIntegration } from './integrations/childProcess';
@@ -234,7 +234,7 @@ export { defaultStackParser, getSentryRelease } from './sdk/api';
 export { makeNodeTransport } from './transports';
 export { createGetModuleFromFilename } from './utils/module';
 
-export { eveConversationHook, eveIntegration, getInstrumentedModuleNames } from '@sentry/server-utils';
+export { eveConversationHook, eveIntegration, getInstrumentedModuleNames } from '@ichnois/server-utils';
 export { eveInstrumentation } from './eve';
 export { httpServerIntegration } from './integrations/http/httpServerIntegration';
 export { httpServerSpansIntegration } from './integrations/http/httpServerSpansIntegration';

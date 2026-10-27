@@ -1,4 +1,4 @@
-import { captureException, debug, defineIntegration, getClient } from '@sentry/core';
+import { captureException, debug, defineIntegration, getClient } from '@ichnois/core';
 import { isMainThread } from 'worker_threads';
 import { DEBUG_BUILD } from '../debug-build';
 import type { NodeClient } from '../sdk/client';

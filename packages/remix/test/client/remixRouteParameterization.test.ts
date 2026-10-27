@@ -1,4 +1,4 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, describe, expect, it } from 'vitest';
 import { maybeParameterizeRemixRoute } from '../../src/client/remixRouteParameterization';
 import type { RouteManifest } from '../../src/config/remixRouteManifest';

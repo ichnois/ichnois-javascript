@@ -1,4 +1,4 @@
-import type { Integration, Options } from '@sentry/core';
+import type { Integration, Options } from '@ichnois/core';
 import {
   _INTERNAL_warnIfClientIsActive,
   applySdkMetadata,
@@ -16,9 +16,9 @@ import {
   propagationContextFromHeaders,
   requestDataIntegration,
   stackParserFromStackParserOptions,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { isMainThread, parentPort } from 'node:worker_threads';
-import { detectOrchestrionSetup, getErrorIntegrations, getTracingIntegrations } from '@sentry/server-utils';
+import { detectOrchestrionSetup, getErrorIntegrations, getTracingIntegrations } from '@ichnois/server-utils';
 import { DEBUG_BUILD } from '../debug-build';
 import { childProcessIntegration } from '../integrations/childProcess';
 import { consoleIntegration } from '../integrations/console';

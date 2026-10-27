@@ -1,6 +1,6 @@
 /* eslint-disable typescript-eslint/no-deprecated */
-import { isObjectLike } from '@sentry/core';
-import type { Span, SpanAttributeValue } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
+import type { Span, SpanAttributeValue } from '@ichnois/core';
 import {
   GEN_AI_CONVERSATION_ID,
   GEN_AI_OUTPUT_MESSAGES,

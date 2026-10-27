@@ -13,7 +13,7 @@
  *   `createEngineSpan`) and v6/v7 (which call `dispatchEngineSpans`)
  */
 
-import type { Span, SpanAttributes } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
 import {
   debug,
   getActiveSpan,
@@ -22,7 +22,7 @@ import {
   LRUMap,
   startInactiveSpan,
   startSpanManual,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import type { EngineSpan, ExtendedSpanOptions, SpanCallback, TracingHelper } from './types';
 import {

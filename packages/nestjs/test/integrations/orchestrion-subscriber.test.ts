@@ -1,7 +1,7 @@
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { tracingChannel } from 'node:diagnostics_channel';
-import type { Scope, Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Scope, Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import {
   _INTERNAL_setSpanForScope,
   Client,
@@ -13,10 +13,10 @@ import {
   resolvedSyncPromise,
   setAsyncContextStrategy,
   spanToJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import type { OrchestrionChannelContext } from '@sentry/server-utils';
-import { nestjsChannels as CHANNELS } from '@sentry/server-utils/orchestrion/config';
+import type { OrchestrionChannelContext } from '@ichnois/server-utils';
+import { nestjsChannels as CHANNELS } from '@ichnois/server-utils/orchestrion/config';
 import { subscribeToNestChannels } from '../../src/integrations/orchestrion-subscriber';
 
 // Mirrors harness in `tracing-channel.test.ts`: `bindTracingChannelToSpan`

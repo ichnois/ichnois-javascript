@@ -201,7 +201,7 @@ function buildPackageJson(): void {
 
   const packageJson = {
     dependencies: {
-      '@sentry/aws-serverless': 'file:../../../../../../packages/aws-serverless',
+      '@ichnois/aws-serverless': 'file:../../../../../../packages/aws-serverless',
     },
   };
 

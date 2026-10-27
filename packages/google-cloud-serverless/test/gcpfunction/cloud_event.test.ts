@@ -11,9 +11,9 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { FUNCTION_GCP } from '@sentry/conventions/op';
-import type { Client } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
-import { SERVERLESS_FUNCTION_SPAN_NAME_FALLBACK } from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
+import { SERVERLESS_FUNCTION_SPAN_NAME_FALLBACK } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import { wrapCloudEventFunction } from '../../src/gcpfunction/cloud_events';
 import type { CloudEventFunction, CloudEventFunctionWithCallback } from '../../src/gcpfunction/general';
@@ -30,8 +30,8 @@ const mockSpan = {
   end: vi.fn(),
 };
 
-vi.mock('@sentry/node', async () => {
-  const original = await vi.importActual('@sentry/node');
+vi.mock('@ichnois/node', async () => {
+  const original = await vi.importActual('@ichnois/node');
   return {
     ...original,
     startSpanManual: (...args: unknown[]) => {

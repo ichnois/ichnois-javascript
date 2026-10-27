@@ -1,4 +1,4 @@
-import type { StackFrame } from '@sentry/core';
+import type { StackFrame } from '@ichnois/core';
 import { describe, expect, it } from 'vitest';
 import { patchFrames } from '../src/index';
 

@@ -1,4 +1,4 @@
-import { mysqlIntegration } from '@sentry/server-utils';
+import { mysqlIntegration } from '@ichnois/server-utils';
 
 /**
  * Create spans for `mysql` queries under Deno. Included in the default

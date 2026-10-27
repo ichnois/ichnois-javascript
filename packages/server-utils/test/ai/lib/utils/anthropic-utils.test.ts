@@ -4,7 +4,7 @@ import {
   messagesFromParams,
   setMessagesAttribute,
 } from '../../../../src/ai/anthropic-ai/utils';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 
 describe('anthropic-ai-utils', () => {
   describe('mapAnthropicErrorToStatusMessage', () => {

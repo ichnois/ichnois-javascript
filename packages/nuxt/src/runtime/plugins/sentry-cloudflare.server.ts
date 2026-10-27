@@ -1,7 +1,7 @@
-import type { CloudflareOptions } from '@sentry/cloudflare';
-import { getDefaultIntegrations, setAsyncLocalStorageAsyncContextStrategy } from '@sentry/cloudflare';
-import { wrapRequestHandler } from '@sentry/cloudflare/request';
-import { debug, getDefaultIsolationScope, getIsolationScope, getTraceData } from '@sentry/core';
+import type { CloudflareOptions } from '@ichnois/cloudflare';
+import { getDefaultIntegrations, setAsyncLocalStorageAsyncContextStrategy } from '@ichnois/cloudflare';
+import { wrapRequestHandler } from '@ichnois/cloudflare/request';
+import { debug, getDefaultIsolationScope, getIsolationScope, getTraceData } from '@ichnois/core';
 import type { H3Event } from 'h3';
 import type { NitroApp, NitroAppPlugin } from 'nitropack';
 import type { NuxtRenderHTMLContext } from 'nuxt/app';
@@ -22,7 +22,7 @@ import { getCfProperties, getCloudflareProperties, hasCfProperty, isEventType } 
  * ```ts
  * // nitro/plugins/sentry.ts
  * import { defineNitroPlugin } from '#imports'
- * import { sentryCloudflareNitroPlugin } from '@sentry/nuxt/module/plugins'
+ * import { sentryCloudflareNitroPlugin } from '@ichnois/nuxt/module/plugins'
  *
  * export default defineNitroPlugin(sentryCloudflareNitroPlugin({
  *   dsn: 'https://examplePublicKey@o0.ingest.sentry.io/0',
@@ -34,7 +34,7 @@ import { getCfProperties, getCloudflareProperties, hasCfProperty, isEventType } 
  * ```ts
  * // nitro/plugins/sentry.ts
  * import { defineNitroPlugin } from '#imports'
- * import { sentryCloudflareNitroPlugin } from '@sentry/nuxt/module/plugins'
+ * import { sentryCloudflareNitroPlugin } from '@ichnois/nuxt/module/plugins'
  *
  * export default defineNitroPlugin(sentryCloudflareNitroPlugin(nitroApp => ({
  *   dsn: 'https://examplePublicKey@o0.ingest.sentry.io/0',

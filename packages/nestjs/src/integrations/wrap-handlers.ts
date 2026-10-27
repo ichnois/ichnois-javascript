@@ -1,4 +1,4 @@
-import { captureException, isObjectLike, isThenable, startSpan, withIsolationScope } from '@sentry/core';
+import { captureException, isObjectLike, isThenable, startSpan, withIsolationScope } from '@ichnois/core';
 import type { AnyFn, ReflectWithMetadata } from './helpers';
 import { getBullMQProcessSpanOptions, getEventSpanOptions, isWrapped, markWrapped } from './helpers';
 

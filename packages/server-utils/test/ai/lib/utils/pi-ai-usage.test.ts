@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import { setPiAiUsageAttributes } from '../../../../src/ai/pi-ai/usage';
 
 function spanRecorder(): { span: Span; attributes: Record<string, unknown> } {

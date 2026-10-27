@@ -1,7 +1,7 @@
 /**
  * @vitest-environment jsdom
  */
-import { normalize, setNormalizeStringifier } from '@sentry/core';
+import { normalize, setNormalizeStringifier } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, test } from 'vitest';
 import { normalizeStringifyValue } from '../src/normalizeStringifyValue';
 

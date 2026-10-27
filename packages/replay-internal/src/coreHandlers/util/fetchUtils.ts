@@ -1,6 +1,6 @@
-import type { Breadcrumb, FetchBreadcrumbData } from '@sentry/core';
-import type { FetchHint, NetworkMetaWarning } from '@sentry/browser-utils';
-import { getBodyString, getFetchRequestArgBody, setTimeout } from '@sentry/browser-utils';
+import type { Breadcrumb, FetchBreadcrumbData } from '@ichnois/core';
+import type { FetchHint, NetworkMetaWarning } from '@ichnois/browser-utils';
+import { getBodyString, getFetchRequestArgBody, setTimeout } from '@ichnois/browser-utils';
 import { DEBUG_BUILD } from '../../debug-build';
 import type {
   ReplayContainer,

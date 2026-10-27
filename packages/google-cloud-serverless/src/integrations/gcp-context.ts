@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, getCurrentScope, safeSetSpanJSONAttributes } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration, getCurrentScope, safeSetSpanJSONAttributes } from '@ichnois/core';
 
 const GCP_CONTEXT_ATTRIBUTE_MAP: Record<string, string> = {
   type: 'gcp.function.context.type',

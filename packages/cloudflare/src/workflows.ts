@@ -5,8 +5,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { FUNCTION } from '@sentry/conventions/op';
-import type { PropagationContext, Scope } from '@sentry/core';
-import { captureException, flush, getCurrentScope, startSpan, withIsolationScope, withScope } from '@sentry/core';
+import type { PropagationContext, Scope } from '@ichnois/core';
+import { captureException, flush, getCurrentScope, startSpan, withIsolationScope, withScope } from '@ichnois/core';
 import type {
   WorkflowDelayDuration,
   WorkflowEntrypoint,

@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { _INTERNAL_setSpanForScope, getActiveSpan, getCurrentScope } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { _INTERNAL_setSpanForScope, getActiveSpan, getCurrentScope } from '@ichnois/core';
 
 /**
  * Sets an inactive span active on the current scope.

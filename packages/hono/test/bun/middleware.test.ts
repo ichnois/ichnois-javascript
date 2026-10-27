@@ -6,8 +6,8 @@ import {
   NETWORK_TRANSPORT,
   NETWORK_TYPE,
 } from '@sentry/conventions/attributes';
-import * as SentryCore from '@sentry/core';
-import { SDK_VERSION } from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
+import { SDK_VERSION } from '@ichnois/core';
 import { Hono } from 'hono';
 import { beforeEach, describe, expect, it, type Mock, vi } from 'vitest';
 import { sentry, type HonoBunOptions } from '../../src/bun/middleware';
@@ -15,15 +15,15 @@ import { init } from '../../src/bun/sdk';
 import { LOW_QUALITY_TRANSACTION_PATTERNS } from '../../src/shared/lowQualityTransactionPatterns';
 import { requestConnInfoAttributes } from '../shared/requestConnInfoAttributes';
 
-vi.mock('@sentry/bun', () => ({
+vi.mock('@ichnois/bun', () => ({
   init: vi.fn(),
 }));
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-const { init: initBunMock } = await vi.importMock<typeof import('@sentry/bun')>('@sentry/bun');
+const { init: initBunMock } = await vi.importMock<typeof import('@ichnois/bun')>('@ichnois/bun');
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment

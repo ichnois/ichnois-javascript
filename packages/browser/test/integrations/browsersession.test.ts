@@ -2,9 +2,9 @@
  * @vitest-environment jsdom
  */
 
-import type * as BrowserUtils from '@sentry/browser-utils';
-import type { Scope, User } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type * as BrowserUtils from '@ichnois/browser-utils';
+import type { Scope, User } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { browserSessionIntegration } from '../../src/integrations/browsersession';
 
@@ -12,7 +12,7 @@ const scopeHolder = vi.hoisted(() => ({ current: undefined as unknown as FakeIso
 
 const historyHandlers = vi.hoisted(() => ({ current: [] as Array<(data: { from?: string; to?: string }) => void> }));
 
-vi.mock('@sentry/core', async importActual => {
+vi.mock('@ichnois/core', async importActual => {
   const actual = (await importActual()) as typeof SentryCore;
   return {
     ...actual,
@@ -24,7 +24,7 @@ vi.mock('@sentry/core', async importActual => {
 
 // Capture the registered history handler so navigation can be driven deterministically,
 // while keeping the real `whenIdleOrHidden` (the tests drive its timers/events directly).
-vi.mock('@sentry/browser-utils', async importActual => {
+vi.mock('@ichnois/browser-utils', async importActual => {
   const actual = (await importActual()) as typeof BrowserUtils;
   return {
     ...actual,

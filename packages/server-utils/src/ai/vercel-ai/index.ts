@@ -1,4 +1,4 @@
-import type { SpanAttributeValue } from '@sentry/core';
+import type { SpanAttributeValue } from '@ichnois/core';
 import {
   GEN_AI_USAGE_CACHE_CREATION_INPUT_TOKENS,
   GEN_AI_USAGE_CACHE_READ_INPUT_TOKENS,

@@ -4,10 +4,10 @@ import {
   getDefaultIntegrations as getBunDefaultIntegrations,
   makeFetchTransport,
   makeNodeTransport,
-} from '@sentry/bun';
-import type { Integration, Options } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
-import { init as initNode, type NodeClient } from '@sentry/bun';
+} from '@ichnois/bun';
+import type { Integration, Options } from '@ichnois/core';
+import { applySdkMetadata } from '@ichnois/core';
+import { init as initNode, type NodeClient } from '@ichnois/bun';
 import type { ElysiaOptions } from './types';
 
 /** Get the default integrations for the Elysia SDK. */
@@ -33,7 +33,7 @@ function getRuntime(): { name: string; version: string } {
  *
  * @example
  * ```javascript
- * import * as Sentry from '@sentry/elysia';
+ * import * as Sentry from '@ichnois/elysia';
  *
  * Sentry.init({
  *   dsn: '__DSN__',

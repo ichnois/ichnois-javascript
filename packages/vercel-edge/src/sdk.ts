@@ -1,5 +1,5 @@
 import { diag, DiagLogLevel, propagation, trace } from '@opentelemetry/api';
-import type { Client, Integration } from '@sentry/core';
+import type { Client, Integration } from '@ichnois/core';
 import {
   _INTERNAL_warnIfClientIsActive,
   consoleIntegration,
@@ -16,13 +16,13 @@ import {
   linkedErrorsIntegration,
   requestDataIntegration,
   stackParserFromStackParserOptions,
-} from '@sentry/core';
-import { _INTERNAL_getReleaseFromCommitEnv as getReleaseFromCommitEnv, nodeStackLineParser } from '@sentry/core/server';
+} from '@ichnois/core';
+import { _INTERNAL_getReleaseFromCommitEnv as getReleaseFromCommitEnv, nodeStackLineParser } from '@ichnois/core/server';
 import {
   SentryPropagator,
   SentryTracerProvider,
   setOpenTelemetryContextAsyncContextStrategy,
-} from '@sentry/opentelemetry';
+} from '@ichnois/opentelemetry';
 import { VercelEdgeClient } from './client';
 import { winterCGFetchIntegration } from './integrations/wintercg-fetch';
 import { makeEdgeTransport } from './transports';

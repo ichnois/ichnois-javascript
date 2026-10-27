@@ -2,7 +2,7 @@ import codeTransformer from '@apm-js-collab/code-transformer-bundler-plugins/esb
 import type { Plugin } from 'esbuild';
 
 export type { Plugin as EsbuildPlugin } from 'esbuild';
-import { escapeStringForRegex } from '@sentry/core';
+import { escapeStringForRegex } from '@ichnois/core';
 import { instrumentedModuleNames } from '../config';
 import type { PluginOptions } from './options';
 import { externalEntryMatchesModule, externalizedModulesWarning, orchestrionTransformOptions } from './options';
@@ -28,7 +28,7 @@ function matchesEsbuildExternal(entry: string, moduleName: string): boolean {
  * @example
  * ```ts
  * // build.mjs
- * import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/esbuild';
+ * import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/esbuild';
  * await esbuild.build({ plugins: [sentryOrchestrionPlugin()] });
  * ```
  */

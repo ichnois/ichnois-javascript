@@ -1,11 +1,11 @@
-import type { Event, EventHint, SpanJSON } from '@sentry/core';
-import { GLOBAL_OBJ } from '@sentry/core';
+import type { Event, EventHint, SpanJSON } from '@ichnois/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { devErrorSymbolicationEventProcessor } from '../../src/common/devErrorSymbolicationEventProcessor';
 import { URL_FULL } from '@sentry/conventions/attributes';
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     debug: {

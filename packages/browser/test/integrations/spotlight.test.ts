@@ -1,5 +1,5 @@
-import type { Client, ClientOptions } from '@sentry/core';
-import { shouldIgnoreSpan } from '@sentry/core';
+import type { Client, ClientOptions } from '@ichnois/core';
+import { shouldIgnoreSpan } from '@ichnois/core';
 import { describe, expect, it } from 'vitest';
 import { SPOTLIGHT_IGNORE_SPANS, spotlightBrowserIntegration } from '../../src/integrations/spotlight';
 

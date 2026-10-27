@@ -1,4 +1,4 @@
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import type { Env, Hono } from './honoTypes';
 import { patchAppRequest } from './patchAppRequest';

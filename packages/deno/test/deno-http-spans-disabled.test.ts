@@ -11,8 +11,8 @@
  */
 
 import * as http from 'node:http';
-import type { TransactionEvent } from '@sentry/core';
-import { getIsolationScope, getMainCarrier } from '@sentry/core';
+import type { TransactionEvent } from '@ichnois/core';
+import { getIsolationScope, getMainCarrier } from '@ichnois/core';
 import { assert } from 'https://deno.land/std@0.212.0/assert/assert.ts';
 import { assertEquals } from 'https://deno.land/std@0.212.0/assert/assert_equals.ts';
 import type { DenoClient } from '../build/esm/index.js';

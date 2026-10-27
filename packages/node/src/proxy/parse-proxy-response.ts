@@ -30,7 +30,7 @@
 /* eslint-disable jsdoc/require-jsdoc */
 import type { IncomingHttpHeaders } from 'node:http';
 import type { Readable } from 'node:stream';
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 
 function debugLog(...args: unknown[]): void {
   debug.log('[https-proxy-agent:parse-proxy-response]', ...args);

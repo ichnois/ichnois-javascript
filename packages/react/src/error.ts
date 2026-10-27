@@ -1,5 +1,5 @@
-import { captureException } from '@sentry/browser';
-import { isError } from '@sentry/core';
+import { captureException } from '@ichnois/browser';
+import { isError } from '@ichnois/core';
 import type { ErrorInfo } from 'react';
 
 /**

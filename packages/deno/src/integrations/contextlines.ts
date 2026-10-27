@@ -1,5 +1,5 @@
-import type { Event, IntegrationFn, StackFrame } from '@sentry/core';
-import { addContextToFrame, defineIntegration, LRUMap, stripUrlQueryAndFragment } from '@sentry/core';
+import type { Event, IntegrationFn, StackFrame } from '@ichnois/core';
+import { addContextToFrame, defineIntegration, LRUMap, stripUrlQueryAndFragment } from '@ichnois/core';
 
 const INTEGRATION_NAME = 'ContextLines' as const;
 // Frame filenames come from the parsed `error.stack` string, which application

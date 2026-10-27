@@ -84,13 +84,13 @@ describe('sentryOrchestrionPlugin (rollup)', () => {
     const options = { attributes: {}, custom: { 'node-resolve': { isRequire: true } }, isEntry: false };
 
     resolve.mockResolvedValueOnce({ id: '/resolved.js' });
-    await expect(resolveId.call({ resolve }, '@sentry/server-utils', '/x.js', options)).resolves.toEqual({
+    await expect(resolveId.call({ resolve }, '@ichnois/server-utils', '/x.js', options)).resolves.toEqual({
       id: '/resolved.js',
     });
-    expect(resolve).toHaveBeenCalledWith('@sentry/server-utils', '/x.js', { ...options, skipSelf: true });
+    expect(resolve).toHaveBeenCalledWith('@ichnois/server-utils', '/x.js', { ...options, skipSelf: true });
 
     // When it fails (pnpm isolation), fall back to this package's own resolution.
-    const fallback = await resolveId.call({ resolve }, '@sentry/server-utils', '/x.js', options);
+    const fallback = await resolveId.call({ resolve }, '@ichnois/server-utils', '/x.js', options);
     expect(typeof fallback).toBe('string');
     expect(fallback).toContain('server-utils');
   });
@@ -200,7 +200,7 @@ describe('sentryOrchestrionWebpackPlugin', () => {
       expect(alias).toEqual([
         existing,
         {
-          name: '@sentry/server-utils',
+          name: '@ichnois/server-utils',
           alias: expect.stringMatching(/server-utils/),
           onlyModule: true,
         },
@@ -208,10 +208,10 @@ describe('sentryOrchestrionWebpackPlugin', () => {
     });
 
     it('leaves an existing user alias for the specifier untouched', () => {
-      const { alias: objectAlias } = applyWithResolve({ alias: { '@sentry/server-utils': '/user' } });
-      expect(objectAlias).toEqual({ '@sentry/server-utils': '/user' });
+      const { alias: objectAlias } = applyWithResolve({ alias: { '@ichnois/server-utils': '/user' } });
+      expect(objectAlias).toEqual({ '@ichnois/server-utils': '/user' });
 
-      const userEntry = { name: '@sentry/server-utils', alias: '/user' };
+      const userEntry = { name: '@ichnois/server-utils', alias: '/user' };
       const { alias: arrayAlias } = applyWithResolve({ alias: [userEntry] });
       expect(arrayAlias).toEqual([userEntry]);
     });
@@ -279,7 +279,7 @@ describe('sentryOrchestrionPlugin (vite)', () => {
     // Left external, Vite 5's CommonJS interop turns the snippet's `require`
     // into a default import of the named-exports-only ESM entry — a link-time
     // crash at server startup.
-    expect(config?.ssr.noExternal).toContain('@sentry/server-utils');
+    expect(config?.ssr.noExternal).toContain('@ichnois/server-utils');
     expect(config?.ssr.noExternal).toContain('mysql');
   });
 
@@ -297,7 +297,7 @@ describe('sentryOrchestrionPlugin (vite)', () => {
 
   it('force-bundles instrumented modules in server environments', () => {
     expect(runConfigEnvironment('ssr', {})?.resolve.noExternal).toEqual(
-      expect.arrayContaining(['mysql', '@sentry/server-utils']),
+      expect.arrayContaining(['mysql', '@ichnois/server-utils']),
     );
     expect(runConfigEnvironment('worker', { consumer: 'server' })?.resolve.noExternal).toContain('mysql');
     expect(runConfigEnvironment('client', {})).toBeNull();
@@ -388,17 +388,17 @@ describe('sentryOrchestrionPlugin (vite)', () => {
     ) => Promise<unknown>;
 
     const resolve = vi.fn().mockResolvedValue(null);
-    await expect(resolveId.call({ resolve }, '@sentry/server-utils', '/x.js', { ssr: false })).resolves.toBeNull();
+    await expect(resolveId.call({ resolve }, '@ichnois/server-utils', '/x.js', { ssr: false })).resolves.toBeNull();
     expect(resolve).not.toHaveBeenCalled();
 
     // Normal resolution wins when it succeeds.
     resolve.mockResolvedValueOnce({ id: '/resolved.js' });
-    await expect(resolveId.call({ resolve }, '@sentry/server-utils', '/x.js', { ssr: true })).resolves.toEqual({
+    await expect(resolveId.call({ resolve }, '@ichnois/server-utils', '/x.js', { ssr: true })).resolves.toEqual({
       id: '/resolved.js',
     });
 
     // When it fails (pnpm isolation), fall back to this package's own resolution.
-    const fallback = await resolveId.call({ resolve }, '@sentry/server-utils', '/x.js', { ssr: true });
+    const fallback = await resolveId.call({ resolve }, '@ichnois/server-utils', '/x.js', { ssr: true });
     expect(typeof fallback).toBe('string');
     expect(fallback).toContain('server-utils');
   });
@@ -421,28 +421,28 @@ describe('sentryOrchestrionPlugin (vite)', () => {
       moduleSideEffects: false,
     });
     await expect(
-      resolveId.call({ resolve }, '@sentry/server-utils', '/app/node_modules/mysql/index.js', requireOptions),
+      resolveId.call({ resolve }, '@ichnois/server-utils', '/app/node_modules/mysql/index.js', requireOptions),
     ).resolves.toEqual({
       id: '/app/node_modules/@sentry/server-utils/build/esm/index.js',
       moduleSideEffects: false,
     });
-    expect(resolve).toHaveBeenCalledWith('@sentry/server-utils', '/app/node_modules/mysql/index.js', {
+    expect(resolve).toHaveBeenCalledWith('@ichnois/server-utils', '/app/node_modules/mysql/index.js', {
       ...requireOptions,
       skipSelf: true,
     });
 
     resolve.mockResolvedValueOnce({ id: 'C:\\app\\node_modules\\@sentry\\server-utils\\build\\cjs\\index.js' });
-    await expect(resolveId.call({ resolve }, '@sentry/server-utils', '/x.js', requireOptions)).resolves.toEqual({
+    await expect(resolveId.call({ resolve }, '@ichnois/server-utils', '/x.js', requireOptions)).resolves.toEqual({
       id: 'C:\\app\\node_modules\\@sentry\\server-utils\\build\\esm\\index.js',
     });
 
-    resolve.mockResolvedValueOnce({ id: '@sentry/server-utils', external: true });
-    await expect(resolveId.call({ resolve }, '@sentry/server-utils', '/x.js', requireOptions)).resolves.toEqual({
-      id: '@sentry/server-utils',
+    resolve.mockResolvedValueOnce({ id: '@ichnois/server-utils', external: true });
+    await expect(resolveId.call({ resolve }, '@ichnois/server-utils', '/x.js', requireOptions)).resolves.toEqual({
+      id: '@ichnois/server-utils',
       external: true,
     });
 
-    const fallback = await resolveId.call({ resolve }, '@sentry/server-utils', '/x.js', requireOptions);
+    const fallback = await resolveId.call({ resolve }, '@ichnois/server-utils', '/x.js', requireOptions);
     expect(fallback).toMatch(/[/\\]build[/\\]esm[/\\]index\.js$/);
     expect(existsSync(fallback as string)).toBe(true);
   });
@@ -460,7 +460,7 @@ describe('sentryOrchestrionPlugin (vite)', () => {
       resolve: vi.fn().mockResolvedValue({ id: '/app/node_modules/@sentry/server-utils/build/cjs/index.js' }),
     };
 
-    const resolved = await resolveId.call(context, '@sentry/server-utils', '/app/node_modules/pg/lib/client.js', {
+    const resolved = await resolveId.call(context, '@ichnois/server-utils', '/app/node_modules/pg/lib/client.js', {
       ssr: true,
       kind: 'require-call',
     });
@@ -576,7 +576,7 @@ describe('buildTimeInstrumentation: false', () => {
 describe('resolveOrchestrionRuntimeRequest', () => {
   it.each([
     // Self-references — resolve through this package's own exports map to the CJS build.
-    '@sentry/server-utils/orchestrion/config',
+    '@ichnois/server-utils/orchestrion/config',
     // Dependencies of this package, resolvable only from its location.
     '@apm-js-collab/code-transformer',
   ])('resolves %s to an existing absolute path', request => {
@@ -588,11 +588,11 @@ describe('resolveOrchestrionRuntimeRequest', () => {
   });
 
   it('resolves self-references with require conditions, so the paths are loadable via require()', () => {
-    expect(resolveOrchestrionRuntimeRequest('@sentry/server-utils/orchestrion/config')).toMatch(/[/\\]cjs[/\\]/);
+    expect(resolveOrchestrionRuntimeRequest('@ichnois/server-utils/orchestrion/config')).toMatch(/[/\\]cjs[/\\]/);
   });
 
   it('returns undefined for unresolvable requests', () => {
-    expect(resolveOrchestrionRuntimeRequest('@sentry/server-utils/no-such-subpath')).toBeUndefined();
+    expect(resolveOrchestrionRuntimeRequest('@ichnois/server-utils/no-such-subpath')).toBeUndefined();
     expect(resolveOrchestrionRuntimeRequest('some-package-that-does-not-exist')).toBeUndefined();
   });
 });

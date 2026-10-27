@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { ConsoleLevel, WrappedFunction } from '@sentry/core';
+import type { ConsoleLevel, WrappedFunction } from '@ichnois/core';
 import {
   CONSOLE_LEVELS,
   GLOBAL_OBJ,
@@ -10,7 +10,7 @@ import {
   maybeInstrument,
   originalConsoleMethods,
   triggerHandlers,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 interface ConsoleIntegrationOptions {
   levels: ConsoleLevel[];

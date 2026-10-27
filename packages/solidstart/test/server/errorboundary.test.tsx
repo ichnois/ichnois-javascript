@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/unbound-method */
-import type * as SentryCoreBrowser from '@sentry/core/browser';
-import type * as SentryCore from '@sentry/core';
+import type * as SentryCoreBrowser from '@ichnois/core/browser';
+import type * as SentryCore from '@ichnois/core';
 
-import { createTransport, getCurrentScope, setCurrentClient } from '@sentry/core';
+import { createTransport, getCurrentScope, setCurrentClient } from '@ichnois/core';
 import { render } from '@solidjs/testing-library';
 import userEvent from '@testing-library/user-event';
 import { ErrorBoundary } from 'solid-js';
@@ -18,8 +18,8 @@ async function mockCore<T extends typeof SentryCore | typeof SentryCoreBrowser>(
     captureException: (...args) => mockCaptureException(...args),
   } as typeof SentryCore;
 }
-vi.mock('@sentry/core/browser', mockCore<typeof SentryCoreBrowser>);
-vi.mock('@sentry/core', mockCore<typeof SentryCore>);
+vi.mock('@ichnois/core/browser', mockCore<typeof SentryCoreBrowser>);
+vi.mock('@ichnois/core', mockCore<typeof SentryCore>);
 
 const user = userEvent.setup();
 const SentryErrorBoundary = withSentryErrorBoundary(ErrorBoundary);

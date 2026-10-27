@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { SENTRY_LINK_TYPE } from '@sentry/conventions/attributes';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   addTraceMetaTagLink,

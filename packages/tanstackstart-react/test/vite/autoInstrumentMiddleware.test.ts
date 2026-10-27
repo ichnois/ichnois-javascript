@@ -55,7 +55,7 @@ export const Route = createFileRoute('/foo')({
     const plugin = makeAutoInstrumentMiddlewarePlugin() as PluginWithTransform;
     const code = `
 import { createStart } from '@tanstack/react-start';
-import { wrapMiddlewaresWithSentry } from '@sentry/tanstackstart-react';
+import { wrapMiddlewaresWithSentry } from '@ichnois/tanstackstart-react';
 createStart(() => ({ requestMiddleware: wrapMiddlewaresWithSentry({ myMiddleware }) }));
 `;
     const result = plugin.transform(code, '/app/start.ts');
@@ -68,7 +68,7 @@ createStart(() => ({ requestMiddleware: wrapMiddlewaresWithSentry({ myMiddleware
     const result = plugin.transform(createStartFile, '/app/start.ts');
 
     expect(result).not.toBeNull();
-    expect(result!.code).toContain("import { wrapMiddlewaresWithSentry } from '@sentry/tanstackstart-react'");
+    expect(result!.code).toContain("import { wrapMiddlewaresWithSentry } from '@ichnois/tanstackstart-react'");
   });
 
   it('instruments both start files and route files', () => {
@@ -415,7 +415,7 @@ describe('addSentryImport', () => {
     const code = 'const foo = 1;';
     const result = addSentryImport(code);
 
-    expect(result).toBe("import { wrapMiddlewaresWithSentry } from '@sentry/tanstackstart-react';\nconst foo = 1;");
+    expect(result).toBe("import { wrapMiddlewaresWithSentry } from '@ichnois/tanstackstart-react';\nconst foo = 1;");
   });
 
   it('inserts import after use server directive', () => {
@@ -435,7 +435,7 @@ describe('addSentryImport', () => {
   });
 
   it('does not add import if it already exists', () => {
-    const code = "import { wrapMiddlewaresWithSentry } from '@sentry/tanstackstart-react';\nconst foo = 1;";
+    const code = "import { wrapMiddlewaresWithSentry } from '@ichnois/tanstackstart-react';\nconst foo = 1;";
     const result = addSentryImport(code);
 
     expect(result).toBe(code);

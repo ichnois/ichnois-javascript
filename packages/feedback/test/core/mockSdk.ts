@@ -1,5 +1,5 @@
-import type { Envelope, Transport, TransportMakeRequestResponse } from '@sentry/core';
-import { getCurrentScope } from '@sentry/core';
+import type { Envelope, Transport, TransportMakeRequestResponse } from '@ichnois/core';
+import { getCurrentScope } from '@ichnois/core';
 import { vi } from 'vitest';
 import type { TestClientOptions } from '../../src/core/TestClient';
 import { getDefaultClientOptions, init } from '../../src/core/TestClient';

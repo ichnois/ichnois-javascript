@@ -8,7 +8,7 @@ import {
   USER_AGENT_ORIGINAL,
 } from '@sentry/conventions/attributes';
 import { HTTP_SERVER } from '@sentry/conventions/op';
-import type { Client, Mechanism, Scope, Span, SpanAttributes } from '@sentry/core';
+import type { Client, Mechanism, Scope, Span, SpanAttributes } from '@ichnois/core';
 import {
   captureBodyFromWinterCGRequest,
   captureException,
@@ -25,14 +25,14 @@ import {
   startSpanManual,
   winterCGHeadersToDict,
   winterCGRequestToRequestData,
-} from '@sentry/core';
-import type { ServerRequestOptions } from '@sentry/core/server';
+} from '@ichnois/core';
+import type { ServerRequestOptions } from '@ichnois/core/server';
 import {
   classifyResponseStreaming,
   getClientIPAddress,
   isStaticAssetRequest,
   startRequestSession,
-} from '@sentry/core/server';
+} from '@ichnois/core/server';
 import { DEBUG_BUILD } from '../debug-build';
 import { monitorStream } from './monitorStream';
 

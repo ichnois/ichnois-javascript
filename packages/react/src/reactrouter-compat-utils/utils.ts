@@ -1,5 +1,5 @@
-import type { Span, TransactionSource } from '@sentry/core';
-import { debug, getActiveSpan, getRootSpan, spanToJSON } from '@sentry/core';
+import type { Span, TransactionSource } from '@ichnois/core';
+import { debug, getActiveSpan, getRootSpan, spanToJSON } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import type { Location, MatchRoutes, ReactRouterConfig, RouteMatch, RouteObject } from '../types';
 import { matchRouteManifest, stripBasenameFromPathname } from './route-manifest';

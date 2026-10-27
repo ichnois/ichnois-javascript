@@ -12,7 +12,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import type { IntegrationFn, Scope } from '@sentry/core';
+import type { IntegrationFn, Scope } from '@ichnois/core';
 import {
   isObjectLike,
   bindScopeToEmitter,
@@ -21,7 +21,7 @@ import {
   getCurrentScope,
   hasSpanStreamingEnabled,
   startInactiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { sanitizeSqlQueryWithSummary } from '../utils/sql';
 import type { OrchestrionChannelContext } from '../orchestrion/types';
 import { CHANNELS } from '../orchestrion/channels';

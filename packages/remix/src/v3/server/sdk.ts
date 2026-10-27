@@ -1,10 +1,10 @@
-import { applySdkMetadata, type Integration } from '@sentry/core';
+import { applySdkMetadata, type Integration } from '@ichnois/core';
 import {
   getDefaultIntegrations as getNodeDefaultIntegrations,
   init as nodeInit,
   type NodeClient,
   type NodeOptions,
-} from '@sentry/node';
+} from '@ichnois/node';
 
 import { remixV3Integration } from './integration';
 

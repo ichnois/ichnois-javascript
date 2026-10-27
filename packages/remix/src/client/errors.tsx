@@ -1,5 +1,5 @@
-import { captureException } from '@sentry/core';
-import { isNodeEnv } from '@sentry/core/server';
+import { captureException } from '@ichnois/core';
+import { isNodeEnv } from '@ichnois/core/server';
 import { isResponse } from '../utils/vendor/response';
 
 /**

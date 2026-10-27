@@ -1,4 +1,4 @@
-import type { NodeOptions } from '@sentry/node';
+import type { NodeOptions } from '@ichnois/node';
 import type * as EffectLayer from 'effect/Layer';
 import { empty as emptyLayer, merge as mergeLayer, suspend as suspendLayer } from 'effect/Layer';
 import { makeSentryErrorReporterLayer } from '../errorReporter';
@@ -24,7 +24,7 @@ export type EffectServerLayerOptions = NodeOptions;
  *
  * @example
  * ```typescript
- * import * as Sentry from '@sentry/effect/server';
+ * import * as Sentry from '@ichnois/effect/server';
  * import { NodeRuntime } from '@effect/platform-node';
  * import { Layer, Logger } from 'effect';
  * import { HttpLive } from './Http.js';

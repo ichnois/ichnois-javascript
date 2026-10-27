@@ -1,6 +1,6 @@
-import { isObjectLike, addNonEnumerableProperty } from '@sentry/core';
-import type { Span } from '@sentry/node';
-import { getActiveSpan, startSpanManual, withActiveSpan } from '@sentry/node';
+import { isObjectLike, addNonEnumerableProperty } from '@ichnois/core';
+import type { Span } from '@ichnois/node';
+import { getActiveSpan, startSpanManual, withActiveSpan } from '@ichnois/node';
 import type { MiddlewareWrapperOptions, TanStackMiddlewareBase } from '../common/types';
 import { getMiddlewareSpanOptions } from './utils';
 
@@ -94,7 +94,7 @@ function wrapMiddlewareWithSentry<T extends TanStackMiddlewareBase>(
  *
  * @example
  * ```ts
- * import { wrapMiddlewaresWithSentry } from '@sentry/tanstackstart-react';
+ * import { wrapMiddlewaresWithSentry } from '@ichnois/tanstackstart-react';
  *
  * const wrappedMiddlewares = wrapMiddlewaresWithSentry({
  *   authMiddleware,

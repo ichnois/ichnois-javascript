@@ -1,6 +1,6 @@
 import { URL_FULL, URL_PATH } from '@sentry/conventions/attributes';
-import * as core from '@sentry/core';
-import * as coreServer from '@sentry/core/server';
+import * as core from '@ichnois/core';
+import * as coreServer from '@ichnois/core/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   createSentryServerInstrumentation,
@@ -8,8 +8,8 @@ import {
 } from '../../src/server/createServerInstrumentation';
 import * as serverBuildModule from '../../src/server/serverBuild';
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     startSpan: vi.fn(),
@@ -24,7 +24,7 @@ vi.mock('@sentry/core', async () => {
   };
 });
 
-vi.mock('@sentry/core/server', () => ({
+vi.mock('@ichnois/core/server', () => ({
   flushIfServerless: vi.fn(),
 }));
 

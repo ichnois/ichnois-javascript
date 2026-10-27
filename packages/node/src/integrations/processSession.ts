@@ -1,4 +1,4 @@
-import { closeSession, defineIntegration, endSession, getIsolationScope, startSession } from '@sentry/core';
+import { closeSession, defineIntegration, endSession, getIsolationScope, startSession } from '@ichnois/core';
 
 const INTEGRATION_NAME = 'ProcessSession' as const;
 

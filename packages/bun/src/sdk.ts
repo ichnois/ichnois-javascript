@@ -1,5 +1,5 @@
 import * as os from 'node:os';
-import type { Integration, Options } from '@sentry/core';
+import type { Integration, Options } from '@ichnois/core';
 import {
   applySdkMetadata,
   conversationIdIntegration,
@@ -9,8 +9,8 @@ import {
   hasSpansEnabled,
   linkedErrorsIntegration,
   requestDataIntegration,
-} from '@sentry/core';
-import type { NodeClient } from '@sentry/node';
+} from '@ichnois/core';
+import type { NodeClient } from '@ichnois/node';
 import {
   consoleIntegration,
   contextLinesIntegration,
@@ -22,13 +22,13 @@ import {
   onUnhandledRejectionIntegration,
   processSessionIntegration,
   systemErrorIntegration,
-} from '@sentry/node';
+} from '@ichnois/node';
 import { bunServerIntegration } from './integrations/bunserver';
 import { fetchIntegration } from './integrations/fetch';
 import { makeFetchTransport } from './transports';
 import type { BunOptions } from './types';
 import { bunHttpServerIntegration } from './integrations/bunHttpServer';
-import { getErrorIntegrations, getTracingIntegrations } from '@sentry/server-utils';
+import { getErrorIntegrations, getTracingIntegrations } from '@ichnois/server-utils';
 
 /**
  * The tracing integrations for bun, added whenever spans are enabled. Most of them listen on
@@ -91,7 +91,7 @@ export function getDefaultIntegrations(options: Options): Integration[] {
  * @example
  * ```
  *
- * const { init } = require('@sentry/bun');
+ * const { init } = require('@ichnois/bun');
  *
  * init({
  *   dsn: '__DSN__',
@@ -102,7 +102,7 @@ export function getDefaultIntegrations(options: Options): Integration[] {
  * @example
  * ```
  *
- * const { addBreadcrumb } = require('@sentry/node');
+ * const { addBreadcrumb } = require('@ichnois/node');
  * addBreadcrumb({
  *   message: 'My Breadcrumb',
  *   // ...
@@ -112,7 +112,7 @@ export function getDefaultIntegrations(options: Options): Integration[] {
  * @example
  * ```
  *
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@ichnois/node');
  * Sentry.captureMessage('Hello, world!');
  * Sentry.captureException(new Error('Good bye'));
  * Sentry.captureEvent({

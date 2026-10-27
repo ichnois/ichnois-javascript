@@ -1,4 +1,4 @@
-import { debug, isNativeFunction } from '@sentry/core';
+import { debug, isNativeFunction } from '@ichnois/core';
 import { DEBUG_BUILD } from './debug-build';
 import { WINDOW } from './types';
 

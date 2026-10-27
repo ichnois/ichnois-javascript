@@ -14,15 +14,15 @@ import {
   SERVER_PORT,
 } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import type { Client, Scope, Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Client, Scope, Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import {
   _INTERNAL_setSpanForScope,
   getDefaultCurrentScope,
   getDefaultIsolationScope,
   GLOBAL_OBJ,
   setAsyncContextStrategy,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, type MockInstance, vi } from 'vitest';
 import { neonIntegration } from '../../src/integrations/neon';
 import { CHANNELS } from '../../src/orchestrion/channels';

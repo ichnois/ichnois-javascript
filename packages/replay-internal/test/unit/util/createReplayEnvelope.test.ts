@@ -1,5 +1,5 @@
-import type { ReplayEvent } from '@sentry/core';
-import { makeDsn } from '@sentry/core';
+import type { ReplayEvent } from '@ichnois/core';
+import { makeDsn } from '@ichnois/core';
 import { describe, expect, it } from 'vitest';
 import { createReplayEnvelope } from '../../../src/util/createReplayEnvelope';
 

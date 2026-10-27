@@ -7,14 +7,14 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { FUNCTION, HANDLER } from '@sentry/conventions/op';
-import type { SpanAttributes } from '@sentry/core';
+import type { SpanAttributes } from '@ichnois/core';
 import {
   getClient,
   hasSpanStreamingEnabled,
   REQUEST_HANDLER_SPAN_NAME_FALLBACK,
   startSpan,
   filterCollectedUrl,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { AnyFn } from './helpers';
 import { copyReflectMetadata, HTTP_ORIGIN, isWrapped, markWrapped } from './helpers';
 import { AttributeNames, NestType } from './enums';

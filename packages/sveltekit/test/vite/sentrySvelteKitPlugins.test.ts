@@ -25,7 +25,7 @@ vi.mock('fs', async () => {
 const orchestrionVite = vi.fn((options?: { buildTimeInstrumentation?: boolean }) => ({
   name: options?.buildTimeInstrumentation === false ? 'sentry-orchestrion-disabled' : 'sentry-orchestrion-vite',
 }));
-vi.mock('@sentry/server-utils/orchestrion/vite', () => ({
+vi.mock('@ichnois/server-utils/orchestrion/vite', () => ({
   sentryOrchestrionPlugin: (options?: { buildTimeInstrumentation?: boolean }) => orchestrionVite(options),
 }));
 
@@ -271,7 +271,7 @@ describe('OpenTelemetry API resolver plugin', () => {
     const { resolveId } = await getResolver('3.0.0-next.28');
 
     await expect(resolveId('@opentelemetry/api', '/app/node_modules/@sveltejs/kit/src/instance.js')).resolves.toEqual({
-      id: '@sentry/sveltekit/opentelemetry-api',
+      id: '@ichnois/sveltekit/opentelemetry-api',
       external: true,
     });
   });

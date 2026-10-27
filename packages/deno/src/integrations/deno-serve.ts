@@ -1,7 +1,7 @@
-import type { Client, Event, Integration, IntegrationFn, MaxRequestBodySize, Span } from '@sentry/core';
-import { debug, defineIntegration } from '@sentry/core';
-import type { AssertTrue, CheckServerRequestOptions, ServerRequestOptions } from '@sentry/core/server';
-import { DEFAULT_IGNORE_STATUS_CODES, processHttpServerTransactionEvent } from '@sentry/core/server';
+import type { Client, Event, Integration, IntegrationFn, MaxRequestBodySize, Span } from '@ichnois/core';
+import { debug, defineIntegration } from '@ichnois/core';
+import type { AssertTrue, CheckServerRequestOptions, ServerRequestOptions } from '@ichnois/core/server';
+import { DEFAULT_IGNORE_STATUS_CODES, processHttpServerTransactionEvent } from '@ichnois/core/server';
 import type { RequestHandlerWrapperOptions } from '../wrap-deno-request-handler';
 import { wrapDenoRequestHandler } from '../wrap-deno-request-handler';
 

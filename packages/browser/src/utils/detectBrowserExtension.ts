@@ -1,5 +1,5 @@
-import { getLocationHref } from '@sentry/browser-utils';
-import { consoleSandbox } from '@sentry/core';
+import { getLocationHref } from '@ichnois/browser-utils';
+import { consoleSandbox } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { WINDOW } from '../helpers';
 

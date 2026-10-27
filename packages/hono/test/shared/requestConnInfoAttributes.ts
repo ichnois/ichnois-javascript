@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { Hono, type MiddlewareHandler } from 'hono';
 import { vi } from 'vitest';
 

@@ -21,7 +21,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { QUEUE_PROCESS, QUEUE_PUBLISH, QUEUE_RECEIVE } from '@sentry/conventions/op';
-import type { Span, SpanAttributes, SpanLink } from '@sentry/core';
+import type { Span, SpanAttributes, SpanLink } from '@ichnois/core';
 import {
   getClient,
   getTraceData,
@@ -30,7 +30,7 @@ import {
   propagationContextFromHeaders,
   SPAN_STATUS_ERROR,
   startInactiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { KafkaMessage, Message } from './types';
 import {
   ATTR_MESSAGING_DESTINATION_PARTITION_ID,

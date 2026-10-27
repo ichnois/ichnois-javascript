@@ -10,7 +10,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import type { IntegrationFn, Span } from '@sentry/core';
+import type { IntegrationFn, Span } from '@ichnois/core';
 import {
   debug,
   defineIntegration,
@@ -18,7 +18,7 @@ import {
   hasSpanStreamingEnabled,
   SPAN_STATUS_ERROR,
   startInactiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { getSqlQuerySummary, sanitizeSqlQuery } from '../utils/sql';
 import {

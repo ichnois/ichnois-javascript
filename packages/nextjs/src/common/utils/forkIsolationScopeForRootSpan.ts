@@ -1,13 +1,13 @@
 import { context } from '@opentelemetry/api';
-import type { RawAttributes, Span } from '@sentry/core';
+import type { RawAttributes, Span } from '@ichnois/core';
 import {
   getCapturedScopesOnSpan,
   getCurrentScope,
   getIsolationScope,
   getRootSpan,
   setCapturedScopesOnSpan,
-} from '@sentry/core';
-import { getScopesFromContext } from '@sentry/opentelemetry';
+} from '@ichnois/core';
+import { getScopesFromContext } from '@ichnois/opentelemetry';
 import { ATTR_NEXT_SPAN_TYPE } from '../nextSpanAttributes';
 
 /**

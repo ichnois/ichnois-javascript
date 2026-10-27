@@ -1,5 +1,5 @@
-import type { CultureContext, IntegrationFn } from '@sentry/core';
-import { defineIntegration, safeSetSpanJSONAttributes } from '@sentry/core';
+import type { CultureContext, IntegrationFn } from '@ichnois/core';
+import { defineIntegration, safeSetSpanJSONAttributes } from '@ichnois/core';
 import { WINDOW } from '../helpers';
 
 const INTEGRATION_NAME = 'CultureContext' as const;
@@ -38,7 +38,7 @@ const _cultureContextIntegration = (() => {
  *
  * @example
  * ```js
- * import * as Sentry from '@sentry/browser';
+ * import * as Sentry from '@ichnois/browser';
  *
  * Sentry.init({
  *   integrations: [Sentry.cultureContextIntegration()],

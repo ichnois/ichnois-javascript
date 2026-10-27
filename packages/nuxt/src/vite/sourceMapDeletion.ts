@@ -1,4 +1,4 @@
-import { createSentryBuildPluginManager, globFiles, type Options } from '@sentry/bundler-plugins/core';
+import { createSentryBuildPluginManager, globFiles, type Options } from '@ichnois/bundler-plugins/core';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 

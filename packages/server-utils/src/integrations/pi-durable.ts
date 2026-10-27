@@ -1,6 +1,6 @@
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { IntegrationFn } from '@sentry/core';
-import { debug, defineIntegration, isObjectLike } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { debug, defineIntegration, isObjectLike } from '@ichnois/core';
 import type { PiDurableOptions } from '../ai/pi-durable';
 import { endRunsOnClose, instrumentPiDurableHarnessOptions } from '../ai/pi-durable';
 import { PI_DURABLE_INTEGRATION_NAME } from '../ai/pi-durable/constants';

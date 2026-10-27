@@ -1,7 +1,7 @@
 import * as diagnosticsChannel from 'node:diagnostics_channel';
-import { consoleSandbox } from '@sentry/core';
-import type { OrchestrionChannelContext } from '@sentry/server-utils';
-import { remixV3Channels } from '@sentry/server-utils/orchestrion/config';
+import { consoleSandbox } from '@ichnois/core';
+import type { OrchestrionChannelContext } from '@ichnois/server-utils';
+import { remixV3Channels } from '@ichnois/server-utils/orchestrion/config';
 import { addDebugIdToSourceMap, findDebugId, getDebugId, injectDebugIdSnippet } from './debugId';
 import { getShimUrl, isOrchestrionLoader, orchestrionLoader, resolveShimPath } from './orchestrionLoader';
 
@@ -48,7 +48,7 @@ interface CreateAssetServerContext extends OrchestrionChannelContext {
 const SOURCE_MAPPING_URL_REGEX = /\n\/\/# sourceMappingURL=\S+\s*$/;
 
 const MAX_STAMPED_BODIES = 2000;
-const SDK_PACKAGE = '@sentry/remix';
+const SDK_PACKAGE = '@ichnois/remix';
 
 let instrumented = false;
 

@@ -1,6 +1,6 @@
-import type { RequestEventData, SpanAttributes } from '@sentry/core';
-import { getIsolationScope, GLOBAL_OBJ } from '@sentry/core';
-import type * as VercelEdgeModule from '@sentry/vercel-edge';
+import type { RequestEventData, SpanAttributes } from '@ichnois/core';
+import { getIsolationScope, GLOBAL_OBJ } from '@ichnois/core';
+import type * as VercelEdgeModule from '@ichnois/vercel-edge';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { ATTR_NEXT_SPAN_TYPE } from '../../src/common/nextSpanAttributes';
 
@@ -11,8 +11,8 @@ type BeforeSamplingHandler = (data: { spanAttributes: SpanAttributes }) => void;
 
 let beforeSamplingHandler: BeforeSamplingHandler | undefined;
 
-vi.mock('@sentry/vercel-edge', async () => {
-  const actual = (await vi.importActual('@sentry/vercel-edge')) as typeof VercelEdgeModule;
+vi.mock('@ichnois/vercel-edge', async () => {
+  const actual = (await vi.importActual('@ichnois/vercel-edge')) as typeof VercelEdgeModule;
   return {
     ...actual,
     init: vi.fn(() => {

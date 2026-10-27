@@ -1,6 +1,6 @@
 import type { FastifyIntegration, FastifyReply, FastifyRequest } from './types';
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
-import { addNonEnumerableProperty, captureException, getClient } from '@sentry/core';
+import { addNonEnumerableProperty, captureException, getClient } from '@ichnois/core';
 import { defaultShouldHandleError, INTEGRATION_NAME } from './utils';
 
 // Marks a request whose error has already been captured, so the two code paths that surface the same

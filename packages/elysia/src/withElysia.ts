@@ -8,7 +8,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { HANDLER, HTTP_SERVER, MIDDLEWARE } from '@sentry/conventions/op';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   captureException,
   continueTrace,
@@ -27,7 +27,7 @@ import {
   withIsolationScope,
   filterCollectedUrl,
   HTTP_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { AnyElysia, Elysia, ErrorContext, TraceHandler, TraceListener } from 'elysia';
 
 /**
@@ -202,7 +202,7 @@ function instrumentLifecyclePhase(
  *
  * @example
  * ```javascript
- * import * as Sentry from '@sentry/elysia';
+ * import * as Sentry from '@ichnois/elysia';
  * import { Elysia } from 'elysia';
  *
  * Sentry.withElysia(new Elysia())

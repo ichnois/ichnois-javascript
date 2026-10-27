@@ -1,6 +1,6 @@
-import { getDefaultIntegrations as getBrowserDefaultIntegrations, init as initBrowser } from '@sentry/browser';
-import type { Client } from '@sentry/core';
-import { applySdkMetadata, DEFAULT_ENVIRONMENT, DEV_ENVIRONMENT } from '@sentry/core';
+import { getDefaultIntegrations as getBrowserDefaultIntegrations, init as initBrowser } from '@ichnois/browser';
+import type { Client } from '@ichnois/core';
+import { applySdkMetadata, DEFAULT_ENVIRONMENT, DEV_ENVIRONMENT } from '@ichnois/core';
 import type { SentryNuxtClientOptions } from '../common/types';
 
 /**

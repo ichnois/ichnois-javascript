@@ -15,7 +15,7 @@ import {
   type Span,
   spanToJSON,
   startInactiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { bindTracingChannelToSpan, type TracingChannelPayloadWithSpan } from '../../tracing-channel';
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
 import { setHttpServerSpanRouteAttribute } from '../../utils/setHttpServerSpanRouteAttribute';

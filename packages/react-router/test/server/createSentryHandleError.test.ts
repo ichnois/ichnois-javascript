@@ -1,14 +1,14 @@
-import * as core from '@sentry/core';
-import * as coreServer from '@sentry/core/server';
+import * as core from '@ichnois/core';
+import * as coreServer from '@ichnois/core/server';
 import type { ActionFunctionArgs, LoaderFunctionArgs } from 'react-router';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createSentryHandleError } from '../../src/server/createSentryHandleError';
 
-vi.mock('@sentry/core', () => ({
+vi.mock('@ichnois/core', () => ({
   captureException: vi.fn(),
 }));
 
-vi.mock('@sentry/core/server', () => ({
+vi.mock('@ichnois/core/server', () => ({
   flushIfServerless: vi.fn().mockResolvedValue(undefined),
 }));
 

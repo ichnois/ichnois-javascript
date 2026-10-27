@@ -1,8 +1,8 @@
 import type { SqlStorage } from '@cloudflare/workers-types';
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { DB_QUERY } from '@sentry/conventions/op';
-import { getActiveSpan, getClient, hasSpansEnabled, spanIsSampled, startSpan } from '@sentry/core';
-import { getSqlQuerySummary, sanitizeSqlQuery } from '@sentry/server-utils';
+import { getActiveSpan, getClient, hasSpansEnabled, spanIsSampled, startSpan } from '@ichnois/core';
+import { getSqlQuerySummary, sanitizeSqlQuery } from '@ichnois/server-utils';
 import type { CloudflareClientOptions } from '../client';
 import { mayTargetCloudflareInternalTable, targetsCloudflareInternalTable } from '../utils/internalSqlQuery';
 

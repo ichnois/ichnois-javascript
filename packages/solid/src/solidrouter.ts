@@ -5,7 +5,7 @@ import {
   getRootSpan,
   spanToJSON,
   startBrowserTracingNavigationSpan,
-} from '@sentry/browser';
+} from '@ichnois/browser';
 import {
   PARAMS_KEY_BASE,
   SENTRY_OP,
@@ -17,8 +17,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { NAVIGATION } from '@sentry/conventions/op';
-import type { Client, Integration, Span } from '@sentry/core';
-import { getClient, hasSpanStreamingEnabled, NAVIGATION_SPAN_NAME_FALLBACK, filterCollectedUrl } from '@sentry/core';
+import type { Client, Integration, Span } from '@ichnois/core';
+import { getClient, hasSpanStreamingEnabled, NAVIGATION_SPAN_NAME_FALLBACK, filterCollectedUrl } from '@ichnois/core';
 import type {
   BeforeLeaveEventArgs,
   HashRouter,

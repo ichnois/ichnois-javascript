@@ -1,10 +1,10 @@
-import type { IntegrationFn } from '@sentry/core';
-import { debug, defineIntegration, getCurrentScope, safeSetSpanJSONAttributes } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { debug, defineIntegration, getCurrentScope, safeSetSpanJSONAttributes } from '@ichnois/core';
 import { createRequire } from 'node:module';
 import { DEBUG_BUILD } from '../debug-build';
 import { parseHandlerString, resolveHandlerFile } from '../handlerResolution';
 
-const SHIM_MODULE_ID = '@sentry/aws-serverless/run-lambda-handler';
+const SHIM_MODULE_ID = '@ichnois/aws-serverless/run-lambda-handler';
 
 function resolveShimFile(): string | undefined {
   try {

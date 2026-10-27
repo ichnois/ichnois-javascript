@@ -1,5 +1,5 @@
-import { getRouteProvider, resolveRoute } from '@sentry/browser';
-import { getMainCarrier } from '@sentry/core';
+import { getRouteProvider, resolveRoute } from '@ichnois/browser';
+import { getMainCarrier } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { vueIntegration } from '../src/integration';
 import { init } from '../src/sdk';

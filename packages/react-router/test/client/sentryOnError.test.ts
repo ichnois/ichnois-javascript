@@ -1,5 +1,5 @@
-import * as SentryCore from '@sentry/core';
-import * as SentryReact from '@sentry/react';
+import * as SentryCore from '@ichnois/core';
+import * as SentryReact from '@ichnois/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { sentryOnError } from '../../src/client/sentryOnError';
 

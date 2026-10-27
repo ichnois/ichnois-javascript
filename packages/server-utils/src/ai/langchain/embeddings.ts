@@ -1,5 +1,5 @@
-import { getClient, hasSpanStreamingEnabled, startSpan, stringify } from '@sentry/core';
-import type { SpanAttributeValue } from '@sentry/core';
+import { getClient, hasSpanStreamingEnabled, startSpan, stringify } from '@ichnois/core';
+import type { SpanAttributeValue } from '@ichnois/core';
 import {
   GEN_AI_EMBEDDINGS_INPUT,
   GEN_AI_OPERATION_NAME,
@@ -114,7 +114,7 @@ export function instrumentEmbeddingMethod(
  *
  * @example
  * ```javascript
- * import * as Sentry from '@sentry/cloudflare';
+ * import * as Sentry from '@ichnois/cloudflare';
  * import { OpenAIEmbeddings } from '@langchain/openai';
  *
  * const embeddings = Sentry.instrumentLangChainEmbeddings(

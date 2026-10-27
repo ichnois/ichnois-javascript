@@ -1,7 +1,7 @@
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
 import type { TracingChannelSubscribers } from 'node:diagnostics_channel';
-import type { IntegrationFn, Span } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { IntegrationFn, Span } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
 import type { OrchestrionChannelContext } from '../../orchestrion/types';
 import { CHANNELS } from '../../orchestrion/channels';
 import { kafkajsModuleNames } from '../../orchestrion/config/kafkajs';

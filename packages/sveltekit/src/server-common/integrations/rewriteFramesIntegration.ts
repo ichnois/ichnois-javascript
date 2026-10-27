@@ -1,4 +1,4 @@
-import type { IntegrationFn, StackFrame } from '@sentry/core';
+import type { IntegrationFn, StackFrame } from '@ichnois/core';
 import {
   basename,
   defineIntegration,
@@ -6,7 +6,7 @@ import {
   GLOBAL_OBJ,
   join,
   rewriteFramesIntegration as originalRewriteFramesIntegration,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { WRAPPED_MODULE_SUFFIX } from '../../common/utils';
 import type { GlobalWithSentryValues } from '../../vite/injectGlobalValues';
 

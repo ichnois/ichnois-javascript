@@ -2,8 +2,8 @@
 /**
  * Shared utils for AI integrations (OpenAI, Anthropic, Verce.AI, etc.)
  */
-import { getClient, isObjectLike, isThenable, stringify } from '@sentry/core';
-import type { Span } from '@sentry/core';
+import { getClient, isObjectLike, isThenable, stringify } from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import {
   GEN_AI_OUTPUT_MESSAGES,
   GEN_AI_RESPONSE_FINISH_REASONS,

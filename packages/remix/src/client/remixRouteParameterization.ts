@@ -1,4 +1,4 @@
-import { debug, GLOBAL_OBJ } from '@sentry/core';
+import { debug, GLOBAL_OBJ } from '@ichnois/core';
 import type { RouteManifest } from '../config/remixRouteManifest';
 import { DEBUG_BUILD } from '../utils/debug-build';
 

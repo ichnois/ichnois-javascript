@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { debug } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { debug } from '@ichnois/core';
 import {
   GEN_AI_OPERATION_NAME,
   GEN_AI_PROVIDER_NAME,

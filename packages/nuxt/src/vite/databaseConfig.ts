@@ -1,5 +1,5 @@
 import { addNitroPlugin, createResolver } from '@nuxt/kit';
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@ichnois/core';
 import type { NitroConfig } from 'nitropack/types';
 import type { SentryNuxtModuleOptions } from '../common/types';
 import { addServerTemplate } from '../vendor/server-template';

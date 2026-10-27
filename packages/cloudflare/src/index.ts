@@ -21,7 +21,7 @@ export type {
   Metric,
   ExclusiveEventHintOrCaptureContext,
   CaptureContext,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export type { CloudflareOptions } from './client';
 
@@ -109,10 +109,10 @@ export {
   // oxlint-disable-next-line typescript/no-deprecated
   withStreamedSpan,
   spanStreamingIntegration,
-} from '@sentry/core';
-export { trpcMiddleware, wrapMcpServerWithSentry } from '@sentry/core/server';
-export { createFlueInstrumentation, instrumentPostgresJsSql } from '@sentry/server-utils';
-export type { FlueOptions } from '@sentry/server-utils';
+} from '@ichnois/core';
+export { trpcMiddleware, wrapMcpServerWithSentry } from '@ichnois/core/server';
+export { createFlueInstrumentation, instrumentPostgresJsSql } from '@ichnois/server-utils';
+export type { FlueOptions } from '@ichnois/server-utils';
 
 export { withSentry } from './withSentry';
 export { defineCloudflareOptions } from './defineCloudflareOptions';
@@ -125,7 +125,7 @@ export { _INTERNAL_wrapRequestHandler, getDefaultIntegrations } from './sdk';
 
 export { httpServerIntegration } from './integrations/httpServer';
 export { fetchIntegration } from './integrations/fetch';
-export type { FetchIntegrationOptions } from '@sentry/core';
+export type { FetchIntegrationOptions } from '@ichnois/core';
 export { spotlightIntegration } from './integrations/spotlight';
 export { cronTriggersIntegration } from './integrations/cronTriggers';
 export type { CronTriggerMonitorSettings, CronTriggersOptions } from './integrations/cronTriggers';
@@ -150,7 +150,7 @@ export {
   eveConversationHook,
   eveIntegration,
   getInstrumentedModuleNames,
-} from '@sentry/server-utils';
+} from '@ichnois/server-utils';
 
 // The orchestrion channel integrations. When the `@sentry/cloudflare/vite`
 // plugin bundles an instrumented package, the SDK adds the matching
@@ -192,8 +192,8 @@ export {
   tediousIntegration,
   togetherAIIntegration,
   typesafeIntegration,
-} from '@sentry/server-utils';
+} from '@ichnois/server-utils';
 
 export { instrumentWorkflowWithSentry } from './workflows';
 
-export { setAsyncLocalStorageAsyncContextStrategy } from '@sentry/server-utils/no-diagnostic-channels';
+export { setAsyncLocalStorageAsyncContextStrategy } from '@ichnois/server-utils/no-diagnostic-channels';

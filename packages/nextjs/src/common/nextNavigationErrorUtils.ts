@@ -1,4 +1,4 @@
-import { isError } from '@sentry/core';
+import { isError } from '@ichnois/core';
 
 // Next.js nests the "real" reason in `cause` when an error crosses certain boundaries, and
 // `unstable_rethrow` walks that chain. The cap guards against self-referencing causes.

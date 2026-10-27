@@ -1,9 +1,9 @@
-import type { IntegrationFn, StackFrame } from '@sentry/core';
+import type { IntegrationFn, StackFrame } from '@ichnois/core';
 import {
   defineIntegration,
   escapeStringForRegex,
   rewriteFramesIntegration as originalRewriteFramesIntegration,
-} from '@sentry/core';
+} from '@ichnois/core';
 import * as path from 'path';
 
 const globalWithInjectedValues = global as typeof global & {

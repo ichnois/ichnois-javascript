@@ -1,5 +1,5 @@
-import { debug, dsnFromString, GLOBAL_OBJ } from '@sentry/core';
-import type { BrowserOptions } from '@sentry/react';
+import { debug, dsnFromString, GLOBAL_OBJ } from '@ichnois/core';
+import type { BrowserOptions } from '@ichnois/react';
 import { DEBUG_BUILD } from '../common/debug-build';
 import type { TunnelRouteMode } from '../common/utils/tunnelPathnameMatch';
 

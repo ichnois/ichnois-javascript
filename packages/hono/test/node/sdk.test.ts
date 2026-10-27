@@ -1,18 +1,18 @@
-import * as SentryCore from '@sentry/core';
-import { SDK_VERSION } from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
+import { SDK_VERSION } from '@ichnois/core';
 import { beforeEach, describe, expect, it, type Mock, vi } from 'vitest';
 import { init } from '../../src/node/sdk';
 import { LOW_QUALITY_TRANSACTION_PATTERNS } from '../../src/shared/lowQualityTransactionPatterns';
 
-vi.mock('@sentry/node', () => ({
+vi.mock('@ichnois/node', () => ({
   init: vi.fn().mockReturnValue({/* fake client returned by node init */}),
 }));
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-const { init: initNodeMock } = await vi.importMock<typeof import('@sentry/node')>('@sentry/node');
+const { init: initNodeMock } = await vi.importMock<typeof import('@ichnois/node')>('@ichnois/node');
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment

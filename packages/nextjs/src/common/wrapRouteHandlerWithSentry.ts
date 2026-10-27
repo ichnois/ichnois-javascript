@@ -1,4 +1,4 @@
-import type { RequestEventData } from '@sentry/core';
+import type { RequestEventData } from '@ichnois/core';
 import {
   captureException,
   getActiveSpan,
@@ -14,7 +14,7 @@ import {
   winterCGHeadersToDict,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   getAuthInterruptStatusCode,
   isNotFoundNavigationError,

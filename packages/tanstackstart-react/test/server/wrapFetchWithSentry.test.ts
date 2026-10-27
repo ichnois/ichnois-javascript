@@ -5,7 +5,7 @@ const flushIfServerlessSpy = vi.fn().mockResolvedValue(undefined);
 
 const captureExceptionSpy = vi.fn();
 
-vi.mock('@sentry/node', async importOriginal => {
+vi.mock('@ichnois/node', async importOriginal => {
   const original = await importOriginal();
   return {
     ...original,
@@ -23,7 +23,7 @@ const getTraceMetaTagsSpy = vi
 // Span streaming is the default trace lifecycle; `undefined` stands for a not-yet-initialized SDK.
 const getClientSpy = vi.fn<() => { getOptions: () => { traceLifecycle: string } } | undefined>(() => undefined);
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const original = await importOriginal();
   return {
     ...original,
@@ -32,7 +32,7 @@ vi.mock('@sentry/core', async importOriginal => {
   };
 });
 
-vi.mock('@sentry/core/server', async importOriginal => {
+vi.mock('@ichnois/core/server', async importOriginal => {
   const original = await importOriginal();
   return {
     ...original,

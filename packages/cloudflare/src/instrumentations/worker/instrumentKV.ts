@@ -10,7 +10,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { CACHE_GET, CACHE_PUT, CACHE_REMOVE } from '@sentry/conventions/op';
-import { CACHE_OPERATION_NAMES, isObjectLike, startSpan } from '@sentry/core';
+import { CACHE_OPERATION_NAMES, isObjectLike, startSpan } from '@ichnois/core';
 
 const ORIGIN = 'auto.cache.cloudflare.kv';
 

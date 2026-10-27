@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import * as core from '@sentry/core';
+import * as core from '@ichnois/core';
 import { collectGraphqlDocument } from '../../../src/integrations/graphql/utils';
 import type { GraphqlDocumentNode } from '../../../src/integrations/graphql/types';
 

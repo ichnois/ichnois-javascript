@@ -1,11 +1,11 @@
-import { getActiveSpan, getTraceData } from '@sentry/core';
-import { isNodeEnv } from '@sentry/core/server';
+import { getActiveSpan, getTraceData } from '@ichnois/core';
+import { isNodeEnv } from '@ichnois/core/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   generateSentryServerTimingHeader,
   injectServerTimingHeaderValue,
 } from '../../src/server/serverTimingTracePropagation';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 
 const mockSpan = {
   spanId: 'test-span-id',
@@ -16,7 +16,7 @@ const mockRootSpan = {
   spanContext: () => ({ traceId: '12345678901234567890123456789012' }),
 };
 
-vi.mock('@sentry/core', () => ({
+vi.mock('@ichnois/core', () => ({
   debug: {
     log: vi.fn(),
     warn: vi.fn(),
@@ -31,7 +31,7 @@ vi.mock('@sentry/core', () => ({
   spanToBaggageHeader: vi.fn(() => 'sentry-environment=production,sentry-release=1.0.0'),
 }));
 
-vi.mock('@sentry/core/server', () => ({
+vi.mock('@ichnois/core/server', () => ({
   isNodeEnv: vi.fn(() => true),
 }));
 

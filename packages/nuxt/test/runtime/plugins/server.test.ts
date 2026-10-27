@@ -1,8 +1,8 @@
-import { getTraceMetaTags } from '@sentry/core';
+import { getTraceMetaTags } from '@ichnois/core';
 import { afterEach, describe, expect, it, type Mock, vi } from 'vitest';
 import { addSentryTracingMetaTags } from '../../../src/runtime/utils';
 
-vi.mock(import('@sentry/core'), async importOriginal => {
+vi.mock(import('@ichnois/core'), async importOriginal => {
   const mod = await importOriginal();
   return {
     ...mod,

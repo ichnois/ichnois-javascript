@@ -276,7 +276,7 @@ export function makeOrchestrionLoader(outputFolder) {
     );
   }
 
-  const requiredDep = '@sentry/server-runtime-injection';
+  const requiredDep = '@ichnois/server-runtime-injection';
   const foundRequiredDep =
     Object.keys(packageDotJSON.dependencies ?? {}).some(key => {
       return key === requiredDep;

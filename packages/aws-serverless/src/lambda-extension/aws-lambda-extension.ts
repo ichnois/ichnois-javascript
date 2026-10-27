@@ -7,7 +7,7 @@ import {
   dsnToString,
   getEnvelopeEndpointWithUrlEncodedAuth,
   makeDsn,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from './debug-build';
 
 /**

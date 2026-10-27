@@ -3,7 +3,7 @@ import {
   addInpInstrumentationHandler,
   addLcpInstrumentationHandler,
   addPerformanceInstrumentationHandler,
-} from '@sentry/browser-utils';
+} from '@ichnois/browser-utils';
 import type { ReplayContainer } from '../types';
 import {
   getCumulativeLayoutShift,

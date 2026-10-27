@@ -205,7 +205,7 @@ export function applyAutoInstrumentTransforms(
     ms.prepend(buildMergedOptionsDeclaration(sameWorkerBindings, ctx.optionsFn, state));
   }
   if (ctx.optionsImport) ms.prepend(ctx.optionsImport);
-  ms.prepend(`import * as __SENTRY__ from '${ctx.sentryModule ?? '@sentry/cloudflare'}';\n`);
+  ms.prepend(`import * as __SENTRY__ from '${ctx.sentryModule ?? '@ichnois/cloudflare'}';\n`);
 
   return {
     code: ms.toString(),

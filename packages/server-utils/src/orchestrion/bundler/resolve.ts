@@ -8,7 +8,7 @@ import { createRequire } from 'node:module';
  * the importing package's location under isolated installs (pnpm), so every
  * bundler plugin gives it build-time resolution help.
  */
-export const SNIPPET_IMPORT_SPECIFIER = '@sentry/server-utils';
+export const SNIPPET_IMPORT_SPECIFIER = '@ichnois/server-utils';
 
 /** esbuild `onResolve` filter matching the snippet import specifier exactly. */
 export const SNIPPET_IMPORT_SPECIFIER_FILTER = /^@sentry\/server-utils$/;
@@ -32,7 +32,7 @@ function getOrchestrionRequire(): ReturnType<typeof createRequire> {
  * are bundled devDependencies and not resolvable on user installs.
  */
 export function getOrchestrionLoaderPath(): string {
-  return getOrchestrionRequire().resolve('@sentry/server-utils/orchestrion/webpack-loader');
+  return getOrchestrionRequire().resolve('@ichnois/server-utils/orchestrion/webpack-loader');
 }
 
 /**

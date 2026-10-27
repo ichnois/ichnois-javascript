@@ -1,4 +1,4 @@
-import { defineIntegration } from '@sentry/core';
+import { defineIntegration } from '@ichnois/core';
 
 /**
  * Shim for the edge build so named imports from `@sentry/nextjs` stay resolvable in

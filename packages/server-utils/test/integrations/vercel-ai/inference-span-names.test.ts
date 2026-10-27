@@ -1,4 +1,4 @@
-import { setCurrentClient, spanToJSON } from '@sentry/core';
+import { setCurrentClient, spanToJSON } from '@ichnois/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { createSpanFromMessage } from '../../../src/integrations/vercel-ai/vercel-ai-dc-subscriber';
 import { getDefaultTestClientOptions, TestClient } from '../../mocks/client';

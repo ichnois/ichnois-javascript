@@ -1,8 +1,8 @@
-import type { Integration } from '@sentry/core';
-import { getMainCarrier } from '@sentry/core';
-import type { NodeClient } from '@sentry/node';
-import * as SentryNode from '@sentry/node';
-import { SDK_VERSION } from '@sentry/node';
+import type { Integration } from '@ichnois/core';
+import { getMainCarrier } from '@ichnois/core';
+import type { NodeClient } from '@ichnois/node';
+import * as SentryNode from '@ichnois/node';
+import { SDK_VERSION } from '@ichnois/node';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import * as LowQualityModule from '../../src/server/integration/lowQualityTransactionsFilterIntegration';
 import { init as reactRouterInit } from '../../src/server/sdk';

@@ -1,4 +1,4 @@
-import type { Client, Event, EventHint, IntegrationFn } from '@sentry/core';
+import type { Client, Event, EventHint, IntegrationFn } from '@ichnois/core';
 import {
   _INTERNAL_addFeatureFlagToActiveSpan,
   _INTERNAL_copyFlagsFromScopeToEvent,
@@ -6,7 +6,7 @@ import {
   debug,
   defineIntegration,
   fill,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../../../debug-build';
 import type { UnleashClient, UnleashClientClass } from './types';
 
@@ -22,7 +22,7 @@ type UnleashIntegrationOptions = {
  * @example
  * ```
  * import { UnleashClient } from 'unleash-proxy-client';
- * import * as Sentry from '@sentry/browser';
+ * import * as Sentry from '@ichnois/browser';
  *
  * Sentry.init({
  *   dsn: '___PUBLIC_DSN___',

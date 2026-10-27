@@ -3,7 +3,7 @@
 // CJS entry here would fail at resolution time (ERR_PACKAGE_PATH_NOT_EXPORTED).
 // The CJS rollup variant still emits this file, but `package.json` doesn't
 // expose it — same setup as `@sentry/server-utils/orchestrion/vite` itself.
-import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/vite';
+import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/vite';
 import { sentryCloudflareAutoInstrumentPlugin } from './autoInstrument';
 import { sentryFlueRuntimeProviderPlugin } from './flueRuntime';
 import { sentryMastraObservabilityProviderPlugin } from './mastraObservability';
@@ -75,7 +75,7 @@ export interface SentryCloudflareVitePluginOptions {
  * ```ts
  * // vite.config.ts
  * import { cloudflare } from '@cloudflare/vite-plugin';
- * import { sentryCloudflareVitePlugin } from '@sentry/cloudflare/vite';
+ * import { sentryCloudflareVitePlugin } from '@ichnois/cloudflare/vite';
  * import { defineConfig } from 'vite';
  *
  * export default defineConfig({
@@ -89,7 +89,7 @@ export function sentryCloudflareVitePlugin(options: SentryCloudflareVitePluginOp
       buildTimeInstrumentation: options.buildTimeInstrumentation,
       // Route the injected `tracingChannel` imports through the workerd-safe façade so a
       // dependency wrapped at module scope (`const app = new Hono()`) doesn't throw on workerd.
-      dcModule: '@sentry/cloudflare/orchestrion-diagnostics-channel',
+      dcModule: '@ichnois/cloudflare/orchestrion-diagnostics-channel',
     }),
     sentryMastraObservabilityProviderPlugin(),
     sentryFlueRuntimeProviderPlugin(),

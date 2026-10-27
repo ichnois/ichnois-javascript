@@ -1,5 +1,5 @@
-import { setContext } from '@sentry/core';
-import { setTimeout } from '@sentry/browser-utils';
+import { setContext } from '@ichnois/core';
+import { setTimeout } from '@ichnois/browser-utils';
 import { RETRY_BASE_INTERVAL, RETRY_MAX_COUNT, UNABLE_TO_SEND_REPLAY } from '../constants';
 import type { SendReplayData } from '../types';
 import { RateLimitError, sendReplayRequest, TransportStatusCodeError } from './sendReplayRequest';

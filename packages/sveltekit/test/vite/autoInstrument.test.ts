@@ -73,7 +73,7 @@ describe('makeAutoInstrumentationPlugin()', () => {
       // @ts-expect-error this exists
       const loadResult = await plugin.load(path);
       expect(loadResult).toEqual(
-        'import { wrapLoadWithSentry } from "@sentry/sveltekit";' +
+        'import { wrapLoadWithSentry } from "@ichnois/sveltekit";' +
           `import * as userModule from "${path}?sentry-auto-wrap";` +
           'export const load = userModule.load ? wrapLoadWithSentry(userModule.load) : undefined;' +
           `export * from "${path}?sentry-auto-wrap";`,
@@ -113,7 +113,7 @@ describe('makeAutoInstrumentationPlugin()', () => {
       // @ts-expect-error this exists
       const loadResult = await plugin.load(path);
       expect(loadResult).toEqual(
-        'import { wrapServerLoadWithSentry } from "@sentry/sveltekit";' +
+        'import { wrapServerLoadWithSentry } from "@ichnois/sveltekit";' +
           `import * as userModule from "${path}?sentry-auto-wrap";` +
           'export const load = userModule.load ? wrapServerLoadWithSentry(userModule.load) : undefined;' +
           `export * from "${path}?sentry-auto-wrap";`,
@@ -183,7 +183,7 @@ describe('makeAutoInstrumentationPlugin()', () => {
         const loadResult = await plugin.load(path);
 
         expect(loadResult).toBe(
-          'import { wrapLoadWithSentry } from "@sentry/sveltekit";' +
+          'import { wrapLoadWithSentry } from "@ichnois/sveltekit";' +
             `import * as userModule from "${path}?sentry-auto-wrap";` +
             'export const load = userModule.load ? wrapLoadWithSentry(userModule.load) : undefined;' +
             `export * from "${path}?sentry-auto-wrap";`,
@@ -267,7 +267,7 @@ describe('makeAutoInstrumentationPlugin()', () => {
         const loadResult = await plugin.load(path);
 
         expect(loadResult).toBe(
-          'import { wrapServerLoadWithSentry } from "@sentry/sveltekit";' +
+          'import { wrapServerLoadWithSentry } from "@ichnois/sveltekit";' +
             `import * as userModule from "${path}?sentry-auto-wrap";` +
             'export const load = userModule.load ? wrapServerLoadWithSentry(userModule.load) : undefined;' +
             `export * from "${path}?sentry-auto-wrap";`,
@@ -313,7 +313,7 @@ describe('makeAutoInstrumentationPlugin()', () => {
       const loadResult = await plugin.load.call({ environment: { name: 'client' } }, path);
 
       expect(loadResult).toBe(
-        'import { wrapLoadWithSentry } from "@sentry/sveltekit";' +
+        'import { wrapLoadWithSentry } from "@ichnois/sveltekit";' +
           `import * as userModule from "${path}?sentry-auto-wrap";` +
           'export const load = userModule.load ? wrapLoadWithSentry(userModule.load) : undefined;' +
           `export * from "${path}?sentry-auto-wrap";`,
@@ -378,14 +378,14 @@ describe('canWrapLoad', () => {
     [
       'function declaration, sentry commented out',
       `import {something} from 'somewhere';
-       // import * as Sentry from '@sentry/sveltekit';
+       // import * as Sentry from '@ichnois/sveltekit';
        async function load(){};
        export { load }`,
     ],
     [
       'function declaration, sentry commented out',
       `import {something} from 'somewhere';
-       /* import * as Sentry from '@sentry/sveltekit'; */
+       /* import * as Sentry from '@ichnois/sveltekit'; */
        async function load(){};
        export { load }`,
     ],

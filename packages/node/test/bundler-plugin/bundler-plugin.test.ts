@@ -9,19 +9,19 @@ const orchestrionRollup = vi.fn(() => ({ name: 'sentry-orchestrion-rollup' }));
 const orchestrionEsbuildSetup = vi.fn();
 const orchestrionWebpackApply = vi.fn();
 
-vi.mock('@sentry/bundler-plugins/vite', () => ({ sentryVitePlugin: () => [{ name: 'sentry-vite' }] }));
-vi.mock('@sentry/bundler-plugins/rollup', () => ({ sentryRollupPlugin: () => [{ name: 'sentry-rollup' }] }));
-vi.mock('@sentry/bundler-plugins/esbuild', () => ({
+vi.mock('@ichnois/bundler-plugins/vite', () => ({ sentryVitePlugin: () => [{ name: 'sentry-vite' }] }));
+vi.mock('@ichnois/bundler-plugins/rollup', () => ({ sentryRollupPlugin: () => [{ name: 'sentry-rollup' }] }));
+vi.mock('@ichnois/bundler-plugins/esbuild', () => ({
   sentryEsbuildPlugin: () => ({ name: 'sentry-esbuild', setup: vi.fn() }),
 }));
-vi.mock('@sentry/bundler-plugins/webpack', () => ({ sentryWebpackPlugin: () => ({ apply: vi.fn() }) }));
+vi.mock('@ichnois/bundler-plugins/webpack', () => ({ sentryWebpackPlugin: () => ({ apply: vi.fn() }) }));
 
-vi.mock('@sentry/server-utils/orchestrion/vite', () => ({ sentryOrchestrionPlugin: () => orchestrionVite() }));
-vi.mock('@sentry/server-utils/orchestrion/rollup', () => ({ sentryOrchestrionPlugin: () => orchestrionRollup() }));
-vi.mock('@sentry/server-utils/orchestrion/esbuild', () => ({
+vi.mock('@ichnois/server-utils/orchestrion/vite', () => ({ sentryOrchestrionPlugin: () => orchestrionVite() }));
+vi.mock('@ichnois/server-utils/orchestrion/rollup', () => ({ sentryOrchestrionPlugin: () => orchestrionRollup() }));
+vi.mock('@ichnois/server-utils/orchestrion/esbuild', () => ({
   sentryOrchestrionPlugin: () => ({ name: 'sentry-orchestrion-esbuild', setup: orchestrionEsbuildSetup }),
 }));
-vi.mock('@sentry/server-utils/orchestrion/webpack', () => ({
+vi.mock('@ichnois/server-utils/orchestrion/webpack', () => ({
   sentryOrchestrionWebpackPlugin: () => ({ apply: orchestrionWebpackApply }),
 }));
 

@@ -25,7 +25,7 @@ vi.mock('fs', async requireActual => {
   };
 });
 
-vi.mock('@sentry/bundler-plugins/vite', () => ({
+vi.mock('@ichnois/bundler-plugins/vite', () => ({
   sentryVitePlugin: vi.fn(() => 'sentryVitePlugin'),
 }));
 
@@ -320,7 +320,7 @@ directory = "./dist"
         expect.objectContaining({
           vite: expect.objectContaining({
             ssr: expect.objectContaining({
-              noExternal: ['@sentry/astro', '@sentry/node'],
+              noExternal: ['@ichnois/astro', '@ichnois/node'],
             }),
           }),
         }),

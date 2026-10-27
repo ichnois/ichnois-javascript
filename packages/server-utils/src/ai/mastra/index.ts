@@ -1,4 +1,4 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   debug,
   flush as sentryFlush,
@@ -8,7 +8,7 @@ import {
   SPAN_STATUS_ERROR,
   startInactiveSpan,
   timestampInSeconds,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { GEN_AI_RESPONSE_MODEL, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { DEBUG_BUILD } from '../../debug-build';
 import type { GenAiOptions } from '../core/utils';

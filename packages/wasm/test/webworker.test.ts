@@ -1,5 +1,5 @@
-import type { DebugImage, StackFrame } from '@sentry/core';
-import { GLOBAL_OBJ } from '@sentry/core';
+import type { DebugImage, StackFrame } from '@ichnois/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { patchFrames, registerWebWorkerWasm } from '../src/index';
 import { IMAGES } from '../src/registry';

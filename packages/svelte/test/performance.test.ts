@@ -2,8 +2,8 @@
  * @vitest-environment jsdom
  */
 
-import type { TransactionEvent } from '@sentry/core';
-import { getMainCarrier, spanToJSON, UI_MOUNT_SPAN_NAME_FALLBACK } from '@sentry/core';
+import type { TransactionEvent } from '@ichnois/core';
+import { getMainCarrier, spanToJSON, UI_MOUNT_SPAN_NAME_FALLBACK } from '@ichnois/core';
 import { act, render } from '@testing-library/svelte';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getClient, init, startSpan } from '../src';

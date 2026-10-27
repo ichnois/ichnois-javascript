@@ -8,8 +8,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { FUNCTION, MIDDLEWARE, QUEUE_PROCESS } from '@sentry/conventions/op';
-import type { Span } from '@sentry/core';
-import { addNonEnumerableProperty, getClient, hasSpanStreamingEnabled, withActiveSpan } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { addNonEnumerableProperty, getClient, hasSpanStreamingEnabled, withActiveSpan } from '@ichnois/core';
 import type { CatchTarget, InjectableTarget, NextFunction, Observable, Subscription } from './types';
 
 /** A function of unknown signature, matching the methods/handlers we wrap. */

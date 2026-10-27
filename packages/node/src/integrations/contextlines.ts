@@ -1,7 +1,7 @@
 import { createReadStream } from 'node:fs';
 import { createInterface } from 'node:readline';
-import type { Event, IntegrationFn, StackFrame } from '@sentry/core';
-import { debug, defineIntegration, LRUMap, snipLine, stripUrlQueryAndFragment } from '@sentry/core';
+import type { Event, IntegrationFn, StackFrame } from '@ichnois/core';
+import { debug, defineIntegration, LRUMap, snipLine, stripUrlQueryAndFragment } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 
 const SOURCE_FILE_EXTENSION = /\.(?:[cm]?[jt]sx?|vue|svelte|astro|mdx)$/;

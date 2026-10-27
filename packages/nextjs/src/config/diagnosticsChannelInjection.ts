@@ -19,7 +19,7 @@ export const BUNDLE_SAFE_INSTRUMENTED_PACKAGES = ['ioredis'];
  * `@sentry/server-utils` (the barrel + bundler plugins) is NOT here — it is meant to be bundled; the
  * build-time snippet's `@sentry/server-utils` import is handled separately by the code-transform.
  */
-export const ORCHESTRION_RUNTIME_EXTERNAL_PACKAGES = ['@sentry/server-runtime-injection'];
+export const ORCHESTRION_RUNTIME_EXTERNAL_PACKAGES = ['@ichnois/server-runtime-injection'];
 
 // `require` anchored at THIS package (`@sentry/nextjs`), which depends on
 // `@sentry/server-runtime-injection` — so the resolvability check below works even under isolated
@@ -53,7 +53,7 @@ export function filterInstrumentedExternals(externals: string[], packagesToBundl
  * (see `scripts/buildRollup.ts`). Forwarding through `@sentry/nextjs`, always a direct dependency,
  * is what makes the emitted specifier both resolvable from `.next/server/**` and relocation-safe.
  */
-const ORCHESTRION_FORWARDER_PREFIX = '@sentry/nextjs/orchestrion-runtime/';
+const ORCHESTRION_FORWARDER_PREFIX = '@ichnois/nextjs/orchestrion-runtime/';
 
 /** The forwarder specifier mirroring `request`: `<pkg>/a/b` → `…/orchestrion-runtime/a/b`. */
 export function getOrchestrionForwarderSpecifier(request: string, externalPackage: string): string {

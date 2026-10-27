@@ -1,4 +1,4 @@
-import { defineIntegration } from '@sentry/core';
+import { defineIntegration } from '@ichnois/core';
 import { subscribeToNestChannels } from './orchestrion-subscriber';
 
 const INTEGRATION_NAME = 'Nest' as const;

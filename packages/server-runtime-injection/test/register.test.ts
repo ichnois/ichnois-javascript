@@ -1,4 +1,4 @@
-import type * as SentryCore from '@sentry/core';
+import type * as SentryCore from '@ichnois/core';
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import type * as NodeModule from 'node:module';
 import { tmpdir } from 'node:os';
@@ -45,12 +45,12 @@ vi.mock('@apm-js-collab/tracing-hooks/hook-sync.mjs', () => ({
 
 // Neutralise `consoleSandbox` (it swaps in the pristine console during its callback, which would
 // bypass a spy) so we can assert the always-on warning directly.
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const actual = await importOriginal<typeof SentryCore>();
   return { ...actual, consoleSandbox: (cb: () => unknown) => cb() };
 });
 
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import type * as RegisterModule from '../src/register';
 
 type DiagnosticsCallback = (event: { moduleName: string; error?: unknown }) => void;

@@ -1,5 +1,5 @@
-import type { RouteProvider } from '@sentry/browser';
-import { createUrlRouteProvider } from '@sentry/browser';
+import type { RouteProvider } from '@ichnois/browser';
+import { createUrlRouteProvider } from '@ichnois/browser';
 import type { Route } from './router';
 import type { Vue } from './types';
 

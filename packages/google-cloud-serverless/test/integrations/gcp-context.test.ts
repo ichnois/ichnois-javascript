@@ -1,11 +1,11 @@
-import type { StreamedSpanJSON } from '@sentry/core';
+import type { StreamedSpanJSON } from '@ichnois/core';
 import { describe, expect, test, vi } from 'vitest';
 import { gcpContextIntegration } from '../../src/integrations/gcp-context';
 
 const mockGetScopeData = vi.fn();
 
-vi.mock('@sentry/core', async () => {
-  const original = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const original = await vi.importActual('@ichnois/core');
   return {
     ...original,
     getCurrentScope: () => ({

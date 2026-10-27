@@ -140,7 +140,7 @@ const eventWithThirdPartyAndSentryInternalFrames: Event = {
           frames: [
             {
               colno: 2,
-              filename: '@sentry/browser/build/npm/esm/helpers.js',
+              filename: '@ichnois/browser/build/npm/esm/helpers.js',
               function: 'sentryWrapped',
               lineno: 117,
               context_line: '      return fn.apply(this, wrappedArguments);',
@@ -179,7 +179,7 @@ const eventWithThirdPartySentryInternalAndFirstPartyFrames: Event = {
             },
             {
               colno: 2,
-              filename: '@sentry/browser/build/npm/esm/helpers.js',
+              filename: '@ichnois/browser/build/npm/esm/helpers.js',
               function: 'sentryWrapped',
               lineno: 117,
               context_line: '      return fn.apply(this, wrappedArguments);',
@@ -449,7 +449,7 @@ describe('ThirdPartyErrorFilter', () => {
                   frames: [
                     {
                       colno: 2,
-                      filename: '@sentry/browser/build/npm/esm/helpers.js',
+                      filename: '@ichnois/browser/build/npm/esm/helpers.js',
                       function: 'sentryWrapped',
                       lineno: 117,
                       context_line: '      return fn.apply(this, wrappedArguments);',
@@ -493,7 +493,7 @@ describe('ThirdPartyErrorFilter', () => {
                   frames: [
                     {
                       colno: 2,
-                      filename: '@sentry/browser/build/npm/esm/helpers.js',
+                      filename: '@ichnois/browser/build/npm/esm/helpers.js',
                       function: 'sentryWrapped',
                       lineno: 117,
                       context_line: '      return fn.apply(this, wrappedArguments);',
@@ -537,7 +537,7 @@ describe('ThirdPartyErrorFilter', () => {
                   frames: [
                     {
                       colno: 2,
-                      filename: '@sentry/browser/build/npm/esm/helpers.js',
+                      filename: '@ichnois/browser/build/npm/esm/helpers.js',
                       function: 'sentryWrapped',
                       lineno: 115,
                       context_line: '      const wrappedArguments = args.map(arg => wrap(arg, options));',
@@ -588,7 +588,7 @@ describe('ThirdPartyErrorFilter', () => {
                     },
                     {
                       colno: 2,
-                      filename: '@sentry/browser/build/npm/esm/helpers.js',
+                      filename: '@ichnois/browser/build/npm/esm/helpers.js',
                       function: 'sentryWrapped',
                       lineno: 117,
                       context_line: '      return fn.apply(this, wrappedArguments);',

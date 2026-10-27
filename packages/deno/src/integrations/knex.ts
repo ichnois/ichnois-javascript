@@ -1,4 +1,4 @@
-import { knexIntegration } from '@sentry/server-utils';
+import { knexIntegration } from '@ichnois/server-utils';
 
 /**
  * Create spans for `knex` queries under Deno. Not a default; add it to

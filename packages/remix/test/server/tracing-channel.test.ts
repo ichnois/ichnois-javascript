@@ -1,6 +1,6 @@
 import { tracingChannel } from 'node:diagnostics_channel';
-import type { Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, type MockInstance, vi } from 'vitest';
 import {
   makeRequest,
@@ -8,7 +8,7 @@ import {
   setupRemixInstrumentation,
   teardownTestAsyncContextStrategy,
 } from './tracing-channel-test-utils';
-import { remixChannels } from '@sentry/server-utils/orchestrion/config';
+import { remixChannels } from '@ichnois/server-utils/orchestrion/config';
 
 describe('remixIntegration (Orchestrion-based)', () => {
   let startInactiveSpanSpy: MockInstance;

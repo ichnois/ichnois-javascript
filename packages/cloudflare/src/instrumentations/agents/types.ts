@@ -1,6 +1,6 @@
 import { GEN_AI_AGENT_NAME } from '@sentry/conventions/attributes';
 import type { DurableObjectStorage } from '@cloudflare/workers-types';
-import { debug, getCurrentScope, getIsolationScope, uuid4 } from '@sentry/core';
+import { debug, getCurrentScope, getIsolationScope, uuid4 } from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import type { InstrumentedDurableObjectState } from '../../wrapMethodWithSentry';
 

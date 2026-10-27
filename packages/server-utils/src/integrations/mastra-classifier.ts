@@ -1,5 +1,5 @@
 import { GEN_AI_INPUT_MESSAGES, GEN_AI_OUTPUT_MESSAGES } from '@sentry/conventions/attributes';
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 import type { ClassifierEvaluationCall } from '../ai/mastra/classifier-evaluation';
 import { processClassifierEvaluationData, setStartingClassifierEvaluation } from '../ai/mastra/classifier-evaluation';
 import { getEvaluationInputMessages, getEvaluationOutputMessages } from '../ai/core/utils';

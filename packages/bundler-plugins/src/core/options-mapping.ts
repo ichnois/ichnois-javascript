@@ -1,4 +1,4 @@
-import { getVercelEnv } from '@sentry/core';
+import { getVercelEnv } from '@ichnois/core';
 import type { Logger } from './logger';
 import type {
   Options as UserOptions,

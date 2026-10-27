@@ -1,6 +1,6 @@
-import { type BuildTimeOptionsBase, warnOnRemovedBuildOptions } from '@sentry/core';
-import { setupSentryNitroModule } from '@sentry/nitro';
-import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/vite';
+import { type BuildTimeOptionsBase, warnOnRemovedBuildOptions } from '@ichnois/core';
+import { setupSentryNitroModule } from '@ichnois/nitro';
+import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/vite';
 import type { Plugin, UserConfig } from 'vite';
 import { makeAddSentryVitePluginSolidStart2, makeEnableSourceMapsVitePlugin } from './sourceMaps';
 
@@ -17,7 +17,7 @@ export type SentrySolidStartOptions = BuildTimeOptionsBase;
  * @example
  * ```typescript
  * // vite.config.ts
- * import { sentrySolidStart } from '@sentry/solidstart/vite';
+ * import { sentrySolidStart } from '@ichnois/solidstart/vite';
  * import { solidStart } from '@solidjs/start/config';
  * import { nitro } from 'nitro/vite';
  * import { defineConfig } from 'vite';

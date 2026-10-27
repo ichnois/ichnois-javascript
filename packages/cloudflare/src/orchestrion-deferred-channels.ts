@@ -11,7 +11,7 @@
  * runtimes without `nodejs_compat` — there the queue is always empty (no channels were ever
  * injected) and the flush is a no-op.
  */
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 import { DEBUG_BUILD } from './debug-build';
 
 type Ctx = Record<string, unknown>;

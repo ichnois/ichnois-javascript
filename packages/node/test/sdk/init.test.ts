@@ -1,7 +1,7 @@
-import type { Integration } from '@sentry/core';
-import { debug, originalConsoleMethods, SDK_VERSION } from '@sentry/core';
-import * as SentryOpentelemetry from '@sentry/opentelemetry';
-import * as SentryServerUtils from '@sentry/server-utils';
+import type { Integration } from '@ichnois/core';
+import { debug, originalConsoleMethods, SDK_VERSION } from '@ichnois/core';
+import * as SentryOpentelemetry from '@ichnois/opentelemetry';
+import * as SentryServerUtils from '@ichnois/server-utils';
 import { afterEach, beforeEach, describe, expect, it, type Mock, type MockInstance, vi } from 'vitest';
 import { close, getClient, NodeClient } from '../../src/';
 import { init } from '../../src/sdk';

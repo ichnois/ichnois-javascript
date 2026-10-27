@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { GEN_AI_OUTPUT_MESSAGES } from '@sentry/conventions/attributes';
 import { GEN_AI_DECIDE } from '@sentry/conventions/op';
-import { getMainCarrier, setCurrentClient, spanToStaticSpanJSON } from '@sentry/core';
-import type { Span } from '@sentry/core';
+import { getMainCarrier, setCurrentClient, spanToStaticSpanJSON } from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import { instrumentOpenAiClient } from '../../../../src/ai/openai';
 import { getDefaultTestClientOptions, TestClient } from '../../../mocks/client';
 

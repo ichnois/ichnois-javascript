@@ -1,5 +1,5 @@
-import type { Integration, SpanJSON, SpanOrigin, StreamedSpanJSON } from '@sentry/core';
-import { safeSetSpanJSONAttributes } from '@sentry/core';
+import type { Integration, SpanJSON, SpanOrigin, StreamedSpanJSON } from '@ichnois/core';
+import { safeSetSpanJSONAttributes } from '@ichnois/core';
 import { SENTRY_DESCRIPTION, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { FUNCTION } from '@sentry/conventions/op';
 

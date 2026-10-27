@@ -1,4 +1,4 @@
-import type { BuildTimeOptionsBase } from '@sentry/core';
+import type { BuildTimeOptionsBase } from '@ichnois/core';
 
 /**
  *  Build options for the Sentry plugin. These options are used during build-time by the Sentry SDK.

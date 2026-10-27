@@ -13,7 +13,7 @@ export function buildSdkInitFileImportSnippet(filePath: string): string {
  * default options.
  */
 export function buildClientSnippet(options: SentryOptions): string {
-  return `import * as Sentry from "@sentry/astro";
+  return `import * as Sentry from "@ichnois/astro";
 
 Sentry.init({
   ${buildCommonInitOptions(options)}
@@ -28,7 +28,7 @@ Sentry.init({
  * default options.
  */
 export function buildServerSnippet(options: SentryOptions): string {
-  return `import * as Sentry from "@sentry/astro";
+  return `import * as Sentry from "@ichnois/astro";
 
 Sentry.init({
   ${buildCommonInitOptions(options)}

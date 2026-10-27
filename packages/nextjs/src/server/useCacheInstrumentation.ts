@@ -12,7 +12,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { CACHE_GET, CACHE_PUT } from '@sentry/conventions/op';
-import type { Span, SpanContextData } from '@sentry/core';
+import type { Span, SpanContextData } from '@ichnois/core';
 import {
   CACHE_OPERATION_NAMES,
   debug,
@@ -28,7 +28,7 @@ import {
   spanToTraceHeader,
   startSpan,
   timestampInSeconds,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { getCacheFunctionSourceFile } from './useCacheSourceFile';
 

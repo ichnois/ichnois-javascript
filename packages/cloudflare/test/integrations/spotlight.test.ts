@@ -1,9 +1,9 @@
-import type { Envelope, EventEnvelope } from '@sentry/core';
-import { createEnvelope, debug } from '@sentry/core';
+import type { Envelope, EventEnvelope } from '@ichnois/core';
+import { createEnvelope, debug } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { CloudflareClient } from '../../src/client';
 import { INTEGRATION_NAME, spotlightIntegration } from '../../src/integrations/spotlight';
-import { createStackParser } from '@sentry/core';
+import { createStackParser } from '@ichnois/core';
 
 function createTestClient(): CloudflareClient {
   return new CloudflareClient({

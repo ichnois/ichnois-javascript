@@ -13,7 +13,7 @@ import {
   type SpanAttributes,
   SPAN_STATUS_ERROR,
   startSpanManual,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { getSqlQuerySummary, sanitizeSqlQuery } from '../utils/sql';
 import {
@@ -71,7 +71,7 @@ const QUERY_FROM_INSTRUMENTED_SQL = Symbol.for('sentry.query.from.instrumented.s
  * @example
  * ```javascript
  * import postgres from 'postgres';
- * import * as Sentry from '@sentry/cloudflare'; // or '@sentry/deno'
+ * import * as Sentry from '@ichnois/cloudflare'; // or '@ichnois/deno'
  *
  * const sql = Sentry.instrumentPostgresJsSql(
  *   postgres({ host: 'localhost', database: 'mydb' })

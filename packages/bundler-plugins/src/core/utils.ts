@@ -9,7 +9,7 @@ import MagicString from 'magic-string';
 import {
   _INTERNAL_getReleaseFromCommitEnv as getReleaseFromCommitEnv,
   _INTERNAL_readCommitEnvVar as readCoreCommitEnvVar,
-} from '@sentry/core/server';
+} from '@ichnois/core/server';
 
 /**
  * Checks whether the given input is already an array, and if it isn't, wraps it in one.

@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { IntegrationFn, Span, SpanAttributes } from '@sentry/core';
+import type { IntegrationFn, Span, SpanAttributes } from '@ichnois/core';
 import {
   continueTrace,
   defineIntegration,
@@ -10,7 +10,7 @@ import {
   SPAN_STATUS_ERROR,
   startInactiveSpan,
   timestampInSeconds,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   MESSAGING_DESTINATION_NAME,
   MESSAGING_MESSAGE_ID,

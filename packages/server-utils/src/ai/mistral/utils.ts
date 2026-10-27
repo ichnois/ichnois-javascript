@@ -1,5 +1,5 @@
 /* eslint-disable typescript-eslint/no-deprecated */
-import type { Span, SpanAttributeValue } from '@sentry/core';
+import type { Span, SpanAttributeValue } from '@ichnois/core';
 import type { GenAiOutputMessage } from '../core/utils';
 import { setOutputMessagesAttribute } from '../core/utils';
 import {

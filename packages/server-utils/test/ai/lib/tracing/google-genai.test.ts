@@ -13,8 +13,8 @@ import {
   GEN_AI_SYSTEM_INSTRUCTIONS,
   GEN_AI_TOOL_DEFINITIONS,
 } from '@sentry/conventions/attributes';
-import { getMainCarrier, setCurrentClient, spanToStaticSpanJSON } from '@sentry/core';
-import type { Span } from '@sentry/core';
+import { getMainCarrier, setCurrentClient, spanToStaticSpanJSON } from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import { instrumentGoogleGenAIClient } from '../../../../src/ai/google-genai';
 import { getDefaultTestClientOptions, TestClient } from '../../../mocks/client';
 

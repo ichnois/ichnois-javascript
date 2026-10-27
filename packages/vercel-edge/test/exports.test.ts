@@ -1,4 +1,4 @@
-import { SentrySpan } from '@sentry/core';
+import { SentrySpan } from '@ichnois/core';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
   getIsolationScope,

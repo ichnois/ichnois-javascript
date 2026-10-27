@@ -6,8 +6,8 @@ import {
   SPAN_STATUS_ERROR,
   startSpan,
   startSpanManual,
-} from '@sentry/core';
-import type { Span } from '@sentry/core';
+} from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import { isReadableStream, resolveAIRecordingOptions } from '../core/utils';
 import { WORKERS_AI_INTEGRATION_NAME } from './constants';
 import { instrumentWorkersAiStream } from './streaming';

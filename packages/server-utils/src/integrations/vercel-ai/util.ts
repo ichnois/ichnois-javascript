@@ -1,6 +1,6 @@
 /** Shared, state-free helpers for the Vercel AI (`ai`) channel subscribers, plus the streamed model-call tap. */
 
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 
 /** Narrow to a string, or `undefined` for anything else. */
 export function asString(value: unknown): string | undefined {

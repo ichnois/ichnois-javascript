@@ -10,8 +10,8 @@ import {
   startInactiveSpan,
   stringify,
   withActiveSpan,
-} from '@sentry/core';
-import type { Span, SpanAttributeValue } from '@sentry/core';
+} from '@ichnois/core';
+import type { Span, SpanAttributeValue } from '@ichnois/core';
 import {
   GEN_AI_CONVERSATION_ID,
   GEN_AI_OPERATION_NAME,

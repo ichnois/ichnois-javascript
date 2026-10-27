@@ -1,4 +1,4 @@
-import type { Client, IntegrationFn, MaxRequestBodySize, Span } from '@sentry/core';
+import type { Client, IntegrationFn, MaxRequestBodySize, Span } from '@ichnois/core';
 import {
   captureBodyFromWinterCGRequest,
   defineIntegration,
@@ -6,9 +6,9 @@ import {
   hasSpansEnabled,
   parseStringToURLObject,
   safeCallback,
-} from '@sentry/core';
-import type { AssertTrue, CheckServerRequestOptions } from '@sentry/core/server';
-import { isStaticAssetRequest } from '@sentry/core/server';
+} from '@ichnois/core';
+import type { AssertTrue, CheckServerRequestOptions } from '@ichnois/core/server';
+import { isStaticAssetRequest } from '@ichnois/core/server';
 import { DEBUG_BUILD } from '../debug-build';
 
 const INTEGRATION_NAME = 'HttpServer' as const;

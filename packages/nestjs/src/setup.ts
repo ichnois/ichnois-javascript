@@ -8,7 +8,7 @@ import type {
 } from '@nestjs/common';
 import { Catch, Global, HttpException, Injectable, Logger, Module } from '@nestjs/common';
 import { APP_INTERCEPTOR, BaseExceptionFilter } from '@nestjs/core';
-import { captureException, debug, getDefaultIsolationScope, getIsolationScope, isObjectLike } from '@sentry/core';
+import { captureException, debug, getDefaultIsolationScope, getIsolationScope, isObjectLike } from '@ichnois/core';
 import type { Observable } from 'rxjs';
 import { isExpectedError, isWsOrRpcException } from './helpers';
 

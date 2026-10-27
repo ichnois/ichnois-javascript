@@ -1,5 +1,5 @@
 /* oxlint-disable max-lines */
-import { closeSession, DEFAULT_ENVIRONMENT, makeSession, setMeasurement, startSpan } from '@sentry/core';
+import { closeSession, DEFAULT_ENVIRONMENT, makeSession, setMeasurement, startSpan } from '@ichnois/core';
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as os from 'os';

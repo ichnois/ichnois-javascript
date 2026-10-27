@@ -1,7 +1,7 @@
 /**
  * @vitest-environment jsdom
  */
-import { getCurrentScope } from '@sentry/core';
+import { getCurrentScope } from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { buildFeedbackIntegration } from '../../src/core/integration';
 import { mockSdk } from './mockSdk';

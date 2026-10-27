@@ -4,14 +4,14 @@ import {
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
   WINDOW,
-} from '@sentry/browser';
-import type { Integration } from '@sentry/core';
+} from '@ichnois/browser';
+import type { Integration } from '@ichnois/core';
 import {
   filterCollectedUrl,
   hasSpanStreamingEnabled,
   NAVIGATION_SPAN_NAME_FALLBACK,
   PAGELOAD_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { VendoredTanstackRouter, VendoredTanstackRouterRouteMatch } from './vendor/tanstackrouter-types';
 import {
   PARAMS_KEY_BASE,

@@ -19,7 +19,7 @@ import {
   startBrowserTracingNavigationSpan,
   startInactiveSpan,
   getAbsoluteUrl,
-} from '@sentry/browser';
+} from '@ichnois/browser';
 import {
   SENTRY_SEGMENT_NAME_SOURCE,
   CODE_FUNCTION_NAME,
@@ -32,7 +32,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { FUNCTION, ROUTER } from '@sentry/conventions/op';
-import type { Integration, Span } from '@sentry/core';
+import type { Integration, Span } from '@ichnois/core';
 import {
   debug,
   hasSpanStreamingEnabled,
@@ -44,7 +44,7 @@ import {
   filterCollectedUrl,
   FUNCTION_SPAN_NAME_FALLBACK,
   UI_MOUNT_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { Observable } from 'rxjs';
 import { Subscription } from 'rxjs';
 import { filter, tap } from 'rxjs/operators';

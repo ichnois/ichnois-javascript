@@ -1,4 +1,4 @@
-import type { Client, HandlerDataError, Mechanism, WrappedFunction } from '@sentry/core';
+import type { Client, HandlerDataError, Mechanism, WrappedFunction } from '@ichnois/core';
 import {
   addExceptionMechanism,
   addExceptionTypeValue,
@@ -9,8 +9,8 @@ import {
   GLOBAL_OBJ,
   markFunctionWrapped,
   withScope,
-} from '@sentry/core';
-import { getLocationHref } from '@sentry/browser-utils';
+} from '@ichnois/core';
+import { getLocationHref } from '@ichnois/browser-utils';
 
 export const WINDOW = GLOBAL_OBJ as typeof GLOBAL_OBJ & Window;
 

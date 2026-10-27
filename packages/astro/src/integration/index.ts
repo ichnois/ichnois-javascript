@@ -1,6 +1,6 @@
-import { sentryVitePlugin } from '@sentry/bundler-plugins/vite';
-import { warnOnRemovedBuildOptions } from '@sentry/core';
-import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/vite';
+import { sentryVitePlugin } from '@ichnois/bundler-plugins/vite';
+import { warnOnRemovedBuildOptions } from '@ichnois/core';
+import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/vite';
 import type { AstroConfig, AstroIntegration, AstroIntegrationLogger } from 'astro';
 import * as fs from 'fs';
 import { createRequire } from 'module';
@@ -10,7 +10,7 @@ import { sentryCloudflareNodeWarningPlugin, sentryCloudflareVitePlugin } from '.
 import { buildClientSnippet, buildSdkInitFileImportSnippet, buildServerSnippet } from './snippets';
 import type { SentryOptions } from './types';
 
-const PKG_NAME = '@sentry/astro';
+const PKG_NAME = '@ichnois/astro';
 
 export const sentryAstro = (options: SentryOptions = {}): AstroIntegration => {
   return {
@@ -164,7 +164,7 @@ export const sentryAstro = (options: SentryOptions = {}): AstroIntegration => {
         if (isCloudflare) {
           try {
             const _require = createRequire(`${process.cwd()}/`);
-            _require.resolve('@sentry/cloudflare');
+            _require.resolve('@ichnois/cloudflare');
           } catch {
             logger.error(
               'You are using the Cloudflare adapter but `@sentry/cloudflare` is not installed. ' +
@@ -219,7 +219,7 @@ export const sentryAstro = (options: SentryOptions = {}): AstroIntegration => {
                   // @sentry/node is required in case we have 2 different @sentry/node
                   // packages installed in the same project.
                   // Ref: https://github.com/getsentry/sentry-javascript/issues/10121
-                  noExternal: ['@sentry/astro', '@sentry/node'],
+                  noExternal: ['@ichnois/astro', '@ichnois/node'],
                 },
               },
             });
@@ -234,7 +234,7 @@ export const sentryAstro = (options: SentryOptions = {}): AstroIntegration => {
         if (isSSR && shouldAddMiddleware) {
           addMiddleware({
             order: 'pre',
-            entrypoint: '@sentry/astro/middleware',
+            entrypoint: '@ichnois/astro/middleware',
           });
         }
       },

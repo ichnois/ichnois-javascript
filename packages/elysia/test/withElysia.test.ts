@@ -56,9 +56,9 @@ const mockGetTraceData = vi.fn(() => ({
   baggage: 'sentry-environment=test,sentry-trace_id=abc123',
 }));
 
-vi.mock('@sentry/core', async importActual => {
+vi.mock('@ichnois/core', async importActual => {
   // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-  const actual = await importActual<typeof import('@sentry/core')>();
+  const actual = await importActual<typeof import('@ichnois/core')>();
   return {
     ...actual,
     captureException: (...args: unknown[]) => mockCaptureException(...args),

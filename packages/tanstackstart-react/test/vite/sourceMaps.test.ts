@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { SentryVitePluginOptions } from '@sentry/bundler-plugins/vite';
+import type { SentryVitePluginOptions } from '@ichnois/bundler-plugins/vite';
 import type { Plugin, ResolvedConfig, UserConfig } from 'vite';
 import { mergeConfig } from 'vite';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -24,7 +24,7 @@ const sentryVitePluginSpy = vi.fn((options: SentryVitePluginOptions) => {
   return [mockedSentryVitePlugin];
 });
 
-vi.mock('@sentry/bundler-plugins/vite', () => ({
+vi.mock('@ichnois/bundler-plugins/vite', () => ({
   sentryVitePlugin: (options: SentryVitePluginOptions) => sentryVitePluginSpy(options),
 }));
 

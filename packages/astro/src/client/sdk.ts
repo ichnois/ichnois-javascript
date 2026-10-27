@@ -1,7 +1,7 @@
-import type { BrowserOptions } from '@sentry/browser';
-import { getDefaultIntegrations as getBrowserDefaultIntegrations, init as initBrowserSdk } from '@sentry/browser';
-import type { Client, Integration } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
+import type { BrowserOptions } from '@ichnois/browser';
+import { getDefaultIntegrations as getBrowserDefaultIntegrations, init as initBrowserSdk } from '@ichnois/browser';
+import type { Client, Integration } from '@ichnois/core';
+import { applySdkMetadata } from '@ichnois/core';
 import { browserTracingIntegration } from './browserTracingIntegration';
 import { createAstroRouteProvider } from './routeProvider';
 

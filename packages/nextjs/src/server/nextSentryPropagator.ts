@@ -1,6 +1,6 @@
 import type { Context, TextMapSetter, TracerProvider } from '@opentelemetry/api';
 import { propagation } from '@opentelemetry/api';
-import { SentryPropagator } from '@sentry/opentelemetry';
+import { SentryPropagator } from '@ichnois/opentelemetry';
 import { isPrerenderContext, markPrerendersOnTracerProvider } from './prerenderContext';
 
 /**

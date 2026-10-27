@@ -8,8 +8,8 @@ import {
   startSpan,
   startSpanManual,
   stringify,
-} from '@sentry/core';
-import type { Span, SpanAttributeValue } from '@sentry/core';
+} from '@ichnois/core';
+import type { Span, SpanAttributeValue } from '@ichnois/core';
 import {
   GEN_AI_EMBEDDINGS_INPUT,
   GEN_AI_INPUT_MESSAGES,
@@ -434,7 +434,7 @@ function createDeepProxy<T extends object>(target: T, currentPath = '', options:
  * @example
  * ```typescript
  * import { GoogleGenAI } from '@google/genai';
- * import { instrumentGoogleGenAIClient } from '@sentry/node';
+ * import { instrumentGoogleGenAIClient } from '@ichnois/node';
  *
  * const genAI = new GoogleGenAI({ apiKey: process.env.GOOGLE_GENAI_API_KEY });
  * const instrumentedClient = instrumentGoogleGenAIClient(genAI);

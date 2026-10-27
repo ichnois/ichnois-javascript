@@ -1,4 +1,4 @@
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 import type { FastifyReply, FastifyRequest } from './types';
 
 export const INTEGRATION_NAME = 'Fastify' as const;

@@ -7,7 +7,7 @@ import {
   getRootSpan,
   getTraceData,
   isThenable,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { IncomingMessage, ServerResponse } from 'http';
 import { TRANSACTION_ATTR_SENTRY_ROUTE_BACKFILL } from '../span-attributes-with-logic-attached';
 import { pagesRouterRequestToRequestData } from './pagesRouterRequestToRequestData';

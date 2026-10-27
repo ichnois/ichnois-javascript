@@ -1,4 +1,4 @@
-import { stringMatchesSomePattern } from '@sentry/core';
+import { stringMatchesSomePattern } from '@ichnois/core';
 
 /**
  * Cloudflare frameworks that build on Durable Objects (`agents`, `partyserver`, ...) also manage

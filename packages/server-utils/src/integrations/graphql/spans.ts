@@ -13,8 +13,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { GRAPHQL } from '@sentry/conventions/op';
-import type { Span } from '@sentry/core';
-import { getClient, hasSpanStreamingEnabled, SPAN_STATUS_ERROR, startInactiveSpan } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { getClient, hasSpanStreamingEnabled, SPAN_STATUS_ERROR, startInactiveSpan } from '@ichnois/core';
 import type { GraphqlDocumentNode } from './types';
 import { collectGraphqlDocument, getOperationSpanName, hasResultErrors, renameRootSpanWithOperation } from './utils';
 import {

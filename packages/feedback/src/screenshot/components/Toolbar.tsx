@@ -1,4 +1,4 @@
-import type { FeedbackInternalOptions } from '@sentry/core';
+import type { FeedbackInternalOptions } from '@ichnois/core';
 import type { h as hType, VNode } from 'preact';
 import type * as Hooks from 'preact/hooks';
 

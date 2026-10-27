@@ -1,6 +1,6 @@
-import type { Client } from '@sentry/core';
-import { createTransport, getMainCarrier, resolvedSyncPromise } from '@sentry/core';
-import { startIdleSpan, startInactiveSpan, startSpan, startSpanManual } from '@sentry/core/browser';
+import type { Client } from '@ichnois/core';
+import { createTransport, getMainCarrier, resolvedSyncPromise } from '@ichnois/core';
+import { startIdleSpan, startInactiveSpan, startSpan, startSpanManual } from '@ichnois/core/browser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { BrowserOptions } from '../../src';
 import { browserTracingIntegration, init } from '../../src';

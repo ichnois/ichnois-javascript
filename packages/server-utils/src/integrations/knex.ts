@@ -3,7 +3,7 @@
 /* oxlint-disable typescript/no-deprecated */
 
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { IntegrationFn, Span, SpanAttributes } from '@sentry/core';
+import type { IntegrationFn, Span, SpanAttributes } from '@ichnois/core';
 import {
   debug,
   defineIntegration,
@@ -14,7 +14,7 @@ import {
   startInactiveSpan,
   truncate,
   waitForTracingChannelBinding,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   DB_NAMESPACE,
   DB_OPERATION_NAME,

@@ -1,4 +1,4 @@
-import { startInactiveSpan } from '@sentry/core';
+import { startInactiveSpan } from '@ichnois/core';
 import { makeSentryTracer } from '../tracer';
 
 /**

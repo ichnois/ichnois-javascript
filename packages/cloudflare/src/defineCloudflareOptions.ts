@@ -21,7 +21,7 @@ import type { DefaultEnv, StrictCloudflareOptions } from './types';
  * @example
  * ```ts
  * // src/instrument.server.ts
- * import { defineCloudflareOptions } from '@sentry/cloudflare';
+ * import { defineCloudflareOptions } from '@ichnois/cloudflare';
  *
  * export default defineCloudflareOptions((env) => ({
  *   dsn: env.SENTRY_DSN,

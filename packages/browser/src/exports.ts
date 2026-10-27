@@ -20,7 +20,7 @@ export type {
   ExclusiveEventHintOrCaptureContext,
   Log,
   LogSeverityLevel,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export type { BrowserOptions } from './client';
 export type { LoaderSentry } from './loader-types';
@@ -76,7 +76,7 @@ export {
   withStaticSpan,
   // oxlint-disable-next-line typescript/no-deprecated
   withStreamedSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export {
   // oxlint-disable-next-line typescript/no-deprecated
@@ -84,7 +84,7 @@ export {
   // oxlint-disable-next-line typescript/no-deprecated
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export { WINDOW } from './helpers';
 export { BrowserClient } from './client';

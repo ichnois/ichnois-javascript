@@ -1,6 +1,6 @@
-import type { DynamicSamplingContext } from '@sentry/core';
-import { addEventProcessor, getClient } from '@sentry/core';
-import { addClickKeypressInstrumentationHandler, addHistoryInstrumentationHandler } from '@sentry/browser-utils';
+import type { DynamicSamplingContext } from '@ichnois/core';
+import { addEventProcessor, getClient } from '@ichnois/core';
+import { addClickKeypressInstrumentationHandler, addHistoryInstrumentationHandler } from '@ichnois/browser-utils';
 import { handleProcessSegmentSpan } from '../coreHandlers/handleProcessSegmentSpan';
 import { handleAfterSendEvent } from '../coreHandlers/handleAfterSendEvent';
 import { handleBeforeSendEvent } from '../coreHandlers/handleBeforeSendEvent';

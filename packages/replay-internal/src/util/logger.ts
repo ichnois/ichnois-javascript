@@ -1,5 +1,5 @@
-import type { ConsoleLevel, SeverityLevel } from '@sentry/core';
-import { addBreadcrumb, captureException, debug as coreDebug, severityLevelFromString } from '@sentry/core';
+import type { ConsoleLevel, SeverityLevel } from '@ichnois/core';
+import { addBreadcrumb, captureException, debug as coreDebug, severityLevelFromString } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 
 type ReplayConsoleLevels = Extract<ConsoleLevel, 'log' | 'warn' | 'error'>;

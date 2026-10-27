@@ -3,7 +3,7 @@ import { onCreateWebpackConfig } from '../gatsby-node';
 
 vi.hoisted(
   () =>
-    void mock('@sentry/bundler-plugins/webpack', {
+    void mock('@ichnois/bundler-plugins/webpack', {
       sentryWebpackPlugin: vi.fn().mockReturnValue({}),
     }),
 );
@@ -24,7 +24,7 @@ async function mock(mockedUri: string, stub: any) {
 
 describe('onCreateWebpackConfig', () => {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const { sentryWebpackPlugin } = require('@sentry/bundler-plugins/webpack');
+  const { sentryWebpackPlugin } = require('@ichnois/bundler-plugins/webpack');
   let originalNodeEnv: string | undefined;
 
   beforeAll(() => {

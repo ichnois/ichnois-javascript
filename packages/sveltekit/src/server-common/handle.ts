@@ -1,4 +1,4 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   continueTrace,
   debug,
@@ -18,8 +18,8 @@ import {
   winterCGRequestToRequestData,
   withIsolationScope,
   filterCollectedUrl,
-} from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+} from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import type { Handle, ResolveOptions } from '@sveltejs/kit';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { getTracePropagationData, sendErrorToSentry } from './utils';
@@ -275,7 +275,7 @@ async function instrumentHandle(
  * Usage:
  * ```
  * // src/hooks.server.ts
- * import { sentryHandle } from '@sentry/sveltekit';
+ * import { sentryHandle } from '@ichnois/sveltekit';
  *
  * export const handle = sentryHandle();
  *

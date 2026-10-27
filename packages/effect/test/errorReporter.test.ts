@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@effect/vitest';
-import type { Event } from '@sentry/core';
-import { getClient, getMainCarrier } from '@sentry/core';
+import type { Event } from '@ichnois/core';
+import { getClient, getMainCarrier } from '@ichnois/core';
 import { Cause, Data, Effect, ErrorReporter, Layer } from 'effect';
 import { afterEach, beforeEach, vi } from 'vitest';
 import * as sentryClient from '../src/index.client';

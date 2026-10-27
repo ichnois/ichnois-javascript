@@ -1,4 +1,4 @@
-import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/vite';
+import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/vite';
 import type { ConfigEnv, Plugin } from 'vite';
 import { makeConfigInjectorPlugin } from './makeConfigInjectorPlugin';
 import { makeCustomSentryVitePlugins } from './makeCustomSentryVitePlugins';

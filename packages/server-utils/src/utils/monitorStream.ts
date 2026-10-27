@@ -1,4 +1,4 @@
-import { isError } from '@sentry/core';
+import { isError } from '@ichnois/core';
 
 /** Monitor the source without reading ahead or treating cancellation as a source failure. */
 export function monitorStream(

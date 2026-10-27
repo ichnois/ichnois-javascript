@@ -1,6 +1,6 @@
 import type { ActionFunction, ActionFunctionArgs, LoaderFunction, LoaderFunctionArgs } from '@remix-run/node';
 import { isRouteErrorResponse } from '@remix-run/router';
-import type { RequestEventData, Span } from '@sentry/core';
+import type { RequestEventData, Span } from '@ichnois/core';
 import {
   addExceptionMechanism,
   captureException,
@@ -9,7 +9,7 @@ import {
   handleCallbackErrors,
   objectify,
   winterCGRequestToRequestData,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../utils/debug-build';
 import { resolveFormDataCapture } from '../utils/formData';
 import { storeFormDataKeys } from '../utils/utils';

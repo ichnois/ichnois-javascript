@@ -1,5 +1,5 @@
-import type { EventEnvelope, EventItem } from '@sentry/core';
-import { createEnvelope, createTransport, serializeEnvelope } from '@sentry/core';
+import type { EventEnvelope, EventItem } from '@ichnois/core';
+import { createEnvelope, createTransport, serializeEnvelope } from '@ichnois/core';
 import * as http from 'http';
 import * as https from 'https';
 import { afterEach, describe, expect, it, type Mock, vi } from 'vitest';
@@ -8,8 +8,8 @@ import { makeNodeTransport } from '../../src/transports';
 import type { HTTPModule, HTTPModuleRequestIncomingMessage } from '../../src/transports/http-module';
 import testServerCerts from './test-server-certs';
 
-vi.mock('@sentry/core', async () => {
-  const actualCore = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actualCore = await vi.importActual('@ichnois/core');
   return {
     ...actualCore,
     createTransport: vi.fn().mockImplementation(actualCore.createTransport),

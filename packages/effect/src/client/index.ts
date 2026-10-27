@@ -1,4 +1,4 @@
-import type { BrowserOptions } from '@sentry/browser';
+import type { BrowserOptions } from '@ichnois/browser';
 import type * as EffectLayer from 'effect/Layer';
 import { empty as emptyLayer, merge as mergeLayer, suspend as suspendLayer } from 'effect/Layer';
 import { makeSentryErrorReporterLayer } from '../errorReporter';
@@ -24,7 +24,7 @@ export type EffectClientLayerOptions = BrowserOptions;
  *
  * @example
  * ```typescript
- * import * as Sentry from '@sentry/effect/client';
+ * import * as Sentry from '@ichnois/effect/client';
  * import { Layer, Logger, LogLevel } from 'effect';
  *
  * const SentryLive = Layer.mergeAll(

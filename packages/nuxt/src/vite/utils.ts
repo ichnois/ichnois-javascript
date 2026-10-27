@@ -1,5 +1,5 @@
 import type { Nuxt } from '@nuxt/schema';
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@ichnois/core';
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'node:url';
@@ -238,5 +238,5 @@ export function addRuntimeInjectionTraceDep(nuxt: Nuxt, isNitroV3: boolean): voi
 
   // Nuxt types `nitro` against Nitro v2, which has no `traceDeps`.
   const nitroOptions = nuxt.options.nitro as { traceDeps?: (string | RegExp)[] };
-  nitroOptions.traceDeps = [...(nitroOptions.traceDeps ?? []), '@sentry/server-runtime-injection'];
+  nitroOptions.traceDeps = [...(nitroOptions.traceDeps ?? []), '@ichnois/server-runtime-injection'];
 }

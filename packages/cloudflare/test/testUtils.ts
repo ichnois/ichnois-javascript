@@ -1,5 +1,5 @@
 import { context, propagation, trace } from '@opentelemetry/api';
-import { getMainCarrier, setCurrentClient } from '@sentry/core';
+import { getMainCarrier, setCurrentClient } from '@ichnois/core';
 import { vi } from 'vitest';
 import { CloudflareClient, type CloudflareClientOptions } from '../src/client';
 import { _clearGlobalClientCache } from '../src/clientCache';

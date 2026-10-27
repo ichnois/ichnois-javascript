@@ -1,4 +1,4 @@
-import type { Client, IntegrationFn } from '@sentry/core';
+import type { Client, IntegrationFn } from '@ichnois/core';
 import {
   defineIntegration,
   hasSpanStreamingEnabled,
@@ -6,9 +6,9 @@ import {
   isString,
   spanToJSON,
   stringMatchesSomePattern,
-} from '@sentry/core';
-import type { FetchHint, XhrHint } from '@sentry/browser-utils';
-import { getBodyString, getFetchRequestArgBody, SENTRY_XHR_DATA_KEY } from '@sentry/browser-utils';
+} from '@ichnois/core';
+import type { FetchHint, XhrHint } from '@ichnois/browser-utils';
+import { getBodyString, getFetchRequestArgBody, SENTRY_XHR_DATA_KEY } from '@ichnois/browser-utils';
 import {
   GRAPHQL_DOCUMENT,
   GRAPHQL_OPERATION_NAME,

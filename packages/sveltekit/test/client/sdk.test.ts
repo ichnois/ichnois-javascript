@@ -1,7 +1,7 @@
-import type { BrowserClient } from '@sentry/svelte';
-import { getMainCarrier } from '@sentry/core';
-import * as SentrySvelte from '@sentry/svelte';
-import { getClient, SDK_VERSION } from '@sentry/svelte';
+import type { BrowserClient } from '@ichnois/svelte';
+import { getMainCarrier } from '@ichnois/core';
+import * as SentrySvelte from '@ichnois/svelte';
+import { getClient, SDK_VERSION } from '@ichnois/svelte';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { init } from '../../src/client';
 

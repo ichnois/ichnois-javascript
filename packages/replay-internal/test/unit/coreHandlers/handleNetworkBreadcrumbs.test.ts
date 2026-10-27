@@ -3,9 +3,9 @@
  */
 
 import '../../utils/mock-internal-setTimeout';
-import type { Breadcrumb, BreadcrumbHint, FetchBreadcrumbHint, XhrBreadcrumbHint } from '@sentry/core';
-import type { SentryWrappedXMLHttpRequest } from '@sentry/browser-utils';
-import { SENTRY_XHR_DATA_KEY } from '@sentry/browser-utils';
+import type { Breadcrumb, BreadcrumbHint, FetchBreadcrumbHint, XhrBreadcrumbHint } from '@ichnois/core';
+import type { SentryWrappedXMLHttpRequest } from '@ichnois/browser-utils';
+import { SENTRY_XHR_DATA_KEY } from '@ichnois/browser-utils';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { NETWORK_BODY_MAX_SIZE } from '../../../src/constants';
 import { beforeAddNetworkBreadcrumb } from '../../../src/coreHandlers/handleNetworkBreadcrumbs';

@@ -1,7 +1,7 @@
 import type { ActionFunctionArgs, LoaderFunctionArgs, ServerBuild } from '@remix-run/node';
 import type { AgnosticRouteObject } from '@remix-run/router';
-import type { Span, TransactionSource } from '@sentry/core';
-import { debug } from '@sentry/core';
+import type { Span, TransactionSource } from '@ichnois/core';
+import { debug } from '@ichnois/core';
 import { DEBUG_BUILD } from './debug-build';
 import type { FormDataCapture } from './formData';
 import { applyFormDataAttributes } from './formData';

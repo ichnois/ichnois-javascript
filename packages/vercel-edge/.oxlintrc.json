@@ -4,7 +4,7 @@
   "jsPlugins": [
     {
       "name": "sdk",
-      "specifier": "@sentry/eslint-plugin-sdk"
+      "specifier": "@ichnois/eslint-plugin-sdk"
     }
   ],
   "env": {

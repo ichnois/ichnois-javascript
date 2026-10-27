@@ -1,7 +1,7 @@
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createLoadHookTransform } from '@sentry/server-utils/orchestrion/load-hook';
-import { remixV3Config } from '@sentry/server-utils/orchestrion/config';
+import { createLoadHookTransform } from '@ichnois/server-utils/orchestrion/load-hook';
+import { remixV3Config } from '@ichnois/server-utils/orchestrion/config';
 
 /** Node's synchronous `load` hook shape, which `@remix-run/assets` reuses for `scripts.loaders`. */
 export interface ModuleLoadContext {

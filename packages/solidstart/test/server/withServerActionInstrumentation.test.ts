@@ -4,10 +4,10 @@ import {
   SENTRY_OP,
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
-import * as SentryCore from '@sentry/core';
-import * as SentryCoreServer from '@sentry/core/server';
-import * as SentryNode from '@sentry/node';
-import { createTransport, NodeClient, setCurrentClient, spanToJSON } from '@sentry/node';
+import * as SentryCore from '@ichnois/core';
+import * as SentryCoreServer from '@ichnois/core/server';
+import * as SentryNode from '@ichnois/node';
+import { createTransport, NodeClient, setCurrentClient, spanToJSON } from '@ichnois/node';
 import { redirect } from '@solidjs/router';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { withServerActionInstrumentation } from '../../src/server';

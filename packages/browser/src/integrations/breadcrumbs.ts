@@ -8,7 +8,7 @@ import type {
   FetchBreadcrumbHint,
   HandlerDataFetch,
   IntegrationFn,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   addBreadcrumb,
   addFetchInstrumentationHandler,
@@ -19,8 +19,8 @@ import {
   getClient,
   getEventDescription,
   parseUrl,
-} from '@sentry/core';
-import type { FetchHint, HandlerDataDom, HandlerDataHistory, HandlerDataXhr } from '@sentry/browser-utils';
+} from '@ichnois/core';
+import type { FetchHint, HandlerDataDom, HandlerDataHistory, HandlerDataXhr } from '@ichnois/browser-utils';
 import {
   addClickKeypressInstrumentationHandler,
   addHistoryInstrumentationHandler,
@@ -28,8 +28,8 @@ import {
   htmlTreeAsString,
   getComponentName,
   SENTRY_XHR_DATA_KEY,
-} from '@sentry/browser-utils';
-import type { XhrBreadcrumbData, XhrBreadcrumbHint } from '@sentry/core/browser';
+} from '@ichnois/browser-utils';
+import type { XhrBreadcrumbData, XhrBreadcrumbHint } from '@ichnois/core/browser';
 import { DEBUG_BUILD } from '../debug-build';
 import { WINDOW } from '../helpers';
 

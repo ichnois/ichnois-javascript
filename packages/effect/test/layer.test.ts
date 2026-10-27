@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@effect/vitest';
-import * as sentryCore from '@sentry/core';
-import * as sentryCoreBrowser from '@sentry/core/browser';
-import { getClient, getMainCarrier, SDK_VERSION } from '@sentry/core';
+import * as sentryCore from '@ichnois/core';
+import * as sentryCoreBrowser from '@ichnois/core/browser';
+import { getClient, getMainCarrier, SDK_VERSION } from '@ichnois/core';
 import { Effect, Layer, Logger } from 'effect';
 import * as References from 'effect/References';
 import { afterEach, beforeEach, vi } from 'vitest';

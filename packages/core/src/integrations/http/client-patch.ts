@@ -119,7 +119,7 @@ function patchModule(httpModuleExport: HttpModuleExport, options: HttpInstrument
  * @example
  * ```javascript
  * import http from 'http';
- * import { patchHttpModuleClient } from '@sentry/core';
+ * import { patchHttpModuleClient } from '@ichnois/core';
  * patchHttpModuleClient(http, { tracePropagation: true });
  * ```
  */

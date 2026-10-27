@@ -1,6 +1,6 @@
-import type { EventProcessor } from '@sentry/core';
-import { getGlobalScope, Scope, SDK_VERSION } from '@sentry/node';
-import * as SentryNode from '@sentry/node';
+import type { EventProcessor } from '@ichnois/core';
+import { getGlobalScope, Scope, SDK_VERSION } from '@ichnois/node';
+import * as SentryNode from '@ichnois/node';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { init as solidStartInit } from '../../src/server';
 import { lowQualityTransactionsFilter } from '../../src/server/utils';

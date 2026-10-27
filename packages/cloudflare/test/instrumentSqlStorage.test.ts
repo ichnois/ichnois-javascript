@@ -1,6 +1,6 @@
 import { SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import * as sentryCore from '@sentry/core';
-import * as serverUtils from '@sentry/server-utils';
+import * as sentryCore from '@ichnois/core';
+import * as serverUtils from '@ichnois/server-utils';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { instrumentSqlStorage } from '../src/instrumentations/instrumentSqlStorage';
 import { initTestClient, resetSdk } from './testUtils';

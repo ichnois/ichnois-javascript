@@ -1,6 +1,6 @@
 import { REMIX_ACTION_FORM_DATA_KEY_BASE } from '@sentry/conventions/attributes';
-import type { Client, Span } from '@sentry/core';
-import { _INTERNAL_filterKeyValueData } from '@sentry/core';
+import type { Client, Span } from '@ichnois/core';
+import { _INTERNAL_filterKeyValueData } from '@ichnois/core';
 import type { RemixOptions } from './remixOptions';
 
 /**

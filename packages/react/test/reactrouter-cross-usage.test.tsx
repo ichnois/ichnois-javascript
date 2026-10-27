@@ -1,7 +1,7 @@
 /**
  * @vitest-environment jsdom
  */
-import { createTransport, getCurrentScope, setCurrentClient } from '@sentry/core';
+import { createTransport, getCurrentScope, setCurrentClient } from '@ichnois/core';
 import { SENTRY_SEGMENT_NAME_SOURCE, URL_TEMPLATE, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { render, waitFor } from '@testing-library/react';
 import * as React from 'react';
@@ -63,7 +63,7 @@ const mockRootSpan = {
   },
 };
 
-vi.mock('@sentry/browser', async requireActual => {
+vi.mock('@ichnois/browser', async requireActual => {
   const actual = (await requireActual()) as any;
   return {
     ...actual,
@@ -98,8 +98,8 @@ async function coreMock(requireActual: () => Promise<any>) {
   };
 }
 
-vi.mock('@sentry/core', coreMock);
-vi.mock('@sentry/core/browser', coreMock);
+vi.mock('@ichnois/core', coreMock);
+vi.mock('@ichnois/core/browser', coreMock);
 
 describe('React Router cross usage of wrappers', () => {
   function createMockBrowserClient(): BrowserClient {

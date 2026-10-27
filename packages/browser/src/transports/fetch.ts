@@ -1,6 +1,6 @@
-import type { Transport, TransportMakeRequestResponse, TransportRequest } from '@sentry/core';
-import { createTransport, makePromiseBuffer } from '@sentry/core';
-import { clearCachedImplementation, getNativeImplementation } from '@sentry/browser-utils';
+import type { Transport, TransportMakeRequestResponse, TransportRequest } from '@ichnois/core';
+import { createTransport, makePromiseBuffer } from '@ichnois/core';
+import { clearCachedImplementation, getNativeImplementation } from '@ichnois/browser-utils';
 import type { WINDOW } from '../helpers';
 import type { BrowserTransportOptions } from './types';
 

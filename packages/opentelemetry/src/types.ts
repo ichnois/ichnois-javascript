@@ -1,4 +1,4 @@
-import type { Scope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
 
 export interface CurrentScopes {
   scope: Scope;

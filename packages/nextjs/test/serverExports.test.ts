@@ -46,6 +46,6 @@ describe('CJS server build re-exports are detectable by Node', () => {
     await init();
     const { reexports } = parse(readFileSync(resolve(__dirname, '../build/cjs/index.server.js'), 'utf8'));
 
-    expect(reexports).toContain('@sentry/node');
+    expect(reexports).toContain('@ichnois/node');
   });
 });

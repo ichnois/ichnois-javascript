@@ -1,4 +1,4 @@
-import { captureException, getIsolationScope, isAlreadyCaptured, withScope } from '@sentry/core';
+import { captureException, getIsolationScope, isAlreadyCaptured, withScope } from '@ichnois/core';
 import type { NextPageContext } from 'next';
 import { flushSafelyWithTimeout, waitUntil } from '../utils/responseEnd';
 import { pagesRouterRequestToRequestData } from '../utils/pagesRouterRequestToRequestData';

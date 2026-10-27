@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, type Mock, vi } from 'vitest';
 import { close, getClient, getCurrentScope, getDefaultIntegrations, init, spanStreamingIntegration } from '../src';
-import { type Event, type Integration, originalConsoleMethods } from '@sentry/core';
+import { type Event, type Integration, originalConsoleMethods } from '@ichnois/core';
 
 afterEach(() => {
   getCurrentScope().setClient(undefined);

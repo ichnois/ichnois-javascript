@@ -30,7 +30,7 @@ const instrumentationLoaderThis = {
 describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInjectionLoader', loaderThis => {
   it('should correctly insert values for basic config', () => {
     const userCode = `
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -43,7 +43,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
   it('should correctly insert values with directive', () => {
     const userCode = `
       "use client"
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -56,7 +56,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
   it('should correctly insert values with directive and semicolon', () => {
     const userCode = `
       "use client";
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -69,7 +69,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
   it('should correctly insert values with a single-quoted directive', () => {
     const userCode = `
       'use client';
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -77,7 +77,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
 
     const injectionIndex = result.indexOf(';globalThis["foo"] = "bar";');
     const clientDirectiveIndex = result.indexOf("'use client'");
-    const importIndex = result.indexOf("import * as Sentry from '@sentry/nextjs';");
+    const importIndex = result.indexOf("import * as Sentry from '@ichnois/nextjs';");
 
     expect(injectionIndex).toBeGreaterThan(clientDirectiveIndex);
     expect(injectionIndex).toBeLessThan(importIndex);
@@ -87,7 +87,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
     const userCode = `
       // test
       "use client";
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -101,7 +101,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
     const userCode = `
       /* test */
       "use client";
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -117,7 +117,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
         test
       */
       "use client";
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -140,7 +140,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
 
 
 
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -157,7 +157,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
 
 
 
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -171,7 +171,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
     const userCode = `
       "use strict";
       "use client";
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -179,7 +179,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
 
     const injectionIndex = result.indexOf(';globalThis["foo"] = "bar";');
     const clientDirectiveIndex = result.indexOf('"use client"');
-    const importIndex = result.indexOf("import * as Sentry from '@sentry/nextjs';");
+    const importIndex = result.indexOf("import * as Sentry from '@ichnois/nextjs';");
 
     expect(injectionIndex).toBeGreaterThan(clientDirectiveIndex);
     expect(injectionIndex).toBeLessThan(importIndex);
@@ -190,7 +190,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
       "use strict";
       /* keep */
       "use client";
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 
@@ -206,7 +206,7 @@ describe.each([[clientConfigLoaderThis], [instrumentationLoaderThis]])('valueInj
     const userCode = `
       "use strict"
       "use client"
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@ichnois/nextjs';
       Sentry.init();
     `;
 

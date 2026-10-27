@@ -3,7 +3,7 @@ import { makeBaseBundleConfig, makeBundleConfigVariants } from '@sentry-internal
 const baseBundleConfig = makeBaseBundleConfig({
   bundleType: 'addon',
   entrypoints: ['src/index.ts'],
-  licenseTitle: '@sentry/replay-canvas',
+  licenseTitle: '@ichnois/replay-canvas',
   outputFileBase: () => 'bundles/replay-canvas',
 });
 

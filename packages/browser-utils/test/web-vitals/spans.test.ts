@@ -1,5 +1,5 @@
-import * as SentryCore from '@sentry/core';
-import * as SentryCoreBrowser from '@sentry/core/browser';
+import * as SentryCore from '@ichnois/core';
+import * as SentryCoreBrowser from '@ichnois/core/browser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { htmlTreeAsString } from '../../src/htmlTreeAsString';
 import * as inpModule from '../../src/web-vitals/inp';
@@ -17,8 +17,8 @@ import {
   trackLcpAsSpan,
 } from '../../src/web-vitals/spans';
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     browserPerformanceTimeOrigin: vi.fn(),
@@ -33,8 +33,8 @@ vi.mock('@sentry/core', async () => {
 });
 
 // `startInactiveSpan` comes from `@sentry/core/browser`, not the root entry - see `browserSpanApi.ts`.
-vi.mock('@sentry/core/browser', async () => {
-  const actual = await vi.importActual('@sentry/core/browser');
+vi.mock('@ichnois/core/browser', async () => {
+  const actual = await vi.importActual('@ichnois/core/browser');
   return {
     ...actual,
     startInactiveSpan: vi.fn(),

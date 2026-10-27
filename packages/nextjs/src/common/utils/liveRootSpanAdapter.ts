@@ -1,6 +1,6 @@
 import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_OP } from '@sentry/conventions/attributes';
-import type { Span } from '@sentry/core';
-import { spanToStaticSpanJSON } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { spanToStaticSpanJSON } from '@ichnois/core';
 import type { MutableRootSpan } from '../../server/enhanceHandleRequestRootSpan';
 
 /**

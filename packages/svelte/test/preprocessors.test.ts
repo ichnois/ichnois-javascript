@@ -17,7 +17,7 @@ function expectComponentCodeToBeModified(
   }[],
   options: any,
 ) {
-  const expectedImportStmt = 'import { trackComponent } from "@sentry/svelte";\n';
+  const expectedImportStmt = 'import { trackComponent } from "@ichnois/svelte";\n';
 
   preprocessedComponents.forEach(cmp => {
     const expectedFunctionCallOptions = {
@@ -126,7 +126,7 @@ describe('componentTrackingPreprocessor', () => {
         },
         {
           originalCode:
-            'import { trackComponent } from "@sentry/svelte";\ntrackComponent({"trackInit":true,"trackUpdates":true,"componentName":"Cmp1"});\nconsole.log(cmp1)',
+            'import { trackComponent } from "@ichnois/svelte";\ntrackComponent({"trackInit":true,"trackUpdates":true,"componentName":"Cmp1"});\nconsole.log(cmp1)',
           filename: 'components/Cmp1.svelte',
           name: 'Cmp1',
         },
@@ -245,7 +245,7 @@ describe('componentTrackingPreprocessor', () => {
       });
 
       expect(processedCode.code).toEqual(
-        '<script>import { trackComponent } from "@sentry/svelte";\n' +
+        '<script>import { trackComponent } from "@ichnois/svelte";\n' +
           'trackComponent({"trackInit":true,"trackUpdates":false,"componentName":"Cmp1"});\n\n' +
           '</script>\n' +
           "<p>I'm just a plain component</p>\n" +
@@ -265,7 +265,7 @@ describe('componentTrackingPreprocessor', () => {
       });
 
       expect(processedCode.code).toEqual(
-        '<script>import { trackComponent } from "@sentry/svelte";\n' +
+        '<script>import { trackComponent } from "@ichnois/svelte";\n' +
           'trackComponent({"trackInit":true,"trackUpdates":false,"componentName":"Cmp2"});\n' +
           "console.log('hi');</script>\n" +
           "<p>I'm a component with a script</p>\n" +
@@ -284,7 +284,7 @@ describe('componentTrackingPreprocessor', () => {
       });
 
       expect(processedCode.code).toEqual(
-        '<script>import { trackComponent } from "@sentry/svelte";\n' +
+        '<script>import { trackComponent } from "@ichnois/svelte";\n' +
           'trackComponent({"trackInit":true,"trackUpdates":false,"componentName":"unknown"});\n' +
           "console.log('hi');</script>",
       );

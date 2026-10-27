@@ -1,6 +1,6 @@
 import type { Context, SpanContext, TextMapGetter, TextMapPropagator, TextMapSetter } from '@opentelemetry/api';
 import { context, trace, TraceFlags } from '@opentelemetry/api';
-import type { continueTrace, DynamicSamplingContext } from '@sentry/core';
+import type { continueTrace, DynamicSamplingContext } from '@ichnois/core';
 import {
   _INTERNAL_safeMathRandom,
   baggageHeaderToDynamicSamplingContext,
@@ -13,7 +13,7 @@ import {
   isTracingSuppressed,
   propagationContextFromHeaders,
   shouldContinueTrace,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { getScopesFromContext, setScopesOnContext } from './utils/contextData';
 import { makeTraceState } from './utils/makeTraceState';
 

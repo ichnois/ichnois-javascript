@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import type { HandleServerError, RequestEvent } from '@sveltejs/kit';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { handleErrorWithSentry } from '../../src/server-common/handleError';

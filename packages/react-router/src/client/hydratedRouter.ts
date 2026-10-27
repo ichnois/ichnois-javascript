@@ -1,5 +1,5 @@
-import { getAbsoluteUrl, startBrowserTracingNavigationSpan } from '@sentry/browser';
-import type { Span } from '@sentry/core';
+import { getAbsoluteUrl, startBrowserTracingNavigationSpan } from '@ichnois/browser';
+import type { Span } from '@ichnois/core';
 import {
   debug,
   getActiveSpan,
@@ -10,7 +10,7 @@ import {
   isThenable,
   NAVIGATION_SPAN_NAME_FALLBACK,
   spanToJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { DataRouter } from 'react-router';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { isClientInstrumentationApiUsed } from './createClientInstrumentation';

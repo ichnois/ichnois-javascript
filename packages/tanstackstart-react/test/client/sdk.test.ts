@@ -1,5 +1,5 @@
-import * as SentryReact from '@sentry/react';
-import { SDK_VERSION } from '@sentry/react';
+import * as SentryReact from '@ichnois/react';
+import { SDK_VERSION } from '@ichnois/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { init } from '../../src/client';
 

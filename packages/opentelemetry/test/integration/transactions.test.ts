@@ -2,8 +2,8 @@ import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_ORIGIN } from '@sentry/conventions/a
 import type { SpanContext } from '@opentelemetry/api';
 import { context, ROOT_CONTEXT, trace, TraceFlags } from '@opentelemetry/api';
 import { TraceState } from '../../src/utils/TraceState';
-import type { Event, TransactionEvent } from '@sentry/core';
-import { addBreadcrumb, setTag, startInactiveSpan, startSpan, withIsolationScope } from '@sentry/core';
+import type { Event, TransactionEvent } from '@ichnois/core';
+import { addBreadcrumb, setTag, startInactiveSpan, startSpan, withIsolationScope } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { SENTRY_TRACE_STATE_DSC } from '../../src/constants';
 import { makeTraceState } from '../../src/utils/makeTraceState';

@@ -1,10 +1,10 @@
-import * as SentryBrowser from '@sentry/browser';
+import * as SentryBrowser from '@ichnois/browser';
 import { SENTRY_SEGMENT_NAME_SOURCE, URL_TEMPLATE, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { tanstackRouterBrowserTracingIntegration } from '../src/tanstackrouter';
 
-vi.mock('@sentry/browser', async () => {
-  const actual = await vi.importActual('@sentry/browser');
+vi.mock('@ichnois/browser', async () => {
+  const actual = await vi.importActual('@ichnois/browser');
   return {
     ...actual,
     WINDOW: {

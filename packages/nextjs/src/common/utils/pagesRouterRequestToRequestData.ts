@@ -1,5 +1,5 @@
-import type { RequestEventData } from '@sentry/core';
-import { httpRequestToRequestData, parseUrl } from '@sentry/core';
+import type { RequestEventData } from '@ichnois/core';
+import { httpRequestToRequestData, parseUrl } from '@ichnois/core';
 import type { IncomingMessage } from 'http';
 
 const NEXT_REQUEST_META = Symbol.for('NextInternalRequestMeta');

@@ -1,5 +1,5 @@
 import type { HttpError, Redirect } from '@sveltejs/kit';
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 
 export const WRAPPED_MODULE_SUFFIX = '?sentry-auto-wrap';
 

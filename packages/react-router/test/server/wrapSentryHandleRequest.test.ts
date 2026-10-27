@@ -1,12 +1,12 @@
 import { PassThrough } from 'node:stream';
 import { SENTRY_SEGMENT_NAME_SOURCE, HTTP_ROUTE, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import { getActiveSpan, getRootSpan, getTraceMetaTags } from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+import { getActiveSpan, getRootSpan, getTraceMetaTags } from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { getMetaTagTransformer } from '../../src/server/getMetaTagTransformer';
 import { wrapSentryHandleRequest } from '../../src/server/wrapSentryHandleRequest';
 
-vi.mock('@sentry/core', () => ({
+vi.mock('@ichnois/core', () => ({
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN: 'sentry.origin',
   getActiveSpan: vi.fn(),
   getRootSpan: vi.fn(),
@@ -16,7 +16,7 @@ vi.mock('@sentry/core', () => ({
   GLOBAL_OBJ: globalThis,
 }));
 
-vi.mock('@sentry/core/server', () => ({
+vi.mock('@ichnois/core/server', () => ({
   flushIfServerless: vi.fn(),
 }));
 

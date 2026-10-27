@@ -1,4 +1,4 @@
-import type { Event } from '@sentry/core';
+import type { Event } from '@ichnois/core';
 import type { Callback, Handler } from 'aws-lambda';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { init } from '../src/init';
@@ -17,8 +17,8 @@ const mockScope = {
   setTransactionName: vi.fn(),
 };
 
-vi.mock('@sentry/node', async () => {
-  const original = await vi.importActual('@sentry/node');
+vi.mock('@ichnois/node', async () => {
+  const original = await vi.importActual('@ichnois/node');
   return {
     ...original,
     initWithoutDefaultIntegrations: (options: unknown) => {

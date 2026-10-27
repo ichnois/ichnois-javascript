@@ -1,4 +1,4 @@
-import type { Package } from '@sentry/core';
+import type { Package } from '@ichnois/core';
 import * as fs from 'fs';
 import * as path from 'path';
 import type { ResolvedKitConfig } from './kitConfig';

@@ -3,8 +3,8 @@ import {
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
   WINDOW,
-} from '@sentry/browser';
-import type { Client, Integration, Span, TransactionSource } from '@sentry/core';
+} from '@ichnois/browser';
+import type { Client, Integration, Span, TransactionSource } from '@ichnois/core';
 import {
   getActiveSpan,
   getCurrentScope,
@@ -13,7 +13,7 @@ import {
   NAVIGATION_SPAN_NAME_FALLBACK,
   PAGELOAD_SPAN_NAME_FALLBACK,
   spanToJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { ReactElement } from 'react';
 import * as React from 'react';
 import { hoistNonReactStatics } from './hoist-non-react-statics';

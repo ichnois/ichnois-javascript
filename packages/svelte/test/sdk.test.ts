@@ -2,8 +2,8 @@
  * @vitest-environment jsdom
  */
 
-import { SDK_VERSION } from '@sentry/browser';
-import * as SentryBrowser from '@sentry/browser';
+import { SDK_VERSION } from '@ichnois/browser';
+import * as SentryBrowser from '@ichnois/browser';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { init as svelteInit } from '../src/sdk';
 

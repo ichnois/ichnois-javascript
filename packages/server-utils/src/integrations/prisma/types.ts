@@ -11,7 +11,7 @@
  *   package does not need to depend on OpenTelemetry
  */
 
-import type { Span, SpanAttributes, SpanKind, SpanLink, SpanTimeInput } from '@sentry/core';
+import type { Span, SpanAttributes, SpanKind, SpanLink, SpanTimeInput } from '@ichnois/core';
 
 export type SpanCallback<R> = (span?: Span, parentSpan?: Span) => R;
 

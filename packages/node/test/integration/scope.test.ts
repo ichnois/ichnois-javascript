@@ -1,4 +1,4 @@
-import { getCapturedScopesOnSpan, getCurrentScope, getClient } from '@sentry/core';
+import { getCapturedScopesOnSpan, getCurrentScope, getClient } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import * as Sentry from '../../src/';
 import type { NodeClient } from '../../src/sdk/client';

@@ -11,8 +11,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { GEN_AI_DECIDE } from '@sentry/conventions/op';
-import type { Span, SpanAttributes } from '@sentry/core';
-import { isObjectLike, SPAN_STATUS_ERROR, startInactiveSpan, withActiveSpan } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
+import { isObjectLike, SPAN_STATUS_ERROR, startInactiveSpan, withActiveSpan } from '@ichnois/core';
 import type { GenAiOptions } from '../core/utils';
 import { getEvaluationInputMessages, getEvaluationOutputMessages, resolveAIRecordingOptions } from '../core/utils';
 import { TYPESAFE_ORIGIN, TYPESAFE_PROVIDER_NAME } from './constants';

@@ -10,8 +10,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB_QUERY, DB } from '@sentry/conventions/op';
-import type { SpanAttributes } from '@sentry/core';
-import { startInactiveSpan } from '@sentry/core';
+import type { SpanAttributes } from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/core';
 import { bindTracingChannelToSpan } from '../../tracing-channel';
 import type { RedisCacheOptions } from './redis-cache';
 import { applyCacheResponseAttributes, getRedisCacheAttributes } from './redis-cache';

@@ -1,5 +1,5 @@
 import { URL_PATH } from '@sentry/conventions/attributes';
-import { dsnToString, escapeStringForRegex, getClient, handleTunnelRequest } from '@sentry/core';
+import { dsnToString, escapeStringForRegex, getClient, handleTunnelRequest } from '@ichnois/core';
 
 const registeredTunnelRoutePaths = new Set<string>();
 
@@ -48,7 +48,7 @@ type SentryTunnelRoute = {
  * @example
  * ```ts
  * import { createFileRoute } from '@tanstack/react-router';
- * import * as Sentry from '@sentry/tanstackstart-react';
+ * import * as Sentry from '@ichnois/tanstackstart-react';
  *
  * export const Route = createFileRoute('/monitoring')({
  *   server: Sentry.createSentryTunnelRoute({

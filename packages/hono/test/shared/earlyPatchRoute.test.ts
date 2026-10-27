@@ -1,10 +1,10 @@
-import * as SentryCore from '@sentry/core';
-import { applyHonoPatches as applyPatches, earlyPatchHono } from '@sentry/server-utils';
+import * as SentryCore from '@ichnois/core';
+import { applyHonoPatches as applyPatches, earlyPatchHono } from '@ichnois/server-utils';
 import { Hono } from 'hono';
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     startInactiveSpan: vi.fn((_opts: unknown) => ({

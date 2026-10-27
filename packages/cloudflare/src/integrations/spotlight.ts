@@ -1,5 +1,5 @@
-import type { Client, Envelope, IntegrationFn } from '@sentry/core';
-import { debug, defineIntegration, serializeEnvelope, suppressTracing } from '@sentry/core';
+import type { Client, Envelope, IntegrationFn } from '@ichnois/core';
+import { debug, defineIntegration, serializeEnvelope, suppressTracing } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 
 type SpotlightConnectionOptions = {

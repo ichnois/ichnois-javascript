@@ -1,4 +1,4 @@
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 import type { H3Event } from 'h3';
 import type { NitroAppPlugin } from 'nitropack';
 import type { NuxtRenderHTMLContext } from 'nuxt/app';

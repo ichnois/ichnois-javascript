@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/unbound-method */
-import { getDefaultIsolationScope, getIsolationScope, startSpan, withIsolationScope } from '@sentry/core';
+import { getDefaultIsolationScope, getIsolationScope, startSpan, withIsolationScope } from '@ichnois/core';
 import type { WorkflowEvent, WorkflowStep, WorkflowStepConfig } from 'cloudflare:workers';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { getInvocationState } from '../src/utils/invocationContext';

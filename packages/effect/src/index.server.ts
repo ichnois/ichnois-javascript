@@ -1,4 +1,4 @@
-export * from '@sentry/node';
+export * from '@ichnois/node';
 
 export { effectLayer, init } from './server/index';
 export type { EffectServerLayerOptions } from './server/index';

@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { getMainCarrier, setCurrentClient } from '@sentry/core';
+import { getMainCarrier, setCurrentClient } from '@ichnois/core';
 import { resolveAIRecordingOptions, wrapPromiseWithMethods } from '../../../../../src/ai/core/utils';
 import { getDefaultTestClientOptions, TestClient } from '../../../../mocks/client';
 

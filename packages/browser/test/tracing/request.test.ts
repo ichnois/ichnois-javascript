@@ -1,7 +1,7 @@
-import type { Client } from '@sentry/core';
-import * as utils from '@sentry/core';
-import * as coreBrowser from '@sentry/core/browser';
-import * as browserUtils from '@sentry/browser-utils';
+import type { Client } from '@ichnois/core';
+import * as utils from '@ichnois/core';
+import * as coreBrowser from '@ichnois/core/browser';
+import * as browserUtils from '@ichnois/browser-utils';
 import { HTTP_REQUEST_METHOD } from '@sentry/conventions/attributes';
 import type { MockInstance } from 'vitest';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';

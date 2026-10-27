@@ -3,7 +3,7 @@ import { basename } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { addNitroPlugin, addTemplate, createResolver } from '@nuxt/kit';
 import type { Nuxt } from '@nuxt/schema';
-import { consoleSandbox, debug } from '@sentry/core';
+import { consoleSandbox, debug } from '@ichnois/core';
 import * as fs from 'fs';
 import type { Nitro } from 'nitropack';
 import type { InputPluginOption } from 'rollup';

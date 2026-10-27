@@ -1,5 +1,5 @@
-import { debug, getTraceData } from '@sentry/core';
-import { isNodeEnv } from '@sentry/core/server';
+import { debug, getTraceData } from '@ichnois/core';
+import { isNodeEnv } from '@ichnois/core/server';
 import { DEBUG_BUILD } from '../utils/debug-build';
 import { isCloudflareEnv } from '../utils/utils';
 

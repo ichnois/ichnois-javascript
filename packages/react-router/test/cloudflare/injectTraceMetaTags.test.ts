@@ -1,10 +1,10 @@
 // @vitest-environment node
-import type * as SentryCore from '@sentry/core';
-import { getTraceMetaTags } from '@sentry/core';
+import type * as SentryCore from '@ichnois/core';
+import { getTraceMetaTags } from '@ichnois/core';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { injectTraceMetaTags } from '../../src/cloudflare/index';
 
-vi.mock('@sentry/core', async importOriginal => ({
+vi.mock('@ichnois/core', async importOriginal => ({
   ...(await importOriginal<typeof SentryCore>()),
   getTraceMetaTags: vi.fn(),
 }));

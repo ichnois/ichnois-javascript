@@ -7,8 +7,8 @@ const mockSpan = {
   end: vi.fn(),
 };
 
-vi.mock('@sentry/core', async () => {
-  const original = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const original = await vi.importActual('@ichnois/core');
   return {
     ...original,
     continueTrace: (_traceData: unknown, callback: () => unknown) => callback(),
@@ -16,8 +16,8 @@ vi.mock('@sentry/core', async () => {
   };
 });
 
-vi.mock('@sentry/node', async () => {
-  const original = await vi.importActual('@sentry/node');
+vi.mock('@ichnois/node', async () => {
+  const original = await vi.importActual('@ichnois/node');
   return {
     ...original,
     flush: () => Promise.resolve(true),

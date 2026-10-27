@@ -49,8 +49,8 @@ vi.mock('../../src/core/sentry/telemetry', async () => ({
   safeFlushTelemetry: vi.fn(),
 }));
 
-vi.mock('@sentry/core', async () => ({
-  ...(await vi.importActual('@sentry/core')),
+vi.mock('@ichnois/core', async () => ({
+  ...(await vi.importActual('@ichnois/core')),
   startSpan: vi.fn((options: unknown, callback: () => unknown) => callback()),
 }));
 

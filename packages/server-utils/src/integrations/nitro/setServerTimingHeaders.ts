@@ -1,4 +1,4 @@
-import { getTraceData, GLOBAL_OBJ } from '@sentry/core';
+import { getTraceData, GLOBAL_OBJ } from '@ichnois/core';
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
 import type { H3TracingRequestEvent, NitroH3Event } from './nitroTypes';
 

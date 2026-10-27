@@ -1,7 +1,7 @@
-import type { Integration } from '@sentry/core';
-import { _INTERNAL_getActiveClient, applySdkMetadata, debug } from '@sentry/core';
-import type { NodeClient, NodeOptions } from '@sentry/node';
-import { getDefaultIntegrations as getDefaultNodeIntegrations, init as nodeInit } from '@sentry/node';
+import type { Integration } from '@ichnois/core';
+import { _INTERNAL_getActiveClient, applySdkMetadata, debug } from '@ichnois/core';
+import type { NodeClient, NodeOptions } from '@ichnois/node';
+import { getDefaultIntegrations as getDefaultNodeIntegrations, init as nodeInit } from '@ichnois/node';
 import { DEBUG_BUILD } from '../utils/debug-build';
 import type { RemixOptions } from '../utils/remixOptions';
 import { instrumentServer } from './instrumentServer';

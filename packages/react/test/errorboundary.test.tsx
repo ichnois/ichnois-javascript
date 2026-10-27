@@ -1,8 +1,8 @@
 /**
  * @vitest-environment jsdom
  */
-import { getClient, Scope, setCurrentClient } from '@sentry/browser';
-import type { Client } from '@sentry/core';
+import { getClient, Scope, setCurrentClient } from '@ichnois/browser';
+import type { Client } from '@ichnois/core';
 import { fireEvent, render, screen } from '@testing-library/react';
 import * as React from 'react';
 import { useState } from 'react';
@@ -16,7 +16,7 @@ const mockShowReportDialog = vi.fn();
 const mockClientOn = vi.fn();
 const EVENT_ID = 'test-id-123';
 
-vi.mock('@sentry/browser', async requireActual => {
+vi.mock('@ichnois/browser', async requireActual => {
   return {
     ...(await requireActual()),
     captureException: (...args: unknown[]) => {

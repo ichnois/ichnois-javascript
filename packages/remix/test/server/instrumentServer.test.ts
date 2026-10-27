@@ -7,10 +7,10 @@ import {
   SENTRY_OP,
 } from '@sentry/conventions/attributes';
 import { FUNCTION } from '@sentry/conventions/op';
-import type { Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
-import * as SentryCoreServer from '@sentry/core/server';
-import type { WrappedFunction } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
+import * as SentryCoreServer from '@ichnois/core/server';
+import type { WrappedFunction } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { instrumentBuild, instrumentServer } from '../../src/server/instrumentServer';
 

@@ -8,7 +8,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { HTTP_CLIENT } from '@sentry/conventions/op';
-import { createTransport, NodeClient, setCurrentClient } from '@sentry/node';
+import { createTransport, NodeClient, setCurrentClient } from '@ichnois/node';
 import * as fs from 'fs';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore ESM/CJS interop issue
@@ -20,8 +20,8 @@ import { googleCloudHttpIntegration } from '../../src/integrations/google-cloud-
 const mockSpanEnd = vi.fn();
 const mockStartInactiveSpan = vi.fn(spanArgs => ({ ...spanArgs }));
 
-vi.mock('@sentry/node', async () => {
-  const original = await vi.importActual('@sentry/node');
+vi.mock('@ichnois/node', async () => {
+  const original = await vi.importActual('@ichnois/node');
   return {
     ...original,
     startInactiveSpan: (ctx: unknown) => {

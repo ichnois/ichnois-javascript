@@ -1,4 +1,4 @@
-import { createFetchIntegration } from '@sentry/core';
+import { createFetchIntegration } from '@ichnois/core';
 
 /**
  * Creates spans and attaches tracing headers to fetch requests.

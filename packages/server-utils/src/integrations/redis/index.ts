@@ -11,7 +11,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB_QUERY, DB } from '@sentry/conventions/op';
-import type { IntegrationFn, Span, SpanAttributes } from '@sentry/core';
+import type { IntegrationFn, Span, SpanAttributes } from '@ichnois/core';
 import {
   isObjectLike,
   defineIntegration,
@@ -20,7 +20,7 @@ import {
   startInactiveSpan,
   withActiveSpan,
   waitForTracingChannelBinding,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { OrchestrionChannelContext } from '../../orchestrion/types';
 import { CHANNELS } from '../../orchestrion/channels';
 import { getRedisQueryNaming } from './redis-span-name';
@@ -334,7 +334,7 @@ function instrumentNodeRedis(options: RedisIntegrationOptions): void {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@ichnois/node');
  *
  * Sentry.init({
  *  integrations: [Sentry.redisIntegration()],

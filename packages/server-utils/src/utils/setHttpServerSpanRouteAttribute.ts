@@ -5,7 +5,7 @@ import {
   HTTP_ROUTE,
   SENTRY_OP,
 } from '@sentry/conventions/attributes';
-import { getActiveSpan, getRootSpan, spanToJSON } from '@sentry/core';
+import { getActiveSpan, getRootSpan, spanToJSON } from '@ichnois/core';
 
 /**
  * Set the `http.route` attribute on the root HTTP server span for the current trace.

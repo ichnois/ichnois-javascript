@@ -1,8 +1,8 @@
-import type { Breadcrumb } from '@sentry/core';
-import type { XhrBreadcrumbData } from '@sentry/core/browser';
-import { isObjectLike } from '@sentry/core';
-import type { NetworkMetaWarning, XhrHint } from '@sentry/browser-utils';
-import { getBodyString, parseXhrResponseHeaders, SENTRY_XHR_DATA_KEY } from '@sentry/browser-utils';
+import type { Breadcrumb } from '@ichnois/core';
+import type { XhrBreadcrumbData } from '@ichnois/core/browser';
+import { isObjectLike } from '@ichnois/core';
+import type { NetworkMetaWarning, XhrHint } from '@ichnois/browser-utils';
+import { getBodyString, parseXhrResponseHeaders, SENTRY_XHR_DATA_KEY } from '@ichnois/browser-utils';
 import { DEBUG_BUILD } from '../../debug-build';
 import type { ReplayContainer, ReplayNetworkOptions, ReplayNetworkRequestData } from '../../types';
 import { debug } from '../../util/logger';

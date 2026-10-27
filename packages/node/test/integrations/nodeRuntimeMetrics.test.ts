@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { metrics } from '@sentry/core';
+import { metrics } from '@ichnois/core';
 import { nodeRuntimeMetricsIntegration } from '../../src/integrations/nodeRuntimeMetrics';
 
 const { mockHistogram, mockMonitorEventLoopDelay, mockPerformance } = vi.hoisted(() => {
@@ -36,8 +36,8 @@ vi.mock('perf_hooks', () => ({
   performance: mockPerformance,
 }));
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return { ...actual };
 });
 

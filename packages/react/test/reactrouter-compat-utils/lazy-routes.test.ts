@@ -1,5 +1,5 @@
-import { WINDOW } from '@sentry/browser';
-import { addNonEnumerableProperty, debug } from '@sentry/core';
+import { WINDOW } from '@ichnois/browser';
+import { addNonEnumerableProperty, debug } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   checkRouteForAsyncHandler,
@@ -11,7 +11,7 @@ import {
 } from '../../src/reactrouter-compat-utils';
 import type { RouteObject } from '../../src/types';
 
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@ichnois/core', async requireActual => {
   const actual = await requireActual();
   return {
     ...(actual as any),
@@ -27,7 +27,7 @@ vi.mock('../../src/debug-build', () => ({
 }));
 
 // Create a mutable mock for WINDOW.location that we can modify in tests
-vi.mock('@sentry/browser', async requireActual => {
+vi.mock('@ichnois/browser', async requireActual => {
   const actual = await requireActual();
   return {
     ...(actual as any),

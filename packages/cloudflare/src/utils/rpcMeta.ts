@@ -1,4 +1,4 @@
-import { getTraceData, isObjectLike, type SerializedTraceData } from '@sentry/core';
+import { getTraceData, isObjectLike, type SerializedTraceData } from '@ichnois/core';
 
 /**
  * Key used to identify Sentry RPC metadata in a trailing argument.

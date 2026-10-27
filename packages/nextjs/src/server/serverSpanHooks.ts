@@ -7,14 +7,14 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { MIDDLEWARE } from '@sentry/conventions/op';
-import type { Client, Options, Span } from '@sentry/core';
+import type { Client, Options, Span } from '@ichnois/core';
 import {
   getIsolationScope,
   getRootSpan,
   hasSpanStreamingEnabled,
   HTTP_SPAN_NAME_FALLBACK,
   spanToJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { enhanceMiddlewareRootSpan } from '../common/enhanceMiddlewareRootSpan';
 import { ATTR_NEXT_ROUTE, ATTR_NEXT_SPAN_NAME, ATTR_NEXT_SPAN_TYPE } from '../common/nextSpanAttributes';
 import { TRANSACTION_ATTR_SHOULD_DROP_TRANSACTION } from '../common/span-attributes-with-logic-attached';

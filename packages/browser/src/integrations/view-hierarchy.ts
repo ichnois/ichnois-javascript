@@ -1,6 +1,6 @@
-import type { Attachment, Event, EventHint, ViewHierarchyData, ViewHierarchyWindow } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
-import { getComponentName } from '@sentry/browser-utils';
+import type { Attachment, Event, EventHint, ViewHierarchyData, ViewHierarchyWindow } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
+import { getComponentName } from '@ichnois/browser-utils';
 import { WINDOW } from '../helpers';
 
 interface OnElementArgs {

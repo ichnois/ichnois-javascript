@@ -1,6 +1,6 @@
 import type { TracingChannel, TracingChannelSubscribers } from 'node:diagnostics_channel';
 import type { AsyncLocalStorage } from 'node:async_hooks';
-import type { ExclusiveEventHintOrCaptureContext, Span } from '@sentry/core';
+import type { ExclusiveEventHintOrCaptureContext, Span } from '@ichnois/core';
 import {
   debug,
   captureException,
@@ -12,7 +12,7 @@ import {
   spanIsIgnored,
   getRootSpan,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from './debug-build';
 import { ERROR_TYPE } from '@sentry/conventions/attributes';
 

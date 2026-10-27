@@ -4,7 +4,7 @@ import {
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
   WINDOW,
-} from '@sentry/browser';
+} from '@ichnois/browser';
 import {
   PARAMS_KEY_BASE,
   SENTRY_OP,
@@ -16,13 +16,13 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { NAVIGATION, PAGELOAD } from '@sentry/conventions/op';
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
 import {
   hasSpanStreamingEnabled,
   NAVIGATION_SPAN_NAME_FALLBACK,
   PAGELOAD_SPAN_NAME_FALLBACK,
   filterCollectedUrl,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { AnyRouter } from '@tanstack/vue-router';
 
 type RouteMatch = ReturnType<AnyRouter['matchRoutes']>[number];

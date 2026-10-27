@@ -1,8 +1,8 @@
 /// <reference lib="deno.ns" />
 
 import * as http from 'node:http';
-import type { Envelope, SessionAggregates, TransactionEvent } from '@sentry/core';
-import { forEachEnvelopeItem, getMainCarrier } from '@sentry/core';
+import type { Envelope, SessionAggregates, TransactionEvent } from '@ichnois/core';
+import { forEachEnvelopeItem, getMainCarrier } from '@ichnois/core';
 import { assert } from 'https://deno.land/std@0.212.0/assert/assert.ts';
 import { assertEquals } from 'https://deno.land/std@0.212.0/assert/assert_equals.ts';
 import { assertExists } from 'https://deno.land/std@0.212.0/assert/assert_exists.ts';

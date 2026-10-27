@@ -1,4 +1,4 @@
-import { captureException, debug } from '@sentry/core';
+import { captureException, debug } from '@ichnois/core';
 import { DEBUG_BUILD } from './debug-build';
 
 /**

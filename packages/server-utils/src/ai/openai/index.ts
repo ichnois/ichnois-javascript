@@ -8,8 +8,8 @@ import {
   startSpanManual,
   debug,
   stringify,
-} from '@sentry/core';
-import type { Span, SpanAttributeValue } from '@sentry/core';
+} from '@ichnois/core';
+import type { Span, SpanAttributeValue } from '@ichnois/core';
 import {
   GEN_AI_EMBEDDINGS_INPUT,
   GEN_AI_INPUT_MESSAGES,

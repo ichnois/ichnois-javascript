@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import { GEN_AI_RESPONSE_TOOL_CALLS } from '@sentry/conventions/attributes';
 import { addResponseAttributes } from '../../../../src/ai/google-genai/index';
 import { instrumentStream } from '../../../../src/ai/google-genai/streaming';

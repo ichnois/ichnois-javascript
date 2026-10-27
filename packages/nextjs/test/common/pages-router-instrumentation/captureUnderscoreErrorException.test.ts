@@ -17,8 +17,8 @@ const mockGetIsolationScope = vi.fn(() => ({
   lastEventId: () => storedLastEventId,
 }));
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     captureException: (exception: unknown, hint?: unknown) => mockCaptureException(exception, hint),

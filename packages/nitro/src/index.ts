@@ -1,4 +1,4 @@
 /* eslint-disable import/export */
 export * from './config';
-export * from '@sentry/node';
+export * from '@ichnois/node';
 export { init } from './sdk';

@@ -1,6 +1,6 @@
 import { format } from 'node:util';
-import type { Log, LogSeverityLevel, ParameterizedString, Scope } from '@sentry/core';
-import { _INTERNAL_captureLog } from '@sentry/core';
+import type { Log, LogSeverityLevel, ParameterizedString, Scope } from '@ichnois/core';
+import { _INTERNAL_captureLog } from '@ichnois/core';
 
 /**
  * Additional metadata to capture the log with.

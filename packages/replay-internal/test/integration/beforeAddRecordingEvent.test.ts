@@ -3,9 +3,9 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import type { Transport } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
-import * as SentryBrowserUtils from '@sentry/browser-utils';
+import type { Transport } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
+import * as SentryBrowserUtils from '@ichnois/browser-utils';
 import type { MockedFunction, MockInstance } from 'vitest';
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Replay } from '../../src/integration';

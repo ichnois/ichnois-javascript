@@ -18,7 +18,7 @@
 
 import { URL } from 'url';
 
-import type { Span, SpanAttributes } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
 import {
   debug,
   getClient,
@@ -40,8 +40,8 @@ import {
   filterCollectedUrl,
   filterCollectedUrlQuery,
   httpHeadersToSpanAttributes,
-} from '@sentry/core';
-import { subscribeDiagnosticsChannel } from '@sentry/server-utils';
+} from '@ichnois/core';
+import { subscribeDiagnosticsChannel } from '@ichnois/server-utils';
 import { addFetchRequestBreadcrumb, addTracePropagationHeadersToFetchRequest } from '../../utils/outgoingFetchRequest';
 import {
   HTTP_REQUEST_METHOD,

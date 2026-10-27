@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@ichnois/core';
 import { AwsLambdaExtension } from './aws-lambda-extension';
 
 export const POLL_RETRY_DELAYS = [100, 200, 400] as const;

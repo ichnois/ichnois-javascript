@@ -1,6 +1,6 @@
 import { HTTP_ROUTE, HTTP_TARGET, URL_PATH } from '@sentry/conventions/attributes';
-import type { Event } from '@sentry/core';
-import { getClient } from '@sentry/core';
+import type { Event } from '@ichnois/core';
+import { getClient } from '@ichnois/core';
 import { getSanitizedRequestUrl } from './urls';
 
 /**

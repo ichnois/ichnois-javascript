@@ -1,5 +1,5 @@
-import type { Span, WebFetchHeaders } from '@sentry/core';
-import { getClient, httpHeadersToSpanAttributes, winterCGHeadersToDict } from '@sentry/core';
+import type { Span, WebFetchHeaders } from '@ichnois/core';
+import { getClient, httpHeadersToSpanAttributes, winterCGHeadersToDict } from '@ichnois/core';
 
 /**
  * Extracts HTTP request headers as span attributes and optionally applies them to a span.

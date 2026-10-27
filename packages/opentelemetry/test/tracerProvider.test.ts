@@ -8,7 +8,7 @@ import {
   startSpanManual,
   type Span,
   withIsolationScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { mockSdkInit } from './helpers/mockSdkInit';
 

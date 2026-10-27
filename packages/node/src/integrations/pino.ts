@@ -1,4 +1,4 @@
-import type { IntegrationFn, LogSeverityLevel } from '@sentry/core';
+import type { IntegrationFn, LogSeverityLevel } from '@ichnois/core';
 import {
   _INTERNAL_captureLog,
   addExceptionMechanism,
@@ -8,8 +8,8 @@ import {
   isObjectLike,
   severityLevelFromString,
   withScope,
-} from '@sentry/core';
-import { diagnosticsTracingChannel } from '@sentry/server-utils';
+} from '@ichnois/core';
+import { diagnosticsTracingChannel } from '@ichnois/server-utils';
 
 const SENTRY_TRACK_SYMBOL = Symbol('sentry-track-pino-logger');
 

@@ -1,6 +1,6 @@
-import type { Client } from '@sentry/core';
-import { _INTERNAL_getActiveClient, applySdkMetadata, consoleSandbox } from '@sentry/core';
-import { init as initDeno } from '@sentry/deno';
+import type { Client } from '@ichnois/core';
+import { _INTERNAL_getActiveClient, applySdkMetadata, consoleSandbox } from '@ichnois/core';
+import { init as initDeno } from '@ichnois/deno';
 import type { HonoDenoOptions } from './middleware';
 import { buildFilteredIntegrations } from '../shared/buildFilteredIntegrations';
 import { LOW_QUALITY_TRANSACTION_PATTERNS } from '../shared/lowQualityTransactionPatterns';

@@ -1,4 +1,4 @@
-import { setAsyncContextStrategy, withIsolationScope } from '@sentry/core';
+import { setAsyncContextStrategy, withIsolationScope } from '@ichnois/core';
 import { beforeEach, describe, expect, it, onTestFinished, vi } from 'vitest';
 
 // Spy on the request/response handlers so we can assert exactly how many times they run.

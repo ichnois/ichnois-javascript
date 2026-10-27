@@ -1,6 +1,6 @@
 import http from 'node:http';
 import { HTTP_REQUEST_METHOD, SENTRY_OP } from '@sentry/conventions/attributes';
-import { getActiveSpan, getCurrentScope, getTraceData, spanToJSON } from '@sentry/core';
+import { getActiveSpan, getCurrentScope, getTraceData, spanToJSON } from '@ichnois/core';
 import { afterAll, beforeAll, describe, expect, test } from 'bun:test';
 import { init } from '../../src';
 

@@ -1,6 +1,6 @@
 import { HTTP_ROUTE, SENTRY_SEGMENT_NAME_SOURCE, URL_PATH_PARAMETER_KEY_BASE } from '@sentry/conventions/attributes';
-import type { Event } from '@sentry/core';
-import { getIsolationScope, setCurrentClient, withIsolationScope } from '@sentry/core';
+import type { Event } from '@ichnois/core';
+import { getIsolationScope, setCurrentClient, withIsolationScope } from '@ichnois/core';
 import { beforeAll, describe, expect, it, vi } from 'vitest';
 import { setAsyncLocalStorageAsyncContextStrategy } from '../../src/async-context';
 import type { ServerRequestHandlerConfig } from '../../src/utils/wrapServerRequestHandler';

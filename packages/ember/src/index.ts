@@ -5,7 +5,7 @@
  */
 
 // Re-export everything from @sentry/browser
-export * from '@sentry/browser';
+export * from '@ichnois/browser';
 
 // Sentry-specific utilities
 export { init } from './init.ts';

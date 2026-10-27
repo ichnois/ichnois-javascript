@@ -73,9 +73,9 @@ describe('sentryCloudflareAutoInstrumentPlugin', () => {
       join(dir, 'src/index.ts'),
     );
 
-    expect(resolve).toHaveBeenCalledWith('@sentry/nextjs/cloudflare', join(dir, 'src/index.ts'));
+    expect(resolve).toHaveBeenCalledWith('@ichnois/nextjs/cloudflare', join(dir, 'src/index.ts'));
     expect(result.code).toBe(
-      "import * as __SENTRY__ from '@sentry/nextjs/cloudflare';\n" +
+      "import * as __SENTRY__ from '@ichnois/nextjs/cloudflare';\n" +
         'var __SENTRY_DEFAULT_EXPORT__ = { fetch() { return new Response("ok"); } };\n' +
         'export { __SENTRY_DEFAULT_EXPORT__ as default };\n' +
         '__SENTRY_DEFAULT_EXPORT__ = __SENTRY__.withSentry(() => undefined, __SENTRY_DEFAULT_EXPORT__);',
@@ -98,7 +98,7 @@ describe('sentryCloudflareAutoInstrumentPlugin', () => {
     );
 
     expect(result.code).toBe(
-      "import * as __SENTRY__ from '@sentry/cloudflare';\n" +
+      "import * as __SENTRY__ from '@ichnois/cloudflare';\n" +
         'var __SENTRY_DEFAULT_EXPORT__ = { fetch() { return new Response("ok"); } };\n' +
         'export { __SENTRY_DEFAULT_EXPORT__ as default };\n' +
         '__SENTRY_DEFAULT_EXPORT__ = __SENTRY__.withSentry(() => undefined, __SENTRY_DEFAULT_EXPORT__);',
@@ -119,7 +119,7 @@ describe('sentryCloudflareAutoInstrumentPlugin', () => {
     );
 
     expect(result.code).toBe(
-      "import * as __SENTRY__ from '@sentry/cloudflare';\n" +
+      "import * as __SENTRY__ from '@ichnois/cloudflare';\n" +
         'var __SENTRY_DEFAULT_EXPORT__ = { fetch() { return new Response("ok"); } };\n' +
         'export { __SENTRY_DEFAULT_EXPORT__ as default };\n' +
         '__SENTRY_DEFAULT_EXPORT__ = __SENTRY__.withSentry(() => undefined, __SENTRY_DEFAULT_EXPORT__);',
@@ -144,7 +144,7 @@ describe('sentryCloudflareAutoInstrumentPlugin', () => {
     );
 
     expect(result.code).toBe(
-      "import * as __SENTRY__ from '@sentry/cloudflare';\n" +
+      "import * as __SENTRY__ from '@ichnois/cloudflare';\n" +
         'var __SENTRY_DEFAULT_EXPORT__ = { fetch() { return new Response("ok"); } };\n' +
         'export { __SENTRY_DEFAULT_EXPORT__ as default };\n' +
         '__SENTRY_DEFAULT_EXPORT__ = __SENTRY__.withSentry(() => undefined, __SENTRY_DEFAULT_EXPORT__);',
@@ -155,7 +155,7 @@ describe('sentryCloudflareAutoInstrumentPlugin', () => {
     const { transform: tx, entryPath } = createPlugin('main = "src/index.ts"');
 
     const code = [
-      "import { withSentry } from '@sentry/cloudflare';",
+      "import { withSentry } from '@ichnois/cloudflare';",
       'export default withSentry((env) => ({}), { fetch() {} });',
     ].join('\n');
     // No DO classes configured and nothing to wrap → no transform result.
@@ -249,7 +249,7 @@ describe('sentryCloudflareAutoInstrumentPlugin', () => {
     expect(result).toBeDefined();
     expect(result.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import { WorkerEntrypoint } from 'cloudflare:workers';",
         'class AdminEntry extends WorkerEntrypoint {',
         '  fetch() { return new Response("admin"); }',
@@ -411,7 +411,7 @@ describe('sentryCloudflareAutoInstrumentPlugin', () => {
       const result = await tx(code);
       expect(result.code).toBe(
         [
-          "import * as __SENTRY__ from '@sentry/cloudflare';",
+          "import * as __SENTRY__ from '@ichnois/cloudflare';",
           'const __SENTRY_OPTIONS__ = (env) => { const opts = (() => undefined)(env); return { ...opts, rpcTracePropagationBindings: ["MY_AGENT", ...(opts?.rpcTracePropagationBindings ?? [])] }; };',
           "import { MyAgent } from './agent';",
           'const __SENTRY_WRAPPED_MyAgent__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.instrumentAgentWithSentry, __SENTRY_OPTIONS__, MyAgent);',
@@ -429,7 +429,7 @@ describe('sentryCloudflareAutoInstrumentPlugin', () => {
       const result = await tx(code);
       expect(result.code).toBe(
         [
-          "import * as __SENTRY__ from '@sentry/cloudflare';",
+          "import * as __SENTRY__ from '@ichnois/cloudflare';",
           'const __SENTRY_OPTIONS__ = (env) => { const opts = (() => undefined)(env); return { ...opts, rpcTracePropagationBindings: ["MY_AGENT", ...(opts?.rpcTracePropagationBindings ?? [])] }; };',
           "import { MyAgent as __SENTRY_REEXPORT_MyAgent__ } from './agent';",
           'const __SENTRY_WRAPPED_MyAgent__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.instrumentAgentWithSentry, __SENTRY_OPTIONS__, __SENTRY_REEXPORT_MyAgent__);',
@@ -450,7 +450,7 @@ describe('sentryCloudflareAutoInstrumentPlugin', () => {
       const result = await tx(code);
       expect(result.code).toBe(
         [
-          "import * as __SENTRY__ from '@sentry/cloudflare';",
+          "import * as __SENTRY__ from '@ichnois/cloudflare';",
           'const __SENTRY_OPTIONS__ = (env) => { const opts = (() => undefined)(env); return { ...opts, rpcTracePropagationBindings: ["MY_AGENT", ...(opts?.rpcTracePropagationBindings ?? [])] }; };',
           "import { MyAgent as __SENTRY_REEXPORT_MyAgent__ } from './do';",
           'const __SENTRY_WRAPPED_MyAgent__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.instrumentDurableObjectWithSentry, __SENTRY_OPTIONS__, __SENTRY_REEXPORT_MyAgent__);',
@@ -466,7 +466,7 @@ describe('sentryCloudflareAutoInstrumentPlugin', () => {
 
       const warnings: string[] = [];
       const code = [
-        "import * as Sentry from '@sentry/cloudflare';",
+        "import * as Sentry from '@ichnois/cloudflare';",
         "import { Agent } from 'agents';",
         'class MyAgentBase extends Agent {}',
         'export const MyAgent = Sentry.instrumentAgentWithSentry((env) => ({}), MyAgentBase);',
@@ -521,7 +521,7 @@ describe('wranglerConfigPath option', () => {
     expect(result).toBeDefined();
     expect(result.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         'var __SENTRY_DEFAULT_EXPORT__ = { fetch() { return new Response("ok"); } };',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
         '__SENTRY_DEFAULT_EXPORT__ = __SENTRY__.withSentry(() => undefined, __SENTRY_DEFAULT_EXPORT__);',
@@ -599,7 +599,7 @@ describe('package specifier as wrangler `main`', () => {
     expect(idResolver).toHaveBeenCalledWith(ssr, MAIN, join(dir, 'wrangler.jsonc'));
     expect(result.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         'var __SENTRY_DEFAULT_EXPORT__ = { fetch() { return new Response("ok"); } };',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
         '__SENTRY_DEFAULT_EXPORT__ = __SENTRY__.withSentry(() => undefined, __SENTRY_DEFAULT_EXPORT__);',

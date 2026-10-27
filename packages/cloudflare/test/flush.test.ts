@@ -1,6 +1,6 @@
 import { type ExecutionContext } from '@cloudflare/workers-types';
-import * as sentryCore from '@sentry/core';
-import { type Client } from '@sentry/core';
+import * as sentryCore from '@ichnois/core';
+import { type Client } from '@ichnois/core';
 import { describe, expect, it, onTestFinished, vi } from 'vitest';
 import { flushAndDispose, getOriginalWaitUntil, makeFlushLock } from '../src/flush';
 

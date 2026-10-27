@@ -1,6 +1,6 @@
-import type { BuildTimeOptionsBase } from '@sentry/core';
-import type { init as initNode } from '@sentry/node';
-import type { init as initVue } from '@sentry/vue';
+import type { BuildTimeOptionsBase } from '@ichnois/core';
+import type { init as initNode } from '@ichnois/node';
+import type { init as initVue } from '@ichnois/vue';
 
 // Omitting Vue 'app' as the Nuxt SDK will add the app instance in the client plugin (users do not have to provide this)
 // Adding `& object` helps TS with inferring that this is not `undefined` but an object type

@@ -1,4 +1,4 @@
-import type { FeedbackInternalOptions } from '@sentry/core';
+import type { FeedbackInternalOptions } from '@ichnois/core';
 
 /**
  * Partial configuration that overrides default configuration values

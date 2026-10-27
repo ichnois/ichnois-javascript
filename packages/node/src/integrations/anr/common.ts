@@ -1,4 +1,4 @@
-import type { Contexts, DsnComponents, Primitive, SdkMetadata } from '@sentry/core';
+import type { Contexts, DsnComponents, Primitive, SdkMetadata } from '@ichnois/core';
 
 /**
  * Configuration options for the ANR (Application Not Responding) integration.

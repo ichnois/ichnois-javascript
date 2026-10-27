@@ -3,7 +3,7 @@
 /* eslint-disable import/export */
 export type { ErrorHandlerOptions } from './errorhandler';
 
-export * from '@sentry/browser';
+export * from '@ichnois/browser';
 
 export { init, getDefaultIntegrations } from './sdk';
 export { createErrorHandler, SentryErrorHandler } from './errorhandler';

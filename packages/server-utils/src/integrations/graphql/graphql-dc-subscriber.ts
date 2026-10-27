@@ -7,7 +7,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { GRAPHQL } from '@sentry/conventions/op';
-import { getClient, hasSpanStreamingEnabled, SPAN_STATUS_ERROR, startInactiveSpan } from '@sentry/core';
+import { getClient, hasSpanStreamingEnabled, SPAN_STATUS_ERROR, startInactiveSpan } from '@ichnois/core';
 import { bindTracingChannelToSpan } from '../../tracing-channel';
 import {
   GRAPHQL_FIELD_NAME,

@@ -1,6 +1,6 @@
-import * as SentryBrowser from '@sentry/browser';
-import type { Span, SpanAttributes } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import * as SentryBrowser from '@ichnois/browser';
+import type { Span, SpanAttributes } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import {
   SENTRY_SEGMENT_NAME_SOURCE,
   ROUTER_NAVIGATION_ROUTE_ID,
@@ -16,8 +16,8 @@ const MOCK_SPAN = {
 };
 
 const captureExceptionSpy = vi.spyOn(SentryBrowser, 'captureException');
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     getActiveSpan: vi.fn().mockReturnValue({

@@ -1,4 +1,4 @@
-import { _INTERNAL_performanceTimeToSeconds } from '@sentry/core';
+import { _INTERNAL_performanceTimeToSeconds } from '@ichnois/core';
 import { record } from '@sentry/rrweb';
 import type {
   AllPerformanceEntry,

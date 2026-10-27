@@ -1,4 +1,4 @@
-import type { Client, Event as SentryEvent, IntegrationFn } from '@sentry/core';
+import type { Client, Event as SentryEvent, IntegrationFn } from '@ichnois/core';
 import {
   _INTERNAL_filterCookies,
   _INTERNAL_filterKeyValueData,
@@ -10,9 +10,9 @@ import {
   getClient,
   GLOBAL_OBJ,
   isSentryRequestUrl,
-} from '@sentry/core';
-import type { SentryWrappedXMLHttpRequest } from '@sentry/browser-utils';
-import { addXhrInstrumentationHandler, SENTRY_XHR_DATA_KEY } from '@sentry/browser-utils';
+} from '@ichnois/core';
+import type { SentryWrappedXMLHttpRequest } from '@ichnois/browser-utils';
+import { addXhrInstrumentationHandler, SENTRY_XHR_DATA_KEY } from '@ichnois/browser-utils';
 import { DEBUG_BUILD } from '../debug-build';
 
 export type HttpStatusCodeRange = [number, number] | number;

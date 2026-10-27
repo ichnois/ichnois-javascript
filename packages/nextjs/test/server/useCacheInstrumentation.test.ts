@@ -1,4 +1,4 @@
-import type * as SentryCore from '@sentry/core';
+import type * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 const mocks = vi.hoisted(() => {
@@ -40,7 +40,7 @@ const mocks = vi.hoisted(() => {
   };
 });
 
-vi.mock('@sentry/core', async importOriginal => ({
+vi.mock('@ichnois/core', async importOriginal => ({
   ...(await importOriginal<typeof SentryCore>()),
   getClient: () => mocks.client,
   getActiveSpan: () => mocks.activeSpan,

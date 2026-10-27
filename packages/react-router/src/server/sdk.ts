@@ -1,7 +1,7 @@
-import type { Integration } from '@sentry/core';
-import { applySdkMetadata, debug, setTag } from '@sentry/core';
-import type { NodeClient, NodeOptions } from '@sentry/node';
-import { getDefaultIntegrations as getNodeDefaultIntegrations, init as initNodeSdk } from '@sentry/node';
+import type { Integration } from '@ichnois/core';
+import { applySdkMetadata, debug, setTag } from '@ichnois/core';
+import type { NodeClient, NodeOptions } from '@ichnois/node';
+import { getDefaultIntegrations as getNodeDefaultIntegrations, init as initNodeSdk } from '@ichnois/node';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { lowQualityTransactionsFilterIntegration } from './integration/lowQualityTransactionsFilterIntegration';
 import { reactRouterServerIntegration } from './integration/reactRouterServer';

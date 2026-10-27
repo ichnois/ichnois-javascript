@@ -1,7 +1,7 @@
 /* oxlint-disable max-lines */
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { HTTP_CLIENT, HTTP_SERVER } from '@sentry/conventions/op';
-import type { Span, StartSpanOptions } from '@sentry/core';
+import type { Span, StartSpanOptions } from '@ichnois/core';
 import {
   _INTERNAL_safeMathRandom,
   addNonEnumerableProperty,
@@ -13,7 +13,7 @@ import {
   timestampInSeconds,
   withActiveSpan,
   withScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import * as Context from 'effect/Context';
 import * as Exit from 'effect/Exit';
 import type * as EffectLayer from 'effect/Layer';
@@ -230,7 +230,7 @@ const isEffectV4 = (() => {
   }
 })();
 
-const EXTERNAL_SPAN_KEY = '@sentry/effect/ExternalSpan';
+const EXTERNAL_SPAN_KEY = '@ichnois/effect/ExternalSpan';
 
 interface ContextExports {
   Reference: typeof Context.Reference;

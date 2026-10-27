@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { Client, createTransport, getCurrentScope, initAndBind, resolvedSyncPromise, spanToJSON } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { Client, createTransport, getCurrentScope, initAndBind, resolvedSyncPromise, spanToJSON } from '@ichnois/core';
 import { afterEach, describe, expect, it } from 'vitest';
 import { instrumentPrisma } from '../../src/integrations/prisma';
 import type { TracingHelper } from '../../src/integrations/prisma/types';

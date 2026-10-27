@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { SDK_VERSION } from '@sentry/browser';
+import { SDK_VERSION } from '@ichnois/browser';
 import { sentryTest } from '../../../../utils/fixtures';
 import { envelopeRequestParser, waitForErrorRequestOnUrl } from '../../../../utils/helpers';
 

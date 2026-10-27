@@ -1,5 +1,5 @@
-import { captureException } from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+import { captureException } from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import type { HandleErrorFunction } from 'react-router';
 
 export type SentryHandleErrorOptions = {

@@ -1,5 +1,5 @@
-import type { Client, Event as SentryEvent, IntegrationFn } from '@sentry/core';
-import { addBreadcrumb, consoleSandbox, defineIntegration, getClient, getEventDescription } from '@sentry/core';
+import type { Client, Event as SentryEvent, IntegrationFn } from '@ichnois/core';
+import { addBreadcrumb, consoleSandbox, defineIntegration, getClient, getEventDescription } from '@ichnois/core';
 
 interface BreadcrumbsOptions {
   sentry: boolean;

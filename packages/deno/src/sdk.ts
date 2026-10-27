@@ -1,5 +1,5 @@
-import type { Client, Integration, Options, StackParser } from '@sentry/core';
-import type { ServerRuntimeClientOptions } from '@sentry/core/server';
+import type { Client, Integration, Options, StackParser } from '@ichnois/core';
+import type { ServerRuntimeClientOptions } from '@ichnois/core/server';
 import {
   consoleIntegration,
   conversationIdIntegration,
@@ -13,10 +13,10 @@ import {
   linkedErrorsIntegration,
   requestDataIntegration,
   stackParserFromStackParserOptions,
-} from '@sentry/core';
-import { detectOrchestrionSetup, getTracingIntegrations, getErrorIntegrations } from '@sentry/server-utils';
+} from '@ichnois/core';
+import { detectOrchestrionSetup, getTracingIntegrations, getErrorIntegrations } from '@ichnois/server-utils';
 import { DenoClient } from './client';
-import { nodeStackLineParser } from '@sentry/core/server';
+import { nodeStackLineParser } from '@ichnois/core/server';
 import { breadcrumbsIntegration } from './integrations/breadcrumbs';
 import { denoContextIntegration } from './integrations/context';
 import { contextLinesIntegration } from './integrations/contextlines';

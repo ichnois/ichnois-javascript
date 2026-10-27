@@ -1,7 +1,7 @@
-import type { BunOptions } from '@sentry/bun';
-import { debug } from '@sentry/core';
+import type { BunOptions } from '@ichnois/bun';
+import { debug } from '@ichnois/core';
 import { init } from './sdk';
-import { applyHonoPatches, createHonoRequestMiddleware, type SentryHonoMiddlewareOptions } from '@sentry/server-utils';
+import { applyHonoPatches, createHonoRequestMiddleware, type SentryHonoMiddlewareOptions } from '@ichnois/server-utils';
 import type { Env, Hono, MiddlewareHandler } from 'hono';
 
 export interface HonoBunOptions extends BunOptions, SentryHonoMiddlewareOptions {}

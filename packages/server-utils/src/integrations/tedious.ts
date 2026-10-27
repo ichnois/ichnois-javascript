@@ -4,14 +4,14 @@
 
 import { EventEmitter } from 'node:events';
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { IntegrationFn, SpanAttributes } from '@sentry/core';
+import type { IntegrationFn, SpanAttributes } from '@ichnois/core';
 import {
   defineIntegration,
   getClient,
   hasSpanStreamingEnabled,
   SPAN_STATUS_ERROR,
   startInactiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   DB_NAMESPACE,
   DB_QUERY_SUMMARY,

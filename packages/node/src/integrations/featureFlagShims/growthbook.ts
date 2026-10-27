@@ -1,4 +1,4 @@
-import { growthbookIntegration as coreGrowthbookIntegration } from '@sentry/core';
+import { growthbookIntegration as coreGrowthbookIntegration } from '@ichnois/core';
 
 /**
  * Re-export the core GrowthBook integration for Node.js usage.

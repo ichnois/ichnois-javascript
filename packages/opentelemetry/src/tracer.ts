@@ -16,8 +16,8 @@ import {
   spanKindToName,
   startNewTrace,
   withScope,
-} from '@sentry/core';
-import type { Span, SpanAttributes } from '@sentry/core';
+} from '@ichnois/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
 import { SENTRY_FORK_SET_ISOLATION_SCOPE_CONTEXT_KEY } from './constants';
 import { convertSpanLinkType } from './utils/convertSpanLinkType';
 import { SENTRY_KIND } from '@sentry/conventions/attributes';

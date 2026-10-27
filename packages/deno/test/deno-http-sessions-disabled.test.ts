@@ -10,8 +10,8 @@
  */
 
 import * as http from 'node:http';
-import type { Envelope } from '@sentry/core';
-import { forEachEnvelopeItem, getIsolationScope, getMainCarrier } from '@sentry/core';
+import type { Envelope } from '@ichnois/core';
+import { forEachEnvelopeItem, getIsolationScope, getMainCarrier } from '@ichnois/core';
 import { assert } from 'https://deno.land/std@0.212.0/assert/assert.ts';
 import { assertEquals } from 'https://deno.land/std@0.212.0/assert/assert_equals.ts';
 import { denoHttpIntegration, init } from '../build/esm/index.js';

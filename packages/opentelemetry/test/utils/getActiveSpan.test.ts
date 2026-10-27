@@ -1,5 +1,5 @@
 import { context, trace } from '@opentelemetry/api';
-import { getRootSpan, Scope } from '@sentry/core';
+import { getRootSpan, Scope } from '@ichnois/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { setContextOnScope } from '../../src/utils/contextData';
 import { getActiveSpan } from '../../src/utils/getActiveSpan';

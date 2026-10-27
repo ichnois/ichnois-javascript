@@ -1,7 +1,7 @@
 import { beforeAll, describe, expect, it, vi } from 'vitest';
 
 const captureException = vi.fn();
-vi.mock('@sentry/browser', () => ({ captureException: (...args: unknown[]) => captureException(...args) }));
+vi.mock('@ichnois/browser', () => ({ captureException: (...args: unknown[]) => captureException(...args) }));
 
 const { captureRuntimeErrors, instrumentClientRuntime } = await import('../../src/v3/client/errors');
 const { tracingChannel } = await import('../../src/v3/client/diagnosticsChannelShim');

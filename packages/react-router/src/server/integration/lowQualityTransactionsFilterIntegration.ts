@@ -1,6 +1,6 @@
 import { URL_PATH } from '@sentry/conventions/attributes';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
 
 const LOW_QUALITY_TRANSACTIONS_FILTERS = [
   /GET \/node_modules\//,

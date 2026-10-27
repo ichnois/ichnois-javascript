@@ -1,4 +1,4 @@
-import * as SentryBrowser from '@sentry/browser';
+import * as SentryBrowser from '@ichnois/browser';
 import { version } from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { init } from '../src/sdk';

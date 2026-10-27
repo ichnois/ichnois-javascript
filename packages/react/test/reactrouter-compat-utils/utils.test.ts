@@ -33,7 +33,7 @@ function makeConfig(overrides: Partial<ReactRouterConfig> = {}): ReactRouterConf
   };
 }
 
-vi.mock('@sentry/browser', async requireActual => {
+vi.mock('@ichnois/browser', async requireActual => {
   const actual = await requireActual();
   return {
     ...(actual as any),

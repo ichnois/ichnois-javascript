@@ -1,4 +1,4 @@
-import * as sentryCore from '@sentry/core';
+import * as sentryCore from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { elementTimingIntegration, startTrackingElementTiming } from '../../src/performance/elementTiming';
 import * as browserMetricsInstrumentation from '../../src/instrumentation/performanceObserver';

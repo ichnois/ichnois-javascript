@@ -1,4 +1,4 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 
 const SENTRY_SERVER_INSTRUMENTATION_FLAG = '__sentryReactRouterServerInstrumentationUsed';
 

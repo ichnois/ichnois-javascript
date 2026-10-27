@@ -1,6 +1,6 @@
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { RPC } from '@sentry/conventions/op';
-import { debug, startSpan } from '@sentry/core';
+import { debug, startSpan } from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import { AGENT_SPAN_ORIGIN, type AgentInternals, getAgentAttributes, setAgentConversationId } from './types';
 

@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { getActiveSpan, getRootSpan, isBrowser } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { getActiveSpan, getRootSpan, isBrowser } from '@ichnois/core';
 import { htmlTreeAsString } from '../htmlTreeAsString';
 import { WINDOW } from '../types';
 import { addPerformanceInstrumentationHandler, isPerformanceEventTiming } from '../instrumentation/performanceObserver';

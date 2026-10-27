@@ -1,5 +1,5 @@
-import type { BaseTransportOptions, Transport, TransportMakeRequestResponse, TransportRequest } from '@sentry/core';
-import { consoleSandbox, createTransport, debug, suppressTracing } from '@sentry/core';
+import type { BaseTransportOptions, Transport, TransportMakeRequestResponse, TransportRequest } from '@ichnois/core';
+import { consoleSandbox, createTransport, debug, suppressTracing } from '@ichnois/core';
 
 /**
  * Creates a Transport that uses the Fetch API to send events to Sentry.

@@ -1,5 +1,5 @@
-import type { EventEnvelope, EventItem } from '@sentry/core';
-import { createEnvelope, serializeEnvelope } from '@sentry/core';
+import type { EventEnvelope, EventItem } from '@ichnois/core';
+import { createEnvelope, serializeEnvelope } from '@ichnois/core';
 import type { Mock } from 'vitest';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { makeFetchTransport } from '../../src/transports/fetch';
@@ -118,7 +118,7 @@ describe('fetchTransport', () => {
   });
 
   it('handles when native fetch implementation is undefined', async () => {
-    vi.mock('@sentry/browser-utils', async importOriginal => ({
+    vi.mock('@ichnois/browser-utils', async importOriginal => ({
       ...(await importOriginal()),
       getNativeImplementation: () => undefined,
     }));

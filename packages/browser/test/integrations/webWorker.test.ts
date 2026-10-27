@@ -2,10 +2,10 @@
  * @vitest-environment jsdom
  */
 
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import type { MockInstance } from 'vitest';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { isError } from '@sentry/core';
+import { isError } from '@ichnois/core';
 import { BrowserClient } from '../../src/client';
 import * as helpers from '../../src/helpers';
 import { INTEGRATION_NAME, registerWebWorker, webWorkerIntegration } from '../../src/integrations/webWorker';
@@ -13,7 +13,7 @@ import { defaultStackParser } from '../../src/stack-parsers';
 import { getDefaultBrowserClientOptions } from '../helper/browser-client-options';
 
 // Mock @sentry/core
-vi.mock('@sentry/core', async importActual => {
+vi.mock('@ichnois/core', async importActual => {
   return {
     ...((await importActual()) as any),
     debug: {

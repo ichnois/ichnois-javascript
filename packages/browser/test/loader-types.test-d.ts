@@ -1,5 +1,5 @@
 import { expectTypeOf, it, describe } from 'vitest';
-import type { Scope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
 import type { LoaderSentry } from '../src/loader-types';
 
 describe('LoaderSentry', () => {

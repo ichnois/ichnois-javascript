@@ -1,5 +1,5 @@
 import { workerData } from 'node:worker_threads';
-import type { DebugImage, Event, ScopeData, Session, StackFrame, Thread } from '@sentry/core';
+import type { DebugImage, Event, ScopeData, Session, StackFrame, Thread } from '@ichnois/core';
 import {
   applyScopeDataToEvent,
   createEventEnvelope,
@@ -13,9 +13,9 @@ import {
   stripSentryFramesAndReverse,
   updateSession,
   uuid4,
-} from '@sentry/core';
-import { filenameIsInApp } from '@sentry/core/server';
-import { makeNodeTransport } from '@sentry/node';
+} from '@ichnois/core';
+import { filenameIsInApp } from '@ichnois/core/server';
+import { makeNodeTransport } from '@ichnois/node';
 import { captureStackTrace, getThreadsLastSeen } from '@sentry/node-native-stacktrace';
 import type { ThreadState, WorkerStartData } from './common';
 import { POLL_RATIO } from './common';

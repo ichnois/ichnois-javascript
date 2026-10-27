@@ -3,7 +3,7 @@ import type { AnyExportedHandler } from '../../types';
 import type { env as cloudflareEnv, WorkerEntrypoint } from 'cloudflare:workers';
 import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { QUEUE_PROCESS } from '@sentry/conventions/op';
-import { captureException, startSpan, withIsolationScope } from '@sentry/core';
+import { captureException, startSpan, withIsolationScope } from '@ichnois/core';
 import type { CloudflareOptions } from '../../client';
 import { flushAndDispose } from '../../flush';
 import { ensureInstrumented } from '../../instrument';

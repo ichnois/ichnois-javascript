@@ -3,7 +3,7 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import type { Breadcrumb } from '@sentry/core';
+import type { Breadcrumb } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Replay } from '../../src/integration';
 import type { ReplayConfiguration } from '../../src/types';

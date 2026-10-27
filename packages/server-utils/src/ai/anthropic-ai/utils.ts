@@ -1,5 +1,5 @@
-import { captureException, SPAN_STATUS_ERROR, stringify } from '@sentry/core';
-import type { Span, SpanStatusType } from '@sentry/core';
+import { captureException, SPAN_STATUS_ERROR, stringify } from '@ichnois/core';
+import type { Span, SpanStatusType } from '@ichnois/core';
 import { GEN_AI_INPUT_MESSAGES, GEN_AI_SYSTEM_INSTRUCTIONS } from '@sentry/conventions/attributes';
 import { extractSystemInstructions } from '../core/utils';
 import type { AnthropicAiResponse } from './types';

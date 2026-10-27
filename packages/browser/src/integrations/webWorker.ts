@@ -1,4 +1,4 @@
-import type { DebugImage, Integration, IntegrationFn } from '@sentry/core';
+import type { DebugImage, Integration, IntegrationFn } from '@ichnois/core';
 import {
   addNonEnumerableProperty,
   captureEvent,
@@ -9,7 +9,7 @@ import {
   isPlainObject,
   isPrimitive,
   normalize,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { eventFromUnknownInput, extractMessage, extractType } from '../eventbuilder';
 import { ignoreNextOnErrorMatching, WINDOW } from '../helpers';

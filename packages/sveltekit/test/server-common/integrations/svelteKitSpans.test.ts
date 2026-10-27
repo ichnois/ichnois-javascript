@@ -1,5 +1,5 @@
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import type { SpanJSON, StreamedSpanJSON, TransactionEvent } from '@sentry/core';
+import type { SpanJSON, StreamedSpanJSON, TransactionEvent } from '@ichnois/core';
 import { describe, expect, it } from 'vitest';
 import {
   _enhanceKitSpan,

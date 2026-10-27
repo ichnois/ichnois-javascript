@@ -1,6 +1,6 @@
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import type { Client } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import type { NumericRange, RequestEvent } from '@sveltejs/kit';
 import { error, redirect } from '@sveltejs/kit';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

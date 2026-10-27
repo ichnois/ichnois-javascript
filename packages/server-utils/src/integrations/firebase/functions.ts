@@ -9,7 +9,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { FUNCTION_GCP } from '@sentry/conventions/op';
-import type { SpanAttributes } from '@sentry/core';
+import type { SpanAttributes } from '@ichnois/core';
 import {
   captureException,
   flush,
@@ -18,7 +18,7 @@ import {
   SERVERLESS_FUNCTION_SPAN_NAME_FALLBACK,
   SPAN_STATUS_ERROR,
   startSpanManual,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 const FUNCTIONS_ORIGIN = 'auto.function.firebase';
 

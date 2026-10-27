@@ -1,4 +1,4 @@
-import { debug, GLOBAL_OBJ } from '@sentry/core';
+import { debug, GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { flueIntegration } from '../../src/integrations/flue';
 

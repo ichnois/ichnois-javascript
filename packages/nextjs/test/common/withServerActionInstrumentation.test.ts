@@ -1,5 +1,5 @@
-import type { Client, Span, StartSpanOptions } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Client, Span, StartSpanOptions } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { withServerActionInstrumentation } from '../../src/common/withServerActionInstrumentation';
 

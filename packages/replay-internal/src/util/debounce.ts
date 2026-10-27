@@ -1,5 +1,5 @@
-import { debounce as debounceCore } from '@sentry/core';
-import { setTimeout } from '@sentry/browser-utils';
+import { debounce as debounceCore } from '@ichnois/core';
+import { setTimeout } from '@ichnois/browser-utils';
 
 type DebouncedCallback = {
   (): void | unknown;

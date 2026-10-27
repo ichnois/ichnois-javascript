@@ -1,2 +1,2 @@
-export * from '@sentry/bundler-plugins/esbuild';
-export { default } from '@sentry/bundler-plugins/esbuild';
+export * from '@ichnois/bundler-plugins/esbuild';
+export { default } from '@ichnois/bundler-plugins/esbuild';

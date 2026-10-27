@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { Event, IntegrationFn, ProfileChunk, ProfilingIntegration } from '@sentry/core';
+import type { Event, IntegrationFn, ProfileChunk, ProfilingIntegration } from '@ichnois/core';
 import {
   consoleSandbox,
   debug,
@@ -9,8 +9,8 @@ import {
   getRootSpan,
   spanIsSampled,
   uuid4,
-} from '@sentry/core';
-import type { NodeClient } from '@sentry/node';
+} from '@ichnois/core';
+import type { NodeClient } from '@ichnois/node';
 import { CpuProfilerBindings, ProfileFormat } from '@sentry/node-cpu-profiler';
 import { isMainThread } from 'worker_threads';
 import { DEBUG_BUILD } from './debug-build';

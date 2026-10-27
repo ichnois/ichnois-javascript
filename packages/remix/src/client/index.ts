@@ -1,10 +1,10 @@
 // import/export got a false positive, and affects most of our index barrel files
 // can be removed once following issue is fixed: https://github.com/import-js/eslint-plugin-import/issues/703
 /* eslint-disable import/export */
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 import { DEBUG_BUILD } from '../utils/debug-build';
 
-export * from '@sentry/react';
+export * from '@ichnois/react';
 
 export { init } from './sdk';
 export { captureRemixErrorBoundaryError } from './errors';

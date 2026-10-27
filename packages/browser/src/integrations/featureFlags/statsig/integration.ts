@@ -1,10 +1,10 @@
-import type { Client, Event, EventHint, IntegrationFn } from '@sentry/core';
+import type { Client, Event, EventHint, IntegrationFn } from '@ichnois/core';
 import {
   _INTERNAL_addFeatureFlagToActiveSpan,
   _INTERNAL_copyFlagsFromScopeToEvent,
   _INTERNAL_insertFlagToScope,
   defineIntegration,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { FeatureGate, StatsigClient } from './types';
 
 /**
@@ -15,7 +15,7 @@ import type { FeatureGate, StatsigClient } from './types';
  * @example
  * ```
  * import { StatsigClient } from '@statsig/js-client';
- * import * as Sentry from '@sentry/browser';
+ * import * as Sentry from '@ichnois/browser';
  *
  * const statsigClient = new StatsigClient();
  *

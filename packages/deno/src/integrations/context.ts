@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, safeSetSpanJSONAttributes } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration, safeSetSpanJSONAttributes } from '@ichnois/core';
 
 const INTEGRATION_NAME = 'DenoContext' as const;
 

@@ -1,4 +1,4 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, describe, expect, it } from 'vitest';
 import { maybeParameterizeRoute, stripBasePath } from '../../src/client/routing/parameterization';
 import type { RouteManifest } from '../../src/config/manifest/types';

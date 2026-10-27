@@ -3,12 +3,12 @@
  */
 
 import { runInNewContext } from 'node:vm';
-import { addNonEnumerableProperty } from '@sentry/core';
+import { addNonEnumerableProperty } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { defaultStackParser } from '../src';
 import { eventFromMessage, eventFromUnknownInput, extractMessage, extractType } from '../src/eventbuilder';
 
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@ichnois/core', async requireActual => {
   return {
     ...((await requireActual()) as any),
     getClient() {

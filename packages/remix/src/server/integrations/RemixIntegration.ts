@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, getClient } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration, getClient } from '@ichnois/core';
 import { instrumentRemix } from './tracing-channel';
 import { resolveFormDataCapture } from '../../utils/formData';
 

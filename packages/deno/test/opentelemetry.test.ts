@@ -1,4 +1,4 @@
-import { getMainCarrier } from '@sentry/core';
+import { getMainCarrier } from '@ichnois/core';
 import { assertEquals, assertNotEquals } from 'https://deno.land/std@0.212.0/assert/mod.ts';
 import type { TracerProvider } from 'npm:@opentelemetry/api@1';
 import { context, propagation, trace } from 'npm:@opentelemetry/api@1';

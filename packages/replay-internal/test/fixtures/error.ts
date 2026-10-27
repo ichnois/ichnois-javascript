@@ -1,4 +1,4 @@
-import type { Event } from '@sentry/core';
+import type { Event } from '@ichnois/core';
 
 export function Error(obj?: Event): any {
   const timestamp = Date.now() / 1000;

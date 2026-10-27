@@ -1,7 +1,7 @@
-import { escapeStringForRegex, uuid4 } from '@sentry/core';
-import { getSentryRelease } from '@sentry/node';
-import type { SentryVitePluginOptions } from '@sentry/bundler-plugins/vite';
-import { sentryVitePlugin } from '@sentry/bundler-plugins/vite';
+import { escapeStringForRegex, uuid4 } from '@ichnois/core';
+import { getSentryRelease } from '@ichnois/node';
+import type { SentryVitePluginOptions } from '@ichnois/bundler-plugins/vite';
+import { sentryVitePlugin } from '@ichnois/bundler-plugins/vite';
 import * as child_process from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -93,7 +93,7 @@ export async function makeCustomSentryVitePlugins(
     debug &&
       // eslint-disable-next-line no-console
       console.warn(
-        '@sentry/bundler-plugins/vite not found in sentryPlugins! Cannot modify plugin - returning default Sentry Vite plugins',
+        '@ichnois/bundler-plugins/vite not found in sentryPlugins! Cannot modify plugin - returning default Sentry Vite plugins',
       );
 
     _resolveFilesToDeleteAfterUpload?.(undefined);

@@ -1,4 +1,4 @@
-import type { Client, Event, IntegrationFn, Primitive, StackParser } from '@sentry/core';
+import type { Client, Event, IntegrationFn, Primitive, StackParser } from '@ichnois/core';
 import {
   addGlobalErrorInstrumentationHandler,
   addGlobalUnhandledRejectionInstrumentationHandler,
@@ -10,10 +10,10 @@ import {
   isString,
   stripDataUrlContent,
   UNKNOWN_FUNCTION,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { BrowserClient } from '../client';
 import { DEBUG_BUILD } from '../debug-build';
-import { getLocationHref } from '@sentry/browser-utils';
+import { getLocationHref } from '@ichnois/browser-utils';
 import { eventFromUnknownInput } from '../eventbuilder';
 import { shouldIgnoreOnError } from '../helpers';
 

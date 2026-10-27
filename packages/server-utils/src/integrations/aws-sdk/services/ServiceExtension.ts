@@ -1,4 +1,4 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import type { NormalizedRequest, NormalizedResponse, RequestMetadata } from '../types';
 
 export type { RequestMetadata };

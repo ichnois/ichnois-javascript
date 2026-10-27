@@ -1,4 +1,4 @@
-import type { Client, Integration, Options } from '@sentry/core';
+import type { Client, Integration, Options } from '@ichnois/core';
 import {
   consoleIntegration,
   conversationIdIntegration,
@@ -9,7 +9,7 @@ import {
   initAndBind,
   setNormalizeStringifier,
   stackParserFromStackParserOptions,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { BrowserClientOptions, BrowserOptions } from './client';
 import { BrowserClient } from './client';
 import { breadcrumbsIntegration } from './integrations/breadcrumbs';
@@ -58,7 +58,7 @@ export function getDefaultIntegrations(_options: Options): Integration[] {
  *
  * ```
  *
- * import { init } from '@sentry/browser';
+ * import { init } from '@ichnois/browser';
  *
  * init({
  *   dsn: '__DSN__',
@@ -69,7 +69,7 @@ export function getDefaultIntegrations(_options: Options): Integration[] {
  * @example
  * ```
  *
- * import { addBreadcrumb } from '@sentry/browser';
+ * import { addBreadcrumb } from '@ichnois/browser';
  * addBreadcrumb({
  *   message: 'My Breadcrumb',
  *   // ...
@@ -80,7 +80,7 @@ export function getDefaultIntegrations(_options: Options): Integration[] {
  *
  * ```
  *
- * import * as Sentry from '@sentry/browser';
+ * import * as Sentry from '@ichnois/browser';
  * Sentry.captureMessage('Hello, world!');
  * Sentry.captureException(new Error('Good bye'));
  * Sentry.captureEvent({

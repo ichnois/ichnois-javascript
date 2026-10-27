@@ -1,12 +1,12 @@
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import type { IntegrationFn, Span, SpanAttributes, SpanAttributeValue } from '@sentry/core';
+import type { IntegrationFn, Span, SpanAttributes, SpanAttributeValue } from '@ichnois/core';
 import {
   defineIntegration,
   isPrimitive,
   _INTERNAL_performanceTimeToSeconds,
   spanToJSON,
   stringMatchesSomePattern,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { getBrowserPerformanceAPI, startAndEndSpan } from './utils';
 import { getNavigationEntry } from '../web-vitals/utils';
 

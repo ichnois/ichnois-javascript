@@ -1,5 +1,5 @@
-import type { BaseTransportOptions, Transport, TransportMakeRequestResponse, TransportRequest } from '@sentry/core';
-import { createTransport, SENTRY_BUFFER_FULL_ERROR, suppressTracing } from '@sentry/core';
+import type { BaseTransportOptions, Transport, TransportMakeRequestResponse, TransportRequest } from '@ichnois/core';
+import { createTransport, SENTRY_BUFFER_FULL_ERROR, suppressTracing } from '@ichnois/core';
 
 export interface VercelEdgeTransportOptions extends BaseTransportOptions {
   /** Fetch API init parameters. */

@@ -7,7 +7,7 @@
  *
  * @example
  * ```typescript
- * import type { BuildTimeOptionsBase } from '@sentry/core';
+ * import type { BuildTimeOptionsBase } from '@ichnois/core';
  *
  * // Example of how a framework SDK would define its build-time options
  * type MyFrameworkBuildOptions = BuildTimeOptionsBase & {

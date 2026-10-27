@@ -8,8 +8,8 @@ import {
   NETWORK_TYPE,
   SENTRY_SEGMENT_NAME_SOURCE,
 } from '@sentry/conventions/attributes';
-import * as SentryCore from '@sentry/core';
-import { createHonoRequestMiddleware } from '@sentry/server-utils';
+import * as SentryCore from '@ichnois/core';
+import { createHonoRequestMiddleware } from '@ichnois/server-utils';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 // These exercise the request/response handlers via the public `createHonoRequestMiddleware`, which
@@ -26,8 +26,8 @@ const mockRootSpan = {
   updateName: vi.fn(),
 };
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     getActiveSpan: vi.fn(() => null),

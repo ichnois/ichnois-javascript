@@ -3,8 +3,8 @@
  */
 
 /* eslint-disable @typescript-eslint/unbound-method */
-import type { Span } from '@sentry/core';
-import * as SentrySvelte from '@sentry/svelte';
+import type { Span } from '@ichnois/core';
+import * as SentrySvelte from '@ichnois/svelte';
 import { writable } from 'svelte/store';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { navigating, page } from '$app/stores';

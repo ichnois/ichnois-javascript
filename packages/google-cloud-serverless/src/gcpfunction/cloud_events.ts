@@ -17,8 +17,8 @@ import {
   handleCallbackErrors,
   hasSpanStreamingEnabled,
   SERVERLESS_FUNCTION_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
-import { captureException, flush, getCurrentScope, startSpanManual } from '@sentry/node';
+} from '@ichnois/core';
+import { captureException, flush, getCurrentScope, startSpanManual } from '@ichnois/node';
 import { DEBUG_BUILD } from '../debug-build';
 import { domainify, getFunctionName, markEventUnhandled, proxyFunction } from '../utils';
 import type { CloudEventFunction, CloudEventFunctionWithCallback, WrapperOptions } from './general';

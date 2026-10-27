@@ -2,9 +2,9 @@
 import type { D1Database, D1DatabaseSession, D1PreparedStatement, D1Response } from '@cloudflare/workers-types';
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { DB_QUERY } from '@sentry/conventions/op';
-import type { Span, SpanAttributes, StartSpanOptions } from '@sentry/core';
-import { addBreadcrumb, getClient, hasSpanStreamingEnabled, SPAN_STATUS_ERROR, startSpan } from '@sentry/core';
-import { getSqlQuerySummary, sanitizeSqlQuery } from '@sentry/server-utils';
+import type { Span, SpanAttributes, StartSpanOptions } from '@ichnois/core';
+import { addBreadcrumb, getClient, hasSpanStreamingEnabled, SPAN_STATUS_ERROR, startSpan } from '@ichnois/core';
+import { getSqlQuerySummary, sanitizeSqlQuery } from '@ichnois/server-utils';
 import { ensureInstrumented } from '../../instrument';
 
 // Patching is based on internal Cloudflare D1 API

@@ -3,7 +3,7 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import { captureException, getClient, getCurrentScope } from '@sentry/core';
+import { captureException, getClient, getCurrentScope } from '@ichnois/core';
 import type { MockInstance } from 'vitest';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import {

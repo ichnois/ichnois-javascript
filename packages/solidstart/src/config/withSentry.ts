@@ -1,10 +1,10 @@
-import { debug } from '@sentry/core';
-import { INSTRUMENTED_MODULE_NAMES } from '@sentry/server-utils/orchestrion/config';
+import { debug } from '@ichnois/core';
+import { INSTRUMENTED_MODULE_NAMES } from '@ichnois/server-utils/orchestrion/config';
 import {
   commonJSInteropOptions,
   sentryCommonJSInteropPlugin,
   sentryOrchestrionPlugin,
-} from '@sentry/server-utils/orchestrion/rollup';
+} from '@ichnois/server-utils/orchestrion/rollup';
 import type { Nitro, NitroConfig } from 'nitropack';
 import { addSentryPluginToVite } from '../vite/sentrySolidStartVite';
 import type { SentrySolidStartPluginOptions } from '../vite/types';

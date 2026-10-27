@@ -1,4 +1,4 @@
-import { consoleSandbox, defineIntegration, isBrowser } from '@sentry/core';
+import { consoleSandbox, defineIntegration, isBrowser } from '@ichnois/core';
 
 /**
  * This is a shim for the OpenFeature integration.

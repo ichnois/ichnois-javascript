@@ -1,7 +1,7 @@
-import type { Client, Integration } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
-import type { NodeOptions } from '@sentry/node';
-import { contextLinesIntegration, init as initNode, linkedErrorsIntegration } from '@sentry/node';
+import type { Client, Integration } from '@ichnois/core';
+import { applySdkMetadata } from '@ichnois/core';
+import type { NodeOptions } from '@ichnois/node';
+import { contextLinesIntegration, init as initNode, linkedErrorsIntegration } from '@ichnois/node';
 
 /**
  * Only the integrations needed to enrich captured errors with source context and `cause` chains.

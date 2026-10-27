@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { growthbookIntegration as coreGrowthbookIntegration } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { growthbookIntegration as coreGrowthbookIntegration } from '@ichnois/core';
 import type { GrowthBookClass } from './types';
 
 /**
@@ -10,7 +10,7 @@ import type { GrowthBookClass } from './types';
  * @example
  * ```
  * import { GrowthBook } from '@growthbook/growthbook';
- * import * as Sentry from '@sentry/browser';
+ * import * as Sentry from '@ichnois/browser';
  *
  * Sentry.init({
  *   dsn: '___PUBLIC_DSN___',

@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, getClient, hasSpansEnabled } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration, getClient, hasSpansEnabled } from '@ichnois/core';
 import type { NodeClientOptions } from '../../types';
 import type { NodeFetchOptions } from './types';
 import { instrumentUndici } from './undici-instrumentation';

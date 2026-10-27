@@ -1,6 +1,6 @@
-import type { BrowserOptions } from '@sentry/browser';
-import { getDefaultIntegrations as getBrowserDefaultIntegrations, init as browserInit } from '@sentry/browser';
-import { applySdkMetadata, type Client, type Integration } from '@sentry/core';
+import type { BrowserOptions } from '@ichnois/browser';
+import { getDefaultIntegrations as getBrowserDefaultIntegrations, init as browserInit } from '@ichnois/browser';
+import { applySdkMetadata, type Client, type Integration } from '@ichnois/core';
 
 import { browserTracingIntegration } from './browserTracingIntegration';
 import { instrumentClientRuntime } from './errors';

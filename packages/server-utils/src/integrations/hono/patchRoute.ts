@@ -1,5 +1,5 @@
-import { debug, getOriginalFunction } from '@sentry/core';
-import type { WrappedFunction } from '@sentry/core';
+import { debug, getOriginalFunction } from '@ichnois/core';
+import type { WrappedFunction } from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import type { Hono, HonoRoute } from './honoTypes';
 import { getMiddlewareFlags } from './isMiddleware';

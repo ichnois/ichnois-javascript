@@ -1,8 +1,8 @@
-import { sentryVitePlugin as sentryViteBundlerPlugin } from '@sentry/bundler-plugins/vite';
-import type { SentryVitePluginOptions as SentryVitePluginOptionsBase } from '@sentry/bundler-plugins/vite';
-import type { InstrumentationConfig } from '@sentry/server-utils';
-import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/vite';
-import type { VitePlugin } from '@sentry/server-utils/orchestrion/vite';
+import { sentryVitePlugin as sentryViteBundlerPlugin } from '@ichnois/bundler-plugins/vite';
+import type { SentryVitePluginOptions as SentryVitePluginOptionsBase } from '@ichnois/bundler-plugins/vite';
+import type { InstrumentationConfig } from '@ichnois/server-utils';
+import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/vite';
+import type { VitePlugin } from '@ichnois/server-utils/orchestrion/vite';
 
 export type SentryVitePluginOptions = SentryVitePluginOptionsBase & {
   /**
@@ -32,7 +32,7 @@ export type SentryVitePluginOptions = SentryVitePluginOptionsBase & {
  * @example
  * ```ts
  * // vite.config.ts
- * import { sentryVitePlugin } from '@sentry/node/vite';
+ * import { sentryVitePlugin } from '@ichnois/node/vite';
  * export default { plugins: [sentryVitePlugin({ org: '…', project: '…' })] };
  * ```
  */

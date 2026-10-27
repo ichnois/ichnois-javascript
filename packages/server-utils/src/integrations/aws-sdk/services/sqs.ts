@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { getClient, getTraceData, hasSpanStreamingEnabled, propagationContextFromHeaders } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { getClient, getTraceData, hasSpanStreamingEnabled, propagationContextFromHeaders } from '@ichnois/core';
 import {
   MESSAGING_BATCH_MESSAGE_COUNT,
   MESSAGING_DESTINATION_NAME,

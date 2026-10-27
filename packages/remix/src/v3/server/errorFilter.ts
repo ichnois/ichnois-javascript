@@ -1,4 +1,4 @@
-import { captureException, isObjectLike } from '@sentry/core';
+import { captureException, isObjectLike } from '@ichnois/core';
 
 /** Decides whether a thrown value should become a Sentry issue. */
 export type ShouldHandleError = (error: unknown) => boolean;

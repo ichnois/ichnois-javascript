@@ -11,7 +11,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { HTTP_SERVER } from '@sentry/conventions/op';
-import type { Span, SpanAttributes } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
 import {
   addNonEnumerableProperty,
   getIsolationScope,
@@ -25,8 +25,8 @@ import {
   winterCGRequestToRequestData,
   filterCollectedUrl,
   filterCollectedUrlQuery,
-} from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+} from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import {
   captureException,
   continueTrace,
@@ -39,8 +39,8 @@ import {
   startSpan,
   winterCGHeadersToDict,
   withIsolationScope,
-} from '@sentry/node';
-import { setHttpServerSpanRouteAttribute } from '@sentry/server-utils';
+} from '@ichnois/node';
+import { setHttpServerSpanRouteAttribute } from '@ichnois/server-utils';
 import type { APIContext, MiddlewareHandler, MiddlewareNext, RoutePart } from 'astro';
 
 type MiddlewareOptions = {

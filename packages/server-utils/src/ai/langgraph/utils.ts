@@ -1,6 +1,6 @@
 /* eslint-disable typescript-eslint/no-deprecated */
-import { SPAN_STATUS_ERROR, startSpan, stringify } from '@sentry/core';
-import type { Span, SpanAttributes } from '@sentry/core';
+import { SPAN_STATUS_ERROR, startSpan, stringify } from '@ichnois/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
 import {
   GEN_AI_AGENT_NAME,
   GEN_AI_OPERATION_NAME,

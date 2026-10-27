@@ -1,6 +1,6 @@
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
-import type { IntegrationFn, Span } from '@sentry/core';
-import { defineIntegration, startInactiveSpan } from '@sentry/core';
+import type { IntegrationFn, Span } from '@ichnois/core';
+import { defineIntegration, startInactiveSpan } from '@ichnois/core';
 import {
   _AWS_REQUEST_ID as AWS_REQUEST_ID,
   AWS_REQUEST_EXTENDED_ID,

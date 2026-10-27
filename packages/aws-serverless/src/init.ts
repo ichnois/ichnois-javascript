@@ -1,8 +1,8 @@
-import type { Integration, Options } from '@sentry/core';
-import { applySdkMetadata, debug, envToBool, getSDKSource } from '@sentry/core';
-import type { NodeClient, NodeOptions } from '@sentry/node';
-import { getDefaultIntegrationsWithoutPerformance, initWithoutDefaultIntegrations } from '@sentry/node';
-import { awsIntegration } from '@sentry/server-utils';
+import type { Integration, Options } from '@ichnois/core';
+import { applySdkMetadata, debug, envToBool, getSDKSource } from '@ichnois/core';
+import type { NodeClient, NodeOptions } from '@ichnois/node';
+import { getDefaultIntegrationsWithoutPerformance, initWithoutDefaultIntegrations } from '@ichnois/node';
+import { awsIntegration } from '@ichnois/server-utils';
 import { DEBUG_BUILD } from './debug-build';
 import { awsLambdaIntegration } from './integration/awslambda';
 

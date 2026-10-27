@@ -1,5 +1,5 @@
 import type { Nuxt } from '@nuxt/schema';
-import type * as BundlerPluginsCore from '@sentry/bundler-plugins/core';
+import type * as BundlerPluginsCore from '@ichnois/bundler-plugins/core';
 import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
@@ -19,12 +19,12 @@ const { mockSentryVitePlugin, mockSentryRollupPlugin, mockDeleteArtifacts, mockC
     };
   });
 
-vi.mock('@sentry/bundler-plugins/core', async importOriginal => ({
+vi.mock('@ichnois/bundler-plugins/core', async importOriginal => ({
   ...(await importOriginal<typeof BundlerPluginsCore>()),
   createSentryBuildPluginManager: mockCreateSentryBuildPluginManager,
 }));
-vi.mock('@sentry/bundler-plugins/vite', () => ({ sentryVitePlugin: mockSentryVitePlugin }));
-vi.mock('@sentry/bundler-plugins/rollup', () => ({ sentryRollupPlugin: mockSentryRollupPlugin }));
+vi.mock('@ichnois/bundler-plugins/vite', () => ({ sentryVitePlugin: mockSentryVitePlugin }));
+vi.mock('@ichnois/bundler-plugins/rollup', () => ({ sentryRollupPlugin: mockSentryRollupPlugin }));
 
 function createMockAddVitePlugin() {
   const capturedPlugins: Plugin[] = [];

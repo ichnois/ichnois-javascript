@@ -1,5 +1,5 @@
-import type { Event, IntegrationFn, StackFrame } from '@sentry/core';
-import { defineIntegration, GLOBAL_OBJ } from '@sentry/core';
+import type { Event, IntegrationFn, StackFrame } from '@ichnois/core';
+import { defineIntegration, GLOBAL_OBJ } from '@ichnois/core';
 import { uniqueImageForSyntheticFilename } from './matchSyntheticWasmFilename';
 import { patchWebAssembly } from './patchWebAssembly';
 import { getImage, getImages, registerModule, toProtocolDebugImage, type RegisteredWasmImage } from './registry';

@@ -1,7 +1,7 @@
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { tracingChannel } from 'node:diagnostics_channel';
-import type { Scope, Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Scope, Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import {
   _INTERNAL_setSpanForScope,
   Client,
@@ -17,7 +17,7 @@ import {
   setAsyncContextStrategy,
   spanToJSON,
   startSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   MYSQL2_DC_CHANNEL_CONNECT,

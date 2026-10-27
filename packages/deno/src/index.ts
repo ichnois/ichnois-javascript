@@ -19,7 +19,7 @@ export type {
   Stacktrace,
   Thread,
   User,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export type { DenoOptions } from './types';
 
@@ -110,8 +110,8 @@ export {
   logger,
   consoleLoggingIntegration,
   spanStreamingIntegration,
-} from '@sentry/core';
-export { trpcMiddleware, wrapMcpServerWithSentry } from '@sentry/core/server';
+} from '@ichnois/core';
+export { trpcMiddleware, wrapMcpServerWithSentry } from '@ichnois/core/server';
 export {
   instrumentPostgresJsSql,
   prismaIntegration,
@@ -125,8 +125,8 @@ export {
   instrumentStateGraph,
   instrumentStateGraphCompile,
   instrumentCreateReactAgent,
-} from '@sentry/server-utils';
-export type { FlueOptions } from '@sentry/server-utils';
+} from '@ichnois/server-utils';
+export type { FlueOptions } from '@ichnois/server-utils';
 
 export { DenoClient } from './client';
 
@@ -139,7 +139,7 @@ export {
 export { denoServeIntegration } from './integrations/deno-serve';
 export type { DenoServeIntegrationOptions } from './integrations/deno-serve';
 export { fetchIntegration } from './integrations/fetch';
-export type { FetchIntegrationOptions } from '@sentry/core';
+export type { FetchIntegrationOptions } from '@ichnois/core';
 export { denoHttpIntegration } from './integrations/http';
 export type { DenoHttpIntegrationOptions } from './integrations/http';
 
@@ -190,8 +190,8 @@ export {
   eveConversationHook,
   eveIntegration,
   getInstrumentedModuleNames,
-} from '@sentry/server-utils';
-export { openTelemetryIntegration, getOtlpTracesEndpoint } from '@sentry/server-utils/no-diagnostic-channels';
+} from '@ichnois/server-utils';
+export { openTelemetryIntegration, getOtlpTracesEndpoint } from '@ichnois/server-utils/no-diagnostic-channels';
 // Deprecated aliases kept for back-compat. Each forwards to the shared
 // integration above, so its name is the shared name (e.g. `Mysql`), not the old
 // `Deno*` name. See each alias's `@deprecated` note.

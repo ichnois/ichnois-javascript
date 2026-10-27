@@ -1,4 +1,4 @@
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 
 /**
  * Default implementation of the `shouldHandleError` callback.

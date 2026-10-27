@@ -1,7 +1,7 @@
 import { feedbackAsyncIntegration } from '../feedbackAsync';
 
-export { getFeedback } from '@sentry/feedback';
+export { getFeedback } from '@ichnois/feedback';
 
 export { feedbackAsyncIntegration, feedbackAsyncIntegration as feedbackIntegration };
 
-export { captureFeedback } from '@sentry/core';
+export { captureFeedback } from '@ichnois/core';

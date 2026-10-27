@@ -1,6 +1,6 @@
 import { HTTP_TARGET, URL_FULL, URL_PATH, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import type { ClientOptions, RawAttributes } from '@sentry/core';
-import { escapeStringForRegex, getClient, GLOBAL_OBJ, isSentryRequestUrl, type Span } from '@sentry/core';
+import type { ClientOptions, RawAttributes } from '@ichnois/core';
+import { escapeStringForRegex, getClient, GLOBAL_OBJ, isSentryRequestUrl, type Span } from '@ichnois/core';
 import { ATTR_NEXT_ROUTE, ATTR_NEXT_SPAN_TYPE } from '../nextSpanAttributes';
 import {
   getTunnelRouteRequestPattern,

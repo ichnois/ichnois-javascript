@@ -1,8 +1,8 @@
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { describe, expect, it } from '@effect/vitest';
-import * as sentryCore from '@sentry/core';
-import * as sentryCoreBrowser from '@sentry/core/browser';
-import { ServerRuntimeClient } from '@sentry/core/server';
+import * as sentryCore from '@ichnois/core';
+import * as sentryCoreBrowser from '@ichnois/core/browser';
+import { ServerRuntimeClient } from '@ichnois/core/server';
 import { Effect, Exit } from 'effect';
 import { TestClock } from 'effect/testing';
 import * as Tracer from 'effect/Tracer';

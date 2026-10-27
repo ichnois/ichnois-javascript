@@ -178,7 +178,7 @@ export function makeTunnelRoutePlugin(options: TunnelRouteOptions, debug?: boole
       }
 
       return `import { createFileRoute } from '@tanstack/react-router';
-import { registerSentryServerTunnelRoute } from '@sentry/tanstackstart-react';
+import { registerSentryServerTunnelRoute } from '@ichnois/tanstackstart-react';
 
 // Server-only: drop the tunnel route's own transaction. Registered synchronously at module evaluation
 // (before any request) so streamed spans are filtered from the first request. The SSR guard tree-shakes
@@ -191,7 +191,7 @@ export const Route = createFileRoute(${serializedTunnelRoute})({
   server: {
     handlers: {
       async POST({ request }) {
-        const Sentry = await import('@sentry/tanstackstart-react');
+        const Sentry = await import('@ichnois/tanstackstart-react');
         return Sentry.createSentryTunnelRoute(${serializedAllowedDsns ? `{ allowedDsns: ${serializedAllowedDsns} }` : `{}`}).handlers.POST({ request });
       },
       // Without a handler for a method, TanStack Start falls back to SSR-rendering the app (running root loaders).

@@ -1,6 +1,6 @@
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { IntegrationFn } from '@sentry/core';
-import { debug, defineIntegration, isObjectLike } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { debug, defineIntegration, isObjectLike } from '@ichnois/core';
 import { resolveAIRecordingOptions } from '../ai/core/utils';
 import { createLangChainCallbackHandler } from '../ai/langchain';
 import { instrumentCompiledGraphInvoke } from '../ai/langgraph';

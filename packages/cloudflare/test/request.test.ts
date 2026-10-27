@@ -2,10 +2,10 @@
 // Although this is not ideal, this is the best we can do until we have a better way to test cloudflare workers.
 
 import type { ExecutionContext } from '@cloudflare/workers-types';
-import type { Event } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Event } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { beforeAll, beforeEach, describe, expect, onTestFinished, test, vi } from 'vitest';
-import { setAsyncLocalStorageAsyncContextStrategy } from '@sentry/server-utils/no-diagnostic-channels';
+import { setAsyncLocalStorageAsyncContextStrategy } from '@ichnois/server-utils/no-diagnostic-channels';
 import type { CloudflareOptions } from '../src/client';
 import { CloudflareClient } from '../src/client';
 import { httpServerIntegration } from '../src/integrations/httpServer';

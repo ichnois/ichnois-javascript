@@ -1,5 +1,5 @@
-import type { Integration } from '@sentry/core';
-import { browserTracingIntegration as originalBrowserTracingIntegration } from '@sentry/react';
+import type { Integration } from '@ichnois/core';
+import { browserTracingIntegration as originalBrowserTracingIntegration } from '@ichnois/react';
 import type { RemixBrowserTracingIntegrationOptions } from './performance';
 import { setGlobals, startPageloadSpan } from './performance';
 /**

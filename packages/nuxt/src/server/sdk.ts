@@ -1,5 +1,5 @@
 import * as path from 'node:path';
-import type { Client, Event, EventProcessor } from '@sentry/core';
+import type { Client, Event, EventProcessor } from '@ichnois/core';
 import {
   _INTERNAL_getActiveClient,
   applySdkMetadata,
@@ -7,8 +7,8 @@ import {
   debug,
   DEFAULT_ENVIRONMENT,
   DEV_ENVIRONMENT,
-} from '@sentry/core';
-import { init as initNode } from '@sentry/node';
+} from '@ichnois/core';
+import { init as initNode } from '@ichnois/node';
 import { DEBUG_BUILD } from '../common/debug-build';
 import {
   isNuxtDevRuntime,

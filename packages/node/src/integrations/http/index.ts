@@ -1,5 +1,5 @@
 import type { ClientRequest, RequestOptions } from 'node:http';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import { URL_FULL } from '@sentry/conventions/attributes';
 import {
   defineIntegration,
@@ -7,14 +7,14 @@ import {
   hasSpansEnabled,
   hasSpanStreamingEnabled,
   stripDataUrlContent,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type {
   AssertTrue,
   CheckServerRequestOptions,
   HttpIncomingMessage,
   HttpServerResponse,
-} from '@sentry/core/server';
-import { getRequestUrlFromClientRequest } from '@sentry/core/server';
+} from '@ichnois/core/server';
+import { getRequestUrlFromClientRequest } from '@ichnois/core/server';
 import type { NodeClient } from '../../sdk/client';
 import type { HttpServerIntegrationOptions } from './httpServerIntegration';
 import { httpServerIntegration } from './httpServerIntegration';

@@ -18,7 +18,7 @@ export default {
       },
       {
         // Unit tests target the Svelte 4 variant; the Svelte 5 rune variant is covered by e2e.
-        find: '@sentry/sveltekit/browser-tracing-variant',
+        find: '@ichnois/sveltekit/browser-tracing-variant',
         replacement: resolve(dirname(fileURLToPath(import.meta.url)), 'src/client/svelte4BrowserTracing.ts'),
       },
     ],

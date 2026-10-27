@@ -1,11 +1,11 @@
-import type { EventEnvelope, EventItem } from '@sentry/core';
+import type { EventEnvelope, EventItem } from '@ichnois/core';
 import {
   addItemToEnvelope,
   createAttachmentEnvelopeItem,
   createEnvelope,
   createTransport,
   serializeEnvelope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { EventEmitter } from 'node:events';
 import * as http from 'http';
 import type { ClientRequest } from 'node:http';
@@ -17,8 +17,8 @@ import * as httpProxyAgent from '../../src/proxy';
 import { makeNodeTransport } from '../../src/transports';
 import type { HTTPModule, HTTPModuleRequestIncomingMessage } from '../../src/transports/http-module';
 
-vi.mock('@sentry/core', async () => {
-  const actualCore = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actualCore = await vi.importActual('@ichnois/core');
   return {
     ...actualCore,
     createTransport: vi.fn().mockImplementation(actualCore.createTransport),

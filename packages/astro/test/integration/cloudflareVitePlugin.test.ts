@@ -12,7 +12,7 @@ describe('sentryCloudflareVitePlugin', () => {
 
     expect(transform(code, '\0@astrojs-ssr-virtual-entry')).toEqual({
       code: [
-        "import { withSentry } from '@sentry/cloudflare';",
+        "import { withSentry } from '@ichnois/cloudflare';",
         'const _exports = createExports(manifest);',
         'export default withSentry(() => undefined, _exports.default);',
       ].join('\n'),
@@ -31,7 +31,7 @@ describe('sentryCloudflareVitePlugin', () => {
 
     expect(transform(code, '\0virtual:cloudflare/worker-entry')).toEqual({
       code: [
-        "import { withSentry } from '@sentry/cloudflare';",
+        "import { withSentry } from '@ichnois/cloudflare';",
         'import { getExportTypes } from "virtual:cloudflare/export-types";',
         'import * as mod from "virtual:cloudflare/user-entry";',
         'export * from "virtual:cloudflare/user-entry";',

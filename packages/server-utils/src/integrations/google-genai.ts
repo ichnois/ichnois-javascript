@@ -1,6 +1,6 @@
 import { GEN_AI_REQUEST_MODEL, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { IntegrationFn, Span } from '@sentry/core';
+import type { IntegrationFn, Span } from '@ichnois/core';
 import {
   _INTERNAL_shouldSkipAiProviderWrapping,
   defineIntegration,
@@ -9,7 +9,7 @@ import {
   hasSpanStreamingEnabled,
   spanToJSON,
   startInactiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { getGenAiSpanOp, resolveAIRecordingOptions } from '../ai/core/utils';
 import {
   addPrivateRequestAttributes,

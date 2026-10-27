@@ -1,19 +1,19 @@
-import type * as SentryCore from '@sentry/core';
-import type { Span } from '@sentry/core';
+import type * as SentryCore from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import {
   getMainCarrier,
   _INTERNAL_performanceTimeToSeconds,
   SentrySpan,
   setCurrentClient,
   spanToJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { _addUserTimingSpan, userTimingIntegration } from '../../src/performance/userTiming';
 import * as utils from '../../src/performance/utils';
 import * as webVitalsUtils from '../../src/web-vitals/utils';
 import { getDefaultClientOptions, TestClient } from '../utils/TestClient';
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const actual = await importOriginal<typeof SentryCore>();
   return { ...actual, _INTERNAL_performanceTimeToSeconds: vi.fn(actual._INTERNAL_performanceTimeToSeconds) };
 });

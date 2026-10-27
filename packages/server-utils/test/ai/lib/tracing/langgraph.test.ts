@@ -1,7 +1,7 @@
 import { GEN_AI_INPUT_MESSAGES, GEN_AI_OUTPUT_MESSAGES, GEN_AI_RESPONSE_TEXT } from '@sentry/conventions/attributes';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { getMainCarrier, setCurrentClient, spanToJSON } from '@sentry/core';
-import type { Span } from '@sentry/core';
+import { getMainCarrier, setCurrentClient, spanToJSON } from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import {
   instrumentCreateReactAgent,
   instrumentStateGraph,

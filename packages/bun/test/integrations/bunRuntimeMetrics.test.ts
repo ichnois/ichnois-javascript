@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, jest, mock, spyOn } from 'bun:test';
-import { metrics } from '@sentry/core';
+import { metrics } from '@ichnois/core';
 
 const mockElu = { idle: 700, active: 300, utilization: 0.3 };
 const mockEluDelta = { idle: 700, active: 300, utilization: 0.3 };

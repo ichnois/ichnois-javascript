@@ -1,4 +1,4 @@
-import { captureException, getClient } from '@sentry/core';
+import { captureException, getClient } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, type Mock, test, vi } from 'vitest';
 import type { ComponentPublicInstance } from 'vue';
 import { extractErrorContext, reportNuxtError } from '../../src/runtime/utils';
@@ -93,7 +93,7 @@ describe('extractErrorContext', () => {
 });
 
 describe('reportNuxtError', () => {
-  vi.mock('@sentry/core', async importOriginal => {
+  vi.mock('@ichnois/core', async importOriginal => {
     const actual = await importOriginal();
     return {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment

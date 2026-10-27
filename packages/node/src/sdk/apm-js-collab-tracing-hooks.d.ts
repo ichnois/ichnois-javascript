@@ -1,5 +1,5 @@
 declare module '@apm-js-collab/tracing-hooks' {
-  import type { InstrumentationConfig } from '@sentry/server-utils';
+  import type { InstrumentationConfig } from '@ichnois/server-utils';
 
   type PatchConfig = { instrumentations: InstrumentationConfig[] };
 

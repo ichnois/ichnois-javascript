@@ -1,15 +1,15 @@
-import { getSDKSource } from '@sentry/core';
-import { initWithoutDefaultIntegrations } from '@sentry/node';
+import { getSDKSource } from '@ichnois/core';
+import { initWithoutDefaultIntegrations } from '@ichnois/node';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import type { AwsServerlessOptions } from '../src/init';
 import { init } from '../src/init';
 
-vi.mock('@sentry/core', async importOriginal => ({
+vi.mock('@ichnois/core', async importOriginal => ({
   ...(await importOriginal()),
   getSDKSource: vi.fn(),
 }));
 
-vi.mock('@sentry/node', async importOriginal => ({
+vi.mock('@ichnois/node', async importOriginal => ({
   ...(await importOriginal()),
   initWithoutDefaultIntegrations: vi.fn(),
 }));

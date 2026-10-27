@@ -1,6 +1,6 @@
-import { getMainCarrier } from '@sentry/core';
-import * as SentryNode from '@sentry/node';
-import { SDK_VERSION } from '@sentry/node';
+import { getMainCarrier } from '@ichnois/core';
+import * as SentryNode from '@ichnois/node';
+import { SDK_VERSION } from '@ichnois/node';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { init } from '../../src/server/sdk';
 

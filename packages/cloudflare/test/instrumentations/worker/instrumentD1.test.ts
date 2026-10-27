@@ -1,5 +1,5 @@
 import type { D1Database, D1DatabaseSession, D1PreparedStatement } from '@cloudflare/workers-types';
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import { instrumentD1 } from '../../../src/instrumentations/worker/instrumentD1';
 

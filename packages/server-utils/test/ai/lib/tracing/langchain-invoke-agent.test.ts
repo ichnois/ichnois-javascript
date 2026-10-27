@@ -17,8 +17,8 @@ import {
   spanToJSON,
   spanToStaticSpanJSON,
   startSpan,
-} from '@sentry/core';
-import type { ClientOptions, Span } from '@sentry/core';
+} from '@ichnois/core';
+import type { ClientOptions, Span } from '@ichnois/core';
 import { createLangChainCallbackHandler } from '../../../../src/ai/langchain';
 import { getDefaultTestClientOptions, TestClient } from '../../../mocks/client';
 

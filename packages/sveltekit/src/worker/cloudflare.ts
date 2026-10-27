@@ -3,8 +3,8 @@ import {
   type CloudflareOptions,
   getDefaultIntegrations as getDefaultCloudflareIntegrations,
   setAsyncLocalStorageAsyncContextStrategy,
-} from '@sentry/cloudflare';
-import { addNonEnumerableProperty } from '@sentry/core';
+} from '@ichnois/cloudflare';
+import { addNonEnumerableProperty } from '@ichnois/core';
 import type { Handle } from '@sveltejs/kit';
 import { rewriteFramesIntegration } from '../server-common/integrations/rewriteFramesIntegration';
 import { svelteKitSpansIntegration } from '../server-common/integrations/svelteKitSpans';

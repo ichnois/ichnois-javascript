@@ -1,14 +1,14 @@
 import { HTTP_REQUEST_RESPONSE_END, SENTRY_OP } from '@sentry/conventions/attributes';
-import type { Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
-import { getClient, getMainCarrier, SentrySpan, setCurrentClient, spanToJSON } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
+import { getClient, getMainCarrier, SentrySpan, setCurrentClient, spanToJSON } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { addPerformanceEntries } from '../../src/performance/entries';
 import { WINDOW } from '../../src/types';
 import { getDefaultClientOptions, TestClient } from '../utils/TestClient';
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   const browserPerformanceTimeOrigin = vi.fn();
   return {
     ...actual,

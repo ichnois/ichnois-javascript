@@ -1,4 +1,4 @@
-import { redisIntegration } from '@sentry/server-utils';
+import { redisIntegration } from '@ichnois/server-utils';
 
 /**
  * @deprecated Use `redisIntegration` instead.

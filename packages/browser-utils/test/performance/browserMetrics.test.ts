@@ -1,6 +1,6 @@
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import type { Span, SpanAttributes } from '@sentry/core';
-import { getClient, getMainCarrier, SentrySpan, setCurrentClient, spanToJSON } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
+import { getClient, getMainCarrier, SentrySpan, setCurrentClient, spanToJSON } from '@ichnois/core';
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   _addNavigationSpans,

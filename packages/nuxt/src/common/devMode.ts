@@ -1,4 +1,4 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 
 /** Global flag set by the generated runtime-flags module before the Sentry server config evaluates. */
 export const NUXT_DEV_MODE_FLAG = '__SENTRY_NUXT_DEV_MODE__';

@@ -1,6 +1,6 @@
-import { getClient, getTraceMetaTags, hasSpanStreamingEnabled } from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
-import { captureException, startSpan } from '@sentry/node';
+import { getClient, getTraceMetaTags, hasSpanStreamingEnabled } from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
+import { captureException, startSpan } from '@ichnois/node';
 import {
   CODE_FUNCTION_NAME,
   HTTP_REQUEST_METHOD,
@@ -122,7 +122,7 @@ function injectMetaTagsInResponse(originalResponse: Response): Response {
  *
  * @example
  * ```ts
- * import { wrapFetchWithSentry } from '@sentry/tanstackstart-react';
+ * import { wrapFetchWithSentry } from '@ichnois/tanstackstart-react';
  *
  * import handler, { createServerEntry } from '@tanstack/react-start/server-entry';
  * import type { ServerEntry } from '@tanstack/react-start/server-entry';

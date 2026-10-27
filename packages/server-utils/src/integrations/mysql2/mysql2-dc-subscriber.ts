@@ -11,7 +11,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import { getClient, hasSpanStreamingEnabled, startInactiveSpan } from '@sentry/core';
+import { getClient, hasSpanStreamingEnabled, startInactiveSpan } from '@ichnois/core';
 import { bindTracingChannelToSpan } from '../../tracing-channel';
 import { sanitizeSqlQueryWithSummary } from '../../utils/sql';
 

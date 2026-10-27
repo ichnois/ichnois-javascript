@@ -1,5 +1,5 @@
 import { diag, DiagLogLevel, propagation, trace } from '@opentelemetry/api';
-import { debug, getClient } from '@sentry/core';
+import { debug, getClient } from '@ichnois/core';
 import { DEBUG_BUILD } from '../../src/debug-build';
 import { SentryPropagator } from '../../src/propagator';
 import { registerPrepareSpanScope } from '../../src/prepareSpanScope';

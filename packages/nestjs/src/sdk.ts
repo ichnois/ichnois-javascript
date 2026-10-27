@@ -1,7 +1,7 @@
-import type { Integration } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
-import type { NodeClient, NodeOptions } from '@sentry/node';
-import { getDefaultIntegrations as getDefaultNodeIntegrations, init as nodeInit } from '@sentry/node';
+import type { Integration } from '@ichnois/core';
+import { applySdkMetadata } from '@ichnois/core';
+import type { NodeClient, NodeOptions } from '@ichnois/node';
+import { getDefaultIntegrations as getDefaultNodeIntegrations, init as nodeInit } from '@ichnois/node';
 import { nestIntegration } from './integrations/nest';
 
 /**

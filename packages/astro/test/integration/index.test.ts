@@ -6,7 +6,7 @@ import type { SentryOptions } from '../../src/integration/types';
 
 const sentryVitePluginSpy = vi.fn(() => 'sentryVitePlugin');
 
-vi.mock('@sentry/bundler-plugins/vite', () => ({
+vi.mock('@ichnois/bundler-plugins/vite', () => ({
   // @ts-expect-error - just mocking around
   sentryVitePlugin: vi.fn(args => sentryVitePluginSpy(args)),
 }));
@@ -16,7 +16,7 @@ vi.mock('@sentry/bundler-plugins/vite', () => ({
 const orchestrionVite = vi.fn((options?: { buildTimeInstrumentation?: boolean }) => ({
   name: options?.buildTimeInstrumentation === false ? 'sentry-orchestrion-disabled' : 'sentry-orchestrion-vite',
 }));
-vi.mock('@sentry/server-utils/orchestrion/vite', () => ({
+vi.mock('@ichnois/server-utils/orchestrion/vite', () => ({
   sentryOrchestrionPlugin: (options?: { buildTimeInstrumentation?: boolean }) => orchestrionVite(options),
 }));
 
@@ -27,7 +27,7 @@ vi.mock('module', async requireActual => {
   const actual = await requireActual<any>();
   return {
     ...actual,
-    createRequire: () => ({ resolve: () => '@sentry/cloudflare' }),
+    createRequire: () => ({ resolve: () => '@ichnois/cloudflare' }),
   };
 });
 
@@ -71,7 +71,7 @@ describe('sentryAstro integration', () => {
 
   it('has a name', () => {
     const integration = sentryAstro({});
-    expect(integration.name).toBe('@sentry/astro');
+    expect(integration.name).toBe('@ichnois/astro');
   });
 
   it('enables "hidden" source maps, adds filesToDeleteAfterUpload and adds the sentry vite plugin if an auth token is detected', async () => {
@@ -680,7 +680,7 @@ describe('sentryAstro integration', () => {
     expect(addMiddleware).toHaveBeenCalledTimes(1);
     expect(addMiddleware).toHaveBeenCalledWith({
       order: 'pre',
-      entrypoint: '@sentry/astro/middleware',
+      entrypoint: '@ichnois/astro/middleware',
     });
   });
 

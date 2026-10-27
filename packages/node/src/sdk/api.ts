@@ -1,8 +1,8 @@
 // PUBLIC APIS
 
-import type { StackParser } from '@sentry/core';
-import { createStackParser, GLOBAL_OBJ } from '@sentry/core';
-import { _INTERNAL_getReleaseFromCommitEnv as getReleaseFromCommitEnv, nodeStackLineParser } from '@sentry/core/server';
+import type { StackParser } from '@ichnois/core';
+import { createStackParser, GLOBAL_OBJ } from '@ichnois/core';
+import { _INTERNAL_getReleaseFromCommitEnv as getReleaseFromCommitEnv, nodeStackLineParser } from '@ichnois/core/server';
 import { createGetModuleFromFilename } from '../utils/module';
 
 /**

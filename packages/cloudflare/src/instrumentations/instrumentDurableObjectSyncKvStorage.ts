@@ -1,7 +1,7 @@
 import type { SyncKvStorage } from '@cloudflare/workers-types';
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import { startSpan } from '@sentry/core';
+import { startSpan } from '@ichnois/core';
 
 const SYNC_KV_METHODS_TO_INSTRUMENT = ['get', 'put', 'delete', 'list'] as const;
 

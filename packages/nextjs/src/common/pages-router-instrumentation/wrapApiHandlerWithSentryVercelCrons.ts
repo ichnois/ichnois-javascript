@@ -1,4 +1,4 @@
-import { isObjectLike, _INTERNAL_safeDateNow, captureCheckIn } from '@sentry/core';
+import { isObjectLike, _INTERNAL_safeDateNow, captureCheckIn } from '@ichnois/core';
 import type { NextApiRequest } from 'next';
 import type { VercelCronsConfig } from '../types';
 

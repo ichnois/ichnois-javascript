@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, realpathSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
-import { GLOBAL_OBJ, type IntegrationFn } from '@sentry/core';
+import { GLOBAL_OBJ, type IntegrationFn } from '@ichnois/core';
 
 type ModuleInfo = Record<string, string>;
 

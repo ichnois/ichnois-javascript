@@ -1,4 +1,4 @@
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 const mockInitNode = vi.fn();
@@ -6,7 +6,7 @@ const mockGetBunDefaultIntegrations = vi.fn(() => [] as Integration[]);
 const mockMakeFetchTransport = vi.fn();
 const mockMakeNodeTransport = vi.fn();
 
-vi.mock('@sentry/bun', () => ({
+vi.mock('@ichnois/bun', () => ({
   init: mockInitNode,
   getDefaultIntegrations: mockGetBunDefaultIntegrations,
   makeFetchTransport: mockMakeFetchTransport,

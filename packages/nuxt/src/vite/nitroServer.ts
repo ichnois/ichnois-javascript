@@ -1,6 +1,6 @@
 import { addNitroPlugin, createResolver } from '@nuxt/kit';
 import type { Nuxt } from '@nuxt/schema';
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@ichnois/core';
 import type { Nitro } from 'nitropack/types';
 import type { SentryNuxtModuleOptions } from '../common/types';
 import {

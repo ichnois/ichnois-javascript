@@ -20,7 +20,7 @@ import {
   OBJECT_PUT,
   OBJECT_UPLOAD_PART,
 } from '@sentry/conventions/op';
-import { isObjectLike, startSpan } from '@sentry/core';
+import { isObjectLike, startSpan } from '@ichnois/core';
 
 const ORIGIN = 'auto.faas.cloudflare.r2';
 

@@ -1,15 +1,15 @@
 import { context, trace } from '@opentelemetry/api';
 import type { ClientRequest, IncomingMessage } from 'node:http';
-import type { Span } from '@sentry/core';
-import { isTracingSuppressed } from '@sentry/core';
-import type { HttpClientRequest, HttpIncomingMessage, HttpInstrumentationOptions } from '@sentry/core/server';
+import type { Span } from '@ichnois/core';
+import { isTracingSuppressed } from '@ichnois/core';
+import type { HttpClientRequest, HttpIncomingMessage, HttpInstrumentationOptions } from '@ichnois/core/server';
 import {
   getHttpClientSubscriptions,
   getRequestOptions,
   HTTP_ON_CLIENT_REQUEST,
   patchHttpModuleClient,
-} from '@sentry/core/server';
-import { subscribeDiagnosticsChannel } from '@sentry/server-utils';
+} from '@ichnois/core/server';
+import { subscribeDiagnosticsChannel } from '@ichnois/server-utils';
 import { NODE_VERSION } from '../../nodeVersion';
 import { errorMonitor } from 'node:events';
 import * as http from 'node:http';

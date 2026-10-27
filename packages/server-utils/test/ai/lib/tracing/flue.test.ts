@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import type { Event, Span } from '@sentry/core';
+import type { Event, Span } from '@ichnois/core';
 import {
   _INTERNAL_clearAiProviderSkips,
   _INTERNAL_shouldSkipAiProviderWrapping,
@@ -9,7 +9,7 @@ import {
   spanToStaticSpanJSON,
   startInactiveSpan,
   startSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { ANTHROPIC_AI_INTEGRATION_NAME } from '../../../../src/ai/anthropic-ai/constants';
 import { createFlueInstrumentation } from '../../../../src/ai/flue';
 import { MAX_TRACKED_FLUE_SPANS } from '../../../../src/ai/flue/constants';

@@ -1,5 +1,5 @@
-import { captureException, getClient, getCurrentScope } from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+import { captureException, getClient, getCurrentScope } from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import type { CapturedErrorContext } from 'nitropack/types';
 import { extractErrorContext, getEventRequestInfo } from '../utils';
 

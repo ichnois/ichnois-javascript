@@ -1,13 +1,13 @@
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { tracingChannel } from 'node:diagnostics_channel';
-import type { Client, Scope } from '@sentry/core';
+import type { Client, Scope } from '@ichnois/core';
 import {
   _INTERNAL_setSpanForScope,
   getDefaultCurrentScope,
   getDefaultIsolationScope,
   GLOBAL_OBJ,
   setAsyncContextStrategy,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { postgresIntegration } from '../../../src/integrations/postgres';
 import { CHANNELS } from '../../../src/orchestrion/channels';

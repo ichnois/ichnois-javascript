@@ -1,6 +1,6 @@
 import { Worker } from 'node:worker_threads';
-import type { CollectBehavior, Event, EventHint, Exception, IntegrationFn } from '@sentry/core';
-import { debug, defineIntegration, getClient } from '@sentry/core';
+import type { CollectBehavior, Event, EventHint, Exception, IntegrationFn } from '@ichnois/core';
+import { debug, defineIntegration, getClient } from '@ichnois/core';
 import type { NodeClient } from '../../sdk/client';
 import { isDebuggerEnabled } from '../../utils/debug';
 import type { FrameVariables, LocalVariablesIntegrationOptions, LocalVariablesWorkerArgs } from './common';

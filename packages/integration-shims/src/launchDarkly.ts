@@ -1,4 +1,4 @@
-import { consoleSandbox, defineIntegration, isBrowser } from '@sentry/core';
+import { consoleSandbox, defineIntegration, isBrowser } from '@ichnois/core';
 import { FAKE_FUNCTION } from './common';
 
 /**

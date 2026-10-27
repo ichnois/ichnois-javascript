@@ -1,6 +1,6 @@
-import type { Client } from '@sentry/core';
-import { createTransport, makeSession, Scope, withScope } from '@sentry/core';
-import { ServerRuntimeClient } from '@sentry/core/server';
+import type { Client } from '@ichnois/core';
+import { createTransport, makeSession, Scope, withScope } from '@ichnois/core';
+import { ServerRuntimeClient } from '@ichnois/core/server';
 import { EventEmitter } from 'stream';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { recordRequestSession } from '../../src/integrations/http/httpServerIntegration';

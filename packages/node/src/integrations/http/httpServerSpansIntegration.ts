@@ -27,13 +27,13 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { HTTP_SERVER } from '@sentry/conventions/op';
-import type { Event, Integration, IntegrationFn, Span, SpanAttributes, SpanStatus } from '@sentry/core';
-import type { HttpIncomingMessage, HttpServerResponse } from '@sentry/core/server';
+import type { Event, Integration, IntegrationFn, Span, SpanAttributes, SpanStatus } from '@ichnois/core';
+import type { HttpIncomingMessage, HttpServerResponse } from '@ichnois/core/server';
 import {
   DEFAULT_IGNORE_STATUS_CODES,
   getClientIPAddress,
   processHttpServerTransactionEvent,
-} from '@sentry/core/server';
+} from '@ichnois/core/server';
 import {
   debug,
   safeCallback,
@@ -53,7 +53,7 @@ import {
   filterCollectedUrlQuery,
   hasSpanStreamingEnabled,
   HTTP_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import type { NodeClient } from '../../sdk/client';
 import { addStartSpanCallback } from './httpServerIntegration';

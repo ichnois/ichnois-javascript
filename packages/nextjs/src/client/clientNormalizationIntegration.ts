@@ -1,5 +1,5 @@
-import { defineIntegration } from '@sentry/core';
-import { rewriteFramesIntegration } from '@sentry/react';
+import { defineIntegration } from '@ichnois/core';
+import { rewriteFramesIntegration } from '@ichnois/react';
 
 const NEXTJS_INTERNAL_CHUNK_REGEX =
   /\/_next\/static\/chunks\/(main-|main-app-|polyfills-|webpack-|framework-|framework\.)[0-9a-f]+\.js(:\d+)*$/;

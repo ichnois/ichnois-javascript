@@ -1,4 +1,4 @@
-import { uniq } from '@sentry/core';
+import { uniq } from '@ichnois/core';
 import type { Plugin } from 'vite';
 
 type AutoInstrumentMiddlewareOptions = {
@@ -190,7 +190,7 @@ export function arrayToObjectShorthand(contents: string): string | null {
  * Handles 'use client' and 'use server' directives by inserting the import after them.
  */
 export function addSentryImport(code: string): string {
-  const sentryImport = "import { wrapMiddlewaresWithSentry } from '@sentry/tanstackstart-react';\n";
+  const sentryImport = "import { wrapMiddlewaresWithSentry } from '@ichnois/tanstackstart-react';\n";
 
   // Don't add the import if it already exists
   if (code.includes(sentryImport.trimEnd())) {

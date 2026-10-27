@@ -6,7 +6,7 @@ export type {
   TrackComponentOptions as TrackingOptions,
 } from './types';
 
-export * from '@sentry/browser';
+export * from '@ichnois/browser';
 
 export { init } from './sdk';
 

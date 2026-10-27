@@ -1,4 +1,4 @@
-import { setCurrentClient, spanToJSON } from '@sentry/core';
+import { setCurrentClient, spanToJSON } from '@ichnois/core';
 import { describe, expect, it } from 'vitest';
 import { isWrappedConsumerCallback, wrapEachBatch, wrapEachMessage } from '../../src/integrations/kafkajs/consumer';
 import { startConsumerSpan, startProducerSpan } from '../../src/integrations/kafkajs/spans';

@@ -4,7 +4,7 @@
  * Usage:
  *
  * ```ts
- * import { sentryBunPlugin } from '@sentry/bun/plugin';
+ * import { sentryBunPlugin } from '@ichnois/bun/plugin';
  * await Bun.build({
  *   entrypoints: ['./app.ts'],
  *   outdir: './dist',
@@ -17,10 +17,10 @@
  *
  * @module
  */
-import { sentryBunPlugin as sentryBunBundlerPlugin } from '@sentry/bundler-plugins/bun';
-import type { SentryBunPluginOptions as SentryBunPluginOptionsBase } from '@sentry/bundler-plugins/bun';
-import type { InstrumentationConfig } from '@sentry/server-utils';
-import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/bun';
+import { sentryBunPlugin as sentryBunBundlerPlugin } from '@ichnois/bundler-plugins/bun';
+import type { SentryBunPluginOptions as SentryBunPluginOptionsBase } from '@ichnois/bundler-plugins/bun';
+import type { InstrumentationConfig } from '@ichnois/server-utils';
+import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/bun';
 
 export type SentryBunPluginOptions = SentryBunPluginOptionsBase & {
   /**

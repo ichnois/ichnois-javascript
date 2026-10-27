@@ -1,4 +1,4 @@
-import type { BunOptions } from '@sentry/bun';
+import type { BunOptions } from '@ichnois/bun';
 
 /**
  * Configuration options for the Sentry Elysia SDK.

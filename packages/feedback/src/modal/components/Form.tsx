@@ -3,8 +3,8 @@ import type {
   FeedbackInternalOptions,
   FeedbackScreenshotIntegration,
   SendFeedback,
-} from '@sentry/core';
-import { debug } from '@sentry/core';
+} from '@ichnois/core';
+import { debug } from '@ichnois/core';
 import type { TargetedSubmitEvent, VNode } from 'preact';
 import { h } from 'preact'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import { useCallback, useState } from 'preact/hooks';

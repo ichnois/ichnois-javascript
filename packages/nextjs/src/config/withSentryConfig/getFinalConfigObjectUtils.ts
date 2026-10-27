@@ -1,5 +1,5 @@
-import { debug, isMatchingPattern, parseSemver } from '@sentry/core';
-import { getSentryRelease } from '@sentry/node';
+import { debug, isMatchingPattern, parseSemver } from '@ichnois/core';
+import { getSentryRelease } from '@ichnois/node';
 import * as fs from 'fs';
 import * as path from 'path';
 import type { VercelCronsConfig } from '../../common/types';

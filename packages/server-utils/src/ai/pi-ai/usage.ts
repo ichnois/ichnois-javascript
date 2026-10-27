@@ -1,4 +1,4 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   GEN_AI_COST_CACHE_CREATION_INPUT_TOKENS,
   GEN_AI_COST_CACHE_READ_INPUT_TOKENS,

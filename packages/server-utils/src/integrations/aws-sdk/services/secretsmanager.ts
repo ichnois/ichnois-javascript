@@ -1,4 +1,4 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import { AWS_SECRETSMANAGER_SECRET_ARN as ATTR_AWS_SECRETSMANAGER_SECRET_ARN } from '@sentry/conventions/attributes';
 import type { NormalizedRequest, NormalizedResponse } from '../types';
 import type { RequestMetadata, ServiceExtension } from './ServiceExtension';

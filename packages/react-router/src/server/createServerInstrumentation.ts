@@ -22,8 +22,8 @@ import {
   startSpan,
   updateSpanName,
   filterCollectedUrl,
-} from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+} from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import type { ServerInstrumentation } from 'react-router';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { captureInstrumentationError, getPathFromRequest, getPattern, normalizeRoutePath } from '../common/utils';

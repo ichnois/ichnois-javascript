@@ -32,14 +32,14 @@ import {
   GEN_AI_EXECUTE_TOOL,
   GEN_AI_INVOKE_AGENT,
 } from '@sentry/conventions/op';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   _INTERNAL_clearAiProviderSkips,
   _INTERNAL_shouldSkipAiProviderWrapping,
   getMainCarrier,
   setCurrentClient,
   spanToStaticSpanJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { SentryMastraExporter } from '../../../../src/ai/mastra';
 import type { ClassifierEvaluationCall } from '../../../../src/ai/mastra/classifier-evaluation';
 import { setStartingClassifierEvaluation } from '../../../../src/ai/mastra/classifier-evaluation';

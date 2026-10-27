@@ -1,4 +1,4 @@
-import type { Event } from '@sentry/core';
+import type { Event } from '@ichnois/core';
 import { describe, expect, it } from 'vitest';
 import { dropReactControlFlowErrorsEventProcessor } from '../../../src/common/utils/dropReactControlFlowErrors';
 

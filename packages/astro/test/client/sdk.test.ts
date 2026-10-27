@@ -1,7 +1,7 @@
-import type { BrowserClient } from '@sentry/browser';
-import { browserTracingIntegration, getActiveSpan, getClient, SDK_VERSION } from '@sentry/browser';
-import { getMainCarrier } from '@sentry/core';
-import * as SentryBrowser from '@sentry/browser';
+import type { BrowserClient } from '@ichnois/browser';
+import { browserTracingIntegration, getActiveSpan, getClient, SDK_VERSION } from '@ichnois/browser';
+import { getMainCarrier } from '@ichnois/core';
+import * as SentryBrowser from '@ichnois/browser';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { init } from '../../src/client/sdk';
 

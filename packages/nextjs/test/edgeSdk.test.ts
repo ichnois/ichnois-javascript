@@ -1,7 +1,7 @@
-import type { Integration } from '@sentry/core';
-import { getGlobalScope, getMainCarrier, GLOBAL_OBJ, withIsolationScope } from '@sentry/core';
-import { setAsyncLocalStorageAsyncContextStrategy } from '@sentry/server-utils';
-import * as SentryVercelEdge from '@sentry/vercel-edge';
+import type { Integration } from '@ichnois/core';
+import { getGlobalScope, getMainCarrier, GLOBAL_OBJ, withIsolationScope } from '@ichnois/core';
+import { setAsyncLocalStorageAsyncContextStrategy } from '@ichnois/server-utils';
+import * as SentryVercelEdge from '@ichnois/vercel-edge';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { TRANSACTION_ATTR_SHOULD_DROP_TRANSACTION } from '../src/common/span-attributes-with-logic-attached';
 import { init } from '../src/edge';

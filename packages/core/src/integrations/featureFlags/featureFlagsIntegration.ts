@@ -20,8 +20,8 @@ export interface FeatureFlagsIntegration extends Integration {
  *
  * @example
  * ```
- * import * as Sentry from '@sentry/browser';
- * import { type FeatureFlagsIntegration } from '@sentry/browser';
+ * import * as Sentry from '@ichnois/browser';
+ * import { type FeatureFlagsIntegration } from '@ichnois/browser';
  *
  * // Setup
  * Sentry.init(..., integrations: [Sentry.featureFlagsIntegration()])

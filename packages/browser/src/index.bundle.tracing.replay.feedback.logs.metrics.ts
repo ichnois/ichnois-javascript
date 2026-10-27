@@ -1,4 +1,4 @@
-import { registerSpanErrorInstrumentation } from '@sentry/core';
+import { registerSpanErrorInstrumentation } from '@ichnois/core';
 import { feedbackAsyncIntegration } from './feedbackAsync';
 
 registerSpanErrorInstrumentation();
@@ -16,24 +16,24 @@ export {
   consoleLoggingIntegration,
   metrics,
   spanStreamingIntegration,
-} from '@sentry/core';
-export { startSpan, startInactiveSpan, startSpanManual } from '@sentry/core/browser';
+} from '@ichnois/core';
+export { startSpan, startInactiveSpan, startSpanManual } from '@ichnois/core/browser';
 
 export {
   browserTracingIntegration,
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
 } from './tracing/browserTracingIntegration';
-export { isBotUserAgent } from '@sentry/browser-utils';
-export { elementTimingIntegration } from '@sentry/browser-utils';
+export { isBotUserAgent } from '@ichnois/browser-utils';
+export { elementTimingIntegration } from '@ichnois/browser-utils';
 export { reportPageLoaded } from './tracing/reportPageLoaded';
 export { setActiveSpanInBrowser } from './tracing/setActiveSpan';
 
 export { fetchStreamPerformanceIntegration } from './integrations/fetchStreamPerformance';
 export { webVitalsIntegration } from './integrations/webVitals';
 
-export { getFeedback, sendFeedback } from '@sentry/feedback';
+export { getFeedback, sendFeedback } from '@ichnois/feedback';
 
 export { feedbackAsyncIntegration as feedbackAsyncIntegration, feedbackAsyncIntegration as feedbackIntegration };
 
-export { replayIntegration, getReplay } from '@sentry/replay';
+export { replayIntegration, getReplay } from '@ichnois/replay';

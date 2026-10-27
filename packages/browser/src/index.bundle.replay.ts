@@ -13,7 +13,7 @@ export * from './index.bundle.base';
 
 export { consoleLoggingIntegrationShim as consoleLoggingIntegration, loggerShim as logger, metricsShim as metrics };
 
-export { replayIntegration, getReplay } from '@sentry/replay';
+export { replayIntegration, getReplay } from '@ichnois/replay';
 
 export {
   browserTracingIntegrationShim as browserTracingIntegration,

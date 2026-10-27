@@ -1,5 +1,5 @@
-import type { IntegrationFn, Span } from '@sentry/core';
-import { defineIntegration, hasSpanStreamingEnabled } from '@sentry/core';
+import type { IntegrationFn, Span } from '@ichnois/core';
+import { defineIntegration, hasSpanStreamingEnabled } from '@ichnois/core';
 import {
   addWebVitalsToSpan,
   enableBfcacheReporting,
@@ -11,7 +11,7 @@ import {
   trackClsAsSpan,
   trackInpAsSpan,
   trackLcpAsSpan,
-} from '@sentry/browser-utils';
+} from '@ichnois/browser-utils';
 
 export const WEB_VITALS_INTEGRATION_NAME = 'WebVitals' as const;
 

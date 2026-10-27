@@ -1,6 +1,6 @@
-import type { Client, Integration, IntegrationFn, ReplayRecordingMode, StreamedSpanJSON } from '@sentry/core';
-import type { BrowserClientReplayOptions } from '@sentry/core/browser';
-import { consoleSandbox, GLOBAL_OBJ, isBrowser, parseSampleRate, safeSetSpanJSONAttributes } from '@sentry/core';
+import type { Client, Integration, IntegrationFn, ReplayRecordingMode, StreamedSpanJSON } from '@ichnois/core';
+import type { BrowserClientReplayOptions } from '@ichnois/core/browser';
+import { consoleSandbox, GLOBAL_OBJ, isBrowser, parseSampleRate, safeSetSpanJSONAttributes } from '@ichnois/core';
 import {
   DEFAULT_FLUSH_MAX_DELAY,
   DEFAULT_FLUSH_MIN_DELAY,

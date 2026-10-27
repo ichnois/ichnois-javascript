@@ -19,8 +19,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { GEN_AI_CHAT, GEN_AI_EMBEDDINGS, GEN_AI_DECIDE, GEN_AI_EXTRACT } from '@sentry/conventions/op';
-import { isObjectLike, stringify } from '@sentry/core';
-import type { Span, SpanAttributeValue } from '@sentry/core';
+import { isObjectLike, stringify } from '@ichnois/core';
+import type { Span, SpanAttributeValue } from '@ichnois/core';
 import { GEN_AI_REQUEST_STREAM_ATTRIBUTE } from '../core/gen-ai-attributes';
 import {
   extractSystemInstructions,

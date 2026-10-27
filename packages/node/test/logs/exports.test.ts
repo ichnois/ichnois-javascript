@@ -1,11 +1,11 @@
-import * as sentryCore from '@sentry/core';
-import { Scope } from '@sentry/core';
+import * as sentryCore from '@ichnois/core';
+import { Scope } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import * as nodeLogger from '../../src/logs/exports';
 
 // Mock the core functions
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     _INTERNAL_captureLog: vi.fn(),

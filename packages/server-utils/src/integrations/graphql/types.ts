@@ -4,7 +4,7 @@
  * this file only adds the bookkeeping/config types that depend on this package's symbols.
  */
 
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import type { GRAPHQL_DATA_SYMBOL, GRAPHQL_PATCHED_SYMBOL } from './constants';
 import type { DocumentNode } from './graphql-types';
 

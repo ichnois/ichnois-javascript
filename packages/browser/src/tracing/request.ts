@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { Client, RequestHookInfo, ResponseHookInfo, Span, SpanTimeInput } from '@sentry/core';
+import type { Client, RequestHookInfo, ResponseHookInfo, Span, SpanTimeInput } from '@ichnois/core';
 import {
   addFetchInstrumentationHandler,
   getActiveSpan,
@@ -20,10 +20,10 @@ import {
   stripDataUrlContent,
   stripUrlQueryAndFragment,
   timestampInSeconds,
-} from '@sentry/core';
-import { startInactiveSpan } from '@sentry/core/browser';
-import type { HandlerDataXhr, SentryWrappedXMLHttpRequest, XhrHint } from '@sentry/browser-utils';
-import { filterCollectedUrl, filterCollectedUrlQuery } from '@sentry/core';
+} from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/core/browser';
+import type { HandlerDataXhr, SentryWrappedXMLHttpRequest, XhrHint } from '@ichnois/browser-utils';
+import { filterCollectedUrl, filterCollectedUrlQuery } from '@ichnois/core';
 import {
   addPerformanceInstrumentationHandler,
   addXhrInstrumentationHandler,
@@ -31,7 +31,7 @@ import {
   parseXhrResponseHeaders,
   resourceTimingToSpanAttributes,
   SENTRY_XHR_DATA_KEY,
-} from '@sentry/browser-utils';
+} from '@ichnois/browser-utils';
 import type { BrowserClient } from '../client';
 import { WINDOW } from '../helpers';
 import { baggageHeaderHasSentryValues, createHeadersSafely, getFullURL, isPerformanceResourceTiming } from './utils';

@@ -1,5 +1,5 @@
 // Node SDK exports
-// Unfortunately, we cannot `export * from '@sentry/node'` because in prod builds,
+// Unfortunately, we cannot `export * from '@ichnois/node'` because in prod builds,
 // Vite puts these exports into a `default` property (Sentry.default) rather than
 // on the top - level namespace.
 
@@ -206,7 +206,7 @@ export {
   eveInstrumentation,
   eveIntegration,
   getInstrumentedModuleNames,
-} from '@sentry/node';
+} from '@ichnois/node';
 
 export { init } from './server/sdk';
 

@@ -1,5 +1,5 @@
-import { isObjectLike, debug, getActiveSpan, getRootSpan } from '@sentry/core';
-import { setHttpServerSpanRouteAttribute } from '@sentry/server-utils';
+import { isObjectLike, debug, getActiveSpan, getRootSpan } from '@ichnois/core';
+import { setHttpServerSpanRouteAttribute } from '@ichnois/server-utils';
 import type { H3Event } from 'h3';
 
 type MatchedRoute = { path?: string; route?: string };

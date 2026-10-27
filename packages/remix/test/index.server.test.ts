@@ -1,9 +1,9 @@
-import { getMainCarrier } from '@sentry/core';
-import * as SentryNode from '@sentry/node';
+import { getMainCarrier } from '@ichnois/core';
+import * as SentryNode from '@ichnois/node';
 import { afterEach, describe, expect, it, type Mock, vi } from 'vitest';
 import { init } from '../src/index.server';
 
-vi.mock('@sentry/node', { spy: true });
+vi.mock('@ichnois/node', { spy: true });
 
 const nodeInit = SentryNode.init as Mock;
 

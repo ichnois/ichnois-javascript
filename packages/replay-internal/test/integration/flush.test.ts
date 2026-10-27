@@ -3,8 +3,8 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import * as SentryUtils from '@sentry/core';
-import * as SentryBrowserUtils from '@sentry/browser-utils';
+import * as SentryUtils from '@ichnois/core';
+import * as SentryBrowserUtils from '@ichnois/browser-utils';
 import type { MockedFunction } from 'vitest';
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { DEFAULT_FLUSH_MIN_DELAY, MAX_REPLAY_DURATION, WINDOW } from '../../src/constants';

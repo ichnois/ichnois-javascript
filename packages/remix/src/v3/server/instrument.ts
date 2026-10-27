@@ -1,8 +1,8 @@
 import * as diagnosticsChannel from 'node:diagnostics_channel';
 import { createMultiMatcher } from 'remix/route-pattern/match';
-import { consoleSandbox } from '@sentry/core';
-import type { OrchestrionChannelContext } from '@sentry/server-utils';
-import { remixV3Channels } from '@sentry/server-utils/orchestrion/config';
+import { consoleSandbox } from '@ichnois/core';
+import type { OrchestrionChannelContext } from '@ichnois/server-utils';
+import { remixV3Channels } from '@ichnois/server-utils/orchestrion/config';
 
 import type { MatcherLike, RequestListenerOptionsLike, RouterOptionsLike } from '../types';
 import { captureRequestError } from './errorFilter';

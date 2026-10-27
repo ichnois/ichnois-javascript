@@ -34,7 +34,7 @@ import type * as http from 'node:http';
 import type { OutgoingHttpHeaders } from 'node:http';
 import * as net from 'node:net';
 import * as tls from 'node:tls';
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 import type { AgentConnectOpts } from './base';
 import { Agent } from './base';
 import { parseProxyResponse } from './parse-proxy-response';

@@ -2,8 +2,8 @@
  * @vitest-environment jsdom
  */
 
-import type { Client } from '@sentry/core';
-import { debug } from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import { debug } from '@ichnois/core';
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createApp } from 'vue';
 import * as Sentry from '../../src';

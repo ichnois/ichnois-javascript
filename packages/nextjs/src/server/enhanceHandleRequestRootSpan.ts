@@ -9,7 +9,7 @@ import {
   URL_PATH,
 } from '@sentry/conventions/attributes';
 import { HTTP_SERVER, MIDDLEWARE } from '@sentry/conventions/op';
-import { stripUrlQueryAndFragment } from '@sentry/core';
+import { stripUrlQueryAndFragment } from '@ichnois/core';
 import { ATTR_NEXT_ROUTE, ATTR_NEXT_SPAN_NAME, ATTR_NEXT_SPAN_TYPE } from '../common/nextSpanAttributes';
 import { TRANSACTION_ATTR_SENTRY_ROUTE_BACKFILL } from '../common/span-attributes-with-logic-attached';
 import { backfillHttpResponseStatusCode } from '../common/utils/backfillHttpResponseStatusCode';

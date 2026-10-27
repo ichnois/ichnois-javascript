@@ -1,8 +1,8 @@
-import type { ServerRuntimeClientOptions } from '@sentry/core/server';
-import { SDK_VERSION } from '@sentry/core';
-import { ServerRuntimeClient } from '@sentry/core/server';
-import { registerDiagnosticsChannelInjection } from '@sentry/server-runtime-injection/register';
-import { setAsyncLocalStorageAsyncContextStrategy } from '@sentry/server-utils';
+import type { ServerRuntimeClientOptions } from '@ichnois/core/server';
+import { SDK_VERSION } from '@ichnois/core';
+import { ServerRuntimeClient } from '@ichnois/core/server';
+import { registerDiagnosticsChannelInjection } from '@ichnois/server-runtime-injection/register';
+import { setAsyncLocalStorageAsyncContextStrategy } from '@ichnois/server-utils';
 import process from 'node:process';
 import type { DenoClientOptions } from './types';
 

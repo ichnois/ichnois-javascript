@@ -10,8 +10,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB_QUERY, DB } from '@sentry/conventions/op';
-import type { Span, SpanAttributes } from '@sentry/core';
-import { startInactiveSpan } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/core';
 import type { OrchestrionChannelContext } from '../../orchestrion/types';
 import { CHANNELS } from '../../orchestrion/channels';
 import { bindTracingChannelToSpan } from '../../tracing-channel';

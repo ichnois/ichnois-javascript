@@ -1,8 +1,8 @@
 import { RPC_METHOD, RPC_SERVICE, RPC_SYSTEM_NAME, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { GRPC } from '@sentry/conventions/op';
-import type { Client, IntegrationFn } from '@sentry/core';
-import { defineIntegration, fill, getClient } from '@sentry/core';
-import { startInactiveSpan } from '@sentry/node';
+import type { Client, IntegrationFn } from '@ichnois/core';
+import { defineIntegration, fill, getClient } from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/node';
 import type { EventEmitter } from 'events';
 
 export interface GrpcFunction extends CallableFunction {

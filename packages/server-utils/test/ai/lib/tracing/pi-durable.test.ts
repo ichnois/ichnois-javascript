@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import type { Event, Span } from '@sentry/core';
+import type { Event, Span } from '@ichnois/core';
 import {
   _INTERNAL_clearAiProviderSkips,
   _INTERNAL_shouldSkipAiProviderWrapping,
@@ -11,7 +11,7 @@ import {
   spanToJSON,
   spanToStaticSpanJSON,
   withScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   GEN_AI_CONVERSATION_ID,
   GEN_AI_INPUT_MESSAGES,

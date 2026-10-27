@@ -1,7 +1,7 @@
 import type { DurableObjectStorage, SyncKvStorage, SqlStorage } from '@cloudflare/workers-types';
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import { getClient, isThenable, startSpan } from '@sentry/core';
+import { getClient, isThenable, startSpan } from '@ichnois/core';
 import type { CloudflareClientOptions } from '../client';
 import { getStorageKeys, targetsCloudflareInternalKey } from '../utils/internalStorageKey';
 import { storeSpanContext } from '../utils/traceLinks';

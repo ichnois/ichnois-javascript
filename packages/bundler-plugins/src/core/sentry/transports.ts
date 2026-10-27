@@ -4,14 +4,14 @@
 import * as https from 'node:https';
 import { Readable } from 'node:stream';
 import { createGzip } from 'node:zlib';
-import { createTransport, suppressTracing } from '@sentry/core';
+import { createTransport, suppressTracing } from '@ichnois/core';
 import type {
   BaseTransportOptions,
   Transport,
   TransportMakeRequestResponse,
   TransportRequest,
   TransportRequestExecutor,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { join } from 'node:path';
 import { appendFileSync, mkdirSync } from 'node:fs';
 

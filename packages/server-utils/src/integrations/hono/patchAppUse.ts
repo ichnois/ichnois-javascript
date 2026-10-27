@@ -1,4 +1,4 @@
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 import type { Env, Hono, MiddlewareHandler } from './honoTypes';
 import { DEBUG_BUILD } from '../../debug-build';
 import { wrapMiddlewareWithSpan } from './wrapMiddlewareSpan';

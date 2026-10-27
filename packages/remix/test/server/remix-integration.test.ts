@@ -1,5 +1,5 @@
-import * as SentryCore from '@sentry/core';
-import type { NodeClient } from '@sentry/node';
+import * as SentryCore from '@ichnois/core';
+import type { NodeClient } from '@ichnois/node';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 vi.mock('../../src/server/integrations/tracing-channel', () => ({

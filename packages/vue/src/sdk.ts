@@ -1,6 +1,6 @@
-import { getDefaultIntegrations, init as browserInit } from '@sentry/browser';
-import type { Client } from '@sentry/core';
-import { applySdkMetadata, setNormalizeStringifier } from '@sentry/core';
+import { getDefaultIntegrations, init as browserInit } from '@ichnois/browser';
+import type { Client } from '@ichnois/core';
+import { applySdkMetadata, setNormalizeStringifier } from '@ichnois/core';
 
 import { vueIntegration } from './integration';
 import type { Options } from './types';

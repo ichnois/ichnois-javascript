@@ -5,7 +5,7 @@ import {
   extractTraceparentData,
   getCurrentScope,
   withIsolationScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 interface FunctionComponent {
   (...args: unknown[]): unknown;

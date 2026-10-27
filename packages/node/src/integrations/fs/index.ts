@@ -1,4 +1,4 @@
-import { defineIntegration } from '@sentry/core';
+import { defineIntegration } from '@ichnois/core';
 import { enableFsInstrumentation } from './vendored/instrumentation';
 import type { FsInstrumentationConfig } from './vendored/types';
 

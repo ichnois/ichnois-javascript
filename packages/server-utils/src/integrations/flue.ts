@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { debug, defineIntegration, GLOBAL_OBJ } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { debug, defineIntegration, GLOBAL_OBJ } from '@ichnois/core';
 import type { FlueOptions } from '../ai/flue';
 import { createFlueInstrumentation } from '../ai/flue';
 import { FLUE_INTEGRATION_NAME, FLUE_MODULE_NAME } from '../ai/flue/constants';

@@ -1,6 +1,6 @@
-import type { Integration, IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
-import type { CanvasManagerInterface, CanvasManagerOptions } from '@sentry/replay';
+import type { Integration, IntegrationFn } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
+import type { CanvasManagerInterface, CanvasManagerOptions } from '@ichnois/replay';
 import { CanvasManager } from '@sentry/rrweb';
 
 interface SnapshotOptions {

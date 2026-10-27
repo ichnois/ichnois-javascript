@@ -1,4 +1,4 @@
-import type { CheckIn, ClientOptions, MonitorConfig, Options, Scope, TracePropagationTargets } from '@sentry/core';
+import type { CheckIn, ClientOptions, MonitorConfig, Options, Scope, TracePropagationTargets } from '@ichnois/core';
 import {
   _INTERNAL_clearAiProviderSkips,
   _INTERNAL_flushLogsBuffer,
@@ -7,9 +7,9 @@ import {
   debug,
   spanIsSampled,
   spanStreamingIntegration,
-} from '@sentry/core';
-import type { ServerRuntimeClientOptions } from '@sentry/core/server';
-import { ServerRuntimeClient } from '@sentry/core/server';
+} from '@ichnois/core';
+import type { ServerRuntimeClientOptions } from '@ichnois/core/server';
+import { ServerRuntimeClient } from '@ichnois/core/server';
 import { DEBUG_BUILD } from './debug-build';
 import type { ExecutionContextCompat } from './executionContext';
 import type { makeFlushLock } from './flush';
@@ -521,7 +521,7 @@ interface BaseCloudflareOptions {
    * @example
    * ```ts
    * // src/instrument.server.ts
-   * import { defineCloudflareOptions } from '@sentry/cloudflare';
+   * import { defineCloudflareOptions } from '@ichnois/cloudflare';
    *
    * export default defineCloudflareOptions(env => ({
    *   dsn: env.SENTRY_DSN,

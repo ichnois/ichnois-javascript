@@ -1,7 +1,7 @@
-import type { Transport } from '@sentry/core';
-import { debug } from '@sentry/core';
-import * as Sentry from '@sentry/node';
-import type { NodeClientOptions } from '@sentry/node/build/types/types';
+import type { Transport } from '@ichnois/core';
+import { debug } from '@ichnois/core';
+import * as Sentry from '@ichnois/node';
+import type { NodeClientOptions } from '@ichnois/node/build/types/types';
 import { CpuProfilerBindings } from '@sentry/node-cpu-profiler';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { _nodeProfilingIntegration } from '../src/integration';

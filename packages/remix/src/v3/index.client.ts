@@ -1,4 +1,4 @@
-// A named list rather than `export * from '@sentry/browser'`.
+// A named list rather than `export * from '@ichnois/browser'`.
 //
 // Remix 3 has no bundler, so this list is what gets tree shaken. A wildcard re-export would reach every
 // export of `@sentry/browser`, including Replay, Feedback and the full attribute tables, and none of it
@@ -68,9 +68,9 @@ export {
   withActiveSpan,
   withIsolationScope,
   withScope,
-} from '@sentry/browser';
+} from '@ichnois/browser';
 
-export type { BrowserOptions } from '@sentry/browser';
+export type { BrowserOptions } from '@ichnois/browser';
 
 export { getDefaultIntegrations, init } from './client/sdk';
 export { browserTracingIntegration } from './client/browserTracingIntegration';

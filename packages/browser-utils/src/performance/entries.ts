@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { Span, SpanAttributes } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
 import {
   BROWSER_NAVIGATION_TIMING_SPAN_NAMES,
   getActiveSpan,
@@ -10,7 +10,7 @@ import {
   spanToJSON,
   filterCollectedUrl,
   UI_LONG_TASK_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   BROWSER_PAINT_TYPE,
   CODE_FILE_PATH,

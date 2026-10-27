@@ -1,4 +1,4 @@
-import type { Options as SentryBuildPluginOptions } from '@sentry/bundler-plugins/core';
+import type { Options as SentryBuildPluginOptions } from '@ichnois/bundler-plugins/core';
 import * as fs from 'fs';
 import * as path from 'path';
 import { getBuildLogger } from './buildLogger';

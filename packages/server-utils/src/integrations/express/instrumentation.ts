@@ -1,7 +1,7 @@
 import type * as diagnosticsChannel from 'node:diagnostics_channel';
 import { HTTP_ROUTE, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { HANDLER, MIDDLEWARE, ROUTER } from '@sentry/conventions/op';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   captureException,
   debug,
@@ -16,7 +16,7 @@ import {
   startInactiveSpan,
   stringMatchesSomePattern,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import { CHANNELS } from '../../orchestrion/channels';
 import { bindTracingChannelToSpan } from '../../tracing-channel';

@@ -6,9 +6,9 @@ import {
   BROWSER_BFCACHE_REASON,
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
-import type { IntegrationFn, SpanAttributes } from '@sentry/core';
-import { debug, defineIntegration, getCurrentScope, metrics } from '@sentry/core';
-import { resolveCurrentRoute } from '@sentry/browser-utils';
+import type { IntegrationFn, SpanAttributes } from '@ichnois/core';
+import { debug, defineIntegration, getCurrentScope, metrics } from '@ichnois/core';
+import { resolveCurrentRoute } from '@ichnois/browser-utils';
 import { DEBUG_BUILD } from '../debug-build';
 import { WINDOW } from '../helpers';
 

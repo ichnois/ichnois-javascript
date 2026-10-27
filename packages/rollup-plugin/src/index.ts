@@ -1,1 +1,1 @@
-export * from '@sentry/bundler-plugins/rollup';
+export * from '@ichnois/bundler-plugins/rollup';

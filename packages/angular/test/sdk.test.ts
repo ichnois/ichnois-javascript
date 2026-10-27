@@ -1,4 +1,4 @@
-import * as SentryBrowser from '@sentry/browser';
+import * as SentryBrowser from '@ichnois/browser';
 import { afterEach, vi } from 'vitest';
 import { getDefaultIntegrations, init } from '../src/sdk';
 

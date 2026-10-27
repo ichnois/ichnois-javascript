@@ -1,5 +1,5 @@
 import type { ExecutionContext } from '@cloudflare/workers-types';
-import * as sentryCore from '@sentry/core';
+import * as sentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { makeFlushLock } from '../src/flush';
 import { getInstrumented } from '../src/instrument';

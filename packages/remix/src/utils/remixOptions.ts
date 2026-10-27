@@ -1,6 +1,6 @@
-import type { Options } from '@sentry/core';
-import type { NodeOptions } from '@sentry/node';
-import type { BrowserOptions } from '@sentry/react';
+import type { Options } from '@ichnois/core';
+import type { NodeOptions } from '@ichnois/node';
+import type { BrowserOptions } from '@ichnois/react';
 
 export type RemixOptions = (Options | BrowserOptions | NodeOptions) & {
   /**

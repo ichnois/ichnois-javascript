@@ -1,1 +1,1 @@
-export * from '@sentry/bundler-plugins/webpack';
+export * from '@ichnois/bundler-plugins/webpack';

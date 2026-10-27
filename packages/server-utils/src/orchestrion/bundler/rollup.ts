@@ -88,7 +88,7 @@ export function sentryCommonJSInteropPlugin(): Plugin {
  * @example
  * ```ts
  * // rollup.config.js
- * import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/rollup';
+ * import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/rollup';
  * export default { plugins: [sentryOrchestrionPlugin()] };
  * ```
  */

@@ -1,6 +1,6 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import { uniq } from '@sentry/core';
+import { uniq } from '@ichnois/core';
 import type { Plugin } from 'vite';
 
 const ROUTE_TREE_FILE_NAME = 'routeTree.gen.ts';
@@ -26,7 +26,7 @@ export function makeRoutePatternPlugin(): Plugin {
         return null;
       }
 
-      return { resolve: { noExternal: ['@sentry/tanstackstart-react'] } };
+      return { resolve: { noExternal: ['@ichnois/tanstackstart-react'] } };
     },
 
     configResolved(config) {

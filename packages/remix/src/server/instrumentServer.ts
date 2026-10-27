@@ -12,7 +12,7 @@ import type {
   RequestHandler,
   ServerBuild,
 } from '@remix-run/server-runtime';
-import type { RequestEventData, Span, TransactionSource, WrappedFunction } from '@sentry/core';
+import type { RequestEventData, Span, TransactionSource, WrappedFunction } from '@ichnois/core';
 import {
   continueTrace,
   debug,
@@ -32,8 +32,8 @@ import {
   winterCGRequestToRequestData,
   withIsolationScope,
   filterCollectedUrl,
-} from '@sentry/core';
-import { isNodeEnv, loadModule } from '@sentry/core/server';
+} from '@ichnois/core';
+import { isNodeEnv, loadModule } from '@ichnois/core/server';
 import { DEBUG_BUILD } from '../utils/debug-build';
 import { createRoutes, getTransactionName, isCloudflareEnv } from '../utils/utils';
 import { extractData, isResponse, json } from '../utils/vendor/response';

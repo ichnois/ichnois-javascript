@@ -1,4 +1,4 @@
-import { addHandler, fill, maybeInstrument, triggerHandlers } from '@sentry/core';
+import { addHandler, fill, maybeInstrument, triggerHandlers } from '@ichnois/core';
 import type { HandlerDataHistory } from '../types';
 import { WINDOW } from '../types';
 

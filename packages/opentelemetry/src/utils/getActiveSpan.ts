@@ -1,6 +1,6 @@
 import type { Span } from '@opentelemetry/api';
 import { isSpanContextValid, trace } from '@opentelemetry/api';
-import type { Scope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
 import { getContextFromScope } from './contextData';
 
 /**

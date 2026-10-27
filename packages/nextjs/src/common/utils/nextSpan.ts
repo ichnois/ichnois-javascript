@@ -1,11 +1,11 @@
-import type { Span, StartSpanOptions } from '@sentry/core';
+import type { Span, StartSpanOptions } from '@ichnois/core';
 import {
   debug,
   SentryNonRecordingSpan,
   startInactiveSpan as coreStartInactiveSpan,
   startSpan as coreStartSpan,
   startSpanManual as coreStartSpanManual,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { isBuild } from './isBuild';
 import type { ServerReference } from './isUseCacheFunction';

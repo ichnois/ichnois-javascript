@@ -1,11 +1,11 @@
-import type { ModuleMetadata, ModuleMetadataCallback, ResolveSourceMapHook } from '@sentry/core';
+import type { ModuleMetadata, ModuleMetadataCallback, ResolveSourceMapHook } from '@ichnois/core';
 
 export type {
   ModuleMetadata,
   ModuleMetadataCallback,
   ModuleMetadataCallbackArgs,
   ResolveSourceMapHook,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export interface Options {
   /**

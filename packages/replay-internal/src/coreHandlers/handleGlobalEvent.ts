@@ -1,4 +1,4 @@
-import type { Event, EventHint } from '@sentry/core';
+import type { Event, EventHint } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { saveSession } from '../session/saveSession';
 import type { ReplayContainer } from '../types';

@@ -3,7 +3,7 @@
 // separately for workers and Durable Objects, but they share the same global scope.
 // The WeakMap stores original -> instrumented mappings so we can retrieve the
 // instrumented version even if we only have a reference to the original.
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 
 const GLOBAL_KEY = '__SENTRY_INSTRUMENTED_MAP__' as const;
 

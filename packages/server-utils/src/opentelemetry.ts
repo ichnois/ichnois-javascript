@@ -1,6 +1,6 @@
 import { isSpanContextValid, trace } from '@opentelemetry/api';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, dsnFromString, SENTRY_API_VERSION, registerExternalPropagationContext } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration, dsnFromString, SENTRY_API_VERSION, registerExternalPropagationContext } from '@ichnois/core';
 
 const INTEGRATION_NAME = 'OpenTelemetry' as const;
 

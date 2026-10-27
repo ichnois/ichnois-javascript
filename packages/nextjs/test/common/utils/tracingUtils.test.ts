@@ -1,6 +1,6 @@
 import { HTTP_ROUTE } from '@sentry/conventions/attributes';
-import type { Client, Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Client, Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { ATTR_NEXT_SEGMENT, ATTR_NEXT_SPAN_NAME, ATTR_NEXT_SPAN_TYPE } from '../../../src/common/nextSpanAttributes';
 import { maybeEnhanceServerComponentSpanName } from '../../../src/common/utils/tracingUtils';

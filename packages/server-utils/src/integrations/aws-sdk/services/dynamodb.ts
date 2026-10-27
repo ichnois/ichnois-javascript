@@ -1,4 +1,4 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   AWS_DYNAMODB_ATTRIBUTE_DEFINITIONS as ATTR_AWS_DYNAMODB_ATTRIBUTE_DEFINITIONS,
   AWS_DYNAMODB_CONSISTENT_READ as ATTR_AWS_DYNAMODB_CONSISTENT_READ,

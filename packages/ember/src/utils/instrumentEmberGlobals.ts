@@ -2,8 +2,8 @@ import { subscribe } from '@ember/instrumentation';
 import { scheduleOnce } from '@ember/runloop';
 import { SENTRY_DESCRIPTION, SENTRY_OP, UI_COMPONENT_NAME, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { UI_MOUNT, UI_RENDER, UI_RESOLVE, UI_TASK } from '@sentry/conventions/op';
-import { getActiveSpan, getClient, startInactiveSpan } from '@sentry/browser';
-import type { Span } from '@sentry/core';
+import { getActiveSpan, getClient, startInactiveSpan } from '@ichnois/browser';
+import type { Span } from '@ichnois/core';
 import {
   browserPerformanceTimeOrigin,
   hasSpanStreamingEnabled,
@@ -11,7 +11,7 @@ import {
   timestampInSeconds,
   UI_MOUNT_SPAN_NAME_FALLBACK,
   UI_TASK_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { getBackburner } from './utils.ts';
 
 // Ember runloop queue names

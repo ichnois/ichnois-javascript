@@ -8,7 +8,7 @@ import type {
 } from '../common/types';
 import type { CreateSentryTunnelRouteOptions } from '../server/tunnelRoute';
 
-export * from '@sentry/react';
+export * from '@ichnois/react';
 
 export { init } from './sdk';
 

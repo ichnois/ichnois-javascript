@@ -1,7 +1,7 @@
 import type ApplicationInstance from '@ember/application/instance';
 import type Transition from '@ember/routing/transition';
 import { SENTRY_SEGMENT_NAME_SOURCE } from '@sentry/conventions/attributes';
-import { getCurrentScope, SentrySpan, spanToJSON, type Client, type StartSpanOptions } from '@sentry/core';
+import { getCurrentScope, SentrySpan, spanToJSON, type Client, type StartSpanOptions } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { instrumentEmberAppInstanceForPerformance } from '../src/utils/instrumentEmberAppInstanceForPerformance.ts';
 

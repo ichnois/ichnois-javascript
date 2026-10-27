@@ -1,8 +1,8 @@
-import type { EventEnvelopeHeaders, Span } from '@sentry/core';
+import type { EventEnvelopeHeaders, Span } from '@ichnois/core';
 import { SENTRY_SEGMENT_NAME_SOURCE, HTTP_ROUTE } from '@sentry/conventions/attributes';
-import { getCapturedScopesOnSpan, getRootSpan, getSpanDescendants, spanIsSampled, spanToJSON } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
-import { NodeClient, setCurrentClient } from '@sentry/node';
+import { getCapturedScopesOnSpan, getRootSpan, getSpanDescendants, spanIsSampled, spanToJSON } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
+import { NodeClient, setCurrentClient } from '@ichnois/node';
 import type { Handle } from '@sveltejs/kit';
 import { redirect } from '@sveltejs/kit';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

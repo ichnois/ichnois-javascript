@@ -1,11 +1,11 @@
-import * as SentryCloudflare from '@sentry/cloudflare';
-import { _INTERNAL_wrapRequestHandler as wrapRequestHandler } from '@sentry/cloudflare';
-import type { Carrier, GLOBAL_OBJ } from '@sentry/core';
+import * as SentryCloudflare from '@ichnois/cloudflare';
+import { _INTERNAL_wrapRequestHandler as wrapRequestHandler } from '@ichnois/cloudflare';
+import type { Carrier, GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { setCloudflareExecutionContextFallback } from '../../src/server-common/utils';
 import { initCloudflareSentryHandle } from '../../src/worker';
 
-vi.mock('@sentry/cloudflare', async importOriginal => {
+vi.mock('@ichnois/cloudflare', async importOriginal => {
   const actual = await importOriginal<typeof SentryCloudflare>();
   return { ...actual, _INTERNAL_wrapRequestHandler: vi.fn(actual._INTERNAL_wrapRequestHandler) };
 });

@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { wrapServerComponentWithSentry } from '../../src/common/wrapServerComponentWithSentry';
 

@@ -11,8 +11,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB_QUERY } from '@sentry/conventions/op';
-import type { Span, SpanAttributes } from '@sentry/core';
-import { startInactiveSpan } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/core';
 import type { FirebaseApp, FirebaseOptions, FirestoreReference, FirestoreSettings } from './firestore-types';
 
 /**

@@ -5,8 +5,8 @@ import type {
   SendFeedback,
   SendFeedbackParams,
   TransportMakeRequestResponse,
-} from '@sentry/core';
-import { captureFeedback, getClient, getCurrentScope } from '@sentry/core';
+} from '@ichnois/core';
+import { captureFeedback, getClient, getCurrentScope } from '@ichnois/core';
 import { FEEDBACK_API_SOURCE, WINDOW } from '../constants';
 import { createFeedbackError } from '../util/createFeedbackError';
 

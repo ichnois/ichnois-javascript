@@ -1,5 +1,5 @@
 import { HTTP_TARGET, SERVER_ADDRESS, URL_PATH } from '@sentry/conventions/attributes';
-import { shouldIgnoreSpan } from '@sentry/core';
+import { shouldIgnoreSpan } from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   dropMiddlewareTunnelRequests,
@@ -13,7 +13,7 @@ const globalWithInjectedValues = global as typeof global & {
   _sentryTunnelRouteMode?: string;
 };
 
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@ichnois/core', async requireActual => {
   return {
     ...(await requireActual<any>()),
     getClient: () => ({
@@ -141,7 +141,7 @@ describe('dropMiddlewareTunnelRequests', () => {
 
   describe('enableOpenTelemetrySetup', () => {
     it('does not process spans when enableOpenTelemetrySetup is false', async () => {
-      const core = await import('@sentry/core');
+      const core = await import('@ichnois/core');
       vi.spyOn(core, 'getClient').mockReturnValueOnce({
         getOptions: () => ({ enableOpenTelemetrySetup: false }),
       } as any);

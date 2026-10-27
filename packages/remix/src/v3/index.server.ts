@@ -1,4 +1,4 @@
-export * from '@sentry/node';
+export * from '@ichnois/node';
 
 export { getDefaultIntegrations, init } from './server/sdk';
 export { remixV3Integration } from './server/integration';

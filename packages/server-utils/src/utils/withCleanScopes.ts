@@ -1,5 +1,5 @@
-import type { Scope } from '@sentry/core';
-import { getClient, getDefaultCurrentScope, withIsolationScope, withScope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
+import { getClient, getDefaultCurrentScope, withIsolationScope, withScope } from '@ichnois/core';
 
 /**
  * Run `callback` with `isolationScope` and a fresh copy of the default current scope. For work that

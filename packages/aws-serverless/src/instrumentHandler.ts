@@ -16,9 +16,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import type { Span } from '@sentry/core';
-import { continueTrace, debug, SPAN_STATUS_ERROR, startSpanManual } from '@sentry/core';
-import { captureException } from '@sentry/node';
+import type { Span } from '@ichnois/core';
+import { continueTrace, debug, SPAN_STATUS_ERROR, startSpanManual } from '@ichnois/core';
+import { captureException } from '@ichnois/node';
 import type { Callback, Context, Handler, StreamifyHandler } from 'aws-lambda';
 import { DEBUG_BUILD } from './debug-build';
 import { getRequestSpanOptions } from './requestSpanOptions';

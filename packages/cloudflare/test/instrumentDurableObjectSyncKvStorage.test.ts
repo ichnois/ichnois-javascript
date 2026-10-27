@@ -1,5 +1,5 @@
 import { SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import * as sentryCore from '@sentry/core';
+import * as sentryCore from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { instrumentDurableObjectSyncKvStorage } from '../src/instrumentations/instrumentDurableObjectSyncKvStorage';
 

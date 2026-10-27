@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { addNonEnumerableProperty, captureException, withActiveSpan } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { addNonEnumerableProperty, captureException, withActiveSpan } from '@ichnois/core';
 
 // Marks a koa app as already carrying the Sentry error listener, so repeat
 // attachments only ever register a single listener — whether reached via the

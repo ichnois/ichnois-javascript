@@ -1,4 +1,4 @@
-import { fill } from '@sentry/core';
+import { fill } from '@ichnois/core';
 
 /**
  * Streaming wasm registration (`instantiateStreaming` / `compileStreaming`) reads the module URL

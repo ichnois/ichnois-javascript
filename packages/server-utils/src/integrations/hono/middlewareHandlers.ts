@@ -12,8 +12,8 @@ import {
   spanToJSON,
   winterCGHeadersToDict,
   winterCGRequestToRequestData,
-} from '@sentry/core';
-import { getClientIPAddress } from '@sentry/core/server';
+} from '@ichnois/core';
+import { getClientIPAddress } from '@ichnois/core/server';
 import type { Context } from './honoTypes';
 import { type HonoRuntime, readConnInfo } from './connInfo';
 import { hasFetchEvent } from './hono-context';

@@ -1,4 +1,4 @@
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 
 /**
  * Determines if the exception is an expected NestJS control flow error.

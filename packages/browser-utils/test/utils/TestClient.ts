@@ -4,8 +4,8 @@ import type {
   Event,
   ParameterizedString,
   SeverityLevel,
-} from '@sentry/core';
-import { Client, createTransport, initAndBind, resolvedSyncPromise } from '@sentry/core';
+} from '@ichnois/core';
+import { Client, createTransport, initAndBind, resolvedSyncPromise } from '@ichnois/core';
 
 export interface TestClientOptions extends ClientOptions, BrowserClientReplayOptions {}
 

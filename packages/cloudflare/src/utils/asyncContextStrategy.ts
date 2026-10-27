@@ -1,5 +1,5 @@
-import { getAsyncContextStrategy, getMainCarrier } from '@sentry/core';
-import { setAsyncLocalStorageAsyncContextStrategy } from '@sentry/server-utils/no-diagnostic-channels';
+import { getAsyncContextStrategy, getMainCarrier } from '@ichnois/core';
+import { setAsyncLocalStorageAsyncContextStrategy } from '@ichnois/server-utils/no-diagnostic-channels';
 
 /**
  * Installs the AsyncLocalStorage strategy unless an OpenTelemetry strategy is installed. Both use the same storage,

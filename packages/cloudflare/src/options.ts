@@ -1,4 +1,4 @@
-import { isObjectLike, envToBool } from '@sentry/core';
+import { isObjectLike, envToBool } from '@ichnois/core';
 import type { CloudflareOptions } from './client';
 
 /**

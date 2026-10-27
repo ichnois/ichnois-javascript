@@ -12,7 +12,7 @@ import {
   URL_SCHEME,
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
-import { SPAN_STATUS_ERROR } from '@sentry/core';
+import { SPAN_STATUS_ERROR } from '@ichnois/core';
 import { channel } from 'node:diagnostics_channel';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Mock } from 'vitest';
@@ -24,8 +24,8 @@ const { span, startInactiveSpan, getClient } = vi.hoisted(() => ({
   getClient: vi.fn(),
 }));
 
-vi.mock('@sentry/core', async () => {
-  const actual = (await vi.importActual('@sentry/core')) as Record<string, unknown>;
+vi.mock('@ichnois/core', async () => {
+  const actual = (await vi.importActual('@ichnois/core')) as Record<string, unknown>;
   return {
     ...actual,
     getClient,

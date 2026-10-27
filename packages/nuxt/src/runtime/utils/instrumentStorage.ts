@@ -12,8 +12,8 @@ import {
   type SpanAttributes,
   startSpan,
   type StartSpanOptions,
-} from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+} from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import type { Driver, Storage } from 'unstorage';
 
 /**

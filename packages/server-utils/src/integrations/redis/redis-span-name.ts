@@ -1,6 +1,6 @@
 import { DB_STORED_PROCEDURE_NAME } from '@sentry/conventions/attributes';
-import type { SpanAttributes } from '@sentry/core';
-import { getClient, hasSpanStreamingEnabled } from '@sentry/core';
+import type { SpanAttributes } from '@ichnois/core';
+import { getClient, hasSpanStreamingEnabled } from '@ichnois/core';
 
 const DB_SYSTEM_VALUE_REDIS = 'redis';
 

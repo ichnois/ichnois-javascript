@@ -1,4 +1,4 @@
-import { getClient, getMainCarrier, SentrySpan, setCurrentClient, spanToJSON } from '@sentry/core';
+import { getClient, getMainCarrier, SentrySpan, setCurrentClient, spanToJSON } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { addWebVitalsToSpan, startTrackingWebVitals } from '../../src/web-vitals/tracking';
 import { getDefaultClientOptions, TestClient } from '../utils/TestClient';

@@ -1,4 +1,4 @@
-import type { Span, SpanTimeInput } from '@sentry/core';
+import type { Span, SpanTimeInput } from '@ichnois/core';
 import type { MastraExportedSpan, MastraSpanOutputProcessor } from './types';
 
 /**

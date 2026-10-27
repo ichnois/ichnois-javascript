@@ -1,4 +1,4 @@
-import { addNonEnumerableProperty, getDefaultIsolationScope, getIsolationScope } from '@sentry/core';
+import { addNonEnumerableProperty, getDefaultIsolationScope, getIsolationScope } from '@ichnois/core';
 import type { HonoRuntime } from './connInfo';
 import type { Context, MiddlewareHandler } from './honoTypes';
 import { captureContextError, requestHandler, responseHandler } from './middlewareHandlers';

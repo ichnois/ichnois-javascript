@@ -1,6 +1,6 @@
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { IntegrationFn, Span } from '@sentry/core';
-import { _INTERNAL_skipAiProviderWrapping, defineIntegration, startInactiveSpan } from '@sentry/core';
+import type { IntegrationFn, Span } from '@ichnois/core';
+import { _INTERNAL_skipAiProviderWrapping, defineIntegration, startInactiveSpan } from '@ichnois/core';
 import { ANTHROPIC_AI_INTEGRATION_NAME } from '../ai/anthropic-ai/constants';
 import { GOOGLE_GENAI_INTEGRATION_NAME } from '../ai/google-genai/constants';
 import { createLangChainCallbackHandler } from '../ai/langchain';

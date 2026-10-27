@@ -1,5 +1,5 @@
-import * as SentryCore from '@sentry/core';
-import { debug as coreDebugLogger } from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
+import { debug as coreDebugLogger } from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { debug } from '../../../src/util/logger';
 

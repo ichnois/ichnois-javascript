@@ -1,5 +1,5 @@
-import type { Breadcrumb } from '@sentry/core';
-import { getClient, normalize } from '@sentry/core';
+import type { Breadcrumb } from '@ichnois/core';
+import { getClient, normalize } from '@ichnois/core';
 import { CONSOLE_ARG_MAX_SIZE } from '../constants';
 import type { ReplayContainer } from '../types';
 import type { ReplayFrame } from '../types/replayFrame';

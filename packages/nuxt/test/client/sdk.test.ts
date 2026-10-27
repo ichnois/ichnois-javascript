@@ -1,5 +1,5 @@
-import * as SentryBrowser from '@sentry/browser';
-import { SDK_VERSION } from '@sentry/vue';
+import * as SentryBrowser from '@ichnois/browser';
+import { SDK_VERSION } from '@ichnois/vue';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { init } from '../../src/client';
 

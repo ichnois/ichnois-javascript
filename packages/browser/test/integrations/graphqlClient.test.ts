@@ -2,10 +2,10 @@
  * @vitest-environment jsdom
  */
 
-import type { Client } from '@sentry/core';
-import { SentrySpan, spanToJSON } from '@sentry/core';
-import type { FetchHint, XhrHint } from '@sentry/browser-utils';
-import { SENTRY_XHR_DATA_KEY } from '@sentry/browser-utils';
+import type { Client } from '@ichnois/core';
+import { SentrySpan, spanToJSON } from '@ichnois/core';
+import type { FetchHint, XhrHint } from '@ichnois/browser-utils';
+import { SENTRY_XHR_DATA_KEY } from '@ichnois/browser-utils';
 import { URL_FULL } from '@sentry/conventions/attributes';
 import { describe, expect, test } from 'vitest';
 import {

@@ -1,4 +1,4 @@
-import { normalizeStringifyValue as browserNormalizeStringifyValue } from '@sentry/browser';
+import { normalizeStringifyValue as browserNormalizeStringifyValue } from '@ichnois/browser';
 
 interface VueViewModel {
   // Vue3

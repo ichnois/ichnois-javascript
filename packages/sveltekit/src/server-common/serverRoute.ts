@@ -4,8 +4,8 @@ import {
   getClient,
   hasSpanStreamingEnabled,
   startSpan,
-} from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+} from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import {
   CODE_FUNCTION_NAME,
   HTTP_REQUEST_METHOD,
@@ -28,7 +28,7 @@ type PatchedServerRouteEvent = RequestEvent & { __sentry_wrapped__?: boolean };
  *
  * @example
  * ```js
- * import { wrapServerRouteWithSentry } from '@sentry/sveltekit';
+ * import { wrapServerRouteWithSentry } from '@ichnois/sveltekit';
  *
  * const get = async event => {
  *   return new Response(JSON.stringify({ message: 'hello world' }));

@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, describe, expect, test, vi } from 'vitest';
 import { eveConversationHook, eveIntegration } from '../src/eve';
 import { isEveGenAiRecordingDefault } from '../src/integrations/vercel-ai/gen-ai-recording-mode';

@@ -1,5 +1,5 @@
 import { subscribe } from '@ember/instrumentation';
-import { startInactiveSpan } from '@sentry/browser';
+import { startInactiveSpan } from '@ichnois/browser';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 type Subscriber = {
@@ -9,7 +9,7 @@ type Subscriber = {
 
 vi.mock('@ember/instrumentation', () => ({ subscribe: vi.fn() }));
 vi.mock('@ember/runloop', () => ({ scheduleOnce: vi.fn(), _backburner: undefined, run: {} }));
-vi.mock('@sentry/browser', () => ({
+vi.mock('@ichnois/browser', () => ({
   getActiveSpan: vi.fn(() => undefined),
   startInactiveSpan: vi.fn(() => ({ end: vi.fn() })),
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN: 'sentry.origin',
@@ -17,7 +17,7 @@ vi.mock('@sentry/browser', () => ({
 // Unmocked, `@sentry/core` pulls ~250 ESM files through the ember and babel
 // Vite plugins. That transform is charged to whichever test first awaits the
 // dynamic import below, which timed out on slower CI runners.
-vi.mock('@sentry/core', () => ({
+vi.mock('@ichnois/core', () => ({
   timestampInSeconds: vi.fn(() => Date.now() / 1000),
   browserPerformanceTimeOrigin: vi.fn(() => undefined),
 }));

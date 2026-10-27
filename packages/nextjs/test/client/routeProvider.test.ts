@@ -1,6 +1,6 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { BrowserClient, setCurrentClient, resolveCurrentRoute, resolveRoute, setRouteProvider } from '@sentry/react';
+import { BrowserClient, setCurrentClient, resolveCurrentRoute, resolveRoute, setRouteProvider } from '@ichnois/react';
 import { createNextRouteProvider } from '../../src/client/routing/routeProvider';
 
 const globalWithManifest = GLOBAL_OBJ as typeof GLOBAL_OBJ & {

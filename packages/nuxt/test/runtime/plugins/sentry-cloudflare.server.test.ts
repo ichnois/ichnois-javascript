@@ -1,10 +1,10 @@
-import type { CloudflareOptions } from '@sentry/cloudflare';
-import { wrapRequestHandler } from '@sentry/cloudflare/request';
+import type { CloudflareOptions } from '@ichnois/cloudflare';
+import { wrapRequestHandler } from '@ichnois/cloudflare/request';
 import type { NitroApp } from 'nitropack';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { sentryCloudflareNitroPlugin } from '../../../src/runtime/plugins/sentry-cloudflare.server';
 
-vi.mock('@sentry/cloudflare/request', () => ({
+vi.mock('@ichnois/cloudflare/request', () => ({
   wrapRequestHandler: vi.fn((_options: unknown, callback: () => unknown) => callback()),
 }));
 

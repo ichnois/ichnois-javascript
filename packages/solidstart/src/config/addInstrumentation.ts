@@ -1,4 +1,4 @@
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@ichnois/core';
 import * as fs from 'fs';
 import type { Nitro } from 'nitropack';
 import * as path from 'path';

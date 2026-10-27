@@ -1,7 +1,7 @@
 import { MIDDLEWARE } from '@sentry/conventions/op';
 import { SENTRY_SEGMENT_NAME_SOURCE } from '@sentry/conventions/attributes';
 
-import { stripUrlQueryAndFragment } from '@sentry/core';
+import { stripUrlQueryAndFragment } from '@ichnois/core';
 import { ATTR_NEXT_SPAN_NAME, ATTR_NEXT_SPAN_TYPE } from './nextSpanAttributes';
 
 export interface MutableMiddlewareRootSpan {

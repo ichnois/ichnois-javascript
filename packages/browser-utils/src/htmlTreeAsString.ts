@@ -1,4 +1,4 @@
-import { isString } from '@sentry/core';
+import { isString } from '@ichnois/core';
 
 const DEFAULT_MAX_STRING_LENGTH = 80;
 

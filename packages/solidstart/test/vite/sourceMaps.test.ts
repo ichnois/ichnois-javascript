@@ -1,4 +1,4 @@
-import type { SentryVitePluginOptions } from '@sentry/bundler-plugins/vite';
+import type { SentryVitePluginOptions } from '@ichnois/bundler-plugins/vite';
 import type { Plugin, UserConfig } from 'vite';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { sentrySolidStart } from '../../src/vite/sentrySolidStart';
@@ -30,8 +30,8 @@ function runConfigHook(plugin: Plugin, config: UserConfig = {}): void {
   handler?.call({} as never, config, { command: 'build', mode: 'production' });
 }
 
-vi.mock('@sentry/bundler-plugins/vite', async () => {
-  const original = (await vi.importActual('@sentry/bundler-plugins/vite')) as any;
+vi.mock('@ichnois/bundler-plugins/vite', async () => {
+  const original = (await vi.importActual('@ichnois/bundler-plugins/vite')) as any;
 
   return {
     ...original,

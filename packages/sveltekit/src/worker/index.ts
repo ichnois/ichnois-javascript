@@ -94,7 +94,7 @@ export {
   featureFlagsIntegration,
   vercelAIIntegration,
   type FeatureFlagsIntegration,
-} from '@sentry/cloudflare';
+} from '@ichnois/cloudflare';
 
 /**
  * Tracks the Svelte component's initialization and mounting operation as well as

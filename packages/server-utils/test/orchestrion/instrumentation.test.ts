@@ -1,5 +1,5 @@
-import type { AsyncContextStrategy } from '@sentry/core';
-import { debug, GLOBAL_OBJ, setAsyncContextStrategy } from '@sentry/core';
+import type { AsyncContextStrategy } from '@ichnois/core';
+import { debug, GLOBAL_OBJ, setAsyncContextStrategy } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { invokeOrchestrionInstrumentation } from '../../src/orchestrion/instrumentation';
 

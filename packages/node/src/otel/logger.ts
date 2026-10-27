@@ -1,5 +1,5 @@
 import { diag, DiagLogLevel } from '@opentelemetry/api';
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 
 /**
  * Setup the OTEL logger to use our own debug logger.

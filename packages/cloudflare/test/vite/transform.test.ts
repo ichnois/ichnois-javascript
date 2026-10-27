@@ -51,7 +51,7 @@ describe('default export wrapping', () => {
 
     const result = transform(code, ctx)!;
     expect(result).toBeDefined();
-    expect(result.code).toContain("import * as __SENTRY__ from '@sentry/cloudflare'");
+    expect(result.code).toContain("import * as __SENTRY__ from '@ichnois/cloudflare'");
     expect(result.code).toContain('var __SENTRY_DEFAULT_EXPORT__ = handler');
     expect(result.code).toContain('__SENTRY__.withSentry((env) => ({}), __SENTRY_DEFAULT_EXPORT__)');
     expect(result.code).not.toContain('export default handler');
@@ -84,7 +84,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         'var server_default = { fetch: handle };',
         'var __SENTRY_DEFAULT_EXPORT__ = server_default;',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
@@ -98,7 +98,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
         'const handler = { fetch() {} };',
         'var __SENTRY_DEFAULT_EXPORT__ = handler;',
@@ -112,7 +112,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         'function handler() {}',
         'var __SENTRY_DEFAULT_EXPORT__ = handler;',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
@@ -126,7 +126,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import handler from './handler';",
         'var __SENTRY_DEFAULT_EXPORT__ = handler;',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
@@ -144,7 +144,7 @@ describe('default export wrapping', () => {
       'export { server_default as default };',
     ].join('\n');
     const transformed = transform(entry, ctx)!.code.replace(
-      "import * as __SENTRY__ from '@sentry/cloudflare';",
+      "import * as __SENTRY__ from '@ichnois/cloudflare';",
       'const __SENTRY__ = { withSentry: (_options, handler) => handler };',
     );
 
@@ -168,7 +168,7 @@ describe('default export wrapping', () => {
    */
   function runInstrumented(entry: string): string {
     const transformed = transform(entry, ctx)!.code.replace(
-      "import * as __SENTRY__ from '@sentry/cloudflare';",
+      "import * as __SENTRY__ from '@ichnois/cloudflare';",
       'const __SENTRY__ = { withSentry: (_options, handler) => { for (const key of Object.keys(handler)) handler[key].instrumented = true; return handler; } };',
     );
     const dir = mkdtempSync(join(tmpdir(), 'sentry-cf-late-'));
@@ -205,7 +205,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         'const helper = 1;',
         'const handler = { fetch() {} };',
         'var __SENTRY_DEFAULT_EXPORT__ = handler;',
@@ -218,7 +218,7 @@ describe('default export wrapping', () => {
 
   it('skips a hand-wrapped `export const` exported as default by a specifier', () => {
     const code = [
-      "import { withSentry } from '@sentry/cloudflare';",
+      "import { withSentry } from '@ichnois/cloudflare';",
       'export const handler = withSentry((env) => ({}), { fetch() {} });',
       'export { handler as default };',
     ].join('\n');
@@ -227,7 +227,7 @@ describe('default export wrapping', () => {
 
   it('skips a hand-wrapped local exported as default by a specifier', () => {
     const code = [
-      "import { withSentry } from '@sentry/cloudflare';",
+      "import { withSentry } from '@ichnois/cloudflare';",
       'const handler = withSentry((env) => ({}), { fetch() {} });',
       'export { handler as default };',
     ].join('\n');
@@ -239,7 +239,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import __SENTRY_REEXPORT_default__ from './handler';",
         'var __SENTRY_DEFAULT_EXPORT__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.withSentry, (env) => ({}), __SENTRY_REEXPORT_default__);',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
@@ -252,7 +252,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import { handler as __SENTRY_REEXPORT_default__ } from './handler';",
         'var __SENTRY_DEFAULT_EXPORT__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.withSentry, (env) => ({}), __SENTRY_REEXPORT_default__);',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
@@ -268,7 +268,7 @@ describe('default export wrapping', () => {
       'console.log(readDefault());',
     ].join('\n');
     const transformed = transform(entry, ctx)!.code.replace(
-      "import * as __SENTRY__ from '@sentry/cloudflare';",
+      "import * as __SENTRY__ from '@ichnois/cloudflare';",
       'const __SENTRY__ = { withSentry: (_options, handler) => handler, _INTERNAL_wrapUnlessInstrumented: (wrap, options, handler) => wrap(options, handler) };',
     );
 
@@ -292,7 +292,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import __SENTRY_REEXPORT_default__ from './handler';",
         'var __SENTRY_DEFAULT_EXPORT__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.withSentry, (env) => ({}), __SENTRY_REEXPORT_default__);',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
@@ -324,7 +324,7 @@ describe('default export wrapping', () => {
         const out =
           name === 'a.mjs' && transformEntry
             ? transform(code, ctx)!.code.replace(
-                "import * as __SENTRY__ from '@sentry/cloudflare';",
+                "import * as __SENTRY__ from '@ichnois/cloudflare';",
                 'const __SENTRY__ = { withSentry: (_options, handler) => { for (const key of Object.keys(handler)) handler[key].instrumented = true; return handler; } };',
               )
             : code;
@@ -353,7 +353,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         'const handler = { fetch() {} };',
         'var __SENTRY_DEFAULT_EXPORT__ = (handler);',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
@@ -367,7 +367,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         'var __SENTRY_DEFAULT_EXPORT__ = /* default handler */ { fetch() {} };',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
         '__SENTRY_DEFAULT_EXPORT__ = __SENTRY__.withSentry((env) => ({}), __SENTRY_DEFAULT_EXPORT__);',
@@ -380,7 +380,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         'var __SENTRY_DEFAULT_EXPORT__ = // default handler',
         '{ fetch() {} };',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
@@ -394,7 +394,7 @@ describe('default export wrapping', () => {
 
     expect(transform(code, ctx)!.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         'class Handler { fetch() {} }',
         'var __SENTRY_DEFAULT_EXPORT__ = Handler;',
         'export { __SENTRY_DEFAULT_EXPORT__ as default };',
@@ -430,7 +430,7 @@ describe('default export wrapping', () => {
 
   it('skips when already wrapped with withSentry', () => {
     const code = [
-      "import { withSentry } from '@sentry/cloudflare';",
+      "import { withSentry } from '@ichnois/cloudflare';",
       'export default withSentry((env) => ({}), { fetch() {} });',
     ].join('\n');
     expect(transform(code, ctx)).toBeUndefined();
@@ -438,7 +438,7 @@ describe('default export wrapping', () => {
 
   it('skips when already wrapped with Sentry.withSentry', () => {
     const code = [
-      "import * as Sentry from '@sentry/cloudflare';",
+      "import * as Sentry from '@ichnois/cloudflare';",
       'export default Sentry.withSentry((env) => ({}), { fetch() {} });',
     ].join('\n');
     expect(transform(code, ctx)).toBeUndefined();
@@ -593,7 +593,7 @@ describe('Durable Object class wrapping', () => {
     // The import binding cannot be reassigned, so the export is re-pointed at a wrapper binding.
     expect(result.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import { MyDurableObject } from './do';",
         'const __SENTRY_WRAPPED_MyDurableObject__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.instrumentDurableObjectWithSentry, (env) => ({}), MyDurableObject);',
         'export { __SENTRY_WRAPPED_MyDurableObject__ as MyDurableObject };',
@@ -608,7 +608,7 @@ describe('Durable Object class wrapping', () => {
     const result = transform(code, ctx)!;
     expect(result.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import { MyDurableObject as __SENTRY_REEXPORT_MyDurableObject__ } from './do';",
         'const __SENTRY_WRAPPED_MyDurableObject__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.instrumentDurableObjectWithSentry, (env) => ({}), __SENTRY_REEXPORT_MyDurableObject__);',
         'export { __SENTRY_WRAPPED_MyDurableObject__ as MyDurableObject };',
@@ -623,7 +623,7 @@ describe('Durable Object class wrapping', () => {
     const result = transform(code, ctx)!;
     expect(result.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import { Internal as __SENTRY_REEXPORT_MyDurableObject__ } from './do';",
         'const __SENTRY_WRAPPED_MyDurableObject__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.instrumentDurableObjectWithSentry, (env) => ({}), __SENTRY_REEXPORT_MyDurableObject__);',
         'export { __SENTRY_WRAPPED_MyDurableObject__ as MyDurableObject };',
@@ -637,7 +637,7 @@ describe('Durable Object class wrapping', () => {
     const result = transform(code, ctx)!;
     expect(result.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import __SENTRY_REEXPORT_MyDurableObject__ from './do';",
         'const __SENTRY_WRAPPED_MyDurableObject__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.instrumentDurableObjectWithSentry, (env) => ({}), __SENTRY_REEXPORT_MyDurableObject__);',
         'export { __SENTRY_WRAPPED_MyDurableObject__ as MyDurableObject };',
@@ -651,7 +651,7 @@ describe('Durable Object class wrapping', () => {
     const result = transform(code, ctx)!;
     expect(result.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import { MyDurableObject as __SENTRY_REEXPORT_MyDurableObject__ } from './do';",
         'const __SENTRY_WRAPPED_MyDurableObject__ = __SENTRY__._INTERNAL_wrapUnlessInstrumented(__SENTRY__.instrumentDurableObjectWithSentry, (env) => ({}), __SENTRY_REEXPORT_MyDurableObject__);',
         'export { __SENTRY_WRAPPED_MyDurableObject__ as MyDurableObject };',
@@ -675,7 +675,7 @@ describe('Durable Object class wrapping', () => {
     // Both classes export through a wrapper binding; only the unrelated specifier is carried over.
     expect(result.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import { ImportedDO } from './do';",
         'class DurableObject {}',
         'class LocalDO extends DurableObject {}',
@@ -692,7 +692,7 @@ describe('Durable Object class wrapping', () => {
 
   it('counts a locally hand-wrapped class exported by specifier as wrapped', () => {
     const code = [
-      "import { instrumentDurableObjectWithSentry } from '@sentry/cloudflare';",
+      "import { instrumentDurableObjectWithSentry } from '@ichnois/cloudflare';",
       "import { Impl } from './do';",
       'const MyDurableObject = instrumentDurableObjectWithSentry((env) => ({}), Impl);',
       'export { MyDurableObject };',
@@ -711,7 +711,7 @@ describe('Durable Object class wrapping', () => {
 
   it('counts a manually wrapped DO export as wrapped without touching it', () => {
     const code = [
-      "import { instrumentDurableObjectWithSentry } from '@sentry/cloudflare';",
+      "import { instrumentDurableObjectWithSentry } from '@ichnois/cloudflare';",
       'class Impl {}',
       'export const MyDurableObject = instrumentDurableObjectWithSentry((env) => ({}), Impl);',
     ].join('\n');
@@ -723,12 +723,12 @@ describe('Durable Object class wrapping', () => {
     expect(result.wrappedClasses).toEqual(new Set(['MyDurableObject']));
     expect(result.code).toBe(code);
     expect(result.code).not.toContain('__SENTRY_WRAPPED_');
-    expect(result.code).not.toContain("import * as __SENTRY__ from '@sentry/cloudflare'");
+    expect(result.code).not.toContain("import * as __SENTRY__ from '@ichnois/cloudflare'");
   });
 
   it('returns undefined when nothing is wrapped and no DO classes are configured', () => {
     const code = [
-      "import { withSentry } from '@sentry/cloudflare';",
+      "import { withSentry } from '@ichnois/cloudflare';",
       'export default withSentry((env) => ({}), { fetch() {} });',
     ].join('\n');
 
@@ -794,7 +794,7 @@ describe('Workflow class wrapping', () => {
 
   it('counts a manually wrapped workflow export as wrapped without touching it', () => {
     const code = [
-      "import { instrumentWorkflowWithSentry } from '@sentry/cloudflare';",
+      "import { instrumentWorkflowWithSentry } from '@ichnois/cloudflare';",
       'class Impl {}',
       'export const MyWorkflow = instrumentWorkflowWithSentry((env) => ({}), Impl);',
     ].join('\n');
@@ -1058,7 +1058,7 @@ describe('agent class wrapping', () => {
 
     expect(result.code).toBe(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import { Agent } from 'agents';",
         "import { AIChatAgent } from '@cloudflare/ai-chat';",
         "import { DurableObject } from 'cloudflare:workers';",
@@ -1100,7 +1100,7 @@ describe('agent class wrapping', () => {
 
   it('does not report a manually Agent-wrapped export as unwrapped', () => {
     const code = [
-      "import * as Sentry from '@sentry/cloudflare';",
+      "import * as Sentry from '@ichnois/cloudflare';",
       "import { Agent } from 'agents';",
       'class MyAgentBase extends Agent {}',
       'export const MyAgent = Sentry.instrumentAgentWithSentry((env) => ({}), MyAgentBase);',
@@ -1117,7 +1117,7 @@ describe('agent class wrapping', () => {
 
   it('leaves the DO helper accepted for a manually wrapped Durable Object', () => {
     const code = [
-      "import * as Sentry from '@sentry/cloudflare';",
+      "import * as Sentry from '@ichnois/cloudflare';",
       'export const MyDO = Sentry.instrumentDurableObjectWithSentry((env) => ({}), class {});',
     ].join('\n');
 
@@ -1231,7 +1231,7 @@ describe('combined transforms', () => {
     const code = [
       'class DurableObject {}',
       'export class MyDO extends DurableObject {}',
-      "import { withSentry } from '@sentry/cloudflare';",
+      "import { withSentry } from '@ichnois/cloudflare';",
       'export default withSentry((env) => ({}), { fetch() {} });',
     ].join('\n');
 
@@ -1264,7 +1264,7 @@ describe('same-worker RPC binding floor', () => {
 
     expect(result.code).toContain(
       [
-        "import * as __SENTRY__ from '@sentry/cloudflare';",
+        "import * as __SENTRY__ from '@ichnois/cloudflare';",
         "import __SENTRY_OPTIONS_CALLBACK__ from './instrument.server.ts';",
         'const __SENTRY_OPTIONS__ = (env) => { const opts = (__SENTRY_OPTIONS_CALLBACK__)(env); return { ...opts, rpcTracePropagationBindings: ["MY_DO", ...(opts?.rpcTracePropagationBindings ?? [])] }; };',
       ].join('\n'),

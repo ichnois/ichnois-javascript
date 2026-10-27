@@ -9,8 +9,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import type { IntegrationFn, Span } from '@sentry/core';
-import { defineIntegration, getActiveSpan, startInactiveSpan } from '@sentry/core';
+import type { IntegrationFn, Span } from '@ichnois/core';
+import { defineIntegration, getActiveSpan, startInactiveSpan } from '@ichnois/core';
 import { sanitizeSqlQueryWithSummary } from '../utils/sql';
 import { CHANNELS } from '../orchestrion/channels';
 import { neonModuleNames } from '../orchestrion/config/neon';

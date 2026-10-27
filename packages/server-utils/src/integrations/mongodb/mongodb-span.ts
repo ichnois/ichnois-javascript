@@ -11,8 +11,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import type { Span, SpanAttributes } from '@sentry/core';
-import { getClient, hasSpanStreamingEnabled, isObjectLike, startInactiveSpan } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
+import { getClient, hasSpanStreamingEnabled, isObjectLike, startInactiveSpan } from '@ichnois/core';
 
 // `db.connection_string` is not part of `@sentry/conventions`, so it stays inlined to match
 // what `@opentelemetry/instrumentation-mongodb` emitted.

@@ -1,6 +1,6 @@
-import { stringMatchesSomePattern } from '@sentry/core';
-import type { NetworkMetaWarning } from '@sentry/browser-utils';
-import { serializeFormData } from '@sentry/browser-utils';
+import { stringMatchesSomePattern } from '@ichnois/core';
+import type { NetworkMetaWarning } from '@ichnois/browser-utils';
+import { serializeFormData } from '@ichnois/browser-utils';
 import { NETWORK_BODY_MAX_SIZE, WINDOW } from '../../constants';
 import type {
   NetworkBody,

@@ -1,11 +1,11 @@
 /* eslint-disable import/export */
 import type { Context, TextMapGetter } from '@opentelemetry/api';
 import { context, propagation, trace } from '@opentelemetry/api';
-import type { CloudflareOptions } from '@sentry/cloudflare';
-import { withSentry as withSentryCloudflare } from '@sentry/cloudflare';
-import type { Integration } from '@sentry/core';
-import { applySdkMetadata, extractTraceparentData, getRootSpan, GLOBAL_OBJ, spanToJSON } from '@sentry/core';
-import { registerPrepareSpanScope, setOpenTelemetryContextAsyncContextStrategy } from '@sentry/opentelemetry';
+import type { CloudflareOptions } from '@ichnois/cloudflare';
+import { withSentry as withSentryCloudflare } from '@ichnois/cloudflare';
+import type { Integration } from '@ichnois/core';
+import { applySdkMetadata, extractTraceparentData, getRootSpan, GLOBAL_OBJ, spanToJSON } from '@ichnois/core';
+import { registerPrepareSpanScope, setOpenTelemetryContextAsyncContextStrategy } from '@ichnois/opentelemetry';
 import { ATTR_NEXT_SPAN_TYPE } from '../common/nextSpanAttributes';
 import { isTunnelRouteSpan } from '../common/utils/dropMiddlewareTunnelRequests';
 import { dropReactControlFlowErrorsEventProcessor } from '../common/utils/dropReactControlFlowErrors';
@@ -15,7 +15,7 @@ import { getGlobalTracerProvider, markPrerendersOnTracerProvider } from '../serv
 import { addNextjsServerSpanHooks, NEXTJS_SERVER_IGNORE_SPANS } from '../server/serverSpanHooks';
 import { nextjsUseCacheIntegration } from '../server/useCacheInstrumentation';
 
-export * from '@sentry/cloudflare';
+export * from '@ichnois/cloudflare';
 
 class NextjsCloudflarePropagator extends NextSentryPropagator {
   /** @inheritDoc */

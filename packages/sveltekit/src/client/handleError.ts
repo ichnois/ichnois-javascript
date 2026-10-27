@@ -1,5 +1,5 @@
-import { consoleSandbox } from '@sentry/core';
-import { captureException } from '@sentry/svelte';
+import { consoleSandbox } from '@ichnois/core';
+import { captureException } from '@ichnois/svelte';
 import type { AnyErrorHandler, SentryHandleClientErrorInput } from '../common/handleErrorTypes';
 import { getErrorStatus, shouldCaptureError } from '../common/handleErrorTypes';
 

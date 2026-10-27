@@ -1,6 +1,6 @@
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { MIDDLEWARE } from '@sentry/conventions/op';
-import type { StartSpanOptions } from '@sentry/core';
+import type { StartSpanOptions } from '@ichnois/core';
 
 /**
  * Returns span options for TanStack Start middleware spans.

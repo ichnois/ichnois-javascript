@@ -1,19 +1,19 @@
-import { getActiveSpan, startInactiveSpan } from '@sentry/browser';
-import type * as SentryCore from '@sentry/core';
+import { getActiveSpan, startInactiveSpan } from '@ichnois/browser';
+import type * as SentryCore from '@ichnois/core';
 import type { Mock } from 'vitest';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { DEFAULT_HOOKS } from '../../src/constants';
 import { createTracingMixins } from '../../src/tracing';
 
 const clock = vi.hoisted(() => ({ now: 0 }));
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   return {
     ...(await importOriginal<typeof SentryCore>()),
     timestampInSeconds: () => clock.now,
   };
 });
 
-vi.mock('@sentry/browser', () => {
+vi.mock('@ichnois/browser', () => {
   return {
     getActiveSpan: vi.fn(),
     getClient: vi.fn(),

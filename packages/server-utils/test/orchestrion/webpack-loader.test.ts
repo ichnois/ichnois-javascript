@@ -75,7 +75,7 @@ describe('orchestrion webpack/Turbopack loader', () => {
     });
 
     expect(code).toContain('require("my-custom-server-utils")');
-    expect(code).not.toContain('require("@sentry/server-utils")');
+    expect(code).not.toContain('require("@ichnois/server-utils")');
   });
 
   it('derives a per-file relative specifier from importHelperPath (Turbopack)', () => {
@@ -88,7 +88,7 @@ describe('orchestrion webpack/Turbopack loader', () => {
     });
 
     expect(code).toContain('require("../../@sentry/server-utils/build/cjs/index.js")');
-    expect(code).not.toContain('require("@sentry/server-utils")');
+    expect(code).not.toContain('require("@ichnois/server-utils")');
   });
 
   it('passes through files of packages that are not instrumented', () => {
@@ -115,7 +115,7 @@ describe('orchestrion webpack/Turbopack loader', () => {
 
     expect(error).toBeNull();
     expect(code).toContain('orchestrion:@mastra/core:mastraConstructor');
-    expect(code).toContain('import {orchestrionModuleInjected, mastraIntegration} from "@sentry/server-utils"');
+    expect(code).toContain('import {orchestrionModuleInjected, mastraIntegration} from "@ichnois/server-utils"');
     expect(code).toContain('orchestrionModuleInjected("@mastra/core", () => mastraIntegration())');
   });
 
@@ -126,7 +126,7 @@ describe('orchestrion webpack/Turbopack loader', () => {
 
     expect(error).toBeNull();
     expect(code).toContain('orchestrion:@mastra/core:mastraConstructor');
-    expect(code).toContain('import {orchestrionModuleInjected, mastraIntegration} from "@sentry/server-utils"');
+    expect(code).toContain('import {orchestrionModuleInjected, mastraIntegration} from "@ichnois/server-utils"');
     expect(code).toContain('orchestrionModuleInjected("@mastra/core", () => mastraIntegration())');
   });
 

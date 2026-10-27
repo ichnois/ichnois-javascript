@@ -1,6 +1,6 @@
 import { tracingChannel } from 'node:diagnostics_channel';
-import type { Client } from '@sentry/core';
-import { _INTERNAL_clearAiProviderSkips, _INTERNAL_shouldSkipAiProviderWrapping, GLOBAL_OBJ } from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import { _INTERNAL_clearAiProviderSkips, _INTERNAL_shouldSkipAiProviderWrapping, GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { ANTHROPIC_AI_INTEGRATION_NAME } from '../../../src/ai/anthropic-ai/constants';
 import { GOOGLE_GENAI_INTEGRATION_NAME } from '../../../src/ai/google-genai/constants';

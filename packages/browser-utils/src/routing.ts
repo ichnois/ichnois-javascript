@@ -1,5 +1,5 @@
-import type { Client } from '@sentry/core';
-import { debug, getClient, LRUMap, parseStringToURLObject, safeCallback } from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import { debug, getClient, LRUMap, parseStringToURLObject, safeCallback } from '@ichnois/core';
 import { DEBUG_BUILD } from './debug-build';
 import { getLocationHref } from './getLocationHref';
 

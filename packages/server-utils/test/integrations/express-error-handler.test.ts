@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, type MockInstance, vi } from 'vitest';
 import { isExpressErrorHandled } from '../../src/integrations/express/error-handled';
 // oxlint-disable-next-line typescript/no-deprecated

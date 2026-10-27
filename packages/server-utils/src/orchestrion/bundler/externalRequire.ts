@@ -1,4 +1,4 @@
-import { isPlainObject } from '@sentry/core';
+import { isPlainObject } from '@ichnois/core';
 import { readFileSync } from 'node:fs';
 import { createRequire, isBuiltin } from 'node:module';
 import { isAbsolute } from 'node:path';

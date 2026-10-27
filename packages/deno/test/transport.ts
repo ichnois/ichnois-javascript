@@ -4,8 +4,8 @@ import type {
   Transport,
   TransportMakeRequestResponse,
   TransportRequest,
-} from '@sentry/core';
-import { createTransport, parseEnvelope } from '@sentry/core';
+} from '@ichnois/core';
+import { createTransport, parseEnvelope } from '@ichnois/core';
 
 export interface TestTransportOptions extends BaseTransportOptions {
   callback: (envelope: Envelope) => void;

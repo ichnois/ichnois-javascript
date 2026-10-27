@@ -1,3 +1,3 @@
-import type { BrowserOptions } from '@sentry/react';
+import type { BrowserOptions } from '@ichnois/react';
 
 export type GatsbyOptions = BrowserOptions;

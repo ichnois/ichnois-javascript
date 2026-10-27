@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { getActiveSpan, isThenable, startInactiveSpan, startSpan, startSpanManual, withActiveSpan } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { getActiveSpan, isThenable, startInactiveSpan, startSpan, startSpanManual, withActiveSpan } from '@ichnois/core';
 import type { AnyFn } from './helpers';
 import { getMiddlewareSpanOptions, getNextProxy, instrumentObservable, isTargetPatched } from './helpers';
 import type { CallHandler, CatchTarget, InjectableTarget, MinimalNestJsExecutionContext, Observable } from './types';

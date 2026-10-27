@@ -1,5 +1,5 @@
 import * as diagnosticsChannel from 'node:diagnostics_channel';
-import { remixV3Channels } from '@sentry/server-utils/orchestrion/config';
+import { remixV3Channels } from '@ichnois/server-utils/orchestrion/config';
 import { beforeAll, describe, expect, it, vi } from 'vitest';
 import * as path from 'node:path';
 import { debugIdLoader, instrumentAssetServer } from '../../src/v3/assetServer';
@@ -127,7 +127,7 @@ describe('instrumentAssetServer', () => {
     it('allows the SDK package, so the injected shim import can be served', () => {
       const { receivedOptions } = createAssetServer({ allowPackages: ['remix'] });
 
-      expect(receivedOptions.allowPackages).toEqual(['remix', '@sentry/remix']);
+      expect(receivedOptions.allowPackages).toEqual(['remix', '@ichnois/remix']);
     });
 
     it('injects nothing when the app serves no packages, since no module could import the shim', () => {

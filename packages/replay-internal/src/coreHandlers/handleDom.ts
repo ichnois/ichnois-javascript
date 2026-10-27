@@ -1,6 +1,6 @@
-import type { HandlerDataDom } from '@sentry/browser-utils';
-import { htmlTreeAsString } from '@sentry/browser-utils';
-import type { Breadcrumb } from '@sentry/core';
+import type { HandlerDataDom } from '@ichnois/browser-utils';
+import { htmlTreeAsString } from '@ichnois/browser-utils';
+import type { Breadcrumb } from '@ichnois/core';
 import { record } from '@sentry/rrweb';
 import type { serializedElementNodeWithId, serializedNodeWithId } from '@sentry/rrweb-snapshot';
 import { NodeType } from '@sentry/rrweb-snapshot';

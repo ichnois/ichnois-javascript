@@ -13,6 +13,6 @@
 // resolves it (and the bare specifier below) via Node's module resolution
 // against the installed package.
 
-import { registerDiagnosticsChannelInjection } from '@sentry/server-runtime-injection/register';
+import { registerDiagnosticsChannelInjection } from '@ichnois/server-runtime-injection/register';
 
 registerDiagnosticsChannelInjection();

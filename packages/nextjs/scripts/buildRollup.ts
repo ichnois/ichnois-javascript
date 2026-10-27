@@ -27,7 +27,7 @@ fs.readdirSync(esmTemplateDir).forEach(templateFile =>
 // from `@sentry/server-runtime-injection`' own exports map, so a new subpath there is forwarded
 // automatically. Only `require`-able entries get one, since the emitted external is a `require()`.
 // Written as plain CJS, not built by rollup: they are loaded by specifier, never bundled.
-const RUNTIME_INJECTION = '@sentry/server-runtime-injection';
+const RUNTIME_INJECTION = '@ichnois/server-runtime-injection';
 const orchestrionRuntimeBuildDir = 'build/orchestrion-runtime';
 
 const runtimeInjectionExports = (

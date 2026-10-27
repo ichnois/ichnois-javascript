@@ -1,4 +1,4 @@
-import type { Scope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
 import {
   getAsyncContextStrategy,
   getCurrentScope,
@@ -8,7 +8,7 @@ import {
   setAsyncContextStrategy,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { afterAll, beforeEach, describe, expect, it, test } from 'vitest';
 import { setOpenTelemetryContextAsyncContextStrategy } from '../src/asyncContextStrategy';
 import { mockSdkInit } from './helpers/mockSdkInit';

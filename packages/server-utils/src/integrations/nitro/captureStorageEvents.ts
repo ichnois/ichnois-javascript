@@ -8,8 +8,8 @@ import {
   isObjectLike,
   _INTERNAL_safeDateNow as safeDateNow,
   startInactiveSpan,
-} from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+} from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import { bindTracingChannelToSpan } from '../../tracing-channel';
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
 import type { UnstorageTraceContext } from './nitroTypes';

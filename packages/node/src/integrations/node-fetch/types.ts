@@ -10,7 +10,7 @@
  *   here, `enabled`, is unused by the Sentry integration)
  */
 
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 
 export interface UndiciRequest {
   origin: string;

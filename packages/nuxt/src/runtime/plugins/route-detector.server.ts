@@ -1,8 +1,8 @@
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 import { defineNuxtPlugin } from 'nuxt/app';
 import type { NuxtPageSubset } from '../utils/route-extraction';
 import { extractParametrizedRouteFromContext } from '../utils/route-extraction';
-import { setHttpServerSpanRouteAttribute } from '@sentry/server-utils';
+import { setHttpServerSpanRouteAttribute } from '@ichnois/server-utils';
 
 export default defineNuxtPlugin(nuxtApp => {
   nuxtApp.hooks.hook('app:rendered', async renderContext => {

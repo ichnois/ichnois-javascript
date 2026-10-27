@@ -1,5 +1,5 @@
 import type { OrchestrionChannelContext } from '../../orchestrion/types';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 
 export type ExpressLayerType = 'router' | 'middleware' | 'request_handler';
 

@@ -192,14 +192,14 @@ export {
   eveInstrumentation,
   eveIntegration,
   getInstrumentedModuleNames,
-} from '@sentry/node';
+} from '@ichnois/node';
 
 export {
   captureConsoleIntegration,
   dedupeIntegration,
   extraErrorDataIntegration,
   rewriteFramesIntegration,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export { getDefaultIntegrations, init } from './sdk';
 

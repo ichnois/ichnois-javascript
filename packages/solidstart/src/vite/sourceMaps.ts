@@ -1,4 +1,4 @@
-import { sentryVitePlugin } from '@sentry/bundler-plugins/vite';
+import { sentryVitePlugin } from '@ichnois/bundler-plugins/vite';
 import type { Plugin, UserConfig } from 'vite';
 import type { SentrySolidStartOptions } from './sentrySolidStart';
 import type { SentrySolidStartPluginOptions } from './types';

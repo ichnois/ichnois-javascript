@@ -1,3 +1,3 @@
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
 
 export const filterHonoIntegration = (integration: Integration): boolean => integration.name !== 'Hono';

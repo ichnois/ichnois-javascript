@@ -1,5 +1,5 @@
-import { sentryVitePlugin } from '@sentry/bundler-plugins/vite';
-import { warnOnRemovedBuildOptions } from '@sentry/core';
+import { sentryVitePlugin } from '@ichnois/bundler-plugins/vite';
+import { warnOnRemovedBuildOptions } from '@ichnois/core';
 import { type Plugin } from 'vite';
 import type { SentryReactRouterBuildOptions } from './types';
 

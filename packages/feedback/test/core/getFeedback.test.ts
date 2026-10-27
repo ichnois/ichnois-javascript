@@ -1,4 +1,4 @@
-import { getCurrentScope } from '@sentry/core';
+import { getCurrentScope } from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getFeedback } from '../../src/core/getFeedback';
 import { buildFeedbackIntegration } from '../../src/core/integration';

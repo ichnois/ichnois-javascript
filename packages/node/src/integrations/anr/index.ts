@@ -1,6 +1,6 @@
 import { types } from 'node:util';
 import { Worker } from 'node:worker_threads';
-import type { Contexts, Event, EventHint, Integration, IntegrationFn, ScopeData } from '@sentry/core';
+import type { Contexts, Event, EventHint, Integration, IntegrationFn, ScopeData } from '@ichnois/core';
 import {
   debug,
   defineIntegration,
@@ -10,7 +10,7 @@ import {
   getFilenameToDebugIdMap,
   getIsolationScope,
   GLOBAL_OBJ,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { NodeClient } from '../../sdk/client';
 import { isDebuggerEnabled } from '../../utils/debug';
 import type { AnrIntegrationOptions, WorkerStartData } from './common';

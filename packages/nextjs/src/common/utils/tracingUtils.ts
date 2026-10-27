@@ -7,8 +7,8 @@ import {
   SENTRY_OP,
 } from '@sentry/conventions/attributes';
 import { FUNCTION } from '@sentry/conventions/op';
-import type { Client, PropagationContext, RawAttributes, Span } from '@sentry/core';
-import { isObjectLike, Scope, INTERNAL_setSegmentNameSourceIfSegment, hasSpanStreamingEnabled } from '@sentry/core';
+import type { Client, PropagationContext, RawAttributes, Span } from '@ichnois/core';
+import { isObjectLike, Scope, INTERNAL_setSegmentNameSourceIfSegment, hasSpanStreamingEnabled } from '@ichnois/core';
 import { ATTR_NEXT_SEGMENT, ATTR_NEXT_SPAN_NAME, ATTR_NEXT_SPAN_TYPE } from '../nextSpanAttributes';
 
 const commonPropagationContextMap = new WeakMap<object, PropagationContext>();

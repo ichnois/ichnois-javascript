@@ -1,6 +1,6 @@
-import { handleCallbackErrors, SPAN_STATUS_ERROR } from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
-import { captureException, getActiveSpan, getRootSpan, spanToJSON, startSpan } from '@sentry/node';
+import { handleCallbackErrors, SPAN_STATUS_ERROR } from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
+import { captureException, getActiveSpan, getRootSpan, spanToJSON, startSpan } from '@ichnois/node';
 import { isRedirect } from './utils';
 import {
   SENTRY_SEGMENT_NAME_SOURCE,
@@ -12,7 +12,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { FUNCTION } from '@sentry/conventions/op';
-import { setHttpServerSpanRouteAttribute } from '@sentry/server-utils';
+import { setHttpServerSpanRouteAttribute } from '@ichnois/server-utils';
 
 /**
  * Wraps a server action (functions that use the 'use server' directive)

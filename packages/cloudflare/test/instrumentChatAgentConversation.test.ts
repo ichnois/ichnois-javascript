@@ -1,5 +1,5 @@
 import type { DurableObjectStorage } from '@cloudflare/workers-types';
-import { getIsolationScope, getMainCarrier } from '@sentry/core';
+import { getIsolationScope, getMainCarrier } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { instrumentChatAgentConversation } from '../src/instrumentations/agents/instrumentChatAgentConversation';
 import {

@@ -7,7 +7,7 @@ import {
   SPAN_STATUS_ERROR,
   startInactiveSpan,
   type WrappedFunction,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { type MiddlewareHandler } from './honoTypes';
 import { SENTRY_HONO_MIDDLEWARE } from './createHonoMiddleware';
 import { defaultShouldHandleError } from './defaultShouldHandleError';

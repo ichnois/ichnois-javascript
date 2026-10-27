@@ -7,7 +7,7 @@ const spanToJSONSpy = vi.fn<() => { name: string; attributes: Record<string, unk
 // Span streaming is the default trace lifecycle; `undefined` stands for a not-yet-initialized SDK.
 const getClientSpy = vi.fn<() => { getOptions: () => { traceLifecycle: string } } | undefined>(() => undefined);
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const original = await importOriginal();
   return {
     ...original,

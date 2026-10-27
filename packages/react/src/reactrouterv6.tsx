@@ -1,5 +1,5 @@
-import type { browserTracingIntegration } from '@sentry/browser';
-import type { Integration } from '@sentry/core';
+import type { browserTracingIntegration } from '@ichnois/browser';
+import type { Integration } from '@ichnois/core';
 import type { ReactRouterOptions } from './reactrouter-compat-utils';
 import {
   createReactRouterV6CompatibleTracingIntegration,

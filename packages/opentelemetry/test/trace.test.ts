@@ -2,7 +2,7 @@
 import type { Span, TimeInput } from '@opentelemetry/api';
 import { context, ROOT_CONTEXT, trace, TraceFlags } from '@opentelemetry/api';
 import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_KIND, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import type { Event, Scope } from '@sentry/core';
+import type { Event, Scope } from '@ichnois/core';
 import {
   getCapturedScopesOnSpan,
   getClient,
@@ -16,7 +16,7 @@ import {
   startSpan,
   startSpanManual,
   withScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getActiveSpan } from '../src/utils/getActiveSpan';
 import { makeTraceState } from '../src/utils/makeTraceState';

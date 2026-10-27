@@ -1,5 +1,5 @@
-import { type Integration, setConversationId } from '@sentry/core';
-import { eveIntegration } from '@sentry/server-utils';
+import { type Integration, setConversationId } from '@ichnois/core';
+import { eveIntegration } from '@ichnois/server-utils';
 import { init } from './sdk';
 import type { NodeOptions } from './types';
 
@@ -36,7 +36,7 @@ interface EveInstrumentationProvider {
  * @example
  * ```ts
  * // agent/instrumentation/sentry.ts
- * import * as Sentry from '@sentry/node';
+ * import * as Sentry from '@ichnois/node';
  * import { defineInstrumentation } from 'eve/instrumentation';
  *
  * export default defineInstrumentation(Sentry.eveInstrumentation({ dsn: '__DSN__' }));

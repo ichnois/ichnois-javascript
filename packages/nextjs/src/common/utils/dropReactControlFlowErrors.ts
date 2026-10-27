@@ -1,4 +1,4 @@
-import type { EventProcessor } from '@sentry/core';
+import type { EventProcessor } from '@ichnois/core';
 import { isPrerenderControlFlowError } from '../nextNavigationErrorUtils';
 
 /** Drops the errors that React and Next.js throw for control flow: postpones, prerender aborts and Suspense exceptions. */

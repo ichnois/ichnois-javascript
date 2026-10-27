@@ -1,12 +1,12 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   debug,
   getClient,
   hasSpanStreamingEnabled,
   UI_MOUNT_SPAN_NAME_FALLBACK,
   UI_UPDATE_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
-import { startInactiveSpan } from '@sentry/core/browser';
+} from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/core/browser';
 import { SENTRY_DESCRIPTION, SENTRY_OP, UI_COMPONENT_NAME, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { UI_MOUNT, UI_UPDATE } from '@sentry/conventions/op';
 import { afterUpdate, beforeUpdate, onMount } from 'svelte';

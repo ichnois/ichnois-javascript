@@ -4,7 +4,7 @@ import type {
   ModuleMetadata,
   ModuleMetadataCallback,
   ReactComponentAnnotationOptions,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 // The first argument to `withSentryConfig` (which is the user's next config).
 export type ExportedNextConfig = NextConfigObject | NextConfigFunction;
@@ -277,7 +277,7 @@ export type SentryBuildOptions = Omit<
    * group) with:
    *
    * ```ts
-   * export { POST } from '@sentry/nextjs/tunnel';
+   * export { POST } from '@ichnois/nextjs/tunnel';
    * ```
    *
    * This handler accepts the DSN of the server SDK, also a self-hosted one. For other DSNs, use

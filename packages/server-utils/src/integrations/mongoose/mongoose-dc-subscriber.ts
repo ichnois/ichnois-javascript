@@ -12,7 +12,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import { debug, getClient, hasSpanStreamingEnabled, isObjectLike, startInactiveSpan } from '@sentry/core';
+import { debug, getClient, hasSpanStreamingEnabled, isObjectLike, startInactiveSpan } from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import { bindTracingChannelToSpan } from '../../tracing-channel';
 

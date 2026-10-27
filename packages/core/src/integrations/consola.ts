@@ -201,7 +201,7 @@ const DEFAULT_CAPTURED_LEVELS: Array<LogSeverityLevel> = ['trace', 'debug', 'inf
  *
  * @example
  * ```ts
- * import * as Sentry from '@sentry/node';
+ * import * as Sentry from '@ichnois/node';
  * import { consola } from 'consola';
  *
  * Sentry.init({

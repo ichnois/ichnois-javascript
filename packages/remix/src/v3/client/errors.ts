@@ -1,4 +1,4 @@
-import { captureException } from '@sentry/browser';
+import { captureException } from '@ichnois/browser';
 import { tracingChannel } from './diagnosticsChannelShim';
 
 /** The `AppRuntime` returned by `run()` from `remix/component`, an EventTarget emitting `error`. */

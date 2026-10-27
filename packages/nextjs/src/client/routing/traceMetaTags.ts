@@ -1,8 +1,8 @@
 import { SENTRY_LINK_TYPE } from '@sentry/conventions/attributes';
-import type { Span } from '@sentry/core';
-import { extractTraceparentData } from '@sentry/core';
-import { GLOBAL_OBJ } from '@sentry/core';
-import { WINDOW } from '@sentry/react';
+import type { Span } from '@ichnois/core';
+import { extractTraceparentData } from '@ichnois/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
+import { WINDOW } from '@ichnois/react';
 
 // `@opentelemetry/api` `TraceFlags`, inlined because core does not export its copies.
 const TRACE_FLAG_SAMPLED = 0x1;

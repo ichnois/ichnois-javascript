@@ -1,10 +1,10 @@
-import { consoleSandbox, debug, getClient, GLOBAL_OBJ, parseSemver } from '@sentry/core';
+import { consoleSandbox, debug, getClient, GLOBAL_OBJ, parseSemver } from '@ichnois/core';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import * as Module from 'node:module';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { SENTRY_RUNTIME_INSTRUMENTATIONS } from '@sentry/server-utils/orchestrion/config';
+import { SENTRY_RUNTIME_INSTRUMENTATIONS } from '@ichnois/server-utils/orchestrion/config';
 import type { register } from 'node:module';
 import ModulePatch from '@apm-js-collab/tracing-hooks';
 import { initialize, load, resolve, createDiagnosticsPort } from '@apm-js-collab/tracing-hooks/hook-sync.mjs';
@@ -319,7 +319,7 @@ export function registerDiagnosticsChannelInjection(): void {
         debug.warn(`No orchestrion ESM hook at ${hookPath}; falling back to the package specifier.`);
       }
 
-      const hookSpecifier = hookFound ? pathToFileURL(hookPath).href : '@sentry/server-runtime-injection/hook';
+      const hookSpecifier = hookFound ? pathToFileURL(hookPath).href : '@ichnois/server-runtime-injection/hook';
 
       if (hookFound) {
         // Only `build/esm/package.json` marks the hook and its chunks as ESM. Deployments can drop

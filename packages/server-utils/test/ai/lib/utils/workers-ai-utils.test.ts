@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   GEN_AI_PROVIDER_NAME,
   GEN_AI_EMBEDDINGS_INPUT,

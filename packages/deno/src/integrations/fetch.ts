@@ -1,4 +1,4 @@
-import { createFetchIntegration } from '@sentry/core';
+import { createFetchIntegration } from '@ichnois/core';
 
 /**
  * Instruments outgoing `fetch` requests in Deno: creates spans, records breadcrumbs and

@@ -1,11 +1,11 @@
-import { debug } from '@sentry/core';
-import type { DenoOptions } from '@sentry/deno';
+import { debug } from '@ichnois/core';
+import type { DenoOptions } from '@ichnois/deno';
 import { init } from './sdk';
 import {
   applyHonoPatches,
   createHonoRequestMiddleware,
   type SentryHonoMiddlewareOptions,
-} from '@sentry/server-utils/no-diagnostic-channels';
+} from '@ichnois/server-utils/no-diagnostic-channels';
 import type { Env, Hono, MiddlewareHandler } from 'hono';
 
 export interface HonoDenoOptions extends DenoOptions, SentryHonoMiddlewareOptions {}

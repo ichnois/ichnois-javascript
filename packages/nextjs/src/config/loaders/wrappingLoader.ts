@@ -1,5 +1,5 @@
 import commonjs from '@rollup/plugin-commonjs';
-import { stringMatchesSomePattern } from '@sentry/core';
+import { stringMatchesSomePattern } from '@ichnois/core';
 import * as fs from 'fs';
 import * as path from 'path';
 import type { RollupBuild, RollupError } from 'rollup';
@@ -179,7 +179,7 @@ export default function wrappingLoader(
       }
       templateCode = templateCode.replace(
         /__SENTRY_NEXTJS_REQUEST_ASYNC_STORAGE_SHIM__/g,
-        '@sentry/nextjs/async-storage-shim',
+        '@ichnois/nextjs/async-storage-shim',
       );
     }
 

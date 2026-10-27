@@ -1,5 +1,5 @@
 import { context, defaultTextMapGetter, defaultTextMapSetter, ROOT_CONTEXT, trace } from '@opentelemetry/api';
-import { suppressTracing, withScope } from '@sentry/core';
+import { suppressTracing, withScope } from '@ichnois/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { SENTRY_BAGGAGE_HEADER, SENTRY_TRACE_HEADER } from '../src/constants';
 import { SentryPropagator } from '../src/propagator';

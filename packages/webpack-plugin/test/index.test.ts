@@ -1,8 +1,8 @@
-import * as bundlerPlugins from '@sentry/bundler-plugins/webpack';
+import * as bundlerPlugins from '@ichnois/bundler-plugins/webpack';
 import { describe, expect, it } from 'vitest';
 import * as plugin from '../src/index';
 
-describe('@sentry/webpack-plugin', () => {
+describe('@ichnois/webpack-plugin', () => {
   it('re-exports @sentry/bundler-plugins/webpack', () => {
     expect(plugin.sentryWebpackPlugin).toBe(bundlerPlugins.sentryWebpackPlugin);
     expect(Object.keys(plugin).sort()).toEqual(Object.keys(bundlerPlugins).sort());

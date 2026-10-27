@@ -1,4 +1,4 @@
-import type { BuildTimeOptionsBase } from '@sentry/core';
+import type { BuildTimeOptionsBase } from '@ichnois/core';
 import type { NitroConfig } from 'nitro/types';
 import { createNitroModule } from './module';
 import { configureSourcemapSettings } from './sourceMaps';

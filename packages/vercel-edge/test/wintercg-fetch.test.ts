@@ -1,5 +1,5 @@
-import type { TransactionEvent } from '@sentry/core';
-import { createStackParser, setCurrentClient, startSpan } from '@sentry/core';
+import type { TransactionEvent } from '@ichnois/core';
+import { createStackParser, setCurrentClient, startSpan } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { VercelEdgeClient } from '../src/index';
 import { winterCGFetchIntegration } from '../src/integrations/wintercg-fetch';

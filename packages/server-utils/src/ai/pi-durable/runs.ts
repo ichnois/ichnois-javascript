@@ -1,4 +1,4 @@
-import type { MaybeWeakRef, Scope, Span, SpanStatus } from '@sentry/core';
+import type { MaybeWeakRef, Scope, Span, SpanStatus } from '@ichnois/core';
 import {
   continueTrace,
   debug,
@@ -9,7 +9,7 @@ import {
   startInactiveSpan,
   startNewTrace,
   uuid4,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { GEN_AI_CONVERSATION_ID, GEN_AI_OPERATION_NAME, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { GEN_AI_INVOKE_AGENT } from '@sentry/conventions/op';
 import { DEBUG_BUILD } from '../../debug-build';

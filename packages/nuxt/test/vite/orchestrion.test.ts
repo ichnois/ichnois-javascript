@@ -26,10 +26,10 @@ function createMockNuxt(options: { _prepare?: boolean; dev?: boolean } = {}) {
 
 describe('setupOrchestrion', () => {
   beforeAll(async () => {
-    vi.doMock('@sentry/server-utils/orchestrion/config', () => ({
+    vi.doMock('@ichnois/server-utils/orchestrion/config', () => ({
       INSTRUMENTED_MODULE_NAMES: ['mysql', 'ioredis'],
     }));
-    vi.doMock('@sentry/server-utils/orchestrion/rollup', () => ({
+    vi.doMock('@ichnois/server-utils/orchestrion/rollup', () => ({
       sentryOrchestrionPlugin: mockSentryOrchestrionPlugin,
       sentryCommonJSInteropPlugin: () => ({ name: 'sentry-commonjs-interop' }),
       commonJSInteropOptions: () => mockCommonJSInteropOptions,
@@ -41,8 +41,8 @@ describe('setupOrchestrion', () => {
   }, 60_000);
 
   afterAll(() => {
-    vi.doUnmock('@sentry/server-utils/orchestrion/config');
-    vi.doUnmock('@sentry/server-utils/orchestrion/rollup');
+    vi.doUnmock('@ichnois/server-utils/orchestrion/config');
+    vi.doUnmock('@ichnois/server-utils/orchestrion/rollup');
   });
 
   beforeEach(() => {

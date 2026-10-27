@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { Scope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
 import {
   addBreadcrumb,
   getClient,
   getCurrentScope,
   getGlobalScope,
   setNormalizationDepthOverrideHint,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 interface Action<T = any> {
   type: T;

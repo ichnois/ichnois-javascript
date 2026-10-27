@@ -3,8 +3,8 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import type { Transport } from '@sentry/core';
-import { getClient } from '@sentry/core';
+import type { Transport } from '@ichnois/core';
+import { getClient } from '@ichnois/core';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { DEFAULT_FLUSH_MIN_DELAY, SESSION_IDLE_EXPIRE_DURATION } from '../../src/constants';
 import type { Replay } from '../../src/integration';

@@ -6,18 +6,18 @@ import {
   NETWORK_TRANSPORT,
   NETWORK_TYPE,
 } from '@sentry/conventions/attributes';
-import * as SentryCloudflare from '@sentry/cloudflare';
-import * as SentryCore from '@sentry/core';
-import { SDK_VERSION } from '@sentry/core';
+import * as SentryCloudflare from '@ichnois/cloudflare';
+import * as SentryCore from '@ichnois/core';
+import { SDK_VERSION } from '@ichnois/core';
 import { Hono } from 'hono';
 import { beforeEach, describe, expect, it, type Mock, vi } from 'vitest';
 import { sentry, type HonoCloudflareOptions } from '../../src/cloudflare/middleware';
 import { LOW_QUALITY_TRANSACTION_PATTERNS } from '../../src/shared/lowQualityTransactionPatterns';
 import { requestConnInfoAttributes } from '../shared/requestConnInfoAttributes';
 
-vi.mock('@sentry/cloudflare', { spy: true });
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/cloudflare', { spy: true });
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment

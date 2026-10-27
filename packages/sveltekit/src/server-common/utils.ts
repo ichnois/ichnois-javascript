@@ -1,4 +1,4 @@
-import { captureException, objectify } from '@sentry/core';
+import { captureException, objectify } from '@ichnois/core';
 import type { RequestEvent } from '@sveltejs/kit';
 import { isHttpError, isRedirect } from '../common/utils';
 

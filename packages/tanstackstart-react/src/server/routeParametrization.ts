@@ -1,5 +1,5 @@
 import { SENTRY_SEGMENT_NAME_SOURCE, HTTP_ROUTE } from '@sentry/conventions/attributes';
-import { getActiveSpan, getCurrentScope, getRootSpan, spanToJSON, updateSpanName } from '@sentry/core';
+import { getActiveSpan, getCurrentScope, getRootSpan, spanToJSON, updateSpanName } from '@ichnois/core';
 
 type RouteSegment =
   | { kind: 'static'; value: string }

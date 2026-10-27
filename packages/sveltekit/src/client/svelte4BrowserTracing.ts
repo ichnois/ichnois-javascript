@@ -1,17 +1,17 @@
-import type { Client, Span } from '@sentry/core';
+import type { Client, Span } from '@ichnois/core';
 import {
   hasSpanStreamingEnabled,
   NAVIGATION_SPAN_NAME_FALLBACK,
   PAGELOAD_SPAN_NAME_FALLBACK,
   ROUTER_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   getCurrentScope,
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
   startInactiveSpan,
   WINDOW,
-} from '@sentry/svelte';
+} from '@ichnois/svelte';
 import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_OP, URL_TEMPLATE, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { NAVIGATION, PAGELOAD, ROUTER } from '@sentry/conventions/op';
 import type { Navigation, Page } from '@sveltejs/kit';

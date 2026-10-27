@@ -1,4 +1,4 @@
-import { createTransport, resolvedSyncPromise } from '@sentry/core';
+import { createTransport, resolvedSyncPromise } from '@ichnois/core';
 import type { NodeClientOptions } from '../../src/types';
 
 export function getDefaultNodeClientOptions(options: Partial<NodeClientOptions> = {}): NodeClientOptions {

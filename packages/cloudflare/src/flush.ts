@@ -1,6 +1,6 @@
 import type { ExecutionContext } from '@cloudflare/workers-types';
-import type { Client } from '@sentry/core';
-import { debug, flush } from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import { debug, flush } from '@ichnois/core';
 import { DEBUG_BUILD } from './debug-build';
 import type { ExecutionContextCompat } from './executionContext';
 

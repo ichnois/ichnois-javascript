@@ -1,4 +1,4 @@
-import { htmlTreeAsString, isElement } from '@sentry/browser-utils';
+import { htmlTreeAsString, isElement } from '@ichnois/browser-utils';
 
 type Prototype = { constructor?: (...args: unknown[]) => unknown };
 

@@ -1,4 +1,4 @@
-import { parseSemver } from '@sentry/core';
+import { parseSemver } from '@ichnois/core';
 import { it, test } from 'vitest';
 
 const NODE_VERSION = parseSemver(process.versions.node).major;

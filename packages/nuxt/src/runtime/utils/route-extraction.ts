@@ -1,5 +1,5 @@
 import type { NuxtPage } from '@nuxt/schema';
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 import type { NuxtSSRContext } from 'nuxt/app';
 
 export type NuxtPageSubset = { path: NuxtPage['path']; file: NuxtPage['file'] };

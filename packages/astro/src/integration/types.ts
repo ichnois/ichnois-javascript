@@ -1,4 +1,4 @@
-import type { BuildTimeOptionsBase } from '@sentry/core';
+import type { BuildTimeOptionsBase } from '@ichnois/core';
 import type { RouteData } from 'astro';
 
 type SdkInitPaths = {

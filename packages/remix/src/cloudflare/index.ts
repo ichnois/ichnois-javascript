@@ -7,7 +7,7 @@ import {
   sentryHandleError,
 } from '../server/instrumentServer';
 
-export * from '@sentry/react';
+export * from '@ichnois/react';
 
 export { captureRemixErrorBoundaryError } from '../client/errors';
 export { withSentry } from '../client/performance';
@@ -44,7 +44,7 @@ export type {
   Stacktrace,
   Thread,
   User,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export {
   addEventProcessor,
@@ -120,5 +120,5 @@ export {
   // oxlint-disable-next-line typescript/no-deprecated
   withStreamedSpan,
   featureFlagsIntegration,
-} from '@sentry/core';
-export { trpcMiddleware } from '@sentry/core/server';
+} from '@ichnois/core';
+export { trpcMiddleware } from '@ichnois/core/server';

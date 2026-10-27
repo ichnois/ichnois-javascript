@@ -1,5 +1,5 @@
-import { browserTracingIntegration as originalBrowserTracingIntegration } from '@sentry/browser';
-import type { Integration } from '@sentry/core';
+import { browserTracingIntegration as originalBrowserTracingIntegration } from '@ichnois/browser';
+import type { Integration } from '@ichnois/core';
 import type { ClientInstrumentation } from 'react-router';
 import {
   createSentryClientInstrumentation,

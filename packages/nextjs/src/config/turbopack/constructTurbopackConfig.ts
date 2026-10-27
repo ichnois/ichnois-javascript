@@ -1,12 +1,12 @@
-import { debug, escapeStringForRegex } from '@sentry/core';
+import { debug, escapeStringForRegex } from '@ichnois/core';
 import * as path from 'path';
-import { getInstrumentedModuleNames } from '@sentry/server-utils/orchestrion/config';
+import { getInstrumentedModuleNames } from '@ichnois/server-utils/orchestrion/config';
 import {
   getOrchestrionLoaderPath,
   getSentryInstrumentations,
   resolveOrchestrionRuntimeRequest,
   serializeInstrumentations,
-} from '@sentry/server-utils/orchestrion/webpack';
+} from '@ichnois/server-utils/orchestrion/webpack';
 import type { VercelCronsConfig } from '../../common/types';
 import { getBuildLogger } from '../buildLogger';
 import type { RouteManifest } from '../manifest/types';
@@ -157,7 +157,7 @@ function maybeAddOrchestrionRule(
   // package's location — so pass the entry's absolute on-disk path and let the loader derive a
   // per-file RELATIVE specifier, which Turbopack resolves from the importing file and bundles at
   // build time.
-  const importHelperPath = resolveOrchestrionRuntimeRequest('@sentry/server-utils');
+  const importHelperPath = resolveOrchestrionRuntimeRequest('@ichnois/server-utils');
 
   // Turbopack runs webpack loaders out of process, one round trip per matched file. The transform
   // only ever touches files of the instrumented packages, so limit the rule to those instead of

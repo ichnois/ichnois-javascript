@@ -1,10 +1,10 @@
-import * as SentryCore from '@sentry/core';
-import * as SentryCoreServer from '@sentry/core/server';
+import * as SentryCore from '@ichnois/core';
+import * as SentryCoreServer from '@ichnois/core/server';
 import { HTTPError } from 'nitro/h3';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { captureErrorHook } from '../../../src/runtime/hooks/captureErrorHook';
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const mod = await importOriginal();
   return {
     ...(mod as any),
@@ -16,7 +16,7 @@ vi.mock('@sentry/core', async importOriginal => {
   };
 });
 
-vi.mock('@sentry/core/server', async importOriginal => {
+vi.mock('@ichnois/core/server', async importOriginal => {
   const mod = await importOriginal();
   return {
     ...(mod as any),

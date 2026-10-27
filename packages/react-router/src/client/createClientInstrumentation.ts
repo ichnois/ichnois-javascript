@@ -1,6 +1,6 @@
 // oxlint-disable max-lines
-import { getAbsoluteUrl, startBrowserTracingNavigationSpan } from '@sentry/browser';
-import type { Span } from '@sentry/core';
+import { getAbsoluteUrl, startBrowserTracingNavigationSpan } from '@ichnois/browser';
+import type { Span } from '@ichnois/core';
 import {
   debug,
   getActiveSpan,
@@ -13,8 +13,8 @@ import {
   SPAN_STATUS_ERROR,
   updateSpanName,
   filterCollectedUrl,
-} from '@sentry/core';
-import { startSpan } from '@sentry/core/browser';
+} from '@ichnois/core';
+import { startSpan } from '@ichnois/core/browser';
 import type { ClientInstrumentation } from 'react-router';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { captureInstrumentationError, getPathFromRequest, getPattern, normalizeRoutePath } from '../common/utils';

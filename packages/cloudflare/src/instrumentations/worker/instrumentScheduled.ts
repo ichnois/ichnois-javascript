@@ -12,7 +12,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { FUNCTION } from '@sentry/conventions/op';
-import { captureException, debug, hasSpanStreamingEnabled, startSpan, withIsolationScope } from '@sentry/core';
+import { captureException, debug, hasSpanStreamingEnabled, startSpan, withIsolationScope } from '@ichnois/core';
 import type { CloudflareOptions } from '../../client';
 import { DEBUG_BUILD } from '../../debug-build';
 import { flushAndDispose } from '../../flush';

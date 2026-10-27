@@ -1,8 +1,8 @@
 import {
   browserTracingIntegration as originalBrowserTracingIntegration,
   startBrowserTracingNavigationSpan,
-} from '@sentry/browser';
-import type { Integration, StartSpanOptions } from '@sentry/core';
+} from '@ichnois/browser';
+import type { Integration, StartSpanOptions } from '@ichnois/core';
 import { instrumentVueRouter } from './router';
 
 // The following type is an intersection of the Route type from VueRouter v2, v3, and v4.

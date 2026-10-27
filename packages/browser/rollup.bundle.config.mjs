@@ -60,7 +60,7 @@ builds.push(
 const baseBundleConfig = makeBaseBundleConfig({
   bundleType: 'standalone',
   entrypoints: ['src/index.bundle.ts'],
-  licenseTitle: '@sentry/browser',
+  licenseTitle: '@ichnois/browser',
   outputFileBase: () => 'bundles/bundle',
 });
 

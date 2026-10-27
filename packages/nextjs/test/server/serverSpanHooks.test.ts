@@ -6,8 +6,8 @@ import {
   SENTRY_SEGMENT_NAME_SOURCE,
 } from '@sentry/conventions/attributes';
 import { MIDDLEWARE } from '@sentry/conventions/op';
-import type { Client } from '@sentry/core';
-import { addChildSpanToSpan, SentrySpan, spanToStaticSpanJSON } from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import { addChildSpanToSpan, SentrySpan, spanToStaticSpanJSON } from '@ichnois/core';
 import { describe, expect, it } from 'vitest';
 import { ATTR_NEXT_SPAN_NAME, ATTR_NEXT_SPAN_TYPE } from '../../src/common/nextSpanAttributes';
 import { handleOnSpanStart } from '../../src/server/serverSpanHooks';

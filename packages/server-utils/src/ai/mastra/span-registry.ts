@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { LRUMap } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { LRUMap } from '@ichnois/core';
 import { MAX_TRACKED_MASTRA_SPANS } from './constants';
 
 /**

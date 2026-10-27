@@ -10,8 +10,8 @@ import {
   SENTRY_OP,
 } from '@sentry/conventions/attributes';
 import { CACHE_GET, CACHE_PUT, CACHE_REMOVE } from '@sentry/conventions/op';
-import type { Span, SpanAttributes } from '@sentry/core';
-import { CACHE_OPERATION_NAMES, getClient, hasSpanStreamingEnabled, spanToJSON, truncate } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
+import { CACHE_OPERATION_NAMES, getClient, hasSpanStreamingEnabled, spanToJSON, truncate } from '@ichnois/core';
 
 // Runtime-agnostic on purpose: imports nothing from `node:*` and touches `Buffer` only inside
 // function bodies (never at module load), so bundling this into an edge runtime is safe and the

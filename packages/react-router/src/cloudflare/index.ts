@@ -1,4 +1,4 @@
-import { getTraceMetaTags } from '@sentry/core';
+import { getTraceMetaTags } from '@ichnois/core';
 import { isPrerenderRequest } from '../server/serverBuild';
 
 export * from '../client';

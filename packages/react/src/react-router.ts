@@ -1,5 +1,5 @@
-import type { browserTracingIntegration } from '@sentry/browser';
-import type { Integration } from '@sentry/core';
+import type { browserTracingIntegration } from '@ichnois/browser';
+import type { Integration } from '@ichnois/core';
 import { createRoutesFromChildren, matchRoutes, useLocation, useNavigationType } from 'react-router';
 import type { ReactRouterOptions } from './reactrouter-compat-utils';
 import { reactRouterBrowserTracingIntegration as reactRouterBrowserTracingIntegrationBase } from './reactrouter.compat';
@@ -24,7 +24,7 @@ type BrowserTracingOptions = Parameters<typeof browserTracingIntegration>[0];
  * directly from `react-router`, so you don't have to pass them in:
  *
  * ```ts
- * import { reactRouterBrowserTracingIntegration } from '@sentry/react/react-router';
+ * import { reactRouterBrowserTracingIntegration } from '@ichnois/react/react-router';
  *
  * Sentry.init({ integrations: [reactRouterBrowserTracingIntegration()] });
  * ```

@@ -1,6 +1,6 @@
 // mock helper functions not tested directly in this file
 import '../mocks';
-import * as coreServer from '@sentry/core/server';
+import * as coreServer from '@ichnois/core/server';
 import * as fs from 'fs';
 import type * as os from 'os';
 import * as path from 'path';
@@ -23,7 +23,7 @@ const realOs = await vi.importActual<typeof os>('os');
 
 // Only the plugin factory is stubbed — `resolveOrchestrionRuntimeRequest` must stay real because
 // the externals handler under test uses it.
-vi.mock('@sentry/server-utils/orchestrion/webpack', async importOriginal => ({
+vi.mock('@ichnois/server-utils/orchestrion/webpack', async importOriginal => ({
   ...(await importOriginal<Record<string, unknown>>()),
   sentryOrchestrionWebpackPlugin: () => ({ _name: 'sentry-orchestrion-webpack-plugin' }),
 }));
@@ -800,7 +800,7 @@ describe('constructWebpackConfigFunction()', () => {
       const externals = finalWebpackConfig.externals as ((data: { request?: string }) => Promise<string | undefined>)[];
 
       expect(Array.isArray(externals)).toBe(true);
-      await expect(externals[0]({ request: '@sentry/server-runtime-injection/register' })).resolves.toBe(
+      await expect(externals[0]({ request: '@ichnois/server-runtime-injection/register' })).resolves.toBe(
         'commonjs @sentry/nextjs/orchestrion-runtime/register',
       );
       await expect(externals[0]({ request: 'some-other-package' })).resolves.toBeUndefined();

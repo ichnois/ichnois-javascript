@@ -22,7 +22,7 @@ vi.mock('../../src/vite/makeServerBuildCapturePlugin');
 const orchestrionVite = vi.fn((options?: { buildTimeInstrumentation?: boolean }) => ({
   name: options?.buildTimeInstrumentation === false ? 'sentry-orchestrion-disabled' : 'sentry-orchestrion-vite',
 }));
-vi.mock('@sentry/server-utils/orchestrion/vite', () => ({
+vi.mock('@ichnois/server-utils/orchestrion/vite', () => ({
   sentryOrchestrionPlugin: (options?: { buildTimeInstrumentation?: boolean }) => orchestrionVite(options),
 }));
 

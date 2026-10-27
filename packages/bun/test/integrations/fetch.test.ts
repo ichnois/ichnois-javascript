@@ -1,6 +1,6 @@
 import http from 'node:http';
-import type { TransactionEvent } from '@sentry/core';
-import { getCurrentScope, getIsolationScope, startSpan } from '@sentry/core';
+import type { TransactionEvent } from '@ichnois/core';
+import { getCurrentScope, getIsolationScope, startSpan } from '@ichnois/core';
 import { afterAll, beforeAll, describe, expect, test } from 'bun:test';
 import { init } from '../../src';
 

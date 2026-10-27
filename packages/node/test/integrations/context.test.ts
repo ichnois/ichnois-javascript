@@ -1,5 +1,5 @@
 import * as os from 'node:os';
-import type { StreamedSpanJSON } from '@sentry/core';
+import type { StreamedSpanJSON } from '@ichnois/core';
 import { afterAll, describe, expect, it, vi } from 'vitest';
 import {
   contextsToSpanAttributes,

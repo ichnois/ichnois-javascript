@@ -1,5 +1,5 @@
-import type { Client, IntegrationFn } from '@sentry/core';
-import { defineIntegration, getClient, withMonitor } from '@sentry/core';
+import type { Client, IntegrationFn } from '@ichnois/core';
+import { defineIntegration, getClient, withMonitor } from '@ichnois/core';
 import { parseScheduleToString } from './deno-cron-format';
 
 type CronOptions = { backoffSchedule?: number[]; signal?: AbortSignal };

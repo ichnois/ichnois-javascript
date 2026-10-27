@@ -1,6 +1,6 @@
-import * as Sentry from '@sentry/browser';
+import * as Sentry from '@ichnois/browser';
 // Import this separately so that generatePlugin can handle it for CDN scenarios
-import { feedbackIntegration } from '@sentry/browser';
+import { feedbackIntegration } from '@ichnois/browser';
 
 const feedback = feedbackIntegration({
   autoInject: false,

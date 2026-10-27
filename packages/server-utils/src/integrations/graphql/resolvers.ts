@@ -8,7 +8,7 @@
 
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { GRAPHQL } from '@sentry/conventions/op';
-import type { Span, SpanAttributes } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
 import {
   getClient,
   hasSpanStreamingEnabled,
@@ -16,7 +16,7 @@ import {
   SPAN_STATUS_ERROR,
   startInactiveSpan,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   GRAPHQL_DATA_SYMBOL,
   GRAPHQL_FIELD_NAME,

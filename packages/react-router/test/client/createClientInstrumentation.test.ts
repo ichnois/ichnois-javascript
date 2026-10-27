@@ -1,6 +1,6 @@
-import * as browser from '@sentry/browser';
-import * as core from '@sentry/core';
-import * as coreBrowser from '@sentry/core/browser';
+import * as browser from '@ichnois/browser';
+import * as core from '@ichnois/core';
+import * as coreBrowser from '@ichnois/core/browser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   createSentryClientInstrumentation,
@@ -8,16 +8,16 @@ import {
   isNavigateHookInvoked,
 } from '../../src/client/createClientInstrumentation';
 
-vi.mock('@sentry/core/browser', async () => {
-  const actual = await vi.importActual('@sentry/core/browser');
+vi.mock('@ichnois/core/browser', async () => {
+  const actual = await vi.importActual('@ichnois/core/browser');
   return {
     ...actual,
     startSpan: vi.fn(),
   };
 });
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     captureException: vi.fn(),
@@ -32,7 +32,7 @@ vi.mock('@sentry/core', async () => {
   };
 });
 
-vi.mock('@sentry/browser', () => ({
+vi.mock('@ichnois/browser', () => ({
   startBrowserTracingNavigationSpan: vi.fn().mockReturnValue({ setStatus: vi.fn() }),
   getAbsoluteUrl: vi.fn((urlOrPath: string) => {
     try {

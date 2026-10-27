@@ -1,6 +1,6 @@
-import type { Event } from '@sentry/core';
-import { requestDataIntegration, withScope } from '@sentry/core';
-import { NodeClient } from '@sentry/node';
+import type { Event } from '@ichnois/core';
+import { requestDataIntegration, withScope } from '@ichnois/core';
+import { NodeClient } from '@ichnois/node';
 import { describe, expect, it } from 'vitest';
 import { captureRequestError } from '../../src/common/captureRequestError';
 

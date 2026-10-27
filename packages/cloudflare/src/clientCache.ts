@@ -1,4 +1,4 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import type { CloudflareClient } from './client';
 
 const GLOBAL_CLIENT_KEY = '__SENTRY_CLOUDFLARE_CLIENT__' as const;

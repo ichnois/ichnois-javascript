@@ -1,5 +1,5 @@
-import type { DsnComponents, ReplayEnvelope, ReplayEvent, ReplayRecordingData } from '@sentry/core';
-import { createEnvelope, createEventEnvelopeHeaders, getSdkMetadataForEnvelopeHeader } from '@sentry/core';
+import type { DsnComponents, ReplayEnvelope, ReplayEvent, ReplayRecordingData } from '@ichnois/core';
+import { createEnvelope, createEventEnvelopeHeaders, getSdkMetadataForEnvelopeHeader } from '@ichnois/core';
 
 /**
  * Create a replay envelope ready to be sent.

@@ -2,9 +2,9 @@ import {
   browserTracingIntegration as originalBrowserTracingIntegration,
   startBrowserTracingPageLoadSpan,
   WINDOW,
-} from '@sentry/browser';
-import type { Client, Integration, TransactionSource } from '@sentry/core';
-import { debug, hasSpanStreamingEnabled, PAGELOAD_SPAN_NAME_FALLBACK } from '@sentry/core';
+} from '@ichnois/browser';
+import type { Client, Integration, TransactionSource } from '@ichnois/core';
+import { debug, hasSpanStreamingEnabled, PAGELOAD_SPAN_NAME_FALLBACK } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { SENTRY_SEGMENT_NAME_SOURCE, URL_TEMPLATE, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 

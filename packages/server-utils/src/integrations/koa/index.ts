@@ -1,5 +1,5 @@
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
-import type { IntegrationFn } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
 import {
   addNonEnumerableProperty,
   debug,
@@ -11,7 +11,7 @@ import {
   hasSpanStreamingEnabled,
   ROUTER_SPAN_NAME_FALLBACK,
   startSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { CODE_FUNCTION_NAME, HTTP_ROUTE, KOA_TYPE, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { MIDDLEWARE, ROUTER } from '@sentry/conventions/op';
 import { DEBUG_BUILD } from '../../debug-build';

@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 let mockHeaders: Record<string, string | string[] | undefined> | undefined;
 
-vi.mock('@sentry/core', () => ({
+vi.mock('@ichnois/core', () => ({
   getIsolationScope: () => ({
     getScopeData: () => ({
       sdkProcessingMetadata: {

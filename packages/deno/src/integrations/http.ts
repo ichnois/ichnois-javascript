@@ -1,15 +1,15 @@
 import { subscribe } from 'node:diagnostics_channel';
 import { errorMonitor } from 'node:events';
 import type { RequestOptions } from 'node:http';
-import type { Event, Integration, IntegrationFn, Span } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { Event, Integration, IntegrationFn, Span } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
 import type {
   AssertTrue,
   CheckServerRequestOptions,
   HttpClientRequest,
   HttpIncomingMessage,
   HttpServerResponse,
-} from '@sentry/core/server';
+} from '@ichnois/core/server';
 import {
   DEFAULT_IGNORE_STATUS_CODES,
   getHttpClientSubscriptions,
@@ -18,7 +18,7 @@ import {
   HTTP_ON_CLIENT_REQUEST,
   HTTP_ON_SERVER_REQUEST,
   processHttpServerTransactionEvent,
-} from '@sentry/core/server';
+} from '@ichnois/core/server';
 
 const INTEGRATION_NAME = 'DenoHttp' as const;
 

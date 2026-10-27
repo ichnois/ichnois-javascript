@@ -2,8 +2,8 @@
  * @vitest-environment jsdom
  */
 
-import type { StreamedSpanJSON } from '@sentry/core';
-import { getClient } from '@sentry/core';
+import type { StreamedSpanJSON } from '@ichnois/core';
+import { getClient } from '@ichnois/core';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import type { ReplayContainer } from '../../../src/replay';
 import { resetSdkMock } from '../../mocks/resetSdkMock';

@@ -1,5 +1,5 @@
-import type { Client, Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Client, Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, type MockInstance, vi } from 'vitest';
 import { getPortAndAddress, startFirestoreSpan } from '../../src/integrations/firebase/firestore';
 import type { FirestoreReference } from '../../src/integrations/firebase/firestore-types';

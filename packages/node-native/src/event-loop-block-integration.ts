@@ -9,7 +9,7 @@ import type {
   Integration,
   IntegrationFn,
   ScopeData,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   debug,
   defineIntegration,
@@ -19,8 +19,8 @@ import {
   getGlobalScope,
   getIsolationScope,
   mergeScopeData,
-} from '@sentry/core';
-import type { NodeClient } from '@sentry/node';
+} from '@ichnois/core';
+import type { NodeClient } from '@ichnois/node';
 import { registerThread, threadPoll } from '@sentry/node-native-stacktrace';
 import type { ThreadBlockedIntegrationOptions, WorkerStartData } from './common';
 import { POLL_RATIO } from './common';
@@ -220,8 +220,8 @@ const _eventLoopBlockIntegration = ((options: Partial<ThreadBlockedIntegrationOp
  *
  * ```js
  * // instrument.mjs
- * import * as Sentry from '@sentry/node';
- * import { eventLoopBlockIntegration } from '@sentry/node-native';
+ * import * as Sentry from '@ichnois/node';
+ * import { eventLoopBlockIntegration } from '@ichnois/node-native';
  *
  * Sentry.init({
  *   dsn: '__YOUR_DSN__',

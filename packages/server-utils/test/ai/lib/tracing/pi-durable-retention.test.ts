@@ -1,8 +1,8 @@
 import { setFlagsFromString } from 'node:v8';
 import { runInNewContext } from 'node:vm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import type { MaybeWeakRef, Span } from '@sentry/core';
-import { derefWeakRef, getMainCarrier, makeWeakRef, setCurrentClient, spanToJSON } from '@sentry/core';
+import type { MaybeWeakRef, Span } from '@ichnois/core';
+import { derefWeakRef, getMainCarrier, makeWeakRef, setCurrentClient, spanToJSON } from '@ichnois/core';
 import { createRuns, startRun } from '../../../../src/ai/pi-durable/runs';
 import { instrumentTool } from '../../../../src/ai/pi-durable/tools';
 import { getDefaultTestClientOptions, TestClient } from '../../../mocks/client';

@@ -6,11 +6,11 @@ import type {
   ParameterizedString,
   Scope,
   SeverityLevel,
-} from '@sentry/core';
-import type { BrowserClientReplayOptions } from '@sentry/core/browser';
-import type { RouteProvider } from '@sentry/browser-utils';
-import { setRouteProvider } from '@sentry/browser-utils';
-import { addAutoIpAddressToSession, applySdkMetadata, Client, getSDKSource, timestampInSeconds } from '@sentry/core';
+} from '@ichnois/core';
+import type { BrowserClientReplayOptions } from '@ichnois/core/browser';
+import type { RouteProvider } from '@ichnois/browser-utils';
+import { setRouteProvider } from '@ichnois/browser-utils';
+import { addAutoIpAddressToSession, applySdkMetadata, Client, getSDKSource, timestampInSeconds } from '@ichnois/core';
 import { eventFromException, eventFromMessage } from './eventbuilder';
 import { WINDOW } from './helpers';
 import type { BrowserTransportOptions } from './transports/types';

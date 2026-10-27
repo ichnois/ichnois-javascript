@@ -1,4 +1,4 @@
-import { defineIntegration, setConversationId } from '@sentry/core';
+import { defineIntegration, setConversationId } from '@ichnois/core';
 import { markEveGenAiRecordingDefault } from './integrations/vercel-ai/gen-ai-recording-mode';
 
 /**
@@ -27,7 +27,7 @@ interface EveConversationHookOptions {
  *
  * ```ts
  * // agent/hooks/sentry.ts
- * import * as Sentry from '@sentry/node';
+ * import * as Sentry from '@ichnois/node';
  * import { defineHook } from 'eve/hooks';
  *
  * export default defineHook(Sentry.eveConversationHook());

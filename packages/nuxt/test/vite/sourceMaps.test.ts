@@ -11,7 +11,7 @@ import {
   validateNitroSourceMapSettings,
 } from '../../src/vite/sourceMaps';
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const actual = await importOriginal();
   return {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

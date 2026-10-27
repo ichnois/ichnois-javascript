@@ -6,8 +6,8 @@ import {
   setCurrentClient,
   spanToStaticSpanJSON,
   startSpan,
-} from '@sentry/core';
-import type { Span } from '@sentry/core';
+} from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import { GEN_AI_CONVERSATION_ID } from '@sentry/conventions/attributes';
 import { instrumentCompiledGraphInvoke } from '../../../../src/ai/langgraph';
 import type { CompiledGraph } from '../../../../src/ai/langgraph/types';

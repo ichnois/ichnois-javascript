@@ -1,5 +1,5 @@
-import type { ClientOptions, Event, Options, SeverityLevel } from '@sentry/core';
-import { Client, createTransport, getCurrentScope, resolvedSyncPromise } from '@sentry/core';
+import type { ClientOptions, Event, Options, SeverityLevel } from '@ichnois/core';
+import { Client, createTransport, getCurrentScope, resolvedSyncPromise } from '@ichnois/core';
 
 export class TestClient extends Client<ClientOptions> {
   public constructor(options: ClientOptions) {

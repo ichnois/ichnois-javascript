@@ -1,9 +1,9 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { waitUntil } from '../../../src/common/utils/responseEnd';
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     debug: {
@@ -13,8 +13,8 @@ vi.mock('@sentry/core', async () => {
   };
 });
 
-vi.mock('@sentry/core/server', async () => {
-  const actual = await vi.importActual('@sentry/core/server');
+vi.mock('@ichnois/core/server', async () => {
+  const actual = await vi.importActual('@ichnois/core/server');
   return {
     ...actual,
     vercelWaitUntil: vi.fn(),
@@ -49,12 +49,12 @@ describe('responseEnd utils', () => {
       expect(cfWaitUntilMock).toHaveBeenCalledTimes(1);
 
       // Should not call vercelWaitUntil when Cloudflare is available
-      const { vercelWaitUntil } = await import('@sentry/core/server');
+      const { vercelWaitUntil } = await import('@ichnois/core/server');
       expect(vercelWaitUntil).not.toHaveBeenCalled();
     });
 
     it('should use vercelWaitUntil when Cloudflare context is not available', async () => {
-      const { vercelWaitUntil } = await import('@sentry/core/server');
+      const { vercelWaitUntil } = await import('@ichnois/core/server');
       const testTask = Promise.resolve('test');
 
       waitUntil(testTask);
@@ -87,12 +87,12 @@ describe('responseEnd utils', () => {
       expect(cfWaitUntilMock).toHaveBeenCalledTimes(1);
 
       // Should not use Vercel
-      const { vercelWaitUntil } = await import('@sentry/core/server');
+      const { vercelWaitUntil } = await import('@ichnois/core/server');
       expect(vercelWaitUntil).not.toHaveBeenCalled();
     });
 
     it('should handle errors gracefully when waitUntil is called with a rejected promise', async () => {
-      const { vercelWaitUntil } = await import('@sentry/core/server');
+      const { vercelWaitUntil } = await import('@ichnois/core/server');
       const testTask = Promise.reject(new Error('test error'));
 
       // Should not throw synchronously

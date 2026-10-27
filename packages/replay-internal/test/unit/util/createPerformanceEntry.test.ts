@@ -1,5 +1,5 @@
 import '../../utils/mock-internal-setTimeout';
-import { browserPerformanceTimeOrigin } from '@sentry/core';
+import { browserPerformanceTimeOrigin } from '@ichnois/core';
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { WINDOW } from '../../../src/constants';
 import {
@@ -12,10 +12,10 @@ import { PerformanceEntryNavigation } from '../../fixtures/performanceEntry/navi
 
 const TIME_ORIGIN = new Date('2023-01-01').getTime();
 
-vi.mock('@sentry/core', async () => {
+vi.mock('@ichnois/core', async () => {
   const browserPerformanceTimeOrigin = vi.fn((_monotonicTimeInMs?: number) => new Date('2023-01-01').getTime());
   return {
-    ...(await vi.importActual('@sentry/core')),
+    ...(await vi.importActual('@ichnois/core')),
     browserPerformanceTimeOrigin,
     _INTERNAL_performanceTimeToSeconds: (time: number, entryStartTime = time) =>
       (browserPerformanceTimeOrigin(entryStartTime) + time) / 1000,

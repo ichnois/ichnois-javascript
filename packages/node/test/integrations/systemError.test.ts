@@ -1,4 +1,4 @@
-import type { Client, Event } from '@sentry/core';
+import type { Client, Event } from '@ichnois/core';
 import type * as nodeUtil from 'node:util';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { systemErrorIntegration } from '../../src/integrations/systemError';

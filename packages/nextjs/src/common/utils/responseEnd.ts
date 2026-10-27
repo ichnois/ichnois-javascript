@@ -1,4 +1,4 @@
-import type { AsyncContextStrategy, Span } from '@sentry/core';
+import type { AsyncContextStrategy, Span } from '@ichnois/core';
 import {
   debug,
   fill,
@@ -8,8 +8,8 @@ import {
   getMainCarrier,
   GLOBAL_OBJ,
   setHttpStatus,
-} from '@sentry/core';
-import { vercelWaitUntil } from '@sentry/core/server';
+} from '@ichnois/core';
+import { vercelWaitUntil } from '@ichnois/core/server';
 import type { ServerResponse } from 'http';
 import { DEBUG_BUILD } from '../debug-build';
 import type { ResponseEndMethod, WrappedResponseEndMethod } from '../types';

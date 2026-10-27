@@ -8,7 +8,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { HTTP_CLIENT } from '@sentry/conventions/op';
-import type { Client, IntegrationFn } from '@sentry/core';
+import type { Client, IntegrationFn } from '@ichnois/core';
 import {
   defineIntegration,
   fill,
@@ -19,8 +19,8 @@ import {
   SentryNonRecordingSpan,
   filterCollectedUrl,
   stripUrlQueryAndFragment,
-} from '@sentry/core';
-import { startInactiveSpan } from '@sentry/node';
+} from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/node';
 
 type RequestOptions = common.DecorateRequestOptions;
 type ResponseCallback = common.BodyResponseCallback;

@@ -1,4 +1,4 @@
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 import type App from 'next/app';
 import { isBuild } from '../utils/isBuild';
 import { withErrorInstrumentation, withTracedServerSideDataFetcher } from '../utils/wrapperUtils';

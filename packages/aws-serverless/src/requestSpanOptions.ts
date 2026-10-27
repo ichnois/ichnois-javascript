@@ -31,13 +31,13 @@ import {
   URL_FULL,
 } from '@sentry/conventions/attributes';
 import { FUNCTION_AWS } from '@sentry/conventions/op';
-import type { SpanAttributes, StartSpanOptions } from '@sentry/core';
+import type { SpanAttributes, StartSpanOptions } from '@ichnois/core';
 import {
   getClient,
   hasSpanStreamingEnabled,
   SERVERLESS_FUNCTION_SPAN_NAME_FALLBACK,
   filterCollectedUrl,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { Context } from 'aws-lambda';
 
 interface ApiGatewayLikeEvent {

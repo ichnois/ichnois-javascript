@@ -1,7 +1,7 @@
 import type { Nuxt } from '@nuxt/schema';
-import { sentryRollupPlugin, type SentryRollupPluginOptions } from '@sentry/bundler-plugins/rollup';
-import { sentryVitePlugin, type SentryVitePluginOptions } from '@sentry/bundler-plugins/vite';
-import { warnOnRemovedBuildOptions } from '@sentry/core';
+import { sentryRollupPlugin, type SentryRollupPluginOptions } from '@ichnois/bundler-plugins/rollup';
+import { sentryVitePlugin, type SentryVitePluginOptions } from '@ichnois/bundler-plugins/vite';
+import { warnOnRemovedBuildOptions } from '@ichnois/core';
 import type { NitroConfig } from 'nitropack';
 import type { Plugin } from 'vite';
 import type { SentryNuxtModuleOptions } from '../common/types';

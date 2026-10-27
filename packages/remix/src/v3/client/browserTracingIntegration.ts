@@ -8,7 +8,7 @@ import {
   resolveRoute,
   startBrowserTracingNavigationSpan,
   WINDOW,
-} from '@sentry/browser';
+} from '@ichnois/browser';
 import { SENTRY_OP, SENTRY_ORIGIN, SENTRY_SEGMENT_NAME_SOURCE, URL_TEMPLATE } from '@sentry/conventions/attributes';
 import {
   addFetchInstrumentationHandler,
@@ -18,7 +18,7 @@ import {
   NAVIGATION_SPAN_NAME_FALLBACK,
   type Span,
   spanToJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 import { parseRouteTiming, ROUTE_TIMING_NAME } from '../routeTiming';
 

@@ -1,5 +1,5 @@
-import type { Scope } from '@sentry/core';
-import { addExceptionMechanism, withIsolationScope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
+import { addExceptionMechanism, withIsolationScope } from '@ichnois/core';
 
 /**
  * @param fn function to run

@@ -144,10 +144,10 @@ export {
   withStaticSpan,
   // oxlint-disable-next-line typescript/no-deprecated
   withStreamedSpan,
-} from '@sentry/node';
+} from '@ichnois/node';
 
 // Keeping the `*` exports for backwards compatibility and types
-export * from '@sentry/node';
+export * from '@ichnois/node';
 
 export { init, getRemixDefaultIntegrations } from './sdk';
 export { captureRemixServerException } from './errors';

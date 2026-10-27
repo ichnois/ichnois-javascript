@@ -1,12 +1,12 @@
 import type Route from '@ember/routing/route';
-import { startSpan } from '@sentry/browser';
-import { hasSpanStreamingEnabled } from '@sentry/core';
+import { startSpan } from '@ichnois/browser';
+import { hasSpanStreamingEnabled } from '@ichnois/core';
 import { describe, expect, it, vi } from 'vitest';
 
-vi.mock('@sentry/browser', () => ({
+vi.mock('@ichnois/browser', () => ({
   startSpan: vi.fn((_options: unknown, callback: () => unknown) => callback()),
 }));
-vi.mock('@sentry/core', () => ({
+vi.mock('@ichnois/core', () => ({
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN: 'sentry.origin',
   getClient: vi.fn(() => ({})),
   hasSpanStreamingEnabled: vi.fn(() => false),

@@ -6,7 +6,7 @@ import {
   URL_PATH,
   URL_QUERY,
 } from '@sentry/conventions/attributes';
-import type { RequestEventData, SpanAttributes } from '@sentry/core';
+import type { RequestEventData, SpanAttributes } from '@ichnois/core';
 
 /**
  * Builds a partial `normalizedRequest` from OTel HTTP span attributes.

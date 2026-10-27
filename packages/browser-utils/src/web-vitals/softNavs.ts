@@ -1,5 +1,5 @@
-import type { Client, Span } from '@sentry/core';
-import { debug, LRUMap, spanToJSON } from '@sentry/core';
+import type { Client, Span } from '@ichnois/core';
+import { debug, LRUMap, spanToJSON } from '@ichnois/core';
 import { BROWSER_NAVIGATION_ID, SENTRY_OP } from '@sentry/conventions/attributes';
 import { DEBUG_BUILD } from '../debug-build';
 import type { PerformanceSoftNavigation } from '../instrumentation/performanceObserver';

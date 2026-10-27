@@ -1,4 +1,4 @@
-import { captureException, getIsolationScope, httpRequestToRequestData } from '@sentry/core';
+import { captureException, getIsolationScope, httpRequestToRequestData } from '@ichnois/core';
 import { isExpressErrorHandled } from './error-handled';
 import type { ExpressRequest, ExpressResponse, MiddlewareError } from './types';
 import { defaultShouldHandleError } from './utils';

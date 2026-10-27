@@ -1,4 +1,4 @@
-import { captureException, type MonitorConfig, withMonitor } from '@sentry/core';
+import { captureException, type MonitorConfig, withMonitor } from '@ichnois/core';
 import { replaceCronNames } from './common';
 
 export interface NodeCronOptions {
@@ -18,7 +18,7 @@ export interface NodeCron {
  * Wraps the `node-cron` library with check-in monitoring.
  *
  * ```ts
- * import * as Sentry from "@sentry/node";
+ * import * as Sentry from "@ichnois/node";
  * import * as cron from "node-cron";
  *
  * const cronWithCheckIn = Sentry.cron.instrumentNodeCron(cron);

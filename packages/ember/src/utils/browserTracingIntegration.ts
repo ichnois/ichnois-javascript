@@ -3,8 +3,8 @@ import {
   browserTracingIntegration as originalBrowserTracingIntegration,
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
-} from '@sentry/browser';
-import type { Integration } from '@sentry/core';
+} from '@ichnois/browser';
+import type { Integration } from '@ichnois/core';
 import type ApplicationInstance from '@ember/application/instance';
 import { instrumentEmberAppInstanceForPerformance } from './instrumentEmberAppInstanceForPerformance.ts';
 import { instrumentGlobalsForPerformance } from './instrumentEmberGlobals.ts';

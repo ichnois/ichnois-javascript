@@ -1,8 +1,8 @@
-import type { ServerRuntimeClientOptions } from '@sentry/core/server';
-import { applySdkMetadata } from '@sentry/core';
-import { ServerRuntimeClient } from '@sentry/core/server';
+import type { ServerRuntimeClientOptions } from '@ichnois/core/server';
+import { applySdkMetadata } from '@ichnois/core';
+import { ServerRuntimeClient } from '@ichnois/core/server';
 import type { VercelEdgeClientOptions } from './types';
-import { registerPrepareSpanScope, type SentryTracerProvider } from '@sentry/opentelemetry';
+import { registerPrepareSpanScope, type SentryTracerProvider } from '@ichnois/opentelemetry';
 
 declare const process: {
   env: Record<string, string>;

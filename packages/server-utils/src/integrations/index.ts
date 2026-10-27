@@ -35,7 +35,7 @@ import { nitroIntegration } from './nitro';
 import { hapiIntegration } from './hapi';
 import { honoIntegration } from './hono';
 import { koaIntegration } from './koa';
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
 import { awsIntegration } from './aws-sdk';
 
 /** These are integrations that are tracing-only integrations. */

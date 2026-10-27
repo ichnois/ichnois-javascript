@@ -8,8 +8,8 @@ import type {
   ProfileChunkEnvelope,
   ProfileChunkItem,
   SdkInfo,
-} from '@sentry/core';
-import { createEnvelope, debug, dsnToString, getDebugImagesForResources, uuid4 } from '@sentry/core';
+} from '@ichnois/core';
+import { createEnvelope, debug, dsnToString, getDebugImagesForResources, uuid4 } from '@ichnois/core';
 import type { RawChunkCpuProfile } from '@sentry/node-cpu-profiler';
 import { isMainThread, threadId } from 'worker_threads';
 import { DEBUG_BUILD } from './debug-build';

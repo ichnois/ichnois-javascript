@@ -1,6 +1,6 @@
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { ProxyTracer } from '@opentelemetry/api';
-import type { Event, EventHint, Log } from '@sentry/core';
+import type { Event, EventHint, Log } from '@ichnois/core';
 import {
   createTransport,
   getAsyncContextStrategy,
@@ -10,11 +10,11 @@ import {
   Scope,
   SDK_VERSION,
   startSpan,
-} from '@sentry/core';
-import type { SentryTracerProvider } from '@sentry/opentelemetry';
-import { setOpenTelemetryContextAsyncContextStrategy } from '@sentry/opentelemetry';
-import * as SentryOpentelemetry from '@sentry/opentelemetry';
-import * as SentryServerUtils from '@sentry/server-utils';
+} from '@ichnois/core';
+import type { SentryTracerProvider } from '@ichnois/opentelemetry';
+import { setOpenTelemetryContextAsyncContextStrategy } from '@ichnois/opentelemetry';
+import * as SentryOpentelemetry from '@ichnois/opentelemetry';
+import * as SentryServerUtils from '@ichnois/server-utils';
 import * as os from 'os';
 import { afterEach, beforeEach, describe, expect, it, test, vi } from 'vitest';
 import { NodeClient } from '../../src';

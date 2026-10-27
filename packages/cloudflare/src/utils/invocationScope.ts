@@ -1,4 +1,4 @@
-import { getDefaultIsolationScope, getIsolationScope, type Scope, withIsolationScope } from '@sentry/core';
+import { getDefaultIsolationScope, getIsolationScope, type Scope, withIsolationScope } from '@ichnois/core';
 import type { ExecutionContextCompat } from '../executionContext';
 import { setInvocationState } from './invocationContext';
 

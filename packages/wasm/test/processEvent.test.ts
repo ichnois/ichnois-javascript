@@ -1,5 +1,5 @@
-import type { DebugImage, Event } from '@sentry/core';
-import { GLOBAL_OBJ } from '@sentry/core';
+import type { DebugImage, Event } from '@ichnois/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, describe, expect, it } from 'vitest';
 import { wasmIntegration } from '../src/index';
 import { IMAGES, registerModule } from '../src/registry';

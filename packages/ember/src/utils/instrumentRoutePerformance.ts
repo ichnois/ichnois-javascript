@@ -1,7 +1,7 @@
-import { startSpan } from '@sentry/browser';
+import { startSpan } from '@ichnois/browser';
 import { CODE_FUNCTION_NAME, SENTRY_DESCRIPTION, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { FUNCTION } from '@sentry/conventions/op';
-import { getClient, hasSpanStreamingEnabled } from '@sentry/core';
+import { getClient, hasSpanStreamingEnabled } from '@ichnois/core';
 
 import type Route from '@ember/routing/route';
 
@@ -19,7 +19,7 @@ type RouteConstructor = new (...args: ConstructorParameters<typeof Route>) => Ro
  * @example
  * ```ts
  * import Route from '@ember/routing/route';
- * import { instrumentRoutePerformance } from '@sentry/ember';
+ * import { instrumentRoutePerformance } from '@ichnois/ember';
  *
  * class ApplicationRoute extends Route {
  *   async model() {

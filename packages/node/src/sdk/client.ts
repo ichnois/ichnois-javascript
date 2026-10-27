@@ -1,23 +1,23 @@
 import * as os from 'node:os';
 import type { Tracer } from '@opentelemetry/api';
 import { trace } from '@opentelemetry/api';
-import type { ServerRuntimeClientOptions } from '@sentry/core/server';
+import type { ServerRuntimeClientOptions } from '@ichnois/core/server';
 import {
   _INTERNAL_clearAiProviderSkips,
   _INTERNAL_setDeferSegmentSpanCapture,
   applySdkMetadata,
   debug,
   SDK_VERSION,
-} from '@sentry/core';
-import { ServerRuntimeClient } from '@sentry/core/server';
+} from '@ichnois/core';
+import { ServerRuntimeClient } from '@ichnois/core/server';
 import {
   type AsyncLocalStorageLookup,
   registerPrepareSpanScope,
   type SentryTracerProvider,
   setOpenTelemetryContextAsyncContextStrategy,
-} from '@sentry/opentelemetry';
-import { registerDiagnosticsChannelInjection } from '@sentry/server-runtime-injection/register';
-import { setAsyncLocalStorageAsyncContextStrategy } from '@sentry/server-utils';
+} from '@ichnois/opentelemetry';
+import { registerDiagnosticsChannelInjection } from '@ichnois/server-runtime-injection/register';
+import { setAsyncLocalStorageAsyncContextStrategy } from '@ichnois/server-utils';
 import { isMainThread, threadId } from 'worker_threads';
 import { DEBUG_BUILD } from '../debug-build';
 import type { NodeClientOptions } from '../types';
@@ -124,7 +124,7 @@ export class NodeClient extends ServerRuntimeClient<NodeClientOptions> {
       return this._tracer;
     }
 
-    const name = '@sentry/node';
+    const name = '@ichnois/node';
     const version = SDK_VERSION;
     const tracer = trace.getTracer(name, version);
     this._tracer = tracer;

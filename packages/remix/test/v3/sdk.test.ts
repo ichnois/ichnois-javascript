@@ -1,12 +1,12 @@
-import type * as SentryBrowser from '@sentry/browser';
-import type { BrowserOptions } from '@sentry/browser';
+import type * as SentryBrowser from '@ichnois/browser';
+import type { BrowserOptions } from '@ichnois/browser';
 import { describe, expect, it, vi } from 'vitest';
 
 const browserInit = vi.fn();
 
 // Only `init` is replaced. Everything else stays real, so the integration assertion below is checked
 // against the actual `@sentry/browser` defaults.
-vi.mock('@sentry/browser', async importOriginal => ({
+vi.mock('@ichnois/browser', async importOriginal => ({
   ...(await importOriginal<typeof SentryBrowser>()),
   init: (options: BrowserOptions) => browserInit(options),
 }));
@@ -70,7 +70,7 @@ describe('the client entry', () => {
   it('re-exports @sentry/browser, never a @sentry/core lookalike', async () => {
     const [entry, browser] = await Promise.all([
       import('../../src/v3/index.client'),
-      vi.importActual<typeof SentryBrowser>('@sentry/browser'),
+      vi.importActual<typeof SentryBrowser>('@ichnois/browser'),
     ]);
 
     // The three the Remix 3 SDK deliberately replaces.

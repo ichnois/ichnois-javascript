@@ -1,5 +1,5 @@
-import { SPAN_STATUS_ERROR, startSpan, startSpanManual, stringify } from '@sentry/core';
-import type { Span, SpanAttributeValue } from '@sentry/core';
+import { SPAN_STATUS_ERROR, startSpan, startSpanManual, stringify } from '@ichnois/core';
+import type { Span, SpanAttributeValue } from '@ichnois/core';
 import {
   GEN_AI_AGENT_NAME,
   GEN_AI_EMBEDDINGS_INPUT,

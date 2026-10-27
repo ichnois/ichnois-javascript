@@ -1,7 +1,7 @@
 // import/export got a false positive, and affects most of our index barrel files
 // can be removed once following issue is fixed: https://github.com/import-js/eslint-plugin-import/issues/703
 /* eslint-disable import/export */
-import type { Scope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
 import {
   _INTERNAL_getActiveClient,
   applySdkMetadata,
@@ -9,9 +9,9 @@ import {
   getGlobalScope,
   getVercelEnv,
   GLOBAL_OBJ,
-} from '@sentry/core';
-import type { NodeClient, NodeOptions } from '@sentry/node';
-import { getDefaultIntegrations, httpIntegration, init as nodeInit } from '@sentry/node';
+} from '@ichnois/core';
+import type { NodeClient, NodeOptions } from '@ichnois/node';
+import { getDefaultIntegrations, httpIntegration, init as nodeInit } from '@ichnois/node';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { devErrorSymbolicationEventProcessor } from '../common/devErrorSymbolicationEventProcessor';
 import { dropReactControlFlowErrorsEventProcessor } from '../common/utils/dropReactControlFlowErrors';
@@ -29,10 +29,10 @@ import { addNextjsServerSpanHooks, NEXTJS_SERVER_IGNORE_SPANS } from './serverSp
 import { prepareSafeIdGeneratorContext } from './prepareSafeIdGeneratorContext';
 import { nextjsUseCacheIntegration } from './useCacheInstrumentation';
 
-export * from '@sentry/node';
+export * from '@ichnois/node';
 
 // Explicitly re-export so these are statically detectable by turbopack
-export { pinoIntegration, vercelAIIntegration } from '@sentry/node';
+export { pinoIntegration, vercelAIIntegration } from '@ichnois/node';
 
 export { captureUnderscoreErrorException } from '../common/pages-router-instrumentation/_error';
 

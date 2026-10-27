@@ -44,26 +44,46 @@ jobs:
 
       - name: Build Core, Browser, Node & Next.js Packages
         run: |
-          pnpm --filter @sentry/core build
-          pnpm --filter @sentry/browser-utils build
+          pnpm --filter @ichnois/core build
+          pnpm --filter @ichnois/browser-utils build
           pnpm --filter @sentry-internal/integration-shims build
           pnpm --filter @sentry-internal/replay-worker build
-          pnpm --filter @sentry/replay build
-          pnpm --filter @sentry/replay-canvas build
-          pnpm --filter @sentry/feedback build
-          pnpm --filter @sentry/browser build
-          pnpm --filter @sentry/bundler-plugins build
-          pnpm --filter @sentry/server-utils build
-          pnpm --filter @sentry/server-runtime-injection build
-          pnpm --filter @sentry/opentelemetry build
-          pnpm --filter @sentry/node build
-          pnpm --filter @sentry/react build
-          pnpm --filter @sentry/vercel-edge build
-          pnpm --filter @sentry/cloudflare build
-          pnpm --filter @sentry/nextjs build
+          pnpm --filter @ichnois/replay build
+          pnpm --filter @ichnois/replay-canvas build
+          pnpm --filter @ichnois/feedback build
+          pnpm --filter @ichnois/browser build
+          pnpm --filter @ichnois/bundler-plugins build
+          pnpm --filter @ichnois/server-utils build
+          pnpm --filter @ichnois/server-runtime-injection build
+          pnpm --filter @ichnois/opentelemetry build
+          pnpm --filter @ichnois/node build
+          pnpm --filter @ichnois/react build
+          pnpm --filter @ichnois/vercel-edge build
+          pnpm --filter @ichnois/cloudflare build
+          pnpm --filter @ichnois/nextjs build
 
       - name: Publish to NPM
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          pnpm -r publish --access public --no-git-checks --tag ${{ github.event.inputs.dist_tag || 'latest' }}
+          TARGETS=(
+            "@ichnois/core"
+            "@ichnois/browser-utils"
+            "@ichnois/replay"
+            "@ichnois/replay-canvas"
+            "@ichnois/feedback"
+            "@ichnois/browser"
+            "@ichnois/bundler-plugins"
+            "@ichnois/server-utils"
+            "@ichnois/server-runtime-injection"
+            "@ichnois/opentelemetry"
+            "@ichnois/node"
+            "@ichnois/react"
+            "@ichnois/vercel-edge"
+            "@ichnois/cloudflare"
+            "@ichnois/nextjs"
+          )
+          for pkg in "${TARGETS[@]}"; do
+            echo "Publishing $pkg to npm..."
+            pnpm --filter "$pkg" publish --access public --no-git-checks --tag "${{ github.event.inputs.dist_tag || 'latest' }}"
+          done

@@ -3,9 +3,9 @@ import {
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
   WINDOW,
-} from '@sentry/browser';
-import type { Integration, TransactionSource } from '@sentry/core';
-import { hasSpanStreamingEnabled, NAVIGATION_SPAN_NAME_FALLBACK, PAGELOAD_SPAN_NAME_FALLBACK } from '@sentry/core';
+} from '@ichnois/browser';
+import type { Integration, TransactionSource } from '@ichnois/core';
+import { hasSpanStreamingEnabled, NAVIGATION_SPAN_NAME_FALLBACK, PAGELOAD_SPAN_NAME_FALLBACK } from '@ichnois/core';
 import type { Location } from './types';
 import { SENTRY_OP, SENTRY_SEGMENT_NAME_SOURCE, URL_TEMPLATE, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { NAVIGATION, PAGELOAD } from '@sentry/conventions/op';

@@ -1,6 +1,6 @@
 import { SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import type { Span } from '@sentry/core';
-import { isObjectLike } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { isObjectLike } from '@ichnois/core';
 import { addResponseAttributes, startDecideSpan } from '../typesafe';
 import { LANGCHAIN_ORIGIN } from './constants';
 import { getAgentNameFromMetadata, getConversationIdFromMetadata } from './utils';

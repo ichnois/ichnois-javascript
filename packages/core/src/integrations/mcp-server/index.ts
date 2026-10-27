@@ -124,7 +124,7 @@ function interceptTransportStart(transport: MCPTransport, beforeStart: () => voi
  *
  * @example
  * ```typescript
- * import * as Sentry from '@sentry/core';
+ * import * as Sentry from '@ichnois/core';
  * import { McpServer } from '@modelcontextprotocol/server';
  * import { NodeStreamableHTTPServerTransport } from '@modelcontextprotocol/node';
  *

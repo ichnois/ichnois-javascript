@@ -1,5 +1,5 @@
-import type { SpanAttributes } from '@sentry/core';
-import { _INTERNAL_performanceTimeToSeconds } from '@sentry/core';
+import type { SpanAttributes } from '@ichnois/core';
+import { _INTERNAL_performanceTimeToSeconds } from '@ichnois/core';
 import { extractNetworkProtocol, msToSec } from './utils';
 
 /**

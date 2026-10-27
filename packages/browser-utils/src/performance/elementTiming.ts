@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { browserPerformanceTimeOrigin, defineIntegration, filterCollectedUrl, metrics } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { browserPerformanceTimeOrigin, defineIntegration, filterCollectedUrl, metrics } from '@ichnois/core';
 import { addPerformanceInstrumentationHandler } from '../instrumentation/performanceObserver';
 import { getBrowserPerformanceAPI } from './utils';
 

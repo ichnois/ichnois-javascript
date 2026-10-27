@@ -1,4 +1,4 @@
-import type { WrappedFunction } from '@sentry/core';
+import type { WrappedFunction } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { ignoreNextOnErrorMatching, shouldIgnoreOnError, wrap } from '../src/helpers';
 

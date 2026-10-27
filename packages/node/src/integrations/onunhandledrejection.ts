@@ -1,4 +1,4 @@
-import type { Client, IntegrationFn, SeverityLevel, Span } from '@sentry/core';
+import type { Client, IntegrationFn, SeverityLevel, Span } from '@ichnois/core';
 import {
   captureException,
   consoleSandbox,
@@ -7,7 +7,7 @@ import {
   isMatchingPattern,
   isObjectLike,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { logAndExitProcess } from '../utils/errorhandling';
 
 type UnhandledRejectionMode = 'none' | 'warn' | 'strict';

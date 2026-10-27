@@ -7,7 +7,7 @@ import {
   objectify,
   setCapturedScopesOnSpan,
   withIsolationScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { NextApiRequest } from 'next';
 import { TRANSACTION_ATTR_SENTRY_ROUTE_BACKFILL } from '../span-attributes-with-logic-attached';
 import type { AugmentedNextApiResponse, NextApiHandler } from '../types';

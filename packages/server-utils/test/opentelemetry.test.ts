@@ -1,8 +1,8 @@
 import type { Context, ContextManager } from '@opentelemetry/api';
 import { context, INVALID_SPAN_CONTEXT, ROOT_CONTEXT, trace, TraceFlags } from '@opentelemetry/api';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import type { Envelope } from '@sentry/core';
-import { getCurrentScope, getMainCarrier, registerExternalPropagationContext, setCurrentClient } from '@sentry/core';
+import type { Envelope } from '@ichnois/core';
+import { getCurrentScope, getMainCarrier, registerExternalPropagationContext, setCurrentClient } from '@ichnois/core';
 import { getOtlpTracesEndpoint, openTelemetryIntegration } from '../src/opentelemetry';
 import { getDefaultTestClientOptions, TestClient } from './mocks/client';
 

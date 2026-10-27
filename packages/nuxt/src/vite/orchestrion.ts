@@ -1,10 +1,10 @@
 import type { Nuxt } from '@nuxt/schema';
-import { INSTRUMENTED_MODULE_NAMES } from '@sentry/server-utils/orchestrion/config';
+import { INSTRUMENTED_MODULE_NAMES } from '@ichnois/server-utils/orchestrion/config';
 import {
   commonJSInteropOptions,
   sentryCommonJSInteropPlugin,
   sentryOrchestrionPlugin,
-} from '@sentry/server-utils/orchestrion/rollup';
+} from '@ichnois/server-utils/orchestrion/rollup';
 import type { NitroConfig } from 'nitropack';
 import { isCloudflarePreset } from './utils';
 

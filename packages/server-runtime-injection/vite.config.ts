@@ -13,7 +13,7 @@ export default defineConfig({
   ...baseConfig,
   resolve: {
     alias: {
-      '@sentry/server-utils/orchestrion/config': orchestrionConfigSource,
+      '@ichnois/server-utils/orchestrion/config': orchestrionConfigSource,
     },
   },
   test: {

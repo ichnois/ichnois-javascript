@@ -7,8 +7,8 @@ import {
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
   WINDOW,
-} from '@sentry/browser';
-import type { Client, Integration, Span } from '@sentry/core';
+} from '@ichnois/browser';
+import type { Client, Integration, Span } from '@ichnois/core';
 import {
   addNonEnumerableProperty,
   debug,
@@ -19,7 +19,7 @@ import {
   NAVIGATION_SPAN_NAME_FALLBACK,
   PAGELOAD_SPAN_NAME_FALLBACK,
   spanToJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 import * as React from 'react';
 import { DEBUG_BUILD } from '../debug-build';
 import { hoistNonReactStatics } from '../hoist-non-react-statics';

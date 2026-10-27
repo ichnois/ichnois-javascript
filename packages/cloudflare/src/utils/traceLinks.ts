@@ -1,8 +1,8 @@
 import { SENTRY_LINK_TYPE } from '@sentry/conventions/attributes';
 import type { DurableObjectStorage } from '@cloudflare/workers-types';
 import { TraceFlags } from '@opentelemetry/api';
-import type { SpanLink } from '@sentry/core';
-import { debug, getActiveSpan, spanIsSampled } from '@sentry/core';
+import type { SpanLink } from '@ichnois/core';
+import { debug, getActiveSpan, spanIsSampled } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 
 /** Storage key prefix for the span context that links consecutive method invocations */

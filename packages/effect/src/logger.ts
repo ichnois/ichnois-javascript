@@ -1,5 +1,5 @@
 import { SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import { isObjectLike, logger as sentryLogger } from '@sentry/core';
+import { isObjectLike, logger as sentryLogger } from '@ichnois/core';
 import * as Logger from 'effect/Logger';
 import type * as LogLevel from 'effect/LogLevel';
 

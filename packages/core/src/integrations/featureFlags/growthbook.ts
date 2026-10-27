@@ -26,7 +26,7 @@ export type GrowthBookClassLike = new (...args: any[]) => GrowthBookLike;
  * @example
  * ```typescript
  * import { GrowthBook } from '@growthbook/growthbook';
- * import * as Sentry from '@sentry/browser'; // or '@sentry/node'
+ * import * as Sentry from '@ichnois/browser'; // or '@ichnois/node'
  *
  * Sentry.init({
  *   dsn: 'your-dsn',

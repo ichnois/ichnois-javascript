@@ -1,5 +1,5 @@
-import type { ReplayEvent } from '@sentry/core';
-import { getClient, getCurrentScope, Scope, setCurrentClient } from '@sentry/core';
+import type { ReplayEvent } from '@ichnois/core';
+import { getClient, getCurrentScope, Scope, setCurrentClient } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { REPLAY_EVENT_NAME } from '../../../src/constants';
 import { prepareReplayEvent } from '../../../src/util/prepareReplayEvent';

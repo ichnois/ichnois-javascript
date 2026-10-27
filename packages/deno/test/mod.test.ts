@@ -1,7 +1,7 @@
 import process from 'node:process';
-import type { Envelope, Event, Log } from '@sentry/core';
-import { createStackParser, forEachEnvelopeItem } from '@sentry/core';
-import { nodeStackLineParser } from '@sentry/core/server';
+import type { Envelope, Event, Log } from '@ichnois/core';
+import { createStackParser, forEachEnvelopeItem } from '@ichnois/core';
+import { nodeStackLineParser } from '@ichnois/core/server';
 import { assertEquals } from 'https://deno.land/std@0.202.0/assert/assert_equals.ts';
 import { assertSnapshot } from 'https://deno.land/std@0.202.0/testing/snapshot.ts';
 import {

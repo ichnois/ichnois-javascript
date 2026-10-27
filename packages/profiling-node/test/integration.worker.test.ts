@@ -1,5 +1,5 @@
-import type { ProfilingIntegration, Transport } from '@sentry/core';
-import * as Sentry from '@sentry/node';
+import type { ProfilingIntegration, Transport } from '@ichnois/core';
+import * as Sentry from '@ichnois/node';
 import { CpuProfilerBindings } from '@sentry/node-cpu-profiler';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { _nodeProfilingIntegration } from '../src/integration';

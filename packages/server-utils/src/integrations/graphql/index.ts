@@ -1,6 +1,6 @@
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, waitForTracingChannelBinding } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration, waitForTracingChannelBinding } from '@ichnois/core';
 import { subscribeGraphqlDiagnosticChannels, type GraphQLOptions } from './graphql-dc-subscriber';
 import type { OrchestrionChannelContext } from '../../orchestrion/types';
 import { CHANNELS } from '../../orchestrion/channels';

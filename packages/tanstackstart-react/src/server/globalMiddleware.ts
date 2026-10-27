@@ -6,7 +6,7 @@ import {
   hasSpanStreamingEnabled,
   spanToJSON,
   updateSpanName,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { SentryGlobalFunctionMiddleware, SentryGlobalRequestMiddleware } from '../common/types';
 import { SENTRY_INTERNAL } from './middleware';
 import {

@@ -1,7 +1,7 @@
 import { SENTRY_OP } from '@sentry/conventions/attributes';
 import { describe, expect, it, vi } from 'vitest';
 import { httpContextIntegration } from '../../src/exports';
-import type { Event, StreamedSpanJSON } from '@sentry/core';
+import type { Event, StreamedSpanJSON } from '@ichnois/core';
 import { getDefaultBrowserClientOptions } from '../helper/browser-client-options';
 import { BrowserClient } from '../../src/client';
 

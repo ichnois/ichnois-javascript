@@ -1,4 +1,4 @@
-import { getMainCarrier } from '@sentry/core';
+import { getMainCarrier } from '@ichnois/core';
 import type * as EffectModule from 'effect';
 import { Effect, Layer } from 'effect';
 import { beforeEach, describe, expect, it, vi } from 'vitest';

@@ -1,6 +1,6 @@
 /* eslint-disable complexity */
-import type { Envelope, Event, Session } from '@sentry/core';
-import { forEachEnvelopeItem } from '@sentry/core';
+import type { Envelope, Event, Session } from '@ichnois/core';
+import { forEachEnvelopeItem } from '@ichnois/core';
 
 type EventOrSession = Event | Session;
 

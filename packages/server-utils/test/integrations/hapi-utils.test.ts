@@ -9,8 +9,8 @@ import {
   SERVER_EXT_TYPE,
 } from '@sentry/conventions/attributes';
 import { ROUTER } from '@sentry/conventions/op';
-import type { Span } from '@sentry/core';
-import { setCurrentClient, spanToJSON, startSpan } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { setCurrentClient, spanToJSON, startSpan } from '@ichnois/core';
 import { afterEach, describe, expect, it } from 'vitest';
 import { getExtMetadata, getRouteMetadata, wrapRouteArguments } from '../../src/integrations/hapi/hapi-utils';
 import { getDefaultTestClientOptions, TestClient } from '../mocks/client';

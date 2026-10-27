@@ -11,8 +11,8 @@
  */
 
 import { MESSAGING_BATCH_MESSAGE_COUNT } from '@sentry/conventions/attributes';
-import type { Span } from '@sentry/core';
-import { continueTrace, startNewTrace, withActiveSpan } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { continueTrace, startNewTrace, withActiveSpan } from '@ichnois/core';
 import {
   ATTR_MESSAGING_DESTINATION_PARTITION_ID,
   MESSAGING_OPERATION_TYPE_VALUE_PROCESS,

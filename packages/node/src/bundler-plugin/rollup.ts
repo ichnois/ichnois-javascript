@@ -1,8 +1,8 @@
-import { sentryRollupPlugin as sentryRollupBundlerPlugin } from '@sentry/bundler-plugins/rollup';
-import type { SentryRollupPluginOptions as SentryRollupPluginOptionsBase } from '@sentry/bundler-plugins/rollup';
-import type { InstrumentationConfig } from '@sentry/server-utils';
-import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/rollup';
-import type { RollupPlugin } from '@sentry/server-utils/orchestrion/rollup';
+import { sentryRollupPlugin as sentryRollupBundlerPlugin } from '@ichnois/bundler-plugins/rollup';
+import type { SentryRollupPluginOptions as SentryRollupPluginOptionsBase } from '@ichnois/bundler-plugins/rollup';
+import type { InstrumentationConfig } from '@ichnois/server-utils';
+import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/rollup';
+import type { RollupPlugin } from '@ichnois/server-utils/orchestrion/rollup';
 
 export type SentryRollupPluginOptions = SentryRollupPluginOptionsBase & {
   /**
@@ -31,7 +31,7 @@ export type SentryRollupPluginOptions = SentryRollupPluginOptionsBase & {
  * @example
  * ```ts
  * // rollup.config.js
- * import { sentryRollupPlugin } from '@sentry/node/rollup';
+ * import { sentryRollupPlugin } from '@ichnois/node/rollup';
  * export default { plugins: [sentryRollupPlugin({ org: '…', project: '…' })] };
  * ```
  */

@@ -4,7 +4,7 @@ import {
   debug,
   getDefaultIsolationScope,
   getIsolationScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import type { HapiRequest, HapiRequestEvent, HapiServer, HapiServerEvents, HapiShouldHandleError } from './hapi-types';
 import { defaultShouldHandleError } from './hapi-utils';

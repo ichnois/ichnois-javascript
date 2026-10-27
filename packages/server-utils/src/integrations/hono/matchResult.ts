@@ -1,4 +1,4 @@
-import { isPlainObject } from '@sentry/core';
+import { isPlainObject } from '@ichnois/core';
 import type { MatchedHandler } from './honoTypes';
 
 function isMatchedHandler(entry: unknown): entry is MatchedHandler {

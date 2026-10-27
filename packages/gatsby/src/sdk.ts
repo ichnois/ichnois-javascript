@@ -1,6 +1,6 @@
-import type { Client } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
-import { init as reactInit } from '@sentry/react';
+import type { Client } from '@ichnois/core';
+import { applySdkMetadata } from '@ichnois/core';
+import { init as reactInit } from '@ichnois/react';
 import type { GatsbyOptions } from './utils/types';
 
 /**

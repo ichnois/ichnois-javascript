@@ -1,7 +1,7 @@
 import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import { spanToJSON } from '@sentry/browser';
-import type { Span } from '@sentry/core';
-import { createTransport, getCurrentScope, setCurrentClient } from '@sentry/core';
+import { spanToJSON } from '@ichnois/browser';
+import type { Span } from '@ichnois/core';
+import { createTransport, getCurrentScope, setCurrentClient } from '@ichnois/core';
 import type { MemoryHistory } from '@solidjs/router';
 import { createMemoryHistory, MemoryRouter, Navigate, Route } from '@solidjs/router';
 import { render, waitFor } from '@solidjs/testing-library';

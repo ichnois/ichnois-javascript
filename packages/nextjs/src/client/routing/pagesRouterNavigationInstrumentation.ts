@@ -1,6 +1,6 @@
-import type { Client, TransactionSource } from '@sentry/core';
-import { hasSpanStreamingEnabled, NAVIGATION_SPAN_NAME_FALLBACK, stripUrlQueryAndFragment } from '@sentry/core';
-import { getAbsoluteUrl, startBrowserTracingNavigationSpan } from '@sentry/react';
+import type { Client, TransactionSource } from '@ichnois/core';
+import { hasSpanStreamingEnabled, NAVIGATION_SPAN_NAME_FALLBACK, stripUrlQueryAndFragment } from '@ichnois/core';
+import { getAbsoluteUrl, startBrowserTracingNavigationSpan } from '@ichnois/react';
 import RouterImport from 'next/router';
 import { SENTRY_OP, SENTRY_SEGMENT_NAME_SOURCE, URL_TEMPLATE, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { NAVIGATION } from '@sentry/conventions/op';

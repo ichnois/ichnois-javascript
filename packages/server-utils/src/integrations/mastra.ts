@@ -2,7 +2,7 @@ import * as diagnosticsChannel from '../utils/diagnosticsChannel';
 import { createRequire } from 'node:module';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { IntegrationFn } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
 import {
   captureException,
   consoleSandbox,
@@ -11,7 +11,7 @@ import {
   GLOBAL_OBJ,
   isObjectLike,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   COMMUNITY_MASTRA_SENTRY_EXPORTER_NAME,
   MASTRA_EXPORTER_BRAND,

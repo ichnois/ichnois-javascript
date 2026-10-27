@@ -1,6 +1,6 @@
-import { applySdkMetadata } from '@sentry/core';
-import type { NodeClient, NodeOptions } from '@sentry/node';
-import { getDefaultIntegrations as getDefaultNodeIntegrations, init as initNodeSdk } from '@sentry/node';
+import { applySdkMetadata } from '@ichnois/core';
+import type { NodeClient, NodeOptions } from '@ichnois/node';
+import { getDefaultIntegrations as getDefaultNodeIntegrations, init as initNodeSdk } from '@ichnois/node';
 import { rewriteFramesIntegration } from '../server-common/integrations/rewriteFramesIntegration';
 import { svelteKitSpansIntegration } from '../server-common/integrations/svelteKitSpans';
 import { httpIntegration } from './integrations/http';

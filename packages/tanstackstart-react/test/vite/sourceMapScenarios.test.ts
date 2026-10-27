@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { SentryVitePluginOptions } from '@sentry/bundler-plugins/vite';
+import type { SentryVitePluginOptions } from '@ichnois/bundler-plugins/vite';
 import type { BuildEnvironmentOptions, Plugin, ResolvedConfig, UserConfig } from 'vite';
 import { mergeConfig } from 'vite';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -7,7 +7,7 @@ import { sentryTanstackStart } from '../../src/vite/sentryTanstackStart';
 
 let sentryVitePluginOptions: SentryVitePluginOptions | undefined;
 
-vi.mock('@sentry/bundler-plugins/vite', () => ({
+vi.mock('@ichnois/bundler-plugins/vite', () => ({
   sentryVitePlugin: (options: SentryVitePluginOptions) => {
     sentryVitePluginOptions = options;
     return [];

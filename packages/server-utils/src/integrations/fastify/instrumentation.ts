@@ -24,7 +24,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { HANDLER, MIDDLEWARE } from '@sentry/conventions/op';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   isObjectLike,
   getClient,
@@ -35,7 +35,7 @@ import {
   startInactiveSpan,
   startSpan,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { FastifyInstance } from './types';
 import { setHttpServerSpanRouteAttribute } from '../../utils/setHttpServerSpanRouteAttribute';
 import { handleFastifyError } from './errors';

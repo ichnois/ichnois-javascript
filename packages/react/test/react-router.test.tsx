@@ -5,7 +5,7 @@
  * directly from `react` / `react-router` so `reactRouterBrowserTracingIntegration()` can be used
  * without passing them in.
  */
-import { createTransport, getCurrentScope, setCurrentClient } from '@sentry/core';
+import { createTransport, getCurrentScope, setCurrentClient } from '@ichnois/core';
 import { SENTRY_SEGMENT_NAME_SOURCE, URL_TEMPLATE, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { fireEvent, render } from '@testing-library/react';
 import * as React from 'react';
@@ -18,7 +18,7 @@ import { reactRouterBrowserTracingIntegration, wrapReactRouterRouting } from '..
 const mockStartBrowserTracingPageLoadSpan = vi.fn();
 const mockStartBrowserTracingNavigationSpan = vi.fn();
 
-vi.mock('@sentry/browser', async requireActual => {
+vi.mock('@ichnois/browser', async requireActual => {
   const actual = (await requireActual()) as any;
   return {
     ...actual,
@@ -42,7 +42,7 @@ function createMockBrowserClient(): BrowserClient {
   });
 }
 
-describe('@sentry/react/react-router', () => {
+describe('@ichnois/react/react-router', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     getCurrentScope().setClient(undefined);

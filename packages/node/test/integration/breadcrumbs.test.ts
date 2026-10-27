@@ -1,4 +1,4 @@
-import { startSpan, addBreadcrumb, captureException, withIsolationScope, withScope } from '@sentry/core';
+import { startSpan, addBreadcrumb, captureException, withIsolationScope, withScope } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { getClient } from '../../src/';
 import type { NodeClient } from '../../src/sdk/client';

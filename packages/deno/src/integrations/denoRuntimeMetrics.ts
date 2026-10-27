@@ -1,4 +1,4 @@
-import { _INTERNAL_safeDateNow, defineIntegration, metrics } from '@sentry/core';
+import { _INTERNAL_safeDateNow, defineIntegration, metrics } from '@ichnois/core';
 
 const INTEGRATION_NAME = 'DenoRuntimeMetrics' as const;
 const DEFAULT_INTERVAL_MS = 30_000;

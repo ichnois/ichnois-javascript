@@ -1,8 +1,8 @@
-import type * as SentryCore from '@sentry/core';
+import type * as SentryCore from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 const captureException = vi.fn();
-vi.mock('@sentry/core', async importOriginal => ({
+vi.mock('@ichnois/core', async importOriginal => ({
   isObjectLike: (await importOriginal<typeof SentryCore>()).isObjectLike,
   captureException: (...args: unknown[]) => captureException(...args),
 }));

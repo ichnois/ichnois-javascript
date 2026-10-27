@@ -199,7 +199,7 @@ function getWrapperCode(
   idWithSuffix: string,
 ): string {
   return (
-    `import { ${wrapperFunction} } from "@sentry/sveltekit";` +
+    `import { ${wrapperFunction} } from "@ichnois/sveltekit";` +
     `import * as userModule from ${JSON.stringify(idWithSuffix)};` +
     `export const load = userModule.load ? ${wrapperFunction}(userModule.load) : undefined;` +
     `export * from ${JSON.stringify(idWithSuffix)};`

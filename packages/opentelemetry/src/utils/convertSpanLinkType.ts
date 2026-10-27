@@ -1,5 +1,5 @@
 import type { Link } from '@opentelemetry/api';
-import type { SpanLink } from '@sentry/core';
+import type { SpanLink } from '@ichnois/core';
 
 /**
  * Converts OpenTelemetry span links to Sentry span links.

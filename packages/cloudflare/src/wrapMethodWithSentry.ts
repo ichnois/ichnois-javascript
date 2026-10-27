@@ -1,5 +1,5 @@
 import type { DurableObjectStorage } from '@cloudflare/workers-types';
-import type { SerializedTraceData } from '@sentry/core';
+import type { SerializedTraceData } from '@ichnois/core';
 import { CODE_FUNCTION_NAME, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { FUNCTION } from '@sentry/conventions/op';
 import {
@@ -10,7 +10,7 @@ import {
   type Scope,
   startNewTrace as startNewTraceCore,
   startSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { CloudflareOptions } from './client';
 import type { ExecutionContextCompat } from './executionContext';
 import { flushAndDispose, getOriginalWaitUntil } from './flush';

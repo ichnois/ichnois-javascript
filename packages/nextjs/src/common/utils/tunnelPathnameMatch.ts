@@ -1,4 +1,4 @@
-import { escapeStringForRegex } from '@sentry/core';
+import { escapeStringForRegex } from '@ichnois/core';
 
 /**
  * The path of the tunnel route handler (`app/sentry-tunnel/route.ts`).

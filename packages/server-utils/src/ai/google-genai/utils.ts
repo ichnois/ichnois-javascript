@@ -1,5 +1,5 @@
-import { isObjectLike, stringify } from '@sentry/core';
-import type { Span } from '@sentry/core';
+import { isObjectLike, stringify } from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import { GEN_AI_OUTPUT_MESSAGES } from '@sentry/conventions/attributes';
 
 // Copied from https://googleapis.github.io/js-genai/release_docs/index.html

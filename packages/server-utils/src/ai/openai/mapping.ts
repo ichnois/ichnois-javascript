@@ -2,7 +2,7 @@
  * Maps OpenAI decisions requests and responses to the format Jev calls are recorded in, so Sentry renders
  * both the same way.
  */
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 import { getEvaluationInputMessages, getEvaluationOutputMessages } from '../core/utils';
 
 /**

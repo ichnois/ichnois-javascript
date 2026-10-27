@@ -6,7 +6,7 @@ import {
   SENTRY_SEGMENT_NAME_SOURCE,
 } from '@sentry/conventions/attributes';
 import { HTTP_SERVER } from '@sentry/conventions/op';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   captureException,
   continueTrace,
@@ -19,8 +19,8 @@ import {
   setHttpStatus,
   startSpanManual,
   winterCGHeadersToDict,
-} from '@sentry/core';
-import { classifyResponseStreaming } from '@sentry/core/server';
+} from '@ichnois/core';
+import { classifyResponseStreaming } from '@ichnois/core/server';
 import { DEBUG_BUILD } from './debug-build';
 import {
   captureIncomingRequestBody,

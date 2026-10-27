@@ -1,4 +1,4 @@
-import type { Client, Span, StartSpanOptions } from '@sentry/core';
+import type { Client, Span, StartSpanOptions } from '@ichnois/core';
 import {
   getCurrentScope,
   GLOBAL_OBJ,
@@ -8,7 +8,7 @@ import {
   PAGELOAD_SPAN_NAME_FALLBACK,
   filterCollectedUrl,
   timestampInSeconds,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
@@ -16,7 +16,7 @@ import {
   getAbsoluteUrl,
   resolveCurrentRoute,
   resolveRoute,
-} from '@sentry/react';
+} from '@ichnois/react';
 import { stripTrailingSlash } from './parameterization';
 import type { TraceMetaTagValues, TraceMetaTagWait } from './traceMetaTags';
 import { addTraceMetaTagLink, canWaitForTraceMetaTag, readTraceMetaTags, waitForTraceMetaTag } from './traceMetaTags';

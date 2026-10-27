@@ -1,6 +1,6 @@
 import { basename } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@ichnois/core';
 import type { InputPluginOption } from 'rollup';
 
 /** THIS FILE IS AN UTILITY FOR NITRO-BASED PACKAGES AND SHOULD BE KEPT IN SYNC IN NUXT, SOLIDSTART, ETC. */

@@ -16,7 +16,7 @@
 
 import { ERROR_TYPE, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { FILE } from '@sentry/conventions/op';
-import type { Span, SpanAttributes } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
 import {
   SPAN_STATUS_ERROR,
   getActiveSpan,
@@ -24,7 +24,7 @@ import {
   startSpan,
   suppressTracing,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import * as fs from 'fs';
 import { promisify } from 'util';
 import { CALLBACK_FUNCTIONS, PROMISE_FUNCTIONS, SYNC_FUNCTIONS } from './constants';

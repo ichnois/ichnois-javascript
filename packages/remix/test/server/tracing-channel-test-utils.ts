@@ -1,13 +1,13 @@
 import { AsyncLocalStorage } from 'node:async_hooks';
-import type { Scope, Span } from '@sentry/core';
+import type { Scope, Span } from '@ichnois/core';
 import {
   _INTERNAL_setSpanForScope,
   getDefaultCurrentScope,
   getDefaultIsolationScope,
   setAsyncContextStrategy,
-} from '@sentry/core';
-import * as SentryNode from '@sentry/node';
-import type { NodeClient } from '@sentry/node';
+} from '@ichnois/core';
+import * as SentryNode from '@ichnois/node';
+import type { NodeClient } from '@ichnois/node';
 import { vi } from 'vitest';
 import { instrumentRemix } from '../../src/server/integrations/tracing-channel';
 

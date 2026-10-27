@@ -7,8 +7,8 @@ import {
   setCurrentClient,
   spanToStaticSpanJSON,
   withActiveSpan,
-} from '@sentry/core';
-import type { Span } from '@sentry/core';
+} from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import { getProviderMetadataAttributes } from '../../../src/ai/vercel-ai';
 import {
   clearOperationCallId,

@@ -1,7 +1,7 @@
 // <reference lib="deno.ns" />
 
-import type { AggregationCounts, Envelope, ErrorEvent, Span, TransactionEvent } from '@sentry/core';
-import { forEachEnvelopeItem, getMainCarrier } from '@sentry/core';
+import type { AggregationCounts, Envelope, ErrorEvent, Span, TransactionEvent } from '@ichnois/core';
+import { forEachEnvelopeItem, getMainCarrier } from '@ichnois/core';
 import { assertEquals, assertExists, assertMatch, assertNotEquals } from 'https://deno.land/std@0.212.0/assert/mod.ts';
 import type { DenoClient, DenoOptions } from '../build/esm/index.js';
 import { captureException, captureMessage, init, denoServeIntegration, setTag, setUser } from '../build/esm/index.js';

@@ -1,7 +1,7 @@
-import { getMainCarrier } from '@sentry/core';
-import type { NodeClient } from '@sentry/node';
-import * as SentryNode from '@sentry/node';
-import { getClient, SDK_VERSION } from '@sentry/node';
+import { getMainCarrier } from '@ichnois/core';
+import type { NodeClient } from '@ichnois/node';
+import * as SentryNode from '@ichnois/node';
+import { getClient, SDK_VERSION } from '@ichnois/node';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { init } from '../../src/server/sdk';
 

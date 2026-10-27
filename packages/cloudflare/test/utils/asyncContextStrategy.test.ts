@@ -1,5 +1,5 @@
-import { getAsyncContextStrategy, getMainCarrier } from '@sentry/core';
-import { setOpenTelemetryContextAsyncContextStrategy } from '@sentry/opentelemetry';
+import { getAsyncContextStrategy, getMainCarrier } from '@ichnois/core';
+import { setOpenTelemetryContextAsyncContextStrategy } from '@ichnois/opentelemetry';
 import { afterEach, describe, expect, it } from 'vitest';
 import { setAsyncLocalStorageAsyncContextStrategyForWorker } from '../../src/utils/asyncContextStrategy';
 import { resetSdk } from '../testUtils';

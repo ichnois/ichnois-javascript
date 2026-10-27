@@ -1,5 +1,5 @@
-import type { Integration } from '@sentry/core';
-import { consoleSandbox } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
+import { consoleSandbox } from '@ichnois/core';
 import { FAKE_FUNCTION } from './common';
 
 const REPLAY_INTEGRATION_METHODS = ['start', 'stop', 'flush'] as const;

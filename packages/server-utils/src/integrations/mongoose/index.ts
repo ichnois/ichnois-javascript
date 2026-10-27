@@ -1,6 +1,6 @@
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
-import type { IntegrationFn, Span } from '@sentry/core';
-import { defineIntegration, getActiveSpan, waitForTracingChannelBinding } from '@sentry/core';
+import type { IntegrationFn, Span } from '@ichnois/core';
+import { defineIntegration, getActiveSpan, waitForTracingChannelBinding } from '@ichnois/core';
 import { subscribeMongooseDiagnosticChannels } from './mongoose-dc-subscriber';
 import type { MongooseLegacyCollection } from './mongoose-legacy-span';
 import { startMongooseLegacySpan } from './mongoose-legacy-span';

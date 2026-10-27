@@ -1,4 +1,4 @@
-import * as SentryNode from '@sentry/node';
+import * as SentryNode from '@ichnois/node';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { httpIntegration as svelteKitHttpIntegration } from '../../../src/server/integrations/http';
 

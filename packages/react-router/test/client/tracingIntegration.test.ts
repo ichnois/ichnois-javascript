@@ -1,6 +1,6 @@
-import * as sentryBrowser from '@sentry/browser';
-import type { Client } from '@sentry/core';
-import { GLOBAL_OBJ } from '@sentry/core';
+import * as sentryBrowser from '@ichnois/browser';
+import type { Client } from '@ichnois/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { isClientInstrumentationApiUsed } from '../../src/client/createClientInstrumentation';
 import * as hydratedRouterModule from '../../src/client/hydratedRouter';

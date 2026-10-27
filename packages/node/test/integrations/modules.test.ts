@@ -1,4 +1,4 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 type GlobalWithModules = typeof GLOBAL_OBJ & { __SENTRY_SERVER_MODULES__?: Record<string, string> };

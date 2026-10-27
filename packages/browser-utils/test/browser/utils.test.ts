@@ -1,4 +1,4 @@
-import { getMainCarrier, SentrySpan, setCurrentClient, spanToJSON } from '@sentry/core';
+import { getMainCarrier, SentrySpan, setCurrentClient, spanToJSON } from '@ichnois/core';
 import { beforeEach, describe, expect, it, test } from 'vitest';
 import { extractNetworkProtocol, startAndEndSpan } from '../../src/performance/utils';
 import { getDefaultClientOptions, TestClient } from '../utils/TestClient';

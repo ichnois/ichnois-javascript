@@ -1,5 +1,5 @@
-import type { Integration } from '@sentry/core';
-import { getIntegrationsToSetup } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
+import { getIntegrationsToSetup } from '@ichnois/core';
 import { filterHonoIntegration } from './filterHonoIntegration';
 
 /**

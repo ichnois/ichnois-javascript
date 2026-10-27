@@ -1,7 +1,7 @@
 /// <reference lib="deno.ns" />
 
-import type { Event, TransactionEvent } from '@sentry/core';
-import { getMainCarrier } from '@sentry/core';
+import type { Event, TransactionEvent } from '@ichnois/core';
+import { getMainCarrier } from '@ichnois/core';
 import { assert } from 'https://deno.land/std@0.212.0/assert/assert.ts';
 import { assertEquals } from 'https://deno.land/std@0.212.0/assert/assert_equals.ts';
 import { assertExists } from 'https://deno.land/std@0.212.0/assert/assert_exists.ts';

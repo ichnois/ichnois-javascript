@@ -1,6 +1,6 @@
 /* eslint-disable import/export */
 // Node SDK exports
-// Unfortunately, we cannot `export * from '@sentry/node'` because in prod builds,
+// Unfortunately, we cannot `export * from '@ichnois/node'` because in prod builds,
 // Vite puts these exports into a `default` property (Sentry.default) rather than
 // on the top - level namespace.
 // Hence, we export everything from the Node SDK explicitly:
@@ -151,10 +151,10 @@ export {
   withStaticSpan,
   // oxlint-disable-next-line typescript/no-deprecated
   withStreamedSpan,
-} from '@sentry/node';
+} from '@ichnois/node';
 
 // We can still leave this for the carrier init and type exports
-export * from '@sentry/node';
+export * from '@ichnois/node';
 
 // -------------------------
 // SvelteKit SDK exports:

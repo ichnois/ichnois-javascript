@@ -1,7 +1,7 @@
-import type { Event } from '@sentry/core';
-import { originalConsoleMethods } from '@sentry/core';
-import * as SentryNode from '@sentry/node';
-import { getGlobalScope, SDK_VERSION } from '@sentry/node';
+import type { Event } from '@ichnois/core';
+import { originalConsoleMethods } from '@ichnois/core';
+import * as SentryNode from '@ichnois/node';
+import { getGlobalScope, SDK_VERSION } from '@ichnois/node';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { NUXT_DEV_MODE_FLAG, NUXT_PRERENDER_FLAG, NUXT_SERVER_INITIALIZED_FLAG } from '../../src/common/devMode';
 import { init } from '../../src/server';

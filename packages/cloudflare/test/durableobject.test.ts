@@ -1,6 +1,6 @@
 import type { ExecutionContext } from '@cloudflare/workers-types';
-import type { Event } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Event } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, describe, expect, it, onTestFinished, vi } from 'vitest';
 import { instrumentAgentWithSentry, instrumentDurableObjectWithSentry } from '../src';
 import { _INTERNAL_wrapUnlessInstrumented, getInstrumented } from '../src/instrument';

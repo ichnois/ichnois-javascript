@@ -1,6 +1,6 @@
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import { createTransport, setCurrentClient } from '@sentry/core';
-import { NodeClient } from '@sentry/node';
+import { createTransport, setCurrentClient } from '@ichnois/core';
+import { NodeClient } from '@ichnois/node';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import type { GrpcFunction, GrpcFunctionObject, Stub } from '../../src/integrations/google-cloud-grpc';
 import { fillGrpcFunction, googleCloudGrpcIntegration } from '../../src/integrations/google-cloud-grpc';
@@ -11,8 +11,8 @@ const mockFill = vi.fn();
 
 let mockClient: NodeClient;
 
-vi.mock('@sentry/core', async () => {
-  const original = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const original = await vi.importActual('@ichnois/core');
   return {
     ...original,
     fill: (obj: any, name: string, replacement: any) => {
@@ -23,8 +23,8 @@ vi.mock('@sentry/core', async () => {
   };
 });
 
-vi.mock('@sentry/node', async () => {
-  const original = await vi.importActual('@sentry/node');
+vi.mock('@ichnois/node', async () => {
+  const original = await vi.importActual('@ichnois/node');
   return {
     ...original,
     startInactiveSpan: (ctx: unknown) => {

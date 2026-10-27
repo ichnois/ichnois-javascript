@@ -1,4 +1,4 @@
-import { defineIntegration } from '@sentry/core';
+import { defineIntegration } from '@ichnois/core';
 import { CHANNELS } from '../orchestrion/channels';
 import { togetherAiModuleNames } from '../orchestrion/config/together-ai';
 import { createOpenAiCompatibleIntegration } from './openai-compatible';

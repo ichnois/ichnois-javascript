@@ -1,4 +1,4 @@
-import { honoMiddleware } from '@sentry/server-utils';
+import { honoMiddleware } from '@ichnois/server-utils';
 import { Hono } from 'hono';
 import type { Hono as Hono5 } from 'hono-5';
 import { describe, it } from 'vitest';

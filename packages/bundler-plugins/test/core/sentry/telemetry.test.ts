@@ -1,4 +1,4 @@
-import type { Scope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
 import type { NormalizedOptions } from '../../../src/core/options-mapping';
 import { normalizeUserOptions } from '../../../src/core/options-mapping';
 import { allowedToSendTelemetry, setTelemetryDataOnScope } from '../../../src/core/sentry/telemetry';

@@ -1,4 +1,4 @@
-import { isThenable, warnOnRemovedBuildOptions } from '@sentry/core';
+import { isThenable, warnOnRemovedBuildOptions } from '@ichnois/core';
 import { getBuildLogger } from '../buildLogger';
 import type { ExportedNextConfig as NextConfig, NextConfigFunction, SentryBuildOptions } from '../types';
 import { DEFAULT_SERVER_EXTERNAL_PACKAGES } from './constants';

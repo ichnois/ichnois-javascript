@@ -3,7 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { SentryNuxtModuleOptions } from '../../src/common/types';
 import { addDatabaseInstrumentation } from '../../src/vite/databaseConfig';
 
-vi.mock('@sentry/core', () => ({
+vi.mock('@ichnois/core', () => ({
   consoleSandbox: (callback: () => void) => callback(),
 }));
 

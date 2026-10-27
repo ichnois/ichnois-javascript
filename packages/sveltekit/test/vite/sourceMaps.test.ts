@@ -1,4 +1,4 @@
-import { sentryVitePlugin } from '@sentry/bundler-plugins/vite';
+import { sentryVitePlugin } from '@ichnois/bundler-plugins/vite';
 import type { Plugin } from 'vite';
 import * as vite from 'vite';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
@@ -10,8 +10,8 @@ const mockedMainPlugin = {
   writeBundle: vi.fn(),
 };
 
-vi.mock('@sentry/bundler-plugins/vite', async () => {
-  const original = (await vi.importActual('@sentry/bundler-plugins/vite')) as any;
+vi.mock('@ichnois/bundler-plugins/vite', async () => {
+  const original = (await vi.importActual('@ichnois/bundler-plugins/vite')) as any;
 
   return {
     ...original,
@@ -350,8 +350,8 @@ describe('deleteFilesAfterUpload', () => {
   it('works with defauts', async () => {
     const viteConfig: ViteUserConfig = {};
 
-    vi.mock('@sentry/bundler-plugins/vite', async () => {
-      const original = (await vi.importActual('@sentry/bundler-plugins/vite')) as any;
+    vi.mock('@ichnois/bundler-plugins/vite', async () => {
+      const original = (await vi.importActual('@ichnois/bundler-plugins/vite')) as any;
 
       return {
         ...original,
@@ -425,8 +425,8 @@ describe('deleteFilesAfterUpload', () => {
         },
       };
 
-      vi.mock('@sentry/bundler-plugins/vite', async () => {
-        const original = (await vi.importActual('@sentry/bundler-plugins/vite')) as any;
+      vi.mock('@ichnois/bundler-plugins/vite', async () => {
+        const original = (await vi.importActual('@ichnois/bundler-plugins/vite')) as any;
 
         return {
           ...original,

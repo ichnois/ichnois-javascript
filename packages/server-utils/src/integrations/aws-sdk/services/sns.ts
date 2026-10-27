@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { getClient, getTraceData, hasSpanStreamingEnabled } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { getClient, getTraceData, hasSpanStreamingEnabled } from '@ichnois/core';
 import {
   AWS_SNS_TOPIC_ARN as ATTR_AWS_SNS_TOPIC_ARN,
   MESSAGING_DESTINATION as ATTR_MESSAGING_DESTINATION,

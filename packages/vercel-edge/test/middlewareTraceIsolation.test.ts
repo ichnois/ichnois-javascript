@@ -1,6 +1,6 @@
 import { context, propagation, ROOT_CONTEXT, trace } from '@opentelemetry/api';
-import { getMainCarrier, GLOBAL_OBJ, spanToStaticSpanJSON, withIsolationScope } from '@sentry/core';
-import { setOpenTelemetryContextAsyncContextStrategy } from '@sentry/opentelemetry';
+import { getMainCarrier, GLOBAL_OBJ, spanToStaticSpanJSON, withIsolationScope } from '@ichnois/core';
+import { setOpenTelemetryContextAsyncContextStrategy } from '@ichnois/opentelemetry';
 import { AsyncLocalStorage } from 'async_hooks';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { VercelEdgeClient } from '../src';

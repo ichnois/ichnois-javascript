@@ -12,9 +12,9 @@ import { saveSession } from '../../../src/session/saveSession';
 import { makeSession } from '../../../src/session/Session';
 import type { SessionOptions } from '../../../src/types';
 
-vi.mock('@sentry/core', async () => {
+vi.mock('@ichnois/core', async () => {
   return {
-    ...(await vi.importActual('@sentry/core')),
+    ...(await vi.importActual('@ichnois/core')),
     uuid4: vi.fn(() => 'test_session_uuid'),
   };
 });

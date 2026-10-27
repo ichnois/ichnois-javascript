@@ -1,8 +1,8 @@
-import { sentryEsbuildPlugin as sentryEsbuildBundlerPlugin } from '@sentry/bundler-plugins/esbuild';
-import type { SentryEsbuildPluginOptions as SentryEsbuildPluginOptionsBase } from '@sentry/bundler-plugins/esbuild';
-import type { InstrumentationConfig } from '@sentry/server-utils';
-import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/esbuild';
-import type { EsbuildPlugin } from '@sentry/server-utils/orchestrion/esbuild';
+import { sentryEsbuildPlugin as sentryEsbuildBundlerPlugin } from '@ichnois/bundler-plugins/esbuild';
+import type { SentryEsbuildPluginOptions as SentryEsbuildPluginOptionsBase } from '@ichnois/bundler-plugins/esbuild';
+import type { InstrumentationConfig } from '@ichnois/server-utils';
+import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/esbuild';
+import type { EsbuildPlugin } from '@ichnois/server-utils/orchestrion/esbuild';
 
 export type SentryEsbuildPluginOptions = SentryEsbuildPluginOptionsBase & {
   /**
@@ -30,7 +30,7 @@ export type SentryEsbuildPluginOptions = SentryEsbuildPluginOptionsBase & {
  * @example
  * ```ts
  * // build.mjs
- * import { sentryEsbuildPlugin } from '@sentry/node/esbuild';
+ * import { sentryEsbuildPlugin } from '@ichnois/node/esbuild';
  * await esbuild.build({ plugins: [sentryEsbuildPlugin({ org: '…', project: '…' })] });
  * ```
  */

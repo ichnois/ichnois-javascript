@@ -10,7 +10,7 @@ import {
   GEN_AI_USAGE_TOTAL_TOKENS,
 } from '@sentry/conventions/attributes';
 import { describe, expect, it } from 'vitest';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import { addResponseAttributes as addOpenAiResponseAttributes } from '../../../../src/ai/openai/utils';
 import { instrumentStream as instrumentOpenAiStream } from '../../../../src/ai/openai/streaming';
 import { addResponseAttributes as addGoogleResponseAttributes } from '../../../../src/ai/google-genai';

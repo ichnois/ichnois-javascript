@@ -1,11 +1,11 @@
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { Integration, IntegrationFn, Span, SpanAttributeValue } from '@sentry/core';
+import type { Integration, IntegrationFn, Span, SpanAttributeValue } from '@ichnois/core';
 import {
   _INTERNAL_shouldSkipAiProviderWrapping,
   getClient,
   hasSpanStreamingEnabled,
   startInactiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { GEN_AI_PROVIDER_NAME, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { getGenAiSpanOp, resolveAIRecordingOptions } from '../ai/core/utils';
 import { wrapApiPromiseResponse } from '../ai/core/apiPromise';

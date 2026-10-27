@@ -3,8 +3,8 @@
 import * as origModule from '__SENTRY_NEXTJS_REQUEST_ASYNC_STORAGE_SHIM__';
 // @ts-expect-error See above
 import * as routeModule from '__SENTRY_WRAPPING_TARGET_FILE__';
-import type { WebFetchHeaders } from '@sentry/core';
-import * as Sentry from '@sentry/nextjs';
+import type { WebFetchHeaders } from '@ichnois/core';
+import * as Sentry from '@ichnois/nextjs';
 import type { RequestAsyncStorage } from './requestAsyncStorageShim';
 
 type NextAsyncStorageModule =

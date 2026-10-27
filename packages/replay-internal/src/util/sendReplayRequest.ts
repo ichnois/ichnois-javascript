@@ -1,5 +1,5 @@
-import type { RateLimits, ReplayEvent, TransportMakeRequestResponse } from '@sentry/core';
-import { getClient, getCurrentScope, isRateLimited, updateRateLimits } from '@sentry/core';
+import type { RateLimits, ReplayEvent, TransportMakeRequestResponse } from '@ichnois/core';
+import { getClient, getCurrentScope, isRateLimited, updateRateLimits } from '@ichnois/core';
 import { REPLAY_EVENT_NAME, UNABLE_TO_SEND_REPLAY } from '../constants';
 import { DEBUG_BUILD } from '../debug-build';
 import type { SendReplayData } from '../types';

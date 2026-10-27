@@ -1,5 +1,5 @@
-import type { Breadcrumb } from '@sentry/core';
-import { normalize } from '@sentry/core';
+import type { Breadcrumb } from '@ichnois/core';
+import { normalize } from '@ichnois/core';
 import { EventType } from '@sentry/rrweb';
 import type { ReplayContainer } from '../../types';
 

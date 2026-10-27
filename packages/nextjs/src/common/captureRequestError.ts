@@ -1,5 +1,5 @@
-import type { RequestEventData } from '@sentry/core';
-import { captureException, filterCollectedUrl, headersToDict, withScope } from '@sentry/core';
+import type { RequestEventData } from '@ichnois/core';
+import { captureException, filterCollectedUrl, headersToDict, withScope } from '@ichnois/core';
 import { isPrerenderControlFlowError } from './nextNavigationErrorUtils';
 import { flushSafelyWithTimeout, waitUntil } from './utils/responseEnd';
 

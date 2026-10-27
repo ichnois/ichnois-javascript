@@ -1,9 +1,9 @@
 import { TraceFlags } from '@opentelemetry/api';
-import * as sentryCore from '@sentry/core';
+import * as sentryCore from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { buildSpanLinks, getStoredSpanContext, getTraceLinkKey, storeSpanContext } from '../src/utils/traceLinks';
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const actual = await importOriginal();
   return {
     ...actual,

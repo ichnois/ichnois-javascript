@@ -1,6 +1,6 @@
-import { getIsolationScope, getMainCarrier, GLOBAL_OBJ, type Scope, setAsyncContextStrategy } from '@sentry/core';
+import { getIsolationScope, getMainCarrier, GLOBAL_OBJ, type Scope, setAsyncContextStrategy } from '@ichnois/core';
 import { AsyncLocalStorage } from 'async_hooks';
-import { setAsyncLocalStorageAsyncContextStrategy } from '@sentry/server-utils/no-diagnostic-channels';
+import { setAsyncLocalStorageAsyncContextStrategy } from '@ichnois/server-utils/no-diagnostic-channels';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { withInvocationIsolationScope } from '../../src/utils/invocationScope';
 

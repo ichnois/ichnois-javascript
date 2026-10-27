@@ -27,7 +27,7 @@ try {
     fail('a project is required for the upload. Pass `--project` or set `SENTRY_PROJECT` as environment variable.');
   }
 
-  const { emitAssets } = await import('@sentry/remix/v3');
+  const { emitAssets } = await import('@ichnois/remix/v3');
 
   let assetsModule;
   try {

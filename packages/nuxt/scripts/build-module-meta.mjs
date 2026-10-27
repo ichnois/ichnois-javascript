@@ -14,7 +14,7 @@ writeFileSync(
   join(outDir, 'module.json'),
   `${JSON.stringify(
     {
-      name: '@sentry/nuxt/module',
+      name: '@ichnois/nuxt/module',
       configKey: 'sentry',
       compatibility: { nuxt: '>=3.7.0' },
       version,

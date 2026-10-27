@@ -1,4 +1,4 @@
-import type { Client, Span } from '@sentry/core';
+import type { Client, Span } from '@ichnois/core';
 import { describe, expect, it } from 'vitest';
 import { applyFormDataAttributes, resolveFormDataCapture } from '../../src/utils/formData';
 

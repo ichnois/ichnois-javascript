@@ -101,7 +101,7 @@ const _consoleLoggingIntegration = ((options: Partial<CaptureConsoleOptions> = {
  * @example
  *
  * ```ts
- * import * as Sentry from '@sentry/browser';
+ * import * as Sentry from '@ichnois/browser';
  *
  * Sentry.init({
  *   integrations: [Sentry.consoleLoggingIntegration({ levels: ['error', 'warn'] })],

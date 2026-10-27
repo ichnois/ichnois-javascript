@@ -1,5 +1,5 @@
 import { ROOT_CONTEXT } from '@opentelemetry/api';
-import { Scope } from '@sentry/core';
+import { Scope } from '@ichnois/core';
 import { describe, expect, it } from 'vitest';
 import {
   getContextFromScope,

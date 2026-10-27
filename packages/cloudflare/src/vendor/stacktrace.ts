@@ -2,9 +2,9 @@
 // Copyright (c) 2022 Robert Cepa
 // SPDX-License-Identifier: MIT
 
-import type { StackLineParser, StackLineParserFn, StackParser } from '@sentry/core';
-import { basename, createStackParser } from '@sentry/core';
-import { nodeStackLineParser } from '@sentry/core/server';
+import type { StackLineParser, StackLineParserFn, StackParser } from '@ichnois/core';
+import { basename, createStackParser } from '@ichnois/core';
+import { nodeStackLineParser } from '@ichnois/core/server';
 
 type GetModuleFn = (filename: string | undefined) => string | undefined;
 

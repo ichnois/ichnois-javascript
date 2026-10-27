@@ -1,6 +1,6 @@
 import { GEN_AI_CONVERSATION_ID } from '@sentry/conventions/attributes';
-import { getCurrentScope, type Integration } from '@sentry/core';
-import * as sentryServerUtils from '@sentry/server-utils';
+import { getCurrentScope, type Integration } from '@ichnois/core';
+import * as sentryServerUtils from '@ichnois/server-utils';
 import type { Mock } from 'bun:test';
 import { afterEach, beforeEach, describe, expect, it, mock, spyOn } from 'bun:test';
 import {

@@ -2,8 +2,8 @@ import type { MockedFunction } from 'vitest';
 import { describe, beforeEach, vi, expect, it } from 'vitest';
 import type { UndiciRequest } from '../../src/integrations/node-fetch/types';
 import { addTracePropagationHeadersToFetchRequest } from '../../src/utils/outgoingFetchRequest';
-import { LRUMap } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import { LRUMap } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 
 const mockedGetTraceData: MockedFunction<() => ReturnType<typeof SentryCore.getTraceData>> = vi.hoisted(() =>
   vi.fn(() => ({
@@ -19,8 +19,8 @@ const mockedClientGetOptions: MockedFunction<() => Partial<SentryCore.ClientOpti
   })),
 );
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     getClient: vi.fn(() => ({

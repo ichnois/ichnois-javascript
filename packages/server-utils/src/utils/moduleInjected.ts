@@ -1,5 +1,5 @@
-import type { Integration } from '@sentry/core';
-import { getClient, GLOBAL_OBJ } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
+import { getClient, GLOBAL_OBJ } from '@ichnois/core';
 
 /**
  * Record a bundler-injected module and notify channel integrations. This is the

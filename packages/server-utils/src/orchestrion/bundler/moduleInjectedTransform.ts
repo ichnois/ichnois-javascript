@@ -17,7 +17,7 @@ interface ProgramNode {
 // helper and the module's channel-subscriber factory both live on the main
 // `@sentry/server-utils` entry, so a single import serves both. The ESM barrel
 // tree-shakes to just the helper and the factories actually referenced.
-const DEFAULT_IMPORT_SPECIFIER = '@sentry/server-utils';
+const DEFAULT_IMPORT_SPECIFIER = '@ichnois/server-utils';
 
 /**
  * Assignment target that keeps the injected call from being tree-shaken. See

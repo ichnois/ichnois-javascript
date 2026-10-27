@@ -1,7 +1,7 @@
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { tracingChannel } from 'node:diagnostics_channel';
-import type { Client, Scope, Span } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Client, Scope, Span } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import {
   addChildSpanToSpan,
   getActiveSpan,
@@ -11,7 +11,7 @@ import {
   SentryNonRecordingSpan,
   setAsyncContextStrategy,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { MockInstance } from 'vitest';
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { prismaIntegration } from '../../src/integrations/prisma';

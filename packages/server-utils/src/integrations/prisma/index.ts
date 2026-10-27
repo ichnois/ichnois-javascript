@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
 import { prismaModuleNames } from '../../orchestrion/config/prisma';
 import { invokeOrchestrionInstrumentation } from '../../orchestrion/instrumentation';
 import { setGlobalTracingHelper } from './global';

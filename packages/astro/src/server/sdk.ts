@@ -1,7 +1,7 @@
 import { HTTP_SERVER } from '@sentry/conventions/op';
-import { applySdkMetadata } from '@sentry/core';
-import type { NodeClient, NodeOptions } from '@sentry/node';
-import { init as initNodeSdk } from '@sentry/node';
+import { applySdkMetadata } from '@ichnois/core';
+import type { NodeClient, NodeOptions } from '@ichnois/node';
+import { init as initNodeSdk } from '@ichnois/node';
 
 /**
  *

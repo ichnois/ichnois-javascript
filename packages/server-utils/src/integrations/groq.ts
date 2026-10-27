@@ -1,4 +1,4 @@
-import { defineIntegration } from '@sentry/core';
+import { defineIntegration } from '@ichnois/core';
 import { CHANNELS } from '../orchestrion/channels';
 import { groqModuleNames } from '../orchestrion/config/groq';
 import { createOpenAiCompatibleIntegration } from './openai-compatible';

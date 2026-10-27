@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, type MockInstance, test, vi } from 'vitest';
 import { cron } from '../src';
 import type { CronJob, CronJobParams } from '../src/cron/cron';

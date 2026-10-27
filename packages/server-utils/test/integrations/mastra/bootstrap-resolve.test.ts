@@ -1,6 +1,6 @@
 import { tracingChannel } from 'node:diagnostics_channel';
-import type { Client } from '@sentry/core';
-import { GLOBAL_OBJ } from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { mastraIntegration } from '../../../src/integrations/mastra';
 import { CHANNELS } from '../../../src/orchestrion/channels';

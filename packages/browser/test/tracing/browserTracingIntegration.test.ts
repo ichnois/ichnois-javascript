@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import type { Span, StartSpanOptions } from '@sentry/core';
+import type { Span, StartSpanOptions } from '@ichnois/core';
 import {
   getActiveSpan,
   getCurrentScope,
@@ -16,8 +16,8 @@ import {
   TRACING_DEFAULTS,
   browserPerformanceTimeOrigin,
   getSpanDescendants,
-} from '@sentry/core';
-import { startInactiveSpan } from '@sentry/core/browser';
+} from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/core/browser';
 import { JSDOM } from 'jsdom';
 import { TextDecoder, TextEncoder } from 'util';
 import { afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

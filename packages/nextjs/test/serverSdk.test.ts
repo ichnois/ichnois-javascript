@@ -1,8 +1,8 @@
-import type { Integration } from '@sentry/core';
-import { GLOBAL_OBJ, getMainCarrier, withIsolationScope } from '@sentry/core';
-import { setAsyncLocalStorageAsyncContextStrategy } from '@sentry/server-utils';
-import { close, getCurrentScope, getGlobalScope } from '@sentry/node';
-import * as SentryNode from '@sentry/node';
+import type { Integration } from '@ichnois/core';
+import { GLOBAL_OBJ, getMainCarrier, withIsolationScope } from '@ichnois/core';
+import { setAsyncLocalStorageAsyncContextStrategy } from '@ichnois/server-utils';
+import { close, getCurrentScope, getGlobalScope } from '@ichnois/node';
+import * as SentryNode from '@ichnois/node';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { TRANSACTION_ATTR_SHOULD_DROP_TRANSACTION } from '../src/common/span-attributes-with-logic-attached';
 import { init } from '../src/server';

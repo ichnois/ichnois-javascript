@@ -435,7 +435,7 @@ describe('addRuntimeInjectionTraceDep', () => {
 
     addRuntimeInjectionTraceDep(nuxtMock, true);
 
-    expect(nuxtMock.options.nitro).toEqual({ traceDeps: ['sharp', '@sentry/server-runtime-injection'] });
+    expect(nuxtMock.options.nitro).toEqual({ traceDeps: ['sharp', '@ichnois/server-runtime-injection'] });
   });
 
   it('does not touch the Nitro v2 config', () => {

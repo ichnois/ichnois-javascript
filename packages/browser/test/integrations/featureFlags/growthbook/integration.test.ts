@@ -1,4 +1,4 @@
-import { getCurrentScope, getMainCarrier } from '@sentry/core';
+import { getCurrentScope, getMainCarrier } from '@ichnois/core';
 import { afterEach, describe, expect, it } from 'vitest';
 import { growthbookIntegration } from '../../../../src/integrations/featureFlags/growthbook';
 

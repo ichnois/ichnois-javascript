@@ -1,4 +1,4 @@
-import { getIsolationScope, GLOBAL_OBJ, parseStringToURLObject } from '@sentry/core';
+import { getIsolationScope, GLOBAL_OBJ, parseStringToURLObject } from '@ichnois/core';
 
 /**
  * Subset of ServerBuild shape for middleware name lookup and prerender detection.

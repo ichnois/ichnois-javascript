@@ -1,5 +1,5 @@
-import type { ParameterizedString } from '@sentry/core';
-import { consoleSandbox, defineIntegration } from '@sentry/core';
+import type { ParameterizedString } from '@ichnois/core';
+import { consoleSandbox, defineIntegration } from '@ichnois/core';
 import { FAKE_FUNCTION } from './common';
 import { DEBUG_BUILD } from './debug-build';
 

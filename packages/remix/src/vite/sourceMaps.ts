@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { sentryVitePlugin } from '@sentry/bundler-plugins/vite';
+import { sentryVitePlugin } from '@ichnois/bundler-plugins/vite';
 import type { Plugin, UserConfig } from 'vite';
 import type { SentryRemixVitePluginOptions } from './types';
 

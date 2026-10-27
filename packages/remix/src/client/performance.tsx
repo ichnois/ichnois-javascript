@@ -1,4 +1,4 @@
-import type { Client, StartSpanOptions } from '@sentry/core';
+import type { Client, StartSpanOptions } from '@ichnois/core';
 import {
   debug,
   getActiveSpan,
@@ -7,10 +7,10 @@ import {
   hasSpanStreamingEnabled,
   NAVIGATION_SPAN_NAME_FALLBACK,
   PAGELOAD_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
-import { isNodeEnv } from '@sentry/core/server';
-import type { BrowserClient, browserTracingIntegration as originalBrowserTracingIntegration } from '@sentry/react';
-import { getClient, startBrowserTracingNavigationSpan, startBrowserTracingPageLoadSpan, WINDOW } from '@sentry/react';
+} from '@ichnois/core';
+import { isNodeEnv } from '@ichnois/core/server';
+import type { BrowserClient, browserTracingIntegration as originalBrowserTracingIntegration } from '@ichnois/react';
+import { getClient, startBrowserTracingNavigationSpan, startBrowserTracingPageLoadSpan, WINDOW } from '@ichnois/react';
 import * as React from 'react';
 import { DEBUG_BUILD } from '../utils/debug-build';
 import { hasManifest, maybeParameterizeRemixRoute } from './remixRouteParameterization';

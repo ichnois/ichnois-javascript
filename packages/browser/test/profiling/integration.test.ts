@@ -12,7 +12,7 @@ import {
   browserTracingIntegration,
   browserProfilingIntegration,
 } from '../../src/index';
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { BrowserClient } from '../../src/index';
 

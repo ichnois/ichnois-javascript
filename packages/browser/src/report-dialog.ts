@@ -1,5 +1,5 @@
-import type { ReportDialogOptions } from '@sentry/core';
-import { debug, getClient, getCurrentScope, getReportDialogEndpoint, lastEventId } from '@sentry/core';
+import type { ReportDialogOptions } from '@ichnois/core';
+import { debug, getClient, getCurrentScope, getReportDialogEndpoint, lastEventId } from '@ichnois/core';
 import { DEBUG_BUILD } from './debug-build';
 import { WINDOW } from './helpers';
 

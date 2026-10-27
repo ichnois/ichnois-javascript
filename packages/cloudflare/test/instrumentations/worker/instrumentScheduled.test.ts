@@ -2,8 +2,8 @@
 // Although this is not ideal, this is the best we can do until we have a better way to test cloudflare workers.
 
 import type { ExecutionContext, ScheduledController } from '@cloudflare/workers-types';
-import type { Event, Integration, SerializedCheckIn } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Event, Integration, SerializedCheckIn } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { beforeEach, describe, expect, onTestFinished, test, vi } from 'vitest';
 import { CloudflareClient } from '../../../src/client';
 import {

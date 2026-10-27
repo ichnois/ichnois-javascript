@@ -1,6 +1,6 @@
 import type { ChildProcess } from 'node:child_process';
-import { addBreadcrumb, defineIntegration, isObjectLike } from '@sentry/core';
-import { subscribeDiagnosticsChannel } from '@sentry/server-utils';
+import { addBreadcrumb, defineIntegration, isObjectLike } from '@ichnois/core';
+import { subscribeDiagnosticsChannel } from '@ichnois/server-utils';
 
 interface Options {
   /**

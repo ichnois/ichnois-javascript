@@ -1,4 +1,4 @@
-import * as core from '@sentry/core';
+import * as core from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   finalizeNavigationSpanFromRouterState,
@@ -7,15 +7,15 @@ import {
   updateSpanWithParameterizedRoute,
 } from '../../src/client/utils';
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     getClient: vi.fn(),
   };
 });
 
-vi.mock('@sentry/browser', () => ({
+vi.mock('@ichnois/browser', () => ({
   getAbsoluteUrl: vi.fn((urlOrPath: string) => {
     try {
       return new URL(urlOrPath, 'https://example.com').toString();

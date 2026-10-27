@@ -7,7 +7,7 @@ import {
   SERVER_ADDRESS,
   SERVER_PORT,
 } from '@sentry/conventions/attributes';
-import { SentrySpan, setCurrentClient, spanToJSON } from '@sentry/core';
+import { SentrySpan, setCurrentClient, spanToJSON } from '@ichnois/core';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
   applyCacheResponseAttributes,

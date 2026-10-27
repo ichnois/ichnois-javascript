@@ -1,4 +1,4 @@
-import type { RequestEventData } from '@sentry/core';
+import type { RequestEventData } from '@ichnois/core';
 import {
   captureException,
   continueTrace,
@@ -13,7 +13,7 @@ import {
   SPAN_STATUS_OK,
   startSpan,
   withIsolationScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { flushSafelyWithTimeout, waitUntil } from '../common/utils/responseEnd';
 import { DEBUG_BUILD } from './debug-build';
 import {

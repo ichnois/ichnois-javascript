@@ -1,4 +1,4 @@
-import type { BaseTransportOptions, ClientOptions, Options, TracePropagationTargets } from '@sentry/core';
+import type { BaseTransportOptions, ClientOptions, Options, TracePropagationTargets } from '@ichnois/core';
 
 export interface BaseDenoOptions {
   /**

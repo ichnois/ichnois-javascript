@@ -12,7 +12,7 @@ const mockEnableBfcacheReporting = vi.hoisted(() => vi.fn());
 const mockStartSoftNavigationCorrelation = vi.hoisted(() => vi.fn());
 const mockSupportsSoftNavigations = vi.hoisted(() => vi.fn());
 
-vi.mock('@sentry/browser-utils', () => ({
+vi.mock('@ichnois/browser-utils', () => ({
   addWebVitalsToSpan: mockAddWebVitalsToSpan,
   enableBfcacheReporting: mockEnableBfcacheReporting,
   enableSoftNavigationReporting: mockEnableSoftNavigationReporting,

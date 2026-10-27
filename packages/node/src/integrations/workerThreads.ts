@@ -1,6 +1,6 @@
 import type { Worker } from 'node:worker_threads';
-import { captureException, defineIntegration, isObjectLike } from '@sentry/core';
-import { subscribeDiagnosticsChannel } from '@sentry/server-utils';
+import { captureException, defineIntegration, isObjectLike } from '@ichnois/core';
+import { subscribeDiagnosticsChannel } from '@ichnois/server-utils';
 
 const INTEGRATION_NAME = 'WorkerThreads' as const;
 

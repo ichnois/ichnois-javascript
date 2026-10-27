@@ -9,7 +9,7 @@ import {
   type Scope,
   updateSpanName,
   winterCGRequestToRequestData,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 import { formatRouteTiming } from '../routeTiming';
 import type { MatcherLike, MiddlewareLike, NextFunctionLike, RequestContextLike } from '../types';

@@ -7,7 +7,7 @@ import {
   setAsyncContextStrategy,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { setAsyncLocalStorageAsyncContextStrategy } from '../src/async-context';
 

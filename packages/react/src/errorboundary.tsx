@@ -1,7 +1,7 @@
-import type { ReportDialogOptions } from '@sentry/browser';
-import { getClient, showReportDialog, withScope } from '@sentry/browser';
-import type { Scope } from '@sentry/core';
-import { debug } from '@sentry/core';
+import type { ReportDialogOptions } from '@ichnois/browser';
+import { getClient, showReportDialog, withScope } from '@ichnois/browser';
+import type { Scope } from '@ichnois/core';
+import { debug } from '@ichnois/core';
 import * as React from 'react';
 import { DEBUG_BUILD } from './debug-build';
 import { captureReactException } from './error';

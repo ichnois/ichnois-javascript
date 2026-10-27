@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { continueTrace, getActiveSpan, LRUMap, startSpan, withActiveSpan } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { continueTrace, getActiveSpan, LRUMap, startSpan, withActiveSpan } from '@ichnois/core';
 import {
   GEN_AI_AGENT_NAME,
   GEN_AI_CONVERSATION_ID,

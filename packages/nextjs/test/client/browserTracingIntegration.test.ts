@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { SENTRY_OP } from '@sentry/conventions/attributes';
 import { NAVIGATION, PAGELOAD } from '@sentry/conventions/op';
-import type { Span } from '@sentry/core';
+import type { Span } from '@ichnois/core';
 import {
   createTransport,
   getActiveSpan,
@@ -9,8 +9,8 @@ import {
   resolvedSyncPromise,
   setCurrentClient,
   spanToJSON,
-} from '@sentry/core';
-import { BrowserClient, startBrowserTracingNavigationSpan } from '@sentry/react';
+} from '@ichnois/core';
+import { BrowserClient, startBrowserTracingNavigationSpan } from '@ichnois/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { browserTracingIntegration } from '../../src/client/browserTracingIntegration';
 

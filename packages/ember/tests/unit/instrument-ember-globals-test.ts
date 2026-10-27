@@ -1,9 +1,9 @@
 import { UI_RENDER } from '@sentry/conventions/op';
-import type { RenderEntries } from '@sentry/ember/utils/instrumentEmberGlobals';
+import type { RenderEntries } from '@ichnois/ember/utils/instrumentEmberGlobals';
 import {
   _processComponentRenderAfter,
   _processComponentRenderBefore,
-} from '@sentry/ember/utils/instrumentEmberGlobals';
+} from '@ichnois/ember/utils/instrumentEmberGlobals';
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 import type { SentryTestContext } from '../helpers/setup-sentry';

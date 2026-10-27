@@ -1,5 +1,5 @@
-import type { ClientOptions, Options } from '@sentry/core';
-import { getMainCarrier } from '@sentry/core';
+import type { ClientOptions, Options } from '@ichnois/core';
+import { getMainCarrier } from '@ichnois/core';
 import { setOpenTelemetryContextAsyncContextStrategy } from '../../src/asyncContextStrategy';
 import { initOtel } from './initOtel';
 import type { TestClient } from './TestClient';

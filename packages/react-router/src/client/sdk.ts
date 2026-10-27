@@ -1,7 +1,7 @@
-import type { BrowserOptions } from '@sentry/browser';
-import { init as browserInit } from '@sentry/browser';
-import type { Client } from '@sentry/core';
-import { applySdkMetadata, consoleSandbox, setTag } from '@sentry/core';
+import type { BrowserOptions } from '@ichnois/browser';
+import { init as browserInit } from '@ichnois/browser';
+import type { Client } from '@ichnois/core';
+import { applySdkMetadata, consoleSandbox, setTag } from '@ichnois/core';
 
 const BROWSER_TRACING_INTEGRATION_ID = 'BrowserTracing';
 

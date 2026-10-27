@@ -1,4 +1,4 @@
-import { addHandler, isString, maybeInstrument, timestampInSeconds, triggerHandlers } from '@sentry/core';
+import { addHandler, isString, maybeInstrument, timestampInSeconds, triggerHandlers } from '@ichnois/core';
 import type { HandlerDataXhr, SentryWrappedXMLHttpRequest } from '../types';
 import { WINDOW } from '../types';
 

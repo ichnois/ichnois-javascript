@@ -3,8 +3,8 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import type { Event, FeedbackEvent } from '@sentry/core';
-import { captureFeedback, getClient } from '@sentry/core';
+import type { Event, FeedbackEvent } from '@ichnois/core';
+import { captureFeedback, getClient } from '@ichnois/core';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { DEFAULT_FLUSH_MIN_DELAY, SESSION_IDLE_EXPIRE_DURATION } from '../../src/constants';
 import type { ReplayContainer } from '../../src/replay';

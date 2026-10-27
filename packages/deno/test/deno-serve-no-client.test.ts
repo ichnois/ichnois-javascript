@@ -5,7 +5,7 @@
  * file a fresh module graph, so the wipe stays contained here.
  */
 
-import { getMainCarrier } from '@sentry/core';
+import { getMainCarrier } from '@ichnois/core';
 import { assertEquals } from 'https://deno.land/std@0.212.0/assert/assert_equals.ts';
 import { assertNotEquals } from 'https://deno.land/std@0.212.0/assert/assert_not_equals.ts';
 import { init } from '../build/esm/index.js';

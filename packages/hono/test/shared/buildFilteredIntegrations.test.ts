@@ -1,4 +1,4 @@
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
 import { describe, expect, it, vi } from 'vitest';
 import { buildFilteredIntegrations } from '../../src/shared/buildFilteredIntegrations';
 

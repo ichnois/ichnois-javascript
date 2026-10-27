@@ -1,4 +1,4 @@
-import { originalConsoleMethods } from '@sentry/core';
+import { originalConsoleMethods } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, type Mock, vi } from 'vitest';
 import { getClient } from '../../src/';
 import { init } from '../../src/sdk';

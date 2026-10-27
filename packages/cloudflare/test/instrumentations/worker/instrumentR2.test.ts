@@ -1,5 +1,5 @@
 import type { R2Bucket, R2MultipartUpload } from '@cloudflare/workers-types';
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { instrumentR2Bucket } from '../../../src/instrumentations/worker/instrumentR2';
 

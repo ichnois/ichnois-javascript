@@ -1,4 +1,4 @@
-import * as core from '@sentry/core';
+import * as core from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   captureInstrumentationError,
@@ -7,8 +7,8 @@ import {
   normalizeRoutePath,
 } from '../../src/common/utils';
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual<typeof core>('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual<typeof core>('@ichnois/core');
   return {
     ...actual,
     captureException: vi.fn(),

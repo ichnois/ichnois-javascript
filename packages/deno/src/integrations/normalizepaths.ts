@@ -1,6 +1,6 @@
-import type { IntegrationFn } from '@sentry/core';
-import { createStackParser, defineIntegration, dirname } from '@sentry/core';
-import { nodeStackLineParser } from '@sentry/core/server';
+import type { IntegrationFn } from '@ichnois/core';
+import { createStackParser, defineIntegration, dirname } from '@ichnois/core';
+import { nodeStackLineParser } from '@ichnois/core/server';
 
 const INTEGRATION_NAME = 'NormalizePaths' as const;
 

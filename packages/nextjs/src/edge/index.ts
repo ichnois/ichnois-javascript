@@ -12,9 +12,9 @@ import {
   HTTP_SPAN_NAME_FALLBACK,
   registerSpanErrorInstrumentation,
   spanToJSON,
-} from '@sentry/core';
-import type { VercelEdgeOptions } from '@sentry/vercel-edge';
-import { getDefaultIntegrations, init as vercelEdgeInit } from '@sentry/vercel-edge';
+} from '@ichnois/core';
+import type { VercelEdgeOptions } from '@ichnois/vercel-edge';
+import { getDefaultIntegrations, init as vercelEdgeInit } from '@ichnois/vercel-edge';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { ATTR_NEXT_SPAN_NAME, ATTR_NEXT_SPAN_TYPE } from '../common/nextSpanAttributes';
 import {
@@ -50,7 +50,7 @@ import {
 } from '@sentry/conventions/attributes';
 import { HTTP_SERVER, MIDDLEWARE } from '@sentry/conventions/op';
 
-export * from '@sentry/vercel-edge';
+export * from '@ichnois/vercel-edge';
 export * from '../common';
 export { captureUnderscoreErrorException } from '../common/pages-router-instrumentation/_error';
 

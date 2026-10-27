@@ -6,7 +6,7 @@ import {
   getMainCarrier,
   initAndBind,
   resolvedSyncPromise,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { WORKERS_AI_INTEGRATION_NAME } from '../../../src/ai/workers-ai/constants';
 import { createSpanFromMessage } from '../../../src/integrations/vercel-ai/vercel-ai-dc-subscriber';

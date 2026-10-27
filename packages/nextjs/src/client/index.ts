@@ -1,10 +1,10 @@
 // import/export got a false positive, and affects most of our index barrel files
 // can be removed once following issue is fixed: https://github.com/import-js/eslint-plugin-import/issues/703
 /* eslint-disable import/export */
-import type { Client, EventProcessor, Integration } from '@sentry/core';
-import { applySdkMetadata, consoleSandbox, getGlobalScope, GLOBAL_OBJ } from '@sentry/core';
-import type { BrowserOptions } from '@sentry/react';
-import { getDefaultIntegrations as getReactDefaultIntegrations, init as reactInit } from '@sentry/react';
+import type { Client, EventProcessor, Integration } from '@ichnois/core';
+import { applySdkMetadata, consoleSandbox, getGlobalScope, GLOBAL_OBJ } from '@ichnois/core';
+import type { BrowserOptions } from '@ichnois/react';
+import { getDefaultIntegrations as getReactDefaultIntegrations, init as reactInit } from '@ichnois/react';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { devErrorSymbolicationEventProcessor } from '../common/devErrorSymbolicationEventProcessor';
 import { getClientVercelEnv } from '../common/getVercelEnv';
@@ -14,7 +14,7 @@ import { nextjsClientStackFrameNormalizationIntegration } from './clientNormaliz
 import { createNextRouteProvider } from './routing/routeProvider';
 import { applyTunnelRouteOption } from './tunnelRoute';
 
-export * from '@sentry/react';
+export * from '@ichnois/react';
 export * from '../common';
 export { captureUnderscoreErrorException } from '../common/pages-router-instrumentation/_error';
 

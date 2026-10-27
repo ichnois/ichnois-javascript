@@ -1,5 +1,5 @@
-import type { Client, Measurements, Span } from '@sentry/core';
-import { browserPerformanceTimeOrigin, debug, filterCollectedUrl, setMeasurement, spanToJSON } from '@sentry/core';
+import type { Client, Measurements, Span } from '@ichnois/core';
+import { browserPerformanceTimeOrigin, debug, filterCollectedUrl, setMeasurement, spanToJSON } from '@ichnois/core';
 import { BROWSER_NAVIGATION_TYPE, SENTRY_OP } from '@sentry/conventions/attributes';
 import { DEBUG_BUILD } from '../debug-build';
 import { htmlTreeAsString } from '../htmlTreeAsString';

@@ -1,6 +1,6 @@
-import { _INTERNAL_filterKeyValueData, defineIntegration, safeSetSpanJSONAttributes } from '@sentry/core';
+import { _INTERNAL_filterKeyValueData, defineIntegration, safeSetSpanJSONAttributes } from '@ichnois/core';
 import { getHttpRequestData, WINDOW } from '../helpers';
-import { filterCollectedUrl } from '@sentry/core';
+import { filterCollectedUrl } from '@ichnois/core';
 import {
   HTTP_REQUEST_HEADER_KEY_BASE,
   SENTRY_IS_LOCALHOST,

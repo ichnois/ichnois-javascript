@@ -1,4 +1,4 @@
-import type { StreamedSpanJSON } from '@sentry/core';
+import type { StreamedSpanJSON } from '@ichnois/core';
 import * as fs from 'node:fs';
 import * as os from 'node:os';
 import * as path from 'node:path';
@@ -7,8 +7,8 @@ import { awsLambdaIntegration, redirectLambdaHandler } from '../src/integration/
 
 const mockGetScopeData = vi.fn();
 
-vi.mock('@sentry/core', async () => {
-  const original = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const original = await vi.importActual('@ichnois/core');
   return {
     ...original,
     getCurrentScope: () => ({

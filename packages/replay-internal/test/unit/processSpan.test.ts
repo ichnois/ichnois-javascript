@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import type { StreamedSpanJSON } from '@sentry/core';
+import type { StreamedSpanJSON } from '@ichnois/core';
 import { describe, expect, it, vi } from 'vitest';
 import { Replay } from '../../src/integration';
 

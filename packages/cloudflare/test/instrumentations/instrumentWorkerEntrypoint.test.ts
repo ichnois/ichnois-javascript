@@ -1,6 +1,6 @@
 import type { ExecutionContext } from '@cloudflare/workers-types';
-import type { Event } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Event } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { getInstrumented } from '../../src/instrument';
 import {
@@ -176,7 +176,7 @@ describe('instrumentWorkerEntrypoint', () => {
   });
 
   it('Calls setAsyncLocalStorageAsyncContextStrategy outside Proxy (at instrumentation time), not inside construct', async () => {
-    const asyncModule = await import('@sentry/server-utils/no-diagnostic-channels');
+    const asyncModule = await import('@ichnois/server-utils/no-diagnostic-channels');
     const setStrategy = vi.spyOn(asyncModule, 'setAsyncLocalStorageAsyncContextStrategy');
     const mockContext = createMockExecutionContext();
     const TestClass = class extends WorkerEntrypoint {

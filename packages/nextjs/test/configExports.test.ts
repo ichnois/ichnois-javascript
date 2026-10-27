@@ -37,7 +37,7 @@ describe('`./config` subpath export', () => {
 /**
  * ESM consumers of a CJS file only get the named exports `cjs-module-lexer` can see statically — anything it misses
  * links as `undefined`. So `withSentryConfig` has to stay statically detectable for `import { withSentryConfig } from
- * '@sentry/nextjs/config'` to work.
+ * '@ichnois/nextjs/config'` to work.
  *
  * Exercises the generated artifact, so it needs the package built.
  */

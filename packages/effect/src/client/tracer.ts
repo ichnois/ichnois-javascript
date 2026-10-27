@@ -1,4 +1,4 @@
-import { startInactiveSpan } from '@sentry/core/browser';
+import { startInactiveSpan } from '@ichnois/core/browser';
 import { makeSentryTracer } from '../tracer';
 
 /**

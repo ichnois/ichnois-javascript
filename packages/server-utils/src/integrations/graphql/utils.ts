@@ -1,6 +1,6 @@
 import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_GRAPHQL_OPERATION } from '@sentry/conventions/attributes';
-import type { Span, SpanAttributeValue } from '@sentry/core';
-import { getClient, hasSpanStreamingEnabled, isObjectLike, getRootSpan, spanToJSON } from '@sentry/core';
+import type { Span, SpanAttributeValue } from '@ichnois/core';
+import { getClient, hasSpanStreamingEnabled, isObjectLike, getRootSpan, spanToJSON } from '@ichnois/core';
 import type { GraphqlDocumentNode, GraphqlToken } from './types';
 
 // Same key the OTel path uses, so renames stay consistent across both.

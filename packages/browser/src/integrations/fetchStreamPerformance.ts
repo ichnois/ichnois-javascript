@@ -1,6 +1,6 @@
 import { HTTP_REQUEST_METHOD, SENTRY_OP, URL_DOMAIN, URL_FULL, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { HTTP_CLIENT_STREAM } from '@sentry/conventions/op';
-import type { IntegrationFn, Span } from '@sentry/core';
+import type { IntegrationFn, Span } from '@ichnois/core';
 import {
   addFetchEndInstrumentationHandler,
   addFetchInstrumentationHandler,
@@ -11,8 +11,8 @@ import {
   parseStringToURLObject,
   stripDataUrlContent,
   filterCollectedUrl,
-} from '@sentry/core';
-import { startInactiveSpan } from '@sentry/core/browser';
+} from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/core/browser';
 import { WINDOW } from '../helpers';
 
 const responseToStreamSpan = new WeakMap<object, Span>();

@@ -1,4 +1,4 @@
-import type { Span, WrappedFunction } from '@sentry/core';
+import type { Span, WrappedFunction } from '@ichnois/core';
 import {
   captureException,
   fill,
@@ -7,7 +7,7 @@ import {
   SPAN_STATUS_ERROR,
   startSpan,
   stringify,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   GEN_AI_OPERATION_NAME,
   GEN_AI_TOOL_CALL_ARGUMENTS,

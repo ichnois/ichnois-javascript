@@ -1,8 +1,8 @@
 import * as diagnosticsChannel from 'node:diagnostics_channel';
-import { debug, startInactiveSpan, waitForTracingChannelBinding } from '@sentry/core';
-import type { OrchestrionChannelContext } from '@sentry/server-utils';
-import { bindTracingChannelToSpan } from '@sentry/server-utils';
-import { nestjsChannels as CHANNELS } from '@sentry/server-utils/orchestrion/config';
+import { debug, startInactiveSpan, waitForTracingChannelBinding } from '@ichnois/core';
+import type { OrchestrionChannelContext } from '@ichnois/server-utils';
+import { bindTracingChannelToSpan } from '@ichnois/server-utils';
+import { nestjsChannels as CHANNELS } from '@ichnois/server-utils/orchestrion/config';
 import { DEBUG_BUILD } from '../debug-build';
 import type { AnyFn } from './helpers';
 import { isWrapped, markWrapped } from './helpers';

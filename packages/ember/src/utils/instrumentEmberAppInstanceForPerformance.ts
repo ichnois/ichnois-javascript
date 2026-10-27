@@ -4,8 +4,8 @@ import type RouterService from '@ember/routing/router-service';
 import type {
   startBrowserTracingNavigationSpan as startBrowserTracingNavigationSpanType,
   startBrowserTracingPageLoadSpan as startBrowserTracingPageLoadSpanType,
-} from '@sentry/browser';
-import { getAbsoluteUrl, startInactiveSpan, WINDOW } from '@sentry/browser';
+} from '@ichnois/browser';
+import { getAbsoluteUrl, startInactiveSpan, WINDOW } from '@ichnois/browser';
 import {
   ROUTER_NAVIGATION_ROUTE_ID,
   SENTRY_SEGMENT_NAME_SOURCE,
@@ -25,7 +25,7 @@ import {
   spanToJSON,
   type Client,
   type Span,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { getBackburner } from './utils.ts';
 
 interface EmberRouterMain {

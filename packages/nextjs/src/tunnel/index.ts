@@ -1,4 +1,4 @@
-import { dsnToString, getClient, handleTunnelRequest, makeDsn, suppressTracing } from '@sentry/core';
+import { dsnToString, getClient, handleTunnelRequest, makeDsn, suppressTracing } from '@ichnois/core';
 
 export interface CreateSentryTunnelRouteOptions {
   /**
@@ -13,13 +13,13 @@ type TunnelRouteHandler = (request: Request) => Promise<Response>;
 /**
  * Creates a route handler for the `tunnelRoute`, like `POST`, but with your own DSN allowlist.
  *
- * In most cases, use `export { POST } from '@sentry/nextjs/tunnel'` instead. Use this function only if the route must
+ * In most cases, use `export { POST } from '@ichnois/nextjs/tunnel'` instead. Use this function only if the route must
  * accept DSNs other than the one of the server SDK, for example a different browser DSN.
  *
  * @example
  * ```ts
  * // app/sentry-tunnel/route.ts
- * import { createSentryTunnelRoute } from '@sentry/nextjs/tunnel';
+ * import { createSentryTunnelRoute } from '@ichnois/nextjs/tunnel';
  *
  * export const { POST } = createSentryTunnelRoute({
  *   allowedDsns: ['https://public@o0.ingest.sentry.io/0'],
@@ -57,7 +57,7 @@ export function createSentryTunnelRoute(options: CreateSentryTunnelRouteOptions 
  * @example
  * ```ts
  * // app/sentry-tunnel/route.ts
- * export { POST } from '@sentry/nextjs/tunnel';
+ * export { POST } from '@ichnois/nextjs/tunnel';
  * ```
  */
 export const POST: TunnelRouteHandler = createSentryTunnelRoute().POST;

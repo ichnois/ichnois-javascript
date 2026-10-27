@@ -1,14 +1,14 @@
 import { HTTP_REQUEST_METHOD } from '@sentry/conventions/attributes';
-import type { CollectBehavior } from '@sentry/core';
-import { addBreadcrumb, getCurrentScope, withScope } from '@sentry/core';
+import type { CollectBehavior } from '@ichnois/core';
+import { addBreadcrumb, getCurrentScope, withScope } from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { UndiciRequest, UndiciResponse } from '../../src/integrations/node-fetch/types';
 import { addFetchRequestBreadcrumb } from '../../src/utils/outgoingFetchRequest';
 import { NodeClient } from '../../src';
 import { getDefaultNodeClientOptions } from '../helpers/getDefaultNodeClientOptions';
 
-vi.mock('@sentry/core', async () => {
-  const actual = (await vi.importActual('@sentry/core')) as Record<string, unknown>;
+vi.mock('@ichnois/core', async () => {
+  const actual = (await vi.importActual('@ichnois/core')) as Record<string, unknown>;
   return { ...actual, addBreadcrumb: vi.fn() };
 });
 

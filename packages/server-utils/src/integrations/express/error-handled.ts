@@ -1,4 +1,4 @@
-import { addNonEnumerableProperty } from '@sentry/core';
+import { addNonEnumerableProperty } from '@ichnois/core';
 
 // Non-enumerable marker set on the Express *request* once the channel-based `expressIntegration()` has
 // taken responsibility for an error on it — either captured it, or deliberately skipped it per

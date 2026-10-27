@@ -1,5 +1,5 @@
-import { getClient, startInactiveSpan } from '@sentry/browser';
-import type { Span } from '@sentry/core';
+import { getClient, startInactiveSpan } from '@ichnois/browser';
+import type { Span } from '@ichnois/core';
 import {
   hasSpanStreamingEnabled,
   spanToJSON,
@@ -8,7 +8,7 @@ import {
   UI_RENDER_SPAN_NAME_FALLBACK,
   UI_UPDATE_SPAN_NAME_FALLBACK,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { SENTRY_DESCRIPTION, SENTRY_OP, UI_COMPONENT_NAME, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { UI_MOUNT, UI_RENDER, UI_UPDATE } from '@sentry/conventions/op';
 import * as React from 'react';

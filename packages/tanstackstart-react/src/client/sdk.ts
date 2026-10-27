@@ -1,7 +1,7 @@
-import type { Client } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
-import type { BrowserOptions as ReactBrowserOptions } from '@sentry/react';
-import { getDefaultIntegrations as getReactDefaultIntegrations, init as initReactSDK } from '@sentry/react';
+import type { Client } from '@ichnois/core';
+import { applySdkMetadata } from '@ichnois/core';
+import type { BrowserOptions as ReactBrowserOptions } from '@ichnois/react';
+import { getDefaultIntegrations as getReactDefaultIntegrations, init as initReactSDK } from '@ichnois/react';
 import { applyTunnelRouteOption } from './tunnelRoute';
 
 /**

@@ -1,9 +1,9 @@
-import { getCurrentScope, getMainCarrier } from '@sentry/core';
-import * as SentryReact from '@sentry/react';
+import { getCurrentScope, getMainCarrier } from '@ichnois/core';
+import * as SentryReact from '@ichnois/react';
 import { afterEach, describe, expect, it, type Mock, vi } from 'vitest';
 import { init } from '../src/index.client';
 
-vi.mock('@sentry/react', { spy: true });
+vi.mock('@ichnois/react', { spy: true });
 
 const reactInit = SentryReact.init as Mock;
 

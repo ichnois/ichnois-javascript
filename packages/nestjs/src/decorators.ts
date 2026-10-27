@@ -1,8 +1,8 @@
-import type { MonitorConfig } from '@sentry/core';
+import type { MonitorConfig } from '@ichnois/core';
 import { CODE_FUNCTION_NAME, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import { captureException } from '@sentry/core';
-import * as Sentry from '@sentry/node';
-import { startSpan } from '@sentry/node';
+import { captureException } from '@ichnois/core';
+import * as Sentry from '@ichnois/node';
+import { startSpan } from '@ichnois/node';
 import { isExpectedError } from './helpers';
 import { copyReflectMetadata } from './integrations/helpers';
 

@@ -1,5 +1,5 @@
-import { addNonEnumerableProperty, getClient, hasSpanStreamingEnabled, startSpan } from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+import { addNonEnumerableProperty, getClient, hasSpanStreamingEnabled, startSpan } from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import {
   SENTRY_SEGMENT_NAME_SOURCE,
   CODE_FUNCTION_NAME,

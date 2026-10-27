@@ -1,6 +1,6 @@
-import type { ReplayRecordingData, Transport } from '@sentry/core';
-import { getClient } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { ReplayRecordingData, Transport } from '@ichnois/core';
+import { getClient } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
 import type { Mocked, MockedFunction } from 'vitest';
 import { expect, vi } from 'vitest';
 import type { ReplayContainer, Session } from '../src/types';

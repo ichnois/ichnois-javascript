@@ -11,7 +11,7 @@ describe('buildClientSnippet', () => {
   it('returns a basic Sentry init call with default options', () => {
     const snippet = buildClientSnippet({});
     expect(snippet).toMatchInlineSnapshot(`
-      "import * as Sentry from "@sentry/astro";
+      "import * as Sentry from "@ichnois/astro";
 
       Sentry.init({
         dsn: import.meta.env.PUBLIC_SENTRY_DSN,
@@ -30,7 +30,7 @@ describe('buildClientSnippet', () => {
     const snippet = buildClientSnippet(buildTimeSdkOptions);
 
     expect(snippet).toMatchInlineSnapshot(`
-      "import * as Sentry from "@sentry/astro";
+      "import * as Sentry from "@ichnois/astro";
 
       Sentry.init({
         dsn: import.meta.env.PUBLIC_SENTRY_DSN,
@@ -48,7 +48,7 @@ describe('buildClientSnippet', () => {
   it('does not include browserTracingIntegration if bundleSizeOptimizations.excludeTracing is true', () => {
     const snippet = buildClientSnippet({ bundleSizeOptimizations: { excludeTracing: true } });
     expect(snippet).toMatchInlineSnapshot(`
-      "import * as Sentry from "@sentry/astro";
+      "import * as Sentry from "@ichnois/astro";
 
       Sentry.init({
         dsn: import.meta.env.PUBLIC_SENTRY_DSN,
@@ -68,7 +68,7 @@ describe('buildServerSnippet', () => {
   it('returns a basic Sentry init call with default options', () => {
     const snippet = buildServerSnippet({});
     expect(snippet).toMatchInlineSnapshot(`
-      "import * as Sentry from "@sentry/astro";
+      "import * as Sentry from "@ichnois/astro";
 
       Sentry.init({
         dsn: import.meta.env.PUBLIC_SENTRY_DSN,
@@ -84,7 +84,7 @@ describe('buildServerSnippet', () => {
     const snippet = buildServerSnippet(buildTimeSdkOptions);
 
     expect(snippet).toMatchInlineSnapshot(`
-      "import * as Sentry from "@sentry/astro";
+      "import * as Sentry from "@ichnois/astro";
 
       Sentry.init({
         dsn: import.meta.env.PUBLIC_SENTRY_DSN,

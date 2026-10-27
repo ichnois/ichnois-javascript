@@ -1,16 +1,16 @@
 // @vitest-environment jsdom
 import { SENTRY_OP, URL_FULL, URL_PATH } from '@sentry/conventions/attributes';
 import { PAGELOAD } from '@sentry/conventions/op';
-import type { Client } from '@sentry/core';
-import type * as SentryCore from '@sentry/core';
-import type * as SentryReact from '@sentry/react';
+import type { Client } from '@ichnois/core';
+import type * as SentryCore from '@ichnois/core';
+import type * as SentryReact from '@ichnois/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 // Loaded for their side effect: `setup()` re-imports these for every test, and the first of
 // those imports also pays for transforming the whole `@sentry/react` graph. Charged to a test
 // that ran into the 5s timeout on a loaded CI runner; charged to collection it is untimed.
 // Later imports only re-evaluate an already transformed graph, which is cheap.
-import '@sentry/core';
-import '@sentry/react';
+import '@ichnois/core';
+import '@ichnois/react';
 import '../../src/client/routing/appRouterRoutingInstrumentation';
 import type * as AppRouterInstrumentation from '../../src/client/routing/appRouterRoutingInstrumentation';
 import type * as RouteProvider from '../../src/client/routing/routeProvider';
@@ -69,8 +69,8 @@ async function setup(traceLifecycle: 'stream' | 'static'): Promise<{
   instrumentation: Instrumentation;
 }> {
   vi.resetModules();
-  const core: Core = await import('@sentry/core');
-  const react: React = await import('@sentry/react');
+  const core: Core = await import('@ichnois/core');
+  const react: React = await import('@ichnois/react');
   const instrumentation: Instrumentation = await import('../../src/client/routing/appRouterRoutingInstrumentation');
   const routeProvider: RouteProviderModule = await import('../../src/client/routing/routeProvider');
 

@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */ // TODO: We might want to split this file up
 import { SENTRY_SEGMENT_NAME_SOURCE } from '@sentry/conventions/attributes';
-import type { ReplayRecordingMode, ReplayStopReason, Span } from '@sentry/core';
-import { getActiveSpan, getClient, getRootSpan, spanToJSON } from '@sentry/core';
+import type { ReplayRecordingMode, ReplayStopReason, Span } from '@ichnois/core';
+import { getActiveSpan, getClient, getRootSpan, spanToJSON } from '@ichnois/core';
 import { EventType, record } from '@sentry/rrweb';
 import {
   BUFFER_CHECKOUT_TIME,

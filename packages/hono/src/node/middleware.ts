@@ -1,6 +1,6 @@
-import { consoleSandbox, debug, getClient } from '@sentry/core';
-import type { NodeOptions } from '@sentry/node';
-import { applyHonoPatches, createHonoRequestMiddleware, type SentryHonoMiddlewareOptions } from '@sentry/server-utils';
+import { consoleSandbox, debug, getClient } from '@ichnois/core';
+import type { NodeOptions } from '@ichnois/node';
+import { applyHonoPatches, createHonoRequestMiddleware, type SentryHonoMiddlewareOptions } from '@ichnois/server-utils';
 import type { Env, Hono, MiddlewareHandler } from 'hono';
 
 export interface HonoNodeOptions extends NodeOptions {}

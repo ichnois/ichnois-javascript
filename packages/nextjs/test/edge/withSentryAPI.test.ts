@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { afterAll, afterEach, describe, expect, it, vi } from 'vitest';
 import { wrapApiHandlerWithSentry } from '../../src/edge';
 

@@ -1,8 +1,8 @@
-import type { Client, Span } from '@sentry/core';
-import { getActiveSpan, getRootSpan, GLOBAL_OBJ } from '@sentry/core';
-import type { HttpServerResponse } from '@sentry/core/server';
-import { _INTERNAL_safeUnref } from '@sentry/core/server';
-import { subscribeDiagnosticsChannel } from '@sentry/server-utils';
+import type { Client, Span } from '@ichnois/core';
+import { getActiveSpan, getRootSpan, GLOBAL_OBJ } from '@ichnois/core';
+import type { HttpServerResponse } from '@ichnois/core/server';
+import { _INTERNAL_safeUnref } from '@ichnois/core/server';
+import { subscribeDiagnosticsChannel } from '@ichnois/server-utils';
 
 // On Vercel, `http.server.request.start` fires without the request context, while this channel fires with it.
 const HTTP_ON_SERVER_RESPONSE_FINISH = 'http.server.response.finish';

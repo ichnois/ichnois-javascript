@@ -1,7 +1,7 @@
 import type { Span } from '@opentelemetry/api';
 import { context, trace } from '@opentelemetry/api';
-import type { Scope } from '@sentry/core';
-import { _INTERNAL_setSpanForScope, getCurrentScope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
+import { _INTERNAL_setSpanForScope, getCurrentScope } from '@ichnois/core';
 
 /**
  * Forks the current scope and sets the provided span as active span in the context of the provided callback. Can be

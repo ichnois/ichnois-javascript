@@ -1,5 +1,5 @@
-import type { BuildTimeOptionsBase } from '@sentry/core';
-import type { SentryVitePluginOptions } from '@sentry/bundler-plugins/vite';
+import type { BuildTimeOptionsBase } from '@ichnois/core';
+import type { SentryVitePluginOptions } from '@ichnois/bundler-plugins/vite';
 import type { AutoInstrumentSelection } from './autoInstrument';
 import type { SupportedSvelteKitAdapters } from './detectAdapter';
 

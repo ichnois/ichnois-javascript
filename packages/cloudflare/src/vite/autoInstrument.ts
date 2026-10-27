@@ -17,7 +17,7 @@ function normalizePath(path: string): string {
 const JS_EXTENSION_REGEX = /\.[cm]?[jt]sx?$/;
 
 // Re-exports everything the generated code uses, and adds the Next.js span handling and OpenTelemetry context.
-const NEXTJS_CLOUDFLARE_MODULE = '@sentry/nextjs/cloudflare';
+const NEXTJS_CLOUDFLARE_MODULE = '@ichnois/nextjs/cloudflare';
 
 /**
  * Whether `@sentry/nextjs/cloudflare` resolves from `importer`. Vite throws instead of returning `null` when

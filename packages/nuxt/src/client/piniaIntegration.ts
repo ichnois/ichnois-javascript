@@ -1,6 +1,6 @@
-import type { IntegrationFn } from '@sentry/core';
-import { consoleSandbox, defineIntegration } from '@sentry/core';
-import { createSentryPiniaPlugin } from '@sentry/vue';
+import type { IntegrationFn } from '@ichnois/core';
+import { consoleSandbox, defineIntegration } from '@ichnois/core';
+import { createSentryPiniaPlugin } from '@ichnois/vue';
 
 const INTEGRATION_NAME = 'Pinia';
 

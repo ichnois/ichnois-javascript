@@ -1,5 +1,5 @@
 import { AsyncLocalStorage } from 'node:async_hooks';
-import type { Scope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
 import {
   getAsyncContextStrategy,
   _INTERNAL_safeMathRandom,
@@ -9,7 +9,7 @@ import {
   getMainCarrier,
   isContinuingTrace,
   setAsyncContextStrategy,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 type ScopeStore = { scope: Scope; isolationScope: Scope };
 

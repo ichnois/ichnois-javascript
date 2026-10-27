@@ -1,4 +1,4 @@
-import type { addBreadcrumb, captureEvent, captureException, captureMessage, Scope } from '@sentry/core';
+import type { addBreadcrumb, captureEvent, captureException, captureMessage, Scope } from '@ichnois/core';
 import type { showReportDialog } from './report-dialog';
 import type { forceLoad, init, onLoad } from './sdk';
 
@@ -14,8 +14,8 @@ type Queued<Fn> = Fn extends (...args: infer Args) => unknown ? (...args: Args) 
  *
  * @example
  * ```ts
- * import type * as SentryBrowser from '@sentry/browser';
- * import type { LoaderSentry } from '@sentry/browser';
+ * import type * as SentryBrowser from '@ichnois/browser';
+ * import type { LoaderSentry } from '@ichnois/browser';
  *
  * declare global {
  *   interface Window {

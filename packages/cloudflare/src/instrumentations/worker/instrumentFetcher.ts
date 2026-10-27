@@ -1,5 +1,5 @@
 import type { Fetcher } from '@cloudflare/workers-types';
-import { _INTERNAL_getTracingHeadersForFetchRequest } from '@sentry/core';
+import { _INTERNAL_getTracingHeadersForFetchRequest } from '@ichnois/core';
 
 /**
  * Wraps a fetch-like function to create a span and propagate trace headers

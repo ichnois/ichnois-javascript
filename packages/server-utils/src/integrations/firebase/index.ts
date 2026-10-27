@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
 import { firebaseModuleNames } from '../../orchestrion/config/firebase';
 import { invokeOrchestrionInstrumentation } from '../../orchestrion/instrumentation';
 import { instrumentFirebase } from './instrumentation';

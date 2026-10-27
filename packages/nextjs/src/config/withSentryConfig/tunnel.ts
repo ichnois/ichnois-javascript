@@ -1,4 +1,4 @@
-import { _INTERNAL_safeMathRandom } from '@sentry/core';
+import { _INTERNAL_safeMathRandom } from '@ichnois/core';
 import * as fs from 'fs';
 import * as path from 'path';
 import { TUNNEL_ROUTE_HANDLER_PATH, type TunnelRouteMode } from '../../common/utils/tunnelPathnameMatch';

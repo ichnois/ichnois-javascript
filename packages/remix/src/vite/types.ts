@@ -1,4 +1,4 @@
-import type { BuildTimeOptionsBase } from '@sentry/core';
+import type { BuildTimeOptionsBase } from '@ichnois/core';
 
 export type SentryRemixVitePluginOptions = BuildTimeOptionsBase & {
   /**

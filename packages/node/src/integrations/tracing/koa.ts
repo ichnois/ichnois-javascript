@@ -1,4 +1,4 @@
-import { attachKoaErrorHandler } from '@sentry/server-utils';
+import { attachKoaErrorHandler } from '@ichnois/server-utils';
 
 /**
  * Add a Koa error handler to capture errors to Sentry.
@@ -13,7 +13,7 @@ import { attachKoaErrorHandler } from '@sentry/server-utils';
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@ichnois/node');
  * const Koa = require("koa");
  *
  * const app = new Koa();

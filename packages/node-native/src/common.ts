@@ -1,4 +1,4 @@
-import type { Contexts, DsnComponents, Primitive, ScopeData, SdkMetadata, Session } from '@sentry/core';
+import type { Contexts, DsnComponents, Primitive, ScopeData, SdkMetadata, Session } from '@ichnois/core';
 
 export const POLL_RATIO = 2;
 

@@ -1,4 +1,4 @@
-import type { FeedbackInternalOptions, FeedbackModalIntegration } from '@sentry/core';
+import type { FeedbackInternalOptions, FeedbackModalIntegration } from '@ichnois/core';
 import type { ComponentType, h as hType, MouseEventHandler, VNode } from 'preact';
 import { h } from 'preact'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import type * as Hooks from 'preact/hooks';

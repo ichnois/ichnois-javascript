@@ -1,4 +1,4 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { createRemixRouteProvider } from '../../src/client/routeProvider';
 

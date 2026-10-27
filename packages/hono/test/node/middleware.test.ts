@@ -6,22 +6,22 @@ import {
   NETWORK_TRANSPORT,
   NETWORK_TYPE,
 } from '@sentry/conventions/attributes';
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { Hono } from 'hono';
 import { beforeEach, describe, expect, it, type Mock, vi } from 'vitest';
 import { sentry } from '../../src/node/middleware';
 import { init } from '../../src/node/sdk';
 import { requestConnInfoAttributes } from '../shared/requestConnInfoAttributes';
 
-vi.mock('@sentry/node', () => ({
+vi.mock('@ichnois/node', () => ({
   init: vi.fn(),
 }));
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-const { init: initNodeMock } = await vi.importMock<typeof import('@sentry/node')>('@sentry/node');
+const { init: initNodeMock } = await vi.importMock<typeof import('@ichnois/node')>('@ichnois/node');
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual('@ichnois/core');
   return {
     ...actual,
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment

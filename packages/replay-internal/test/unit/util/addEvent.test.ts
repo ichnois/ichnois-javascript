@@ -12,7 +12,7 @@ import { BASE_TIMESTAMP } from '../..';
 import { getTestEventIncremental } from '../../utils/getTestEvent';
 import { setupReplayContainer } from '../../utils/setupReplayContainer';
 import { getDefaultClientOptions, init } from '../../utils/TestClient';
-import { getCurrentScope } from '@sentry/core';
+import { getCurrentScope } from '@ichnois/core';
 
 describe('Unit | util | addEvent', () => {
   beforeAll(() => {

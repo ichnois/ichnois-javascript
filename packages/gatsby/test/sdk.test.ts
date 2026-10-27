@@ -1,9 +1,9 @@
-import { init, SDK_VERSION } from '@sentry/react';
+import { init, SDK_VERSION } from '@ichnois/react';
 import type { Mock } from 'vitest';
 import { afterEach, describe, expect, test, vi } from 'vitest';
 import { init as gatsbyInit } from '../src/sdk';
 
-vi.mock('@sentry/react', async requiredActual => {
+vi.mock('@ichnois/react', async requiredActual => {
   const actual = (await requiredActual()) as any;
   return {
     ...actual,

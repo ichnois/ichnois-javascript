@@ -1,5 +1,5 @@
 import { HTTP_REQUEST_METHOD, URL_FRAGMENT, URL_QUERY } from '@sentry/conventions/attributes';
-import type { LRUMap, SanitizedRequestData, Span } from '@sentry/core';
+import type { LRUMap, SanitizedRequestData, Span } from '@ichnois/core';
 import {
   filterCollectedUrlQuery,
   addBreadcrumb,
@@ -15,9 +15,9 @@ import {
   mergeBaggageHeaders,
   spanIsIgnored,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { UndiciRequest, UndiciResponse } from '../integrations/node-fetch/types';
-import { debug } from '@sentry/core';
+import { debug } from '@ichnois/core';
 const SENTRY_TRACE_HEADER = 'sentry-trace';
 const SENTRY_BAGGAGE_HEADER = 'baggage';
 const W3C_TRACEPARENT_HEADER = 'traceparent';

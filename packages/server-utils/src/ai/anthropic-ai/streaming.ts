@@ -1,5 +1,5 @@
-import { captureException, SPAN_STATUS_ERROR } from '@sentry/core';
-import type { Span } from '@sentry/core';
+import { captureException, SPAN_STATUS_ERROR } from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import { endStreamSpan } from '../core/utils';
 import type { AnthropicAiStreamingEvent } from './types';
 import { mapAnthropicErrorToStatusMessage } from './utils';

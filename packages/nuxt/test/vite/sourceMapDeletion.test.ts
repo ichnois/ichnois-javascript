@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
-import { globFiles } from '@sentry/bundler-plugins/core';
+import { globFiles } from '@ichnois/bundler-plugins/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { deletePublicSourceMaps, getFallbackFilesToDelete } from '../../src/vite/sourceMapDeletion';
 

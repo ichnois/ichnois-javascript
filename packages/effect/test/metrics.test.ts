@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@effect/vitest';
-import * as sentryCore from '@sentry/core';
+import * as sentryCore from '@ichnois/core';
 import * as Context from 'effect/Context';
 import { Duration, Effect, Layer, Metric } from 'effect';
 import { TestClock } from 'effect/testing';

@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { debug, getCurrentScope, setCurrentClient } from '@sentry/core';
-import { setRouteProvider } from '@sentry/browser-utils';
+import { debug, getCurrentScope, setCurrentClient } from '@ichnois/core';
+import { setRouteProvider } from '@ichnois/browser-utils';
 import { BrowserClient } from '../../src/client';
 import { _collectNotRestoredReasons, _getSegmentName, _resolveMaxReasons } from '../../src/integrations/bfcacheMetrics';
 import { WINDOW } from '../../src/helpers';

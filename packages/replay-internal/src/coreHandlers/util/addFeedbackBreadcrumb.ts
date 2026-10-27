@@ -1,4 +1,4 @@
-import type { FeedbackEvent } from '@sentry/core';
+import type { FeedbackEvent } from '@ichnois/core';
 import { EventType } from '@sentry/rrweb';
 import type { ReplayContainer } from '../../types';
 

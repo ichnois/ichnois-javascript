@@ -17,7 +17,7 @@ import {
   REQUEST_HANDLER_SPAN_NAME_FALLBACK,
   ROUTER_SPAN_NAME_FALLBACK,
   startSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   HAPI_EXT_TYPE,
   HAPI_PLUGIN_NAME,

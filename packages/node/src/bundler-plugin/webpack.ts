@@ -1,7 +1,7 @@
-import { sentryWebpackPlugin as sentryWebpackBundlerPlugin } from '@sentry/bundler-plugins/webpack';
-import type { SentryWebpackPluginOptions as SentryWebpackPluginOptionsBase } from '@sentry/bundler-plugins/webpack';
-import type { InstrumentationConfig } from '@sentry/server-utils';
-import { sentryOrchestrionWebpackPlugin } from '@sentry/server-utils/orchestrion/webpack';
+import { sentryWebpackPlugin as sentryWebpackBundlerPlugin } from '@ichnois/bundler-plugins/webpack';
+import type { SentryWebpackPluginOptions as SentryWebpackPluginOptionsBase } from '@ichnois/bundler-plugins/webpack';
+import type { InstrumentationConfig } from '@ichnois/server-utils';
+import { sentryOrchestrionWebpackPlugin } from '@ichnois/server-utils/orchestrion/webpack';
 
 export type SentryWebpackPluginOptions = SentryWebpackPluginOptionsBase & {
   /**
@@ -31,7 +31,7 @@ type WebpackCompiler = Parameters<ReturnType<typeof sentryWebpackBundlerPlugin>[
  * @example
  * ```ts
  * // webpack.config.mjs
- * import { sentryWebpackPlugin } from '@sentry/node/webpack';
+ * import { sentryWebpackPlugin } from '@ichnois/node/webpack';
  * export default { plugins: [sentryWebpackPlugin({ org: '…', project: '…' })] };
  * ```
  */

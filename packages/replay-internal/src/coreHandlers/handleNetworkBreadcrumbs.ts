@@ -1,7 +1,7 @@
-import type { Breadcrumb, BreadcrumbHint, FetchBreadcrumbData } from '@sentry/core';
-import type { XhrBreadcrumbData } from '@sentry/core/browser';
-import { getClient } from '@sentry/core';
-import type { FetchHint, XhrHint } from '@sentry/browser-utils';
+import type { Breadcrumb, BreadcrumbHint, FetchBreadcrumbData } from '@ichnois/core';
+import type { XhrBreadcrumbData } from '@ichnois/core/browser';
+import { getClient } from '@ichnois/core';
+import type { FetchHint, XhrHint } from '@ichnois/browser-utils';
 import { DEBUG_BUILD } from '../debug-build';
 import type { ReplayContainer, ReplayNetworkOptions } from '../types';
 import { debug } from '../util/logger';

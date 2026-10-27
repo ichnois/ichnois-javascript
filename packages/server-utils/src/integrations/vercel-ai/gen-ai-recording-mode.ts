@@ -1,4 +1,4 @@
-import type { Client } from '@sentry/core';
+import type { Client } from '@ichnois/core';
 
 const eveRecordingClients = new WeakSet<Client>();
 

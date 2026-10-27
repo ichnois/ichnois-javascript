@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { debug, getTraceData } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { debug, getTraceData } from '@ichnois/core';
 import {
   FAAS_INVOCATION_ID as ATTR_FAAS_INVOCATION_ID,
   FAAS_INVOKED_NAME as ATTR_FAAS_INVOKED_NAME,

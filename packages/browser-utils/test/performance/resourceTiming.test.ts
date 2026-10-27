@@ -1,4 +1,4 @@
-import * as utils from '@sentry/core';
+import * as utils from '@ichnois/core';
 import type { MockInstance } from 'vitest';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { resourceTimingToSpanAttributes } from '../../src/performance/resourceTiming';

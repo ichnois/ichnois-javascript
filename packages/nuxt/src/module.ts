@@ -14,7 +14,7 @@ type NuxtPageSubset = { file?: string; path: string };
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: '@sentry/nuxt/module',
+    name: '@ichnois/nuxt/module',
     configKey: 'sentry',
     compatibility: {
       nuxt: '>=3.7.0',

@@ -1,5 +1,5 @@
-import type { Scope } from '@sentry/core';
-import { addExceptionMechanism, isString } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
+import { addExceptionMechanism, isString } from '@ichnois/core';
 import type { Handler } from 'aws-lambda';
 
 type HandlerEvent = Parameters<Handler<{ headers?: Record<string, string> }>>[0];

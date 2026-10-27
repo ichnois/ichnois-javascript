@@ -1,8 +1,8 @@
-import * as Sentry from '@sentry/browser';
-import { applySdkMetadata } from '@sentry/core';
+import * as Sentry from '@ichnois/browser';
+import { applySdkMetadata } from '@ichnois/core';
 
-import type { BrowserOptions } from '@sentry/browser';
-import type { Client } from '@sentry/core';
+import type { BrowserOptions } from '@ichnois/browser';
+import type { Client } from '@ichnois/core';
 
 /**
  * Initialize the Sentry SDK for Ember.
@@ -15,7 +15,7 @@ import type { Client } from '@sentry/core';
  *
  * @example
  * ```typescript
- * import * as Sentry from '@sentry/ember';
+ * import * as Sentry from '@ichnois/ember';
  *
  * Sentry.init({
  *   dsn: 'YOUR_DSN_HERE',

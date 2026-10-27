@@ -1,4 +1,4 @@
-import { captureException } from '@sentry/browser';
+import { captureException } from '@ichnois/browser';
 import type { Component, JSX } from 'solid-js';
 import { mergeProps, splitProps } from 'solid-js';
 import { createComponent } from 'solid-js/web';

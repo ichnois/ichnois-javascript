@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type * as AiCoreUtils from '../../../../src/ai/core/utils';
-import type * as SentryCore from '@sentry/core';
+import type * as SentryCore from '@ichnois/core';
 import {
   GEN_AI_EMBEDDINGS_INPUT,
   GEN_AI_OPERATION_NAME,
@@ -27,7 +27,7 @@ vi.mock('../../../../src/ai/core/utils', async importOriginal => {
 
 let capturedSpanConfig: { name: string; attributes: Record<string, unknown> } | undefined;
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const actual = (await importOriginal()) as typeof SentryCore;
   return {
     ...actual,
@@ -42,7 +42,7 @@ vi.mock('@sentry/core', async importOriginal => {
   };
 });
 
-import { captureException, getMainCarrier, setCurrentClient } from '@sentry/core';
+import { captureException, getMainCarrier, setCurrentClient } from '@ichnois/core';
 import { getDefaultTestClientOptions, TestClient } from '../../../mocks/client';
 
 function setupClient(traceLifecycle: 'static' | 'stream'): void {

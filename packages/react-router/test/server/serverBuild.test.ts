@@ -1,4 +1,4 @@
-import { getIsolationScope, GLOBAL_OBJ } from '@sentry/core';
+import { getIsolationScope, GLOBAL_OBJ } from '@ichnois/core';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
   _resetServerBuild,

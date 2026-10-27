@@ -63,7 +63,7 @@ export function componentTrackingPreprocessor(options?: ComponentTrackingInitOpt
         componentName: getBaseName(finalFilename),
       };
 
-      const importStmt = 'import { trackComponent } from "@sentry/svelte";\n';
+      const importStmt = 'import { trackComponent } from "@ichnois/svelte";\n';
       const functionCall = `trackComponent(${JSON.stringify(trackComponentOptions)});\n`;
 
       const s = new MagicString(content);

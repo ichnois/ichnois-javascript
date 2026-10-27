@@ -1,6 +1,6 @@
 import type { ExecutionContext } from '@cloudflare/workers-types';
-import type { Scope } from '@sentry/core';
-import { debug, getDefaultIsolationScope, getIsolationScope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
+import { debug, getDefaultIsolationScope, getIsolationScope } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import type { ExecutionContextCompat } from '../executionContext';
 import { getOriginalWaitUntil } from '../flush';

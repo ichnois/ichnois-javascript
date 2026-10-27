@@ -1,4 +1,4 @@
-import { getIsolationScope, makeSession, setCurrentClient } from '@sentry/core';
+import { getIsolationScope, makeSession, setCurrentClient } from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { processSessionIntegration } from '../../src/integrations/processSession';
 import { NodeClient } from '../../src/sdk/client';

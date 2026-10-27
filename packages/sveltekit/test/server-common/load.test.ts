@@ -1,7 +1,7 @@
 import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_OP, SENTRY_ORIGIN, URL_PATH } from '@sentry/conventions/attributes';
-import type { Client, Event } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
-import { NodeClient, setCurrentClient } from '@sentry/node';
+import type { Client, Event } from '@ichnois/core';
+import * as SentryCore from '@ichnois/core';
+import { NodeClient, setCurrentClient } from '@ichnois/node';
 import type { Load, ServerLoad } from '@sveltejs/kit';
 import { error, redirect } from '@sveltejs/kit';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -12,8 +12,8 @@ const mockCaptureException = vi.spyOn(SentryCore, 'captureException').mockImplem
 
 const mockStartSpan = vi.fn();
 
-vi.mock('@sentry/core', async () => {
-  const original = (await vi.importActual('@sentry/core')) as any;
+vi.mock('@ichnois/core', async () => {
+  const original = (await vi.importActual('@ichnois/core')) as any;
   return {
     ...original,
     startSpan: (...args: unknown[]) => {

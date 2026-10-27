@@ -1,7 +1,7 @@
 import { context, propagation, trace } from '@opentelemetry/api';
-import { getCurrentScope, setCurrentClient, startSpan } from '@sentry/core';
-import { NodeClient, getDefaultIntegrations } from '@sentry/node';
-import { SentryPropagator, SentryTracerProvider } from '@sentry/opentelemetry';
+import { getCurrentScope, setCurrentClient, startSpan } from '@ichnois/core';
+import { NodeClient, getDefaultIntegrations } from '@ichnois/node';
+import { SentryPropagator, SentryTracerProvider } from '@ichnois/opentelemetry';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { ATTR_NEXT_SPAN_NAME, ATTR_NEXT_SPAN_TYPE } from '../../src/common/nextSpanAttributes';
 import { NextSentryPropagator, registerNextSentryPropagator } from '../../src/server/nextSentryPropagator';

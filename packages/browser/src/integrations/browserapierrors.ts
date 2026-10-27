@@ -1,5 +1,5 @@
-import type { IntegrationFn, WrappedFunction } from '@sentry/core';
-import { defineIntegration, fill, getFunctionName, getOriginalFunction } from '@sentry/core';
+import type { IntegrationFn, WrappedFunction } from '@ichnois/core';
+import { defineIntegration, fill, getFunctionName, getOriginalFunction } from '@ichnois/core';
 import { WINDOW, wrap } from '../helpers';
 
 // Using a comma-separated string and split for smaller bundle size vs an array literal

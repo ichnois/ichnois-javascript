@@ -1,6 +1,6 @@
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { HTTP_SERVER } from '@sentry/conventions/op';
-import { debug, getActiveSpan, getOriginalFunction, startSpan, type WrappedFunction } from '@sentry/core';
+import { debug, getActiveSpan, getOriginalFunction, startSpan, type WrappedFunction } from '@ichnois/core';
 import { INTERNAL_REQUEST_ORIGIN } from './constants';
 import type { Env, Hono } from './honoTypes';
 import { DEBUG_BUILD } from '../../debug-build';

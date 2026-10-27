@@ -1,11 +1,11 @@
-import type { BrowserOptions } from '@sentry/browser';
+import type { BrowserOptions } from '@ichnois/browser';
 import {
   init as browserInit,
   normalizeStringifyValue as browserNormalizeStringifyValue,
   setContext,
-} from '@sentry/browser';
-import type { Client } from '@sentry/core';
-import { applySdkMetadata, setNormalizeStringifier } from '@sentry/core';
+} from '@ichnois/browser';
+import type { Client } from '@ichnois/core';
+import { applySdkMetadata, setNormalizeStringifier } from '@ichnois/core';
 import { version } from 'react';
 import { isSyntheticEvent } from './isSyntheticEvent';
 

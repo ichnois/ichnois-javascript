@@ -1,8 +1,8 @@
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, startInactiveSpan } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration, startInactiveSpan } from '@ichnois/core';
 import type { OrchestrionChannelContext } from '../orchestrion/types';
 import { CHANNELS } from '../orchestrion/channels';
 import { genericPoolModuleNames } from '../orchestrion/config/generic-pool';

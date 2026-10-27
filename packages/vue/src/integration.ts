@@ -1,5 +1,5 @@
-import { getRouteProvider, setRouteProvider } from '@sentry/browser';
-import { consoleSandbox, defineIntegration, GLOBAL_OBJ, hasSpansEnabled } from '@sentry/core';
+import { getRouteProvider, setRouteProvider } from '@ichnois/browser';
+import { consoleSandbox, defineIntegration, GLOBAL_OBJ, hasSpansEnabled } from '@ichnois/core';
 import { DEFAULT_HOOKS, DEFAULT_ROOT_SPAN_TIMEOUT } from './constants';
 import { DEBUG_BUILD } from './debug-build';
 import { attachErrorHandler } from './errorhandler';

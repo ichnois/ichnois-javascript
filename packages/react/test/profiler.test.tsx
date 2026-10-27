@@ -1,8 +1,8 @@
 /**
  * @vitest-environment jsdom
  */
-import type { StartSpanOptions } from '@sentry/core';
-import { SentrySpan, UI_MOUNT_SPAN_NAME_FALLBACK } from '@sentry/core';
+import type { StartSpanOptions } from '@ichnois/core';
+import { SentrySpan, UI_MOUNT_SPAN_NAME_FALLBACK } from '@ichnois/core';
 import { render } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 import * as React from 'react';
@@ -21,7 +21,7 @@ class MockSpan extends SentrySpan {
 let activeSpan: Record<string, any>;
 let mockGetClient: () => { getOptions: () => { traceLifecycle: string } } | undefined = () => undefined;
 
-vi.mock('@sentry/browser', async requireActual => ({
+vi.mock('@ichnois/browser', async requireActual => ({
   ...(await requireActual()),
   getClient: () => mockGetClient(),
   getActiveSpan: () => activeSpan,

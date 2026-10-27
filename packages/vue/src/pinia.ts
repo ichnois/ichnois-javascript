@@ -4,7 +4,7 @@ import {
   getCurrentScope,
   getGlobalScope,
   setNormalizationDepthOverrideHint,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { Ref } from 'vue';
 
 // Inline Pinia types

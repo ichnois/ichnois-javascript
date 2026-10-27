@@ -1,11 +1,11 @@
 import { SENTRY_SEGMENT_NAME_SOURCE } from '@sentry/conventions/attributes';
-import * as browser from '@sentry/browser';
-import * as core from '@sentry/core';
+import * as browser from '@ichnois/browser';
+import * as core from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { instrumentHydratedRouter } from '../../src/client/hydratedRouter';
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual<any>('@sentry/core');
+vi.mock('@ichnois/core', async () => {
+  const actual = await vi.importActual<any>('@ichnois/core');
   return {
     ...actual,
     getActiveSpan: vi.fn(),
@@ -21,7 +21,7 @@ vi.mock('@sentry/core', async () => {
     GLOBAL_OBJ: globalThis,
   };
 });
-vi.mock('@sentry/browser', () => ({
+vi.mock('@ichnois/browser', () => ({
   startBrowserTracingNavigationSpan: vi.fn(),
   getAbsoluteUrl: vi.fn((urlOrPath: string) => {
     try {

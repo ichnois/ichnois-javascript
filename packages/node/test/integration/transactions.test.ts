@@ -1,6 +1,6 @@
 import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { context, trace, TraceFlags } from '@opentelemetry/api';
-import type { ErrorEvent, TransactionEvent } from '@sentry/core';
+import type { ErrorEvent, TransactionEvent } from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import * as Sentry from '../../src';
 import { cleanupOtel, mockSdkInit } from '../helpers/mockSdkInit';

@@ -1,7 +1,7 @@
 import type { TraceItem } from '@cloudflare/workers-types';
 import type { AnyExportedHandler } from '../../types';
 import type { env as cloudflareEnv, WorkerEntrypoint } from 'cloudflare:workers';
-import { captureException, withIsolationScope } from '@sentry/core';
+import { captureException, withIsolationScope } from '@ichnois/core';
 import type { CloudflareOptions } from '../../client';
 import { flushAndDispose } from '../../flush';
 import { ensureInstrumented } from '../../instrument';

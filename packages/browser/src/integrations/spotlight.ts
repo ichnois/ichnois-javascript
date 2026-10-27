@@ -1,6 +1,6 @@
-import type { Client, Envelope, IntegrationFn } from '@sentry/core';
-import { debug, defineIntegration, serializeEnvelope } from '@sentry/core';
-import { getNativeImplementation } from '@sentry/browser-utils';
+import type { Client, Envelope, IntegrationFn } from '@ichnois/core';
+import { debug, defineIntegration, serializeEnvelope } from '@ichnois/core';
+import { getNativeImplementation } from '@ichnois/browser-utils';
 import { BROWSER_WEB_VITAL_INP_TARGET } from '@sentry/conventions/attributes';
 import { UI_INTERACTION_CLICK } from '@sentry/conventions/op';
 import { DEBUG_BUILD } from '../debug-build';

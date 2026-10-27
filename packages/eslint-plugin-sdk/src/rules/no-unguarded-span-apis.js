@@ -15,7 +15,7 @@
 
 const SPAN_START_APIS = ['startSpan', 'startInactiveSpan', 'startSpanManual', 'startIdleSpan'];
 
-const RESTRICTED_SOURCES = ['@sentry/core', '@sentry/core/server'];
+const RESTRICTED_SOURCES = ['@ichnois/core', '@ichnois/core/server'];
 
 /**
  * Which parts of which package are browser-facing.

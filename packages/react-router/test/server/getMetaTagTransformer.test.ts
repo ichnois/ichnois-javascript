@@ -1,9 +1,9 @@
-import { getTraceMetaTags } from '@sentry/core';
+import { getTraceMetaTags } from '@ichnois/core';
 import { PassThrough } from 'stream';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { getMetaTagTransformer } from '../../src/server/getMetaTagTransformer';
 
-vi.mock('@sentry/core', () => ({
+vi.mock('@ichnois/core', () => ({
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN: 'sentry.origin',
   getActiveSpan: vi.fn(),
   getRootSpan: vi.fn(),

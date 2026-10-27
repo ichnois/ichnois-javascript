@@ -1,5 +1,5 @@
-import { SPAN_STATUS_ERROR } from '@sentry/core';
-import type { Span } from '@sentry/core';
+import { SPAN_STATUS_ERROR } from '@ichnois/core';
+import type { Span } from '@ichnois/core';
 import { endStreamSpan, type StreamResponseState } from '../core/utils';
 import type { WorkersAiUsage } from './types';
 import { setOutputMessagesAttribute } from './utils';

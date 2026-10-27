@@ -1,5 +1,5 @@
-import type { IntegrationFn, MonitorConfig } from '@sentry/core';
-import { captureCheckIn, debug, defineIntegration, timestampInSeconds } from '@sentry/core';
+import type { IntegrationFn, MonitorConfig } from '@ichnois/core';
+import { captureCheckIn, debug, defineIntegration, timestampInSeconds } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 
 const INTEGRATION_NAME = 'CronTriggers' as const;
@@ -168,7 +168,7 @@ const _cronTriggersIntegration = ((options: CronTriggersOptions = {}): CronTrigg
  * };
  *
  * // src/instrument.server.ts
- * import { cronTriggersIntegration, defineCloudflareOptions } from '@sentry/cloudflare';
+ * import { cronTriggersIntegration, defineCloudflareOptions } from '@ichnois/cloudflare';
  * import { monitorSlugs } from './monitorSlugs';
  *
  * export default defineCloudflareOptions((env) => ({

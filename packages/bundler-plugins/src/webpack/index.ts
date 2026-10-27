@@ -28,7 +28,7 @@ const _req = createRequire(import.meta.url);
 // always finds the correct installed file regardless of chunk placement.
 let COMPONENT_ANNOTATION_LOADER: string;
 try {
-  COMPONENT_ANNOTATION_LOADER = _req.resolve('@sentry/bundler-plugins/webpack-loader');
+  COMPONENT_ANNOTATION_LOADER = _req.resolve('@ichnois/bundler-plugins/webpack-loader');
 } catch {
   // Fallback for non-packaged environments (e.g., monorepo source runs without dist)
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

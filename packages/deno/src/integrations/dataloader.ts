@@ -1,4 +1,4 @@
-import { dataloaderIntegration } from '@sentry/server-utils';
+import { dataloaderIntegration } from '@ichnois/server-utils';
 
 /**
  * Create spans for `dataloader` load/batch operations under Deno. Not a default;

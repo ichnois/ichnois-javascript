@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/unbound-method */
 import { FUNCTION, WEBSOCKET } from '@sentry/conventions/op';
-import { captureException, debug } from '@sentry/core';
+import { captureException, debug } from '@ichnois/core';
 import type { DurableObject } from 'cloudflare:workers';
 import type { CloudflareOptions } from '../client';
 import { DEBUG_BUILD } from '../debug-build';

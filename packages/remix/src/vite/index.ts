@@ -18,7 +18,7 @@ export type { SentryRemixVitePluginOptions };
  * ```typescript
  * // vite.config.ts
  * import { vitePlugin as remix } from '@remix-run/dev';
- * import { sentryRemixVitePlugin } from '@sentry/remix/vite';
+ * import { sentryRemixVitePlugin } from '@ichnois/remix/vite';
  * import { defineConfig } from 'vite';
  *
  * export default defineConfig({

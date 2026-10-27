@@ -1,17 +1,17 @@
 import { EventEmitter } from 'node:events';
-import type { Client, Span } from '@sentry/core';
-import type * as SentryCore from '@sentry/core';
-import { getActiveSpan } from '@sentry/core';
-import type * as SentryServerUtils from '@sentry/server-utils';
-import { subscribeDiagnosticsChannel } from '@sentry/server-utils';
+import type { Client, Span } from '@ichnois/core';
+import type * as SentryCore from '@ichnois/core';
+import { getActiveSpan } from '@ichnois/core';
+import type * as SentryServerUtils from '@ichnois/server-utils';
+import { subscribeDiagnosticsChannel } from '@ichnois/server-utils';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-vi.mock('@sentry/core', async importOriginal => ({
+vi.mock('@ichnois/core', async importOriginal => ({
   ...(await importOriginal<typeof SentryCore>()),
   getActiveSpan: vi.fn(),
 }));
 
-vi.mock('@sentry/server-utils', async importOriginal => ({
+vi.mock('@ichnois/server-utils', async importOriginal => ({
   ...(await importOriginal<typeof SentryServerUtils>()),
   subscribeDiagnosticsChannel: vi.fn(),
 }));

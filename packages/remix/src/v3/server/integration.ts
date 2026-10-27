@@ -1,4 +1,4 @@
-import { defineIntegration, type IntegrationFn } from '@sentry/core';
+import { defineIntegration, type IntegrationFn } from '@ichnois/core';
 
 import { setShouldHandleError, type ShouldHandleError } from './errorFilter';
 import { instrumentRemixV3 } from './instrument';

@@ -2,14 +2,14 @@
 process.env.LAMBDA_TASK_ROOT = '/var/task';
 
 import { afterAll, describe, expect, it, vi } from 'vitest';
-import type { WrappedFunction } from '@sentry/core';
+import type { WrappedFunction } from '@ichnois/core';
 import {
   addConsoleInstrumentationHandler,
   consoleSandbox,
   markFunctionWrapped,
   originalConsoleMethods,
   GLOBAL_OBJ,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { consoleIntegration } from '../../src/integrations/console';
 
 // Capture the real native method before any patches are installed.

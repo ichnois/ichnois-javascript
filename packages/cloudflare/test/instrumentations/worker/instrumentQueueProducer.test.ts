@@ -1,5 +1,5 @@
 import type { Queue } from '@cloudflare/workers-types';
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { instrumentQueueProducer } from '../../../src/instrumentations/worker/instrumentQueueProducer';
 

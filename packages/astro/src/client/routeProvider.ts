@@ -1,5 +1,5 @@
-import type { RouteProvider } from '@sentry/browser';
-import { WINDOW } from '@sentry/browser';
+import type { RouteProvider } from '@ichnois/browser';
+import { WINDOW } from '@ichnois/browser';
 
 /**
  * Reads the parameterized route the Astro middleware injects into the document it rendered.

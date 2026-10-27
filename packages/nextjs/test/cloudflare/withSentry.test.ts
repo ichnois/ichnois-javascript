@@ -1,6 +1,6 @@
 import { context, createContextKey, propagation, ROOT_CONTEXT, trace } from '@opentelemetry/api';
 import { HTTP_ROUTE, SENTRY_SEGMENT_NAME_SOURCE } from '@sentry/conventions/attributes';
-import type { Client, Span } from '@sentry/core';
+import type { Client, Span } from '@ichnois/core';
 import {
   getActiveSpan,
   getAsyncContextStrategy,
@@ -13,7 +13,7 @@ import {
   spanIsSampled,
   spanToJSON,
   startSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { withSentry } from '../../src/cloudflare';
 import { ATTR_NEXT_SPAN_NAME, ATTR_NEXT_SPAN_TYPE } from '../../src/common/nextSpanAttributes';

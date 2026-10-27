@@ -1,5 +1,5 @@
 import type { INode } from '@sentry/rrweb-snapshot';
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 
 const INTERACTIVE_SELECTOR = 'button,a';
 

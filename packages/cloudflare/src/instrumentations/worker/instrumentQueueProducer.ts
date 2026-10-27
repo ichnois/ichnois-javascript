@@ -1,7 +1,7 @@
 import type { MessageSendRequest, Queue, QueueSendBatchOptions, QueueSendOptions } from '@cloudflare/workers-types';
 import { SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { QUEUE_PUBLISH } from '@sentry/conventions/op';
-import { startSpan } from '@sentry/core';
+import { startSpan } from '@ichnois/core';
 
 const ORIGIN = 'auto.faas.cloudflare.queue';
 

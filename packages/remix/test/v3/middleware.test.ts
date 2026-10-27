@@ -1,10 +1,10 @@
-import type * as SentryCore from '@sentry/core';
+import type * as SentryCore from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 // Trace data as the SDK would produce it for the active request; empty when nothing is active.
 const getTraceData = vi.hoisted(() => vi.fn<() => { 'sentry-trace'?: string; baggage?: string }>(() => ({})));
 
-vi.mock('@sentry/core', async importOriginal => ({
+vi.mock('@ichnois/core', async importOriginal => ({
   ...(await importOriginal<typeof SentryCore>()),
   getTraceData,
 }));

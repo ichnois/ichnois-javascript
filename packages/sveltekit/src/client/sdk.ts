@@ -1,7 +1,7 @@
-import type { Client, Integration } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
-import type { BrowserOptions } from '@sentry/svelte';
-import { getDefaultIntegrations as getDefaultSvelteIntegrations, init as initSvelteSdk, WINDOW } from '@sentry/svelte';
+import type { Client, Integration } from '@ichnois/core';
+import { applySdkMetadata } from '@ichnois/core';
+import type { BrowserOptions } from '@ichnois/svelte';
+import { getDefaultIntegrations as getDefaultSvelteIntegrations, init as initSvelteSdk, WINDOW } from '@ichnois/svelte';
 import { browserTracingIntegration as svelteKitBrowserTracingIntegration } from './browserTracingIntegration';
 
 type WindowWithSentryFetchProxy = typeof WINDOW & {

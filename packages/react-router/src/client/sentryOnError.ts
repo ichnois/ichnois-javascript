@@ -1,5 +1,5 @@
-import { captureException } from '@sentry/core';
-import { captureReactException } from '@sentry/react';
+import { captureException } from '@ichnois/core';
+import { captureReactException } from '@ichnois/react';
 
 /**
  * A handler function for React Router's `onError` prop on `HydratedRouter`.
@@ -8,7 +8,7 @@ import { captureReactException } from '@sentry/react';
  *
  * @example (entry.client.tsx)
  * ```tsx
- * import { sentryOnError } from '@sentry/react-router';
+ * import { sentryOnError } from '@ichnois/react-router';
  *
  * startTransition(() => {
  *   hydrateRoot(

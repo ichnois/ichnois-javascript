@@ -1,6 +1,6 @@
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
-import type { Span } from '@sentry/core';
-import { getActiveSpan, getRootSpan, spanIsIgnored, startInactiveSpan, withActiveSpan } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { getActiveSpan, getRootSpan, spanIsIgnored, startInactiveSpan, withActiveSpan } from '@ichnois/core';
 import { DB_COLLECTION_NAME, DB_OPERATION_NAME, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
 import type { OrchestrionChannelContext } from '../../orchestrion/types';

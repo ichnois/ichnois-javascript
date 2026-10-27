@@ -5,7 +5,7 @@ import type {
   ReplayRecordingMode,
   ReplayStopReason,
   Span,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { SKIPPED, THROTTLED } from '../util/throttle';
 import type { AllPerformanceEntry, AllPerformanceEntryData, ReplayPerformanceEntry } from './performance';
 import type { ReplayFrameEvent } from './replayFrame';

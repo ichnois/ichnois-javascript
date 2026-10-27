@@ -1,4 +1,4 @@
-import type { LRUMap, Span } from '@sentry/core';
+import type { LRUMap, Span } from '@ichnois/core';
 import {
   captureException,
   isObjectLike,
@@ -6,7 +6,7 @@ import {
   startInactiveSpan,
   stringify,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import {
   GEN_AI_CONVERSATION_ID,
   GEN_AI_INPUT_MESSAGES,

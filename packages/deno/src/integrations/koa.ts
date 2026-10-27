@@ -1,4 +1,4 @@
-import { koaIntegration } from '@sentry/server-utils';
+import { koaIntegration } from '@ichnois/server-utils';
 
 /**
  * Create spans for `koa` middleware/router layers under Deno. Included in the

@@ -9,8 +9,8 @@ import type {
   Integration,
   IntegrationFn,
   SendFeedback,
-} from '@sentry/core';
-import { addIntegration, debug, isBrowser } from '@sentry/core';
+} from '@ichnois/core';
+import { addIntegration, debug, isBrowser } from '@ichnois/core';
 import {
   ADD_SCREENSHOT_LABEL,
   CANCEL_BUTTON_LABEL,

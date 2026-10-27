@@ -1,4 +1,4 @@
-import type { Client, PropagationContext, Span, SpanContextData } from '@sentry/core';
+import type { Client, PropagationContext, Span, SpanContextData } from '@ichnois/core';
 import {
   debug,
   getCurrentScope,
@@ -6,7 +6,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE,
   SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE,
   spanToJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { WINDOW } from '../exports';
 import { SENTRY_LINK_TYPE, SENTRY_OP } from '@sentry/conventions/attributes';
@@ -230,7 +230,7 @@ export function getPreviousTraceFromSessionStorage(): PreviousTraceInfo | undefi
 }
 
 /**
- * see {@link import('@sentry/core').spanIsSampled}
+ * see {@link import('@ichnois/core').spanIsSampled}
  */
 export function spanContextSampled(ctx: SpanContextData): boolean {
   return ctx.traceFlags === 0x1;

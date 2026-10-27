@@ -1,6 +1,6 @@
 import { HTTP_RESPONSE_STATUS_CODE, HTTP_STATUS_CODE } from '@sentry/conventions/attributes';
-import type { Span } from '@sentry/core';
-import { getSpanStatusFromHttpCode, SPAN_STATUS_OK, spanToStaticSpanJSON } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { getSpanStatusFromHttpCode, SPAN_STATUS_OK, spanToStaticSpanJSON } from '@ichnois/core';
 
 /**
  * Derive the span status of a Next.js `http.server` root span from its HTTP response status code.

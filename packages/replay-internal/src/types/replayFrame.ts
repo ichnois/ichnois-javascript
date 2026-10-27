@@ -1,4 +1,4 @@
-import type { Breadcrumb } from '@sentry/core';
+import type { Breadcrumb } from '@ichnois/core';
 import type {
   HistoryData,
   MemoryData,

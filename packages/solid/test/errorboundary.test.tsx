@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/unbound-method */
-import type * as SentryBrowser from '@sentry/browser';
-import { createTransport, getCurrentScope, setCurrentClient } from '@sentry/core';
+import type * as SentryBrowser from '@ichnois/browser';
+import { createTransport, getCurrentScope, setCurrentClient } from '@ichnois/core';
 import { render } from '@solidjs/testing-library';
 import userEvent from '@testing-library/user-event';
 import { ErrorBoundary } from 'solid-js';
@@ -8,8 +8,8 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { BrowserClient, withSentryErrorBoundary } from '../src';
 
 const mockCaptureException = vi.fn();
-vi.mock('@sentry/browser', async () => {
-  const actual = await vi.importActual<typeof SentryBrowser>('@sentry/browser');
+vi.mock('@ichnois/browser', async () => {
+  const actual = await vi.importActual<typeof SentryBrowser>('@ichnois/browser');
   return {
     ...actual,
     captureException: (...args) => mockCaptureException(...args),

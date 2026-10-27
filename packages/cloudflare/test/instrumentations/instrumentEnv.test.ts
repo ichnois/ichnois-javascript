@@ -1,5 +1,5 @@
 import { SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { instrumentEnv } from '../../src/instrumentations/worker/instrumentEnv';
 

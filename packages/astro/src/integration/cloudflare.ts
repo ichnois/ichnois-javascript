@@ -77,7 +77,7 @@ export function sentryCloudflareVitePlugin(): VitePlugin {
       const originalExpr = defaultExportMatch[1];
       const wrappedExport = `export default withSentry(() => undefined, ${originalExpr});`;
       const transformedCode = [
-        "import { withSentry } from '@sentry/cloudflare';",
+        "import { withSentry } from '@ichnois/cloudflare';",
         code.replace(defaultExportMatch[0], wrappedExport),
       ].join('\n');
 

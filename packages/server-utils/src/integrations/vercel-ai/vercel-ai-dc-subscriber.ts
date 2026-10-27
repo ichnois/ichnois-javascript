@@ -35,7 +35,7 @@ import {
   GEN_AI_INVOKE_AGENT,
   GEN_AI_RERANK,
 } from '@sentry/conventions/op';
-import type { Span, SpanAttributes } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
 import {
   _INTERNAL_skipAiProviderWrapping,
   captureException,
@@ -48,7 +48,7 @@ import {
   startInactiveSpan,
   stringify,
   withScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { TracingChannel } from 'node:diagnostics_channel';
 import { GEN_AI_TOOL_CALL_ID_ATTRIBUTE } from '../../ai/core/gen-ai-attributes';
 import { isEveGenAiRecordingDefault } from './gen-ai-recording-mode';

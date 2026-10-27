@@ -1,6 +1,6 @@
-import type { Client } from '@sentry/core';
-import { _INTERNAL_getActiveClient, applySdkMetadata, consoleSandbox } from '@sentry/core';
-import { init as initBun } from '@sentry/bun';
+import type { Client } from '@ichnois/core';
+import { _INTERNAL_getActiveClient, applySdkMetadata, consoleSandbox } from '@ichnois/core';
+import { init as initBun } from '@ichnois/bun';
 import type { HonoBunOptions } from './middleware';
 import { buildFilteredIntegrations } from '../shared/buildFilteredIntegrations';
 import { LOW_QUALITY_TRANSACTION_PATTERNS } from '../shared/lowQualityTransactionPatterns';

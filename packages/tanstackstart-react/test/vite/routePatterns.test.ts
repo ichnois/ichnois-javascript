@@ -14,9 +14,9 @@ describe('makeRoutePatternPlugin', () => {
   it('bundles the SDK into server environments of a build', () => {
     const build = { command: 'build', mode: 'production' } as const;
 
-    expect(configEnvironment('ssr', {}, build)).toEqual({ resolve: { noExternal: ['@sentry/tanstackstart-react'] } });
+    expect(configEnvironment('ssr', {}, build)).toEqual({ resolve: { noExternal: ['@ichnois/tanstackstart-react'] } });
     expect(configEnvironment('nitro', { consumer: 'server' }, build)).toEqual({
-      resolve: { noExternal: ['@sentry/tanstackstart-react'] },
+      resolve: { noExternal: ['@ichnois/tanstackstart-react'] },
     });
   });
 

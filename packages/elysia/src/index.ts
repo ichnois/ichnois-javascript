@@ -181,7 +181,7 @@ export {
   bunRuntimeMetricsIntegration,
   type BunRuntimeMetricsOptions,
   makeFetchTransport,
-} from '@sentry/bun';
+} from '@ichnois/bun';
 
 export type {
   Breadcrumb,
@@ -204,14 +204,14 @@ export type {
   Metric,
   ExclusiveEventHintOrCaptureContext,
   CaptureContext,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export {
   captureConsoleIntegration,
   dedupeIntegration,
   extraErrorDataIntegration,
   rewriteFramesIntegration,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export type { ElysiaOptions } from './types';
 

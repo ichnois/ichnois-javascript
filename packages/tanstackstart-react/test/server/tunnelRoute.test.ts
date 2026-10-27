@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 const handleTunnelRequestSpy = vi.fn();
 const getClientSpy = vi.fn();
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const original = await importOriginal();
   return {
     ...original,

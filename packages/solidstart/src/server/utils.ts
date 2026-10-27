@@ -1,6 +1,6 @@
-import type { EventProcessor, Options } from '@sentry/core';
-import { debug } from '@sentry/core';
-import { getGlobalScope } from '@sentry/node';
+import type { EventProcessor, Options } from '@ichnois/core';
+import { debug } from '@ichnois/core';
+import { getGlobalScope } from '@ichnois/node';
 
 /**
  * Determines if a thrown "error" is a redirect Response which Solid Start users can throw to redirect to another route.

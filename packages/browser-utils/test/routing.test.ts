@@ -8,7 +8,7 @@ import {
   setRouteProvider,
 } from '../src/routing';
 import type { RouteProvider } from '../src/routing';
-import { debug, getCurrentScope, GLOBAL_OBJ, setCurrentClient } from '@sentry/core';
+import { debug, getCurrentScope, GLOBAL_OBJ, setCurrentClient } from '@ichnois/core';
 import { getDefaultClientOptions, TestClient } from './utils/TestClient';
 
 function setLocationHref(href: string): void {

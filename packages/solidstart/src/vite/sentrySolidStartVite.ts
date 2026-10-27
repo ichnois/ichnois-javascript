@@ -1,4 +1,4 @@
-import { warnOnRemovedBuildOptions } from '@sentry/core';
+import { warnOnRemovedBuildOptions } from '@ichnois/core';
 import type { Plugin, UserConfig } from 'vite';
 import { makeBuildInstrumentationFilePlugin } from './buildInstrumentationFile';
 import { makeAddSentryVitePlugin, makeEnableSourceMapsVitePlugin } from './sourceMaps';

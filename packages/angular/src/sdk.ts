@@ -1,5 +1,5 @@
 import { VERSION } from '@angular/core';
-import type { BrowserOptions } from '@sentry/browser';
+import type { BrowserOptions } from '@ichnois/browser';
 import {
   breadcrumbsIntegration,
   browserSessionIntegration,
@@ -9,8 +9,8 @@ import {
   init as browserInit,
   linkedErrorsIntegration,
   setContext,
-} from '@sentry/browser';
-import type { Client, Integration } from '@sentry/core';
+} from '@ichnois/browser';
+import type { Client, Integration } from '@ichnois/core';
 import {
   applySdkMetadata,
   consoleIntegration,
@@ -19,7 +19,7 @@ import {
   dedupeIntegration,
   eventFiltersIntegration,
   functionToStringIntegration,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { IS_DEBUG_BUILD } from './flags';
 
 /**

@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { _reconstructQuery, instrumentPostgresJsSql } from '../../src/integrations/postgresjs';
 import { sanitizeSqlQuery } from '../../src/utils/sql';

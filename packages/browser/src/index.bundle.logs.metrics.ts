@@ -8,9 +8,9 @@ import {
 
 export * from './index.bundle.base';
 
-export { logger, consoleLoggingIntegration, metrics } from '@sentry/core';
+export { logger, consoleLoggingIntegration, metrics } from '@ichnois/core';
 
-export { elementTimingIntegration } from '@sentry/browser-utils';
+export { elementTimingIntegration } from '@ichnois/browser-utils';
 
 export {
   browserTracingIntegrationShim as browserTracingIntegration,

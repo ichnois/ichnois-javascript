@@ -1,5 +1,5 @@
-import type { Client } from '@sentry/core';
-import { _INTERNAL_safeMathRandom, _INTERNAL_setSpanForScope, getDynamicSamplingContextFromSpan } from '@sentry/core';
+import type { Client } from '@ichnois/core';
+import { _INTERNAL_safeMathRandom, _INTERNAL_setSpanForScope, getDynamicSamplingContextFromSpan } from '@ichnois/core';
 import { SENTRY_TRACE_STATE_DSC } from './constants';
 import { getSamplingDecision } from './utils/getSamplingDecision';
 

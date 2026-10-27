@@ -6,7 +6,7 @@ import {
   setCapturedScopesOnSpan,
   winterCGRequestToRequestData,
   withIsolationScope,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { flushSafelyWithTimeout } from '../common/utils/responseEnd';
 import type { EdgeRouteHandler } from './types';
 

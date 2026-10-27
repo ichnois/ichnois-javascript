@@ -41,7 +41,7 @@ describe('getServerExternalPackagesPatch (build-time instrumentation)', () => {
     expect(externals).toContain('pg');
     expect(externals).toContain('pg-pool');
     // The runtime injection package must be external for the runtime hook to work.
-    expect(externals).toContain('@sentry/server-runtime-injection');
+    expect(externals).toContain('@ichnois/server-runtime-injection');
   });
 
   it('respects user-provided externals even for bundle-safe packages', () => {
@@ -61,8 +61,8 @@ describe('getServerExternalPackagesPatch (build-time instrumentation)', () => {
 describe('externalizeOrchestrionRuntimePackages', () => {
   // An absolute path here breaks every deploy that relocates the output, so it has to stay bare.
   it.each([
-    ['@sentry/server-runtime-injection', '@sentry/nextjs/orchestrion-runtime/index'],
-    ['@sentry/server-runtime-injection/register', '@sentry/nextjs/orchestrion-runtime/register'],
+    ['@ichnois/server-runtime-injection', '@ichnois/nextjs/orchestrion-runtime/index'],
+    ['@ichnois/server-runtime-injection/register', '@ichnois/nextjs/orchestrion-runtime/register'],
   ])('externalizes %s as the relocatable bare specifier %s', async (request, expected) => {
     const external = await externalizeOrchestrionRuntimePackages({ request });
 
@@ -72,17 +72,17 @@ describe('externalizeOrchestrionRuntimePackages', () => {
 
   it('does not externalize @sentry/server-utils — it is meant to be bundled', async () => {
     await expect(
-      externalizeOrchestrionRuntimePackages({ request: '@sentry/server-utils/orchestrion/config' }),
+      externalizeOrchestrionRuntimePackages({ request: '@ichnois/server-utils/orchestrion/config' }),
     ).resolves.toBeUndefined();
   });
 
   // A `commonjs` external could never load these, so webpack gets to report them instead.
   it('ignores subpaths @sentry/server-runtime-injection does not expose to require()', async () => {
     await expect(
-      externalizeOrchestrionRuntimePackages({ request: '@sentry/server-runtime-injection/hook' }),
+      externalizeOrchestrionRuntimePackages({ request: '@ichnois/server-runtime-injection/hook' }),
     ).resolves.toBeUndefined();
     await expect(
-      externalizeOrchestrionRuntimePackages({ request: '@sentry/server-runtime-injection/does-not-exist' }),
+      externalizeOrchestrionRuntimePackages({ request: '@ichnois/server-runtime-injection/does-not-exist' }),
     ).resolves.toBeUndefined();
   });
 
@@ -104,7 +104,7 @@ describe('orchestrion runtime forwarders (generated)', () => {
 
   /** Every `@sentry/server-runtime-injection` entrypoint that a `commonjs` external could load. */
   const requireableSubpaths = Object.entries(
-    (nodeRequire('@sentry/server-runtime-injection/package.json') as { exports: Record<string, { require?: string }> })
+    (nodeRequire('@ichnois/server-runtime-injection/package.json') as { exports: Record<string, { require?: string }> })
       .exports,
   )
     .filter(([key, conditions]) => key !== './package.json' && conditions.require)
@@ -122,7 +122,7 @@ describe('orchestrion runtime forwarders (generated)', () => {
   it.each(requireableSubpaths)('exposes the forwarder for %s through the package exports', subpath => {
     const specifier = getOrchestrionForwarderSpecifier(
       `@sentry/server-runtime-injection${subpath.slice(1)}`,
-      '@sentry/server-runtime-injection',
+      '@ichnois/server-runtime-injection',
     );
 
     expect(nodeRequire.resolve(specifier)).toBe(`${forwarderDir}${subpath === '.' ? 'index' : subpath.slice(2)}.js`);

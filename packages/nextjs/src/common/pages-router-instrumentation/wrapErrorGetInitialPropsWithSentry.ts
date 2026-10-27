@@ -1,4 +1,4 @@
-import { isObjectLike } from '@sentry/core';
+import { isObjectLike } from '@ichnois/core';
 import type { NextPageContext } from 'next';
 import type { ErrorProps } from 'next/error';
 import { isBuild } from '../utils/isBuild';

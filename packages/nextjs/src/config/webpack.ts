@@ -1,8 +1,8 @@
 /* eslint-disable complexity */
 /* eslint-disable max-lines */
 
-import { debug, escapeStringForRegex, parseSemver } from '@sentry/core';
-import { loadModule } from '@sentry/core/server';
+import { debug, escapeStringForRegex, parseSemver } from '@ichnois/core';
+import { loadModule } from '@ichnois/core/server';
 import * as fs from 'fs';
 import { createRequire } from 'module';
 import * as path from 'path';
@@ -25,7 +25,7 @@ import type {
   WebpackEntryProperty,
   WebpackPluginInstance,
 } from './types';
-import { sentryOrchestrionWebpackPlugin } from '@sentry/server-utils/orchestrion/webpack';
+import { sentryOrchestrionWebpackPlugin } from '@ichnois/server-utils/orchestrion/webpack';
 import { DEFAULT_PAGE_EXTENSIONS, getNextjsVersion, getPackageModules } from './util';
 import type { VercelCronsConfigResult } from './withSentryConfig/getFinalConfigObjectUtils';
 import { getTunnelRouteInjectedValues } from './withSentryConfig/tunnel';
@@ -359,7 +359,7 @@ export function constructWebpackConfigFunction({
     if (!(isDev || (isStaticExport && isServer))) {
       const { sentryWebpackPlugin } =
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        loadModule<{ sentryWebpackPlugin: any }>('@sentry/bundler-plugins/webpack', module) ?? {};
+        loadModule<{ sentryWebpackPlugin: any }>('@ichnois/bundler-plugins/webpack', module) ?? {};
 
       if (sentryWebpackPlugin) {
         if (!userSentryOptions.sourcemaps?.disable) {

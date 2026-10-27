@@ -1,4 +1,4 @@
-import { captureException, getAbsoluteUrl } from '@sentry/browser';
+import { captureException, getAbsoluteUrl } from '@ichnois/browser';
 import {
   SENTRY_SEGMENT_NAME_SOURCE,
   ROUTER_NAVIGATION_ROUTE_ID,
@@ -9,7 +9,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { NAVIGATION } from '@sentry/conventions/op';
-import type { Span, SpanAttributes, StartSpanOptions, TransactionSource } from '@sentry/core';
+import type { Span, SpanAttributes, StartSpanOptions, TransactionSource } from '@ichnois/core';
 import {
   getActiveSpan,
   getClient,
@@ -19,7 +19,7 @@ import {
   NAVIGATION_SPAN_NAME_FALLBACK,
   PAGELOAD_SPAN_NAME_FALLBACK,
   spanToJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 // The following type is an intersection of the Route type from VueRouter v2, v3, and v4.
 // This is not great, but kinda necessary to make it work with all versions at the same time.

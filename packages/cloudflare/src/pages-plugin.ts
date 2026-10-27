@@ -1,4 +1,4 @@
-import { setAsyncLocalStorageAsyncContextStrategy } from '@sentry/server-utils/no-diagnostic-channels';
+import { setAsyncLocalStorageAsyncContextStrategy } from '@ichnois/server-utils/no-diagnostic-channels';
 import type { CloudflareOptions } from './client';
 import type { ExecutionContextCompat } from './executionContext';
 import { wrapRequestHandlerWithInit } from './wrapRequestHandlerWithInit';
@@ -14,7 +14,7 @@ import type { StrictCloudflareOptions } from './types';
  *
  * ```javascript
  * // functions/_middleware.js
- * import * as Sentry from '@sentry/cloudflare';
+ * import * as Sentry from '@ichnois/cloudflare';
  *
  * export const onRequest = Sentry.sentryPagesPlugin({
  *   dsn: process.env.SENTRY_DSN,
@@ -25,7 +25,7 @@ import type { StrictCloudflareOptions } from './types';
  * @example Usage with handler function to access context for environmental variables
  *
  * ```javascript
- * import * as Sentry from '@sentry/cloudflare';
+ * import * as Sentry from '@ichnois/cloudflare';
  *
  * const const onRequest = Sentry.sentryPagesPlugin((context) => ({
  *   dsn: context.env.SENTRY_DSN,

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { LogSeverityLevel } from '@sentry/core';
-import { debug, isObjectLike } from '@sentry/core';
+import type { LogSeverityLevel } from '@ichnois/core';
+import { debug, isObjectLike } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { captureLog } from '../logs/capture';
 

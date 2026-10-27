@@ -3,8 +3,8 @@ import { init } from '../src/sdk';
 
 const mockInit = vi.fn();
 
-vi.mock('@sentry/node', async () => {
-  const original = await vi.importActual('@sentry/node');
+vi.mock('@ichnois/node', async () => {
+  const original = await vi.importActual('@ichnois/node');
   return {
     ...original,
     init: (options: unknown) => {

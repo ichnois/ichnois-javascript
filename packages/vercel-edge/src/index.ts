@@ -17,7 +17,7 @@ export type {
   Thread,
   User,
   Metric,
-} from '@sentry/core';
+} from '@ichnois/core';
 
 export type { VercelEdgeOptions } from './types';
 
@@ -104,8 +104,8 @@ export {
   // oxlint-disable-next-line typescript/no-deprecated
   withStreamedSpan,
   spanStreamingIntegration,
-} from '@sentry/core';
-export { trpcMiddleware, wrapMcpServerWithSentry } from '@sentry/core/server';
+} from '@ichnois/core';
+export { trpcMiddleware, wrapMcpServerWithSentry } from '@ichnois/core/server';
 export {
   openTelemetryIntegration,
   getOtlpTracesEndpoint,
@@ -118,13 +118,13 @@ export {
   instrumentLangChainEmbeddings,
   instrumentStateGraph,
   instrumentCreateReactAgent,
-} from '@sentry/server-utils/no-diagnostic-channels';
+} from '@ichnois/server-utils/no-diagnostic-channels';
 
 export { VercelEdgeClient } from './client';
 export { getDefaultIntegrations, init } from './sdk';
 
 export { winterCGFetchIntegration } from './integrations/wintercg-fetch';
-export type { FetchIntegrationOptions } from '@sentry/core';
+export type { FetchIntegrationOptions } from '@ichnois/core';
 
 // vercelAIIntegration and prismaIntegration require diagnostics channels, unavailable on Vercel Edge.
 // Cloudflare's httpServerIntegration is consumed by its request wrapper, which Vercel Edge does not use.

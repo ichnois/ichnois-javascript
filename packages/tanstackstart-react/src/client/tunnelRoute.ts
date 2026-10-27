@@ -1,5 +1,5 @@
-import { consoleSandbox } from '@sentry/core';
-import type { BrowserOptions as ReactBrowserOptions } from '@sentry/react';
+import { consoleSandbox } from '@ichnois/core';
+import type { BrowserOptions as ReactBrowserOptions } from '@ichnois/react';
 
 declare const __SENTRY_TANSTACKSTART_TUNNEL_ROUTE__: string | undefined;
 

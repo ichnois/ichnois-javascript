@@ -1,5 +1,5 @@
-import * as SentryCore from '@sentry/core';
-import * as SentryCoreServer from '@sentry/core/server';
+import * as SentryCore from '@ichnois/core';
+import * as SentryCoreServer from '@ichnois/core/server';
 import { H3Error } from 'h3';
 import { HTTPError } from 'nitro/h3';
 import type { CapturedErrorContext } from 'nitropack/types';
@@ -8,7 +8,7 @@ import { sentryCaptureErrorHook } from '../../../src/runtime/hooks/captureErrorH
 
 const setTransactionName = vi.fn();
 
-vi.mock('@sentry/core', async importOriginal => {
+vi.mock('@ichnois/core', async importOriginal => {
   const mod = await importOriginal();
   return {
     ...(mod as any),
@@ -18,7 +18,7 @@ vi.mock('@sentry/core', async importOriginal => {
   };
 });
 
-vi.mock('@sentry/core/server', async importOriginal => {
+vi.mock('@ichnois/core/server', async importOriginal => {
   const mod = await importOriginal();
   return {
     ...(mod as any),

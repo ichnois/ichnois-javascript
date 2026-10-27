@@ -14,7 +14,7 @@ import {
   URL_TEMPLATE,
 } from '@sentry/conventions/attributes';
 import { UI_ACTION_CLICK, UI_INTERACTION_CLICK } from '@sentry/conventions/op';
-import type { Client, IntegrationFn, Span, StartSpanOptions, TransactionSource } from '@sentry/core';
+import type { Client, IntegrationFn, Span, StartSpanOptions, TransactionSource } from '@ichnois/core';
 import {
   debug,
   defineIntegration,
@@ -26,8 +26,8 @@ import {
   spanToJSON,
   UI_ACTION_CLICK_SPAN_NAME_FALLBACK,
   UI_INTERACTION_CLICK_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
-import { startIdleSpan } from '@sentry/core/browser';
+} from '@ichnois/core';
+import { startIdleSpan } from '@ichnois/core/browser';
 import { DEBUG_BUILD } from '../debug-build';
 import { htmlTreeAsString } from '../htmlTreeAsString';
 import { addPerformanceInstrumentationHandler } from '../instrumentation/performanceObserver';

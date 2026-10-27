@@ -1,4 +1,4 @@
-import type { FeedbackFormData, FeedbackInternalOptions } from '@sentry/core';
+import type { FeedbackFormData, FeedbackInternalOptions } from '@ichnois/core';
 import type { VNode } from 'preact';
 import { Fragment, h } from 'preact'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import { useCallback, useMemo, useState } from 'preact/hooks';

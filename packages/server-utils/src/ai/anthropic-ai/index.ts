@@ -1,6 +1,6 @@
 /* eslint-disable typescript-eslint/no-deprecated */
-import { getClient, hasSpanStreamingEnabled, SPAN_STATUS_ERROR, startSpan, startSpanManual } from '@sentry/core';
-import type { Span, SpanAttributeValue } from '@sentry/core';
+import { getClient, hasSpanStreamingEnabled, SPAN_STATUS_ERROR, startSpan, startSpanManual } from '@ichnois/core';
+import type { Span, SpanAttributeValue } from '@ichnois/core';
 import {
   GEN_AI_OPERATION_NAME,
   GEN_AI_PROVIDER_NAME,

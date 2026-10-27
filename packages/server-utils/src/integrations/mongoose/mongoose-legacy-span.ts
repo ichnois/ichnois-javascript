@@ -11,8 +11,8 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { DB } from '@sentry/conventions/op';
-import type { Span, SpanAttributes } from '@sentry/core';
-import { getClient, hasSpanStreamingEnabled, startInactiveSpan } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
+import { getClient, hasSpanStreamingEnabled, startInactiveSpan } from '@ichnois/core';
 
 const DB_SYSTEM_NAME_VALUE_MONGODB = 'mongodb';
 

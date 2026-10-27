@@ -1,12 +1,12 @@
 import { channel } from 'node:diagnostics_channel';
-import type * as SentryCore from '@sentry/core';
-import { remixV3Channels } from '@sentry/server-utils/orchestrion/config';
+import type * as SentryCore from '@ichnois/core';
+import { remixV3Channels } from '@ichnois/server-utils/orchestrion/config';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
 const captureException = vi.fn();
 
 // Only `captureException` is replaced; the middleware needs the rest for real.
-vi.mock('@sentry/core', async importOriginal => ({
+vi.mock('@ichnois/core', async importOriginal => ({
   ...(await importOriginal<typeof SentryCore>()),
   captureException: (...args: unknown[]) => captureException(...args),
   // Runs the callback as is, so the spy on `console.error` below sees the call.

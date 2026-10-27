@@ -99,7 +99,7 @@ describe('_enhanceEventWithSdkInfo', () => {
         name: 'original',
         version: '1.0.0',
         integrations: ['integration1', 'integration2'],
-        packages: [{ name: '@sentry/browser', version: '10.0.0' }],
+        packages: [{ name: '@ichnois/browser', version: '10.0.0' }],
       },
     };
     const newSdkInfo: SdkInfo = { name: 'newName', version: '2.0.0' };
@@ -110,7 +110,7 @@ describe('_enhanceEventWithSdkInfo', () => {
       name: 'original',
       version: '1.0.0',
       integrations: ['integration1', 'integration2'],
-      packages: [{ name: '@sentry/browser', version: '10.0.0' }],
+      packages: [{ name: '@ichnois/browser', version: '10.0.0' }],
     });
   });
 
@@ -121,7 +121,7 @@ describe('_enhanceEventWithSdkInfo', () => {
           name: 'original',
           version: '1.0.0',
           integrations: ['integration1', 'integration2'],
-          packages: [{ name: '@sentry/browser', version: '10.0.0' }],
+          packages: [{ name: '@ichnois/browser', version: '10.0.0' }],
         },
       };
 
@@ -129,7 +129,7 @@ describe('_enhanceEventWithSdkInfo', () => {
         name: 'newName',
         version: '2.0.0',
         integrations: ['integration3', 'integration4'],
-        packages: [{ name: '@sentry/node', version: '11.0.0' }],
+        packages: [{ name: '@ichnois/node', version: '11.0.0' }],
       };
 
       const enhancedEvent = _enhanceEventWithSdkInfo(event, newSdkInfo);
@@ -139,8 +139,8 @@ describe('_enhanceEventWithSdkInfo', () => {
         version: '1.0.0',
         integrations: ['integration1', 'integration2', 'integration3', 'integration4'],
         packages: [
-          { name: '@sentry/browser', version: '10.0.0' },
-          { name: '@sentry/node', version: '11.0.0' },
+          { name: '@ichnois/browser', version: '10.0.0' },
+          { name: '@ichnois/node', version: '11.0.0' },
         ],
       });
     });
@@ -172,7 +172,7 @@ describe('_enhanceEventWithSdkInfo', () => {
           name: 'original',
           version: '1.0.0',
           integrations: ['integration1', 'integration2'],
-          packages: [{ name: '@sentry/browser', version: '10.0.0' }],
+          packages: [{ name: '@ichnois/browser', version: '10.0.0' }],
           settings: { infer_ip: 'auto' },
         },
       };
@@ -186,7 +186,7 @@ describe('_enhanceEventWithSdkInfo', () => {
         name: 'original',
         version: '1.0.0',
         integrations: ['integration1', 'integration2'],
-        packages: [{ name: '@sentry/browser', version: '10.0.0' }],
+        packages: [{ name: '@ichnois/browser', version: '10.0.0' }],
         settings: { infer_ip: 'never' },
       });
     });
@@ -200,14 +200,14 @@ describe('_enhanceEventWithSdkInfo', () => {
       };
 
       const newSdkInfo: SdkInfo = {
-        packages: [{ name: '@sentry/browser', version: '10.0.0' }],
+        packages: [{ name: '@ichnois/browser', version: '10.0.0' }],
       };
 
       const enhancedEvent = _enhanceEventWithSdkInfo(event, newSdkInfo);
       expect(enhancedEvent.sdk).toEqual({
         name: 'original',
         version: '1.0.0',
-        packages: [{ name: '@sentry/browser', version: '10.0.0' }],
+        packages: [{ name: '@ichnois/browser', version: '10.0.0' }],
         integrations: [],
         settings: undefined, // undefined is fine because JSON.stringify omits undefined values anyways
       });

@@ -24,7 +24,7 @@ const orchestrionVite = vi.fn((options?: { buildTimeInstrumentation?: boolean })
       },
 );
 
-vi.mock('@sentry/server-utils/orchestrion/vite', () => ({
+vi.mock('@ichnois/server-utils/orchestrion/vite', () => ({
   sentryOrchestrionPlugin: (options?: { buildTimeInstrumentation?: boolean }) => orchestrionVite(options),
 }));
 
@@ -36,7 +36,7 @@ type CapturedSentryOptions = {
 
 let capturedSentryOptions: CapturedSentryOptions | undefined;
 
-vi.mock('@sentry/bundler-plugins/vite', () => ({
+vi.mock('@ichnois/bundler-plugins/vite', () => ({
   sentryVitePlugin: (options: CapturedSentryOptions) => {
     capturedSentryOptions = options;
     return [{ name: 'sentry-vite-plugin' }];

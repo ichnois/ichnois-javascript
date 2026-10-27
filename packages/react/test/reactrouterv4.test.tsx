@@ -1,7 +1,7 @@
 /**
  * @vitest-environment jsdom
  */
-import { createTransport, getCurrentScope, setCurrentClient } from '@sentry/core';
+import { createTransport, getCurrentScope, setCurrentClient } from '@ichnois/core';
 import { render } from '@testing-library/react';
 import { createMemoryHistory } from 'history-4';
 import * as React from 'react';
@@ -27,7 +27,7 @@ const mockRootSpan = {
   },
 };
 
-vi.mock('@sentry/browser', async requireActual => {
+vi.mock('@ichnois/browser', async requireActual => {
   const actual = (await requireActual()) as any;
   return {
     ...actual,
@@ -42,7 +42,7 @@ vi.mock('@sentry/browser', async requireActual => {
   };
 });
 
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@ichnois/core', async requireActual => {
   return {
     ...(await requireActual()),
     getRootSpan: () => {

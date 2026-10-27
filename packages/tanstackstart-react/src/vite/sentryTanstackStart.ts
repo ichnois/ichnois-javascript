@@ -1,5 +1,5 @@
-import type { BuildTimeOptionsBase, ReactComponentAnnotationOptions } from '@sentry/core';
-import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/vite';
+import type { BuildTimeOptionsBase, ReactComponentAnnotationOptions } from '@ichnois/core';
+import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/vite';
 import type { Plugin } from 'vite';
 import { makeAutoInstrumentMiddlewarePlugin } from './autoInstrumentMiddleware';
 import { makeComposeNitroServiceSourceMapsPlugin, makeEnableNitroSourceMapsPlugin } from './nitroSourceMaps';
@@ -59,7 +59,7 @@ export interface SentryTanstackStartOptions extends BuildTimeOptionsBase {
  * ```typescript
  * // vite.config.ts
  * import { defineConfig } from 'vite';
- * import { sentryTanstackStart } from '@sentry/tanstackstart-react/vite';
+ * import { sentryTanstackStart } from '@ichnois/tanstackstart-react/vite';
  * import { tanstackStart } from '@tanstack/react-start/plugin/vite';
  *
  * export default defineConfig({

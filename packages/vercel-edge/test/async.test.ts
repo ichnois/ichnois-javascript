@@ -1,9 +1,9 @@
-import { getCurrentScope, getIsolationScope, getMainCarrier, Scope, withIsolationScope, withScope } from '@sentry/core';
+import { getCurrentScope, getIsolationScope, getMainCarrier, Scope, withIsolationScope, withScope } from '@ichnois/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { VercelEdgeClient } from '../src';
 import { setupOtel } from '../src/sdk';
 import { makeEdgeTransport } from '../src/transports';
-import { setOpenTelemetryContextAsyncContextStrategy } from '@sentry/opentelemetry';
+import { setOpenTelemetryContextAsyncContextStrategy } from '@ichnois/opentelemetry';
 
 beforeEach(() => {
   getMainCarrier().__SENTRY__ = undefined;

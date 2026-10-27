@@ -1,4 +1,4 @@
-import { addBreadcrumb, captureException, startSpan, withIsolationScope, withScope } from '@sentry/core';
+import { addBreadcrumb, captureException, startSpan, withIsolationScope, withScope } from '@ichnois/core';
 import { describe, expect, it, vi } from 'vitest';
 import { mockSdkInit } from '../helpers/mockSdkInit';
 

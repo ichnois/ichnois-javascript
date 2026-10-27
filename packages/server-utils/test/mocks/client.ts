@@ -6,8 +6,8 @@ import type {
   ParameterizedString,
   Session,
   SeverityLevel,
-} from '@sentry/core';
-import { Client, createTransport, initAndBind, resolvedSyncPromise } from '@sentry/core';
+} from '@ichnois/core';
+import { Client, createTransport, initAndBind, resolvedSyncPromise } from '@ichnois/core';
 
 export function getDefaultTestClientOptions(options: Partial<TestClientOptions> = {}): TestClientOptions {
   return {

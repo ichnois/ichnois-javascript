@@ -1,8 +1,8 @@
 /**
  * @vitest-environment jsdom
  */
-import { BrowserClient } from '@sentry/browser';
-import { createTransport, getCurrentScope, setCurrentClient } from '@sentry/core';
+import { BrowserClient } from '@ichnois/browser';
+import { createTransport, getCurrentScope, setCurrentClient } from '@ichnois/core';
 import { SENTRY_SEGMENT_NAME_SOURCE, URL_TEMPLATE, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { render } from '@testing-library/react';
 import * as React from 'react';
@@ -24,7 +24,7 @@ const mockRootSpan = {
   },
 };
 
-vi.mock('@sentry/browser', async requireActual => {
+vi.mock('@ichnois/browser', async requireActual => {
   const actual = (await requireActual()) as any;
   return {
     ...actual,
@@ -39,7 +39,7 @@ vi.mock('@sentry/browser', async requireActual => {
   };
 });
 
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@ichnois/core', async requireActual => {
   return {
     ...(await requireActual()),
     getRootSpan: () => {

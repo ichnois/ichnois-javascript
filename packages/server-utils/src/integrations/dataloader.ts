@@ -9,7 +9,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { CACHE_GET, CACHE_PUT, CACHE_REMOVE } from '@sentry/conventions/op';
-import type { IntegrationFn, Span, StartSpanOptions } from '@sentry/core';
+import type { IntegrationFn, Span, StartSpanOptions } from '@ichnois/core';
 import {
   CACHE_OPERATION_NAMES,
   debug,
@@ -19,7 +19,7 @@ import {
   startInactiveSpan,
   startSpan,
   waitForTracingChannelBinding,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import type { OrchestrionChannelContext } from '../orchestrion/types';
 import type { ChannelName } from '../orchestrion/channels';

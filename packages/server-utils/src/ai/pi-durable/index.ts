@@ -1,4 +1,4 @@
-import type { Scope } from '@sentry/core';
+import type { Scope } from '@ichnois/core';
 import {
   addNonEnumerableProperty,
   captureException,
@@ -7,7 +7,7 @@ import {
   SPAN_STATUS_ERROR,
   startNewTrace,
   withActiveSpan,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { GenAiOptions } from '../core/utils';
 import { skipPiAiProviderIntegrations } from '../pi-ai/providers';
 import { PI_DURABLE_ORIGIN, PI_TASK } from './constants';

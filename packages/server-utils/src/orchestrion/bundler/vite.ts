@@ -57,7 +57,7 @@ function toEsmEntry(id: string): string {
  * @example
  * ```ts
  * // vite.config.ts
- * import { sentryOrchestrionPlugin } from '@sentry/server-utils/orchestrion/vite';
+ * import { sentryOrchestrionPlugin } from '@ichnois/server-utils/orchestrion/vite';
  * export default { plugins: [sentryOrchestrionPlugin()] };
  * ```
  */
@@ -72,7 +72,7 @@ export function sentryOrchestrionPlugin(options: PluginOptions = {}): Plugin {
   const upstream = codeTransformer(orchestrionTransformOptions(options));
   const noExternalModules = (): string[] => [
     ...instrumentedModuleNames(options.instrumentations),
-    '@sentry/server-utils',
+    '@ichnois/server-utils',
   ];
   const resolveExternalRequire = createExternalRequireResolver(noExternalModules());
 

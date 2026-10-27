@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import { normalize, setNormalizeStringifier } from '@sentry/core';
+import { normalize, setNormalizeStringifier } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import * as Sentry from '../../src';
 

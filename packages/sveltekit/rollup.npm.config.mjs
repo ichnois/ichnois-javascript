@@ -20,7 +20,7 @@ export default makeNPMConfigVariants(
     packageSpecificConfig: {
       // Keep the variant subpath external so the transpiled output preserves the import for the
       // consumer to resolve (via `exports` or the `sentrySvelteKit()` plugin).
-      external: ['$app/state', '$app/stores', '@sentry/sveltekit/browser-tracing-variant', 'cloudflare:workers'],
+      external: ['$app/state', '$app/stores', '@ichnois/sveltekit/browser-tracing-variant', 'cloudflare:workers'],
       output: {
         dynamicImportInCjs: true,
       },

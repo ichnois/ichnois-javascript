@@ -9,8 +9,8 @@
  */
 
 import * as http from 'node:http';
-import type { TransactionEvent } from '@sentry/core';
-import { getMainCarrier } from '@sentry/core';
+import type { TransactionEvent } from '@ichnois/core';
+import { getMainCarrier } from '@ichnois/core';
 import { assertEquals } from 'https://deno.land/std@0.212.0/assert/assert_equals.ts';
 import { assertExists } from 'https://deno.land/std@0.212.0/assert/assert_exists.ts';
 import { denoHttpIntegration, init, startSpan } from '../build/esm/index.js';

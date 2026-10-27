@@ -1,5 +1,5 @@
-import { getActiveSpan, getClient, startInactiveSpan } from '@sentry/browser';
-import type { Span } from '@sentry/core';
+import { getActiveSpan, getClient, startInactiveSpan } from '@ichnois/browser';
+import type { Span } from '@ichnois/core';
 import {
   debug,
   hasSpanStreamingEnabled,
@@ -9,7 +9,7 @@ import {
   UI_UNMOUNT_SPAN_NAME_FALLBACK,
   UI_UPDATE_SPAN_NAME_FALLBACK,
   uniq,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { SENTRY_DESCRIPTION, SENTRY_OP, UI_COMPONENT_NAME, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
 import { UI_MOUNT, UI_RENDER, UI_UNMOUNT, UI_UPDATE } from '@sentry/conventions/op';
 import { DEFAULT_HOOKS, DEFAULT_ROOT_SPAN_TIMEOUT } from './constants';

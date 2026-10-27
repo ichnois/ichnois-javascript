@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
 import { captureStorageEvents } from './captureStorageEvents';
 import { captureTracingEvents } from './captureTracingEvents';
 import { captureServerTimingHeaders } from './setServerTimingHeaders';

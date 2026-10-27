@@ -1,4 +1,4 @@
-import { mongooseIntegration } from '@sentry/server-utils';
+import { mongooseIntegration } from '@ichnois/server-utils';
 
 /**
  * Create spans for `mongoose` queries under Deno. Included in the default

@@ -1,7 +1,7 @@
-import type { Integration } from '@sentry/core';
-import { debug, getMainCarrier, GLOBAL_OBJ, SentryNonRecordingSpan, spanToJSON } from '@sentry/core';
-import * as SentryReact from '@sentry/react';
-import { close, getClient, getIsolationScope, WINDOW } from '@sentry/react';
+import type { Integration } from '@ichnois/core';
+import { debug, getMainCarrier, GLOBAL_OBJ, SentryNonRecordingSpan, spanToJSON } from '@ichnois/core';
+import * as SentryReact from '@ichnois/react';
+import { close, getClient, getIsolationScope, WINDOW } from '@ichnois/react';
 import { JSDOM } from 'jsdom';
 import { afterAll, afterEach, describe, expect, it, vi } from 'vitest';
 import { breadcrumbsIntegration, browserTracingIntegration, init } from '../src/client';

@@ -1,5 +1,5 @@
-import type { Client } from '@sentry/core';
-import { WINDOW } from '@sentry/react';
+import type { Client } from '@ichnois/core';
+import { WINDOW } from '@ichnois/react';
 import { JSDOM } from 'jsdom';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {

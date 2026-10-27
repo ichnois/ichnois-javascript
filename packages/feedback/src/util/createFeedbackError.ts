@@ -1,4 +1,4 @@
-import type { FeedbackErrorCode, FeedbackErrorMessages } from '@sentry/core';
+import type { FeedbackErrorCode, FeedbackErrorMessages } from '@ichnois/core';
 import {
   ERROR_EMPTY_MESSAGE_TEXT,
   ERROR_FORBIDDEN_TEXT,

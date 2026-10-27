@@ -14,8 +14,8 @@ import type {
   Event,
   IntegrationFn,
   OsContext,
-} from '@sentry/core';
-import { defineIntegration, safeSetSpanJSONAttributes } from '@sentry/core';
+} from '@ichnois/core';
+import { defineIntegration, safeSetSpanJSONAttributes } from '@ichnois/core';
 
 export const readFileAsync = promisify(readFile);
 export const readDirAsync = promisify(readdir);

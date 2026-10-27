@@ -1,6 +1,6 @@
 import { SENTRY_SEGMENT_NAME_SOURCE, HTTP_ROUTE, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import { getActiveSpan, getCurrentScope, getRootSpan, updateSpanName } from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+import { getActiveSpan, getCurrentScope, getRootSpan, updateSpanName } from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import type { AppLoadContext, EntryContext, RouterContextProvider } from 'react-router';
 import { registerServerBuildGlobal } from './serverBuild';
 import { isInstrumentationApiUsed } from './serverGlobals';

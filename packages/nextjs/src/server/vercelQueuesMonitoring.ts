@@ -1,6 +1,6 @@
 import { URL_FULL } from '@sentry/conventions/attributes';
-import type { Span } from '@sentry/core';
-import { getIsolationScope, spanToJSON } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { getIsolationScope, spanToJSON } from '@ichnois/core';
 
 // OTel Messaging semantic convention attribute keys
 const ATTR_MESSAGING_SYSTEM = 'messaging.system';

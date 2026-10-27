@@ -1,5 +1,5 @@
 import * as diagnosticsChannel from 'node:diagnostics_channel';
-import type { Span, SpanAttributes } from '@sentry/core';
+import type { Span, SpanAttributes } from '@ichnois/core';
 import {
   getActiveSpan,
   getClient,
@@ -13,9 +13,9 @@ import {
   startInactiveSpan,
   waitForTracingChannelBinding,
   filterCollectedUrl,
-} from '@sentry/core';
-import type { OrchestrionChannelContext } from '@sentry/server-utils';
-import { bindTracingChannelToSpan } from '@sentry/server-utils';
+} from '@ichnois/core';
+import type { OrchestrionChannelContext } from '@ichnois/server-utils';
+import { bindTracingChannelToSpan } from '@ichnois/server-utils';
 import {
   SENTRY_SEGMENT_NAME_SOURCE,
   CODE_FUNCTION_NAME,
@@ -31,7 +31,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { FUNCTION, HTTP_SERVER } from '@sentry/conventions/op';
-import { remixChannels } from '@sentry/server-utils/orchestrion/config';
+import { remixChannels } from '@ichnois/server-utils/orchestrion/config';
 import type { FormDataCapture } from '../../utils/formData';
 import { applyFormDataAttributes } from '../../utils/formData';
 

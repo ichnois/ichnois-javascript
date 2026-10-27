@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, describe, expect, test, vi } from 'vitest';
 import { eveInstrumentation } from '../src/eve';
 

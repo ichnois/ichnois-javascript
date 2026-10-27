@@ -21,12 +21,12 @@ const commonJSInteropOptionsMock = {
   requireReturnsDefault: vi.fn(),
   ignoreTryCatch: vi.fn(),
 };
-vi.mock('@sentry/server-utils/orchestrion/rollup', () => ({
+vi.mock('@ichnois/server-utils/orchestrion/rollup', () => ({
   sentryOrchestrionPlugin: (options?: { buildTimeInstrumentation?: boolean }) => orchestrionRollupMock(options),
   sentryCommonJSInteropPlugin: () => ({ name: 'sentry-commonjs-interop' }),
   commonJSInteropOptions: () => commonJSInteropOptionsMock,
 }));
-vi.mock('@sentry/server-utils/orchestrion/config', () => ({
+vi.mock('@ichnois/server-utils/orchestrion/config', () => ({
   INSTRUMENTED_MODULE_NAMES: ['mysql', 'ioredis'],
 }));
 

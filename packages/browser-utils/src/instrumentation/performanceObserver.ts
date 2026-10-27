@@ -1,4 +1,4 @@
-import { debug, getFunctionName } from '@sentry/core';
+import { debug, getFunctionName } from '@ichnois/core';
 import { onCLS, onFCP, onINP, onLCP, onTTFB } from 'web-vitals';
 import { DEBUG_BUILD } from '../debug-build';
 

@@ -1,4 +1,4 @@
-import { matchesTracePropagationTargets } from '@sentry/core';
+import { matchesTracePropagationTargets } from '@ichnois/core';
 import type { CloudflareOptions } from '../client';
 
 const PROPAGATE_TO_NONE = () => false;

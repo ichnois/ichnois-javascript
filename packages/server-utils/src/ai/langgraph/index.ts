@@ -1,5 +1,5 @@
 /* eslint-disable typescript-eslint/no-deprecated */
-import { SPAN_STATUS_ERROR, startSpan, stringify } from '@sentry/core';
+import { SPAN_STATUS_ERROR, startSpan, stringify } from '@ichnois/core';
 import {
   GEN_AI_AGENT_NAME,
   GEN_AI_INPUT_MESSAGES,
@@ -269,7 +269,7 @@ export function instrumentCreateReactAgent(
  *
  * @example
  * ```typescript
- * import { instrumentStateGraph } from '@sentry/cloudflare';
+ * import { instrumentStateGraph } from '@ichnois/cloudflare';
  * import { StateGraph } from '@langchain/langgraph';
  *
  * const graph = new StateGraph(MessagesAnnotation)

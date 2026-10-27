@@ -1,7 +1,7 @@
 import * as diagnosticsChannel from '../utils/diagnosticsChannel';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
-import { wrapMcpServerWithSentry } from '@sentry/core/server';
+import type { IntegrationFn } from '@ichnois/core';
+import { defineIntegration } from '@ichnois/core';
+import { wrapMcpServerWithSentry } from '@ichnois/core/server';
 import type { OrchestrionChannelContext } from '../orchestrion/types';
 import { CHANNELS } from '../orchestrion/channels';
 import { mcpServerModuleNames } from '../orchestrion/config/mcp-server';

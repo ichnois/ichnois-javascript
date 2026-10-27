@@ -1,6 +1,6 @@
 import { HTTP_RESPONSE_STATUS_CODE, HTTP_STATUS_CODE } from '@sentry/conventions/attributes';
-import type { Span, SpanAttributes, SpanStatus } from '@sentry/core';
-import { SPAN_STATUS_ERROR, SPAN_STATUS_UNSET } from '@sentry/core';
+import type { Span, SpanAttributes, SpanStatus } from '@ichnois/core';
+import { SPAN_STATUS_ERROR, SPAN_STATUS_UNSET } from '@ichnois/core';
 import { describe, expect, it, vi } from 'vitest';
 import { backfillHttpServerStatus } from '../../src/common/utils/backfillHttpServerStatus';
 

@@ -4,8 +4,8 @@ import {
   handleCallbackErrors,
   hasSpanStreamingEnabled,
   objectify,
-} from '@sentry/core';
-import { startSpan } from '@sentry/core/browser';
+} from '@ichnois/core';
+import { startSpan } from '@ichnois/core/browser';
 import {
   SENTRY_SEGMENT_NAME_SOURCE,
   CODE_FUNCTION_NAME,
@@ -16,7 +16,7 @@ import {
   SENTRY_ORIGIN,
 } from '@sentry/conventions/attributes';
 import { FUNCTION } from '@sentry/conventions/op';
-import { captureException } from '@sentry/svelte';
+import { captureException } from '@ichnois/svelte';
 import type { LoadEvent } from '@sveltejs/kit';
 import type { SentryWrappedFlag } from '../common/utils';
 import { getPathname, getRouteId, isHttpError, isRedirect } from '../common/utils';

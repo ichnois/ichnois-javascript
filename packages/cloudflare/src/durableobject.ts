@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 /* eslint-disable @typescript-eslint/unbound-method */
 import { RPC } from '@sentry/conventions/op';
-import { getDefaultIsolationScope, getIsolationScope, isObjectLike, startNewTrace } from '@sentry/core';
+import { getDefaultIsolationScope, getIsolationScope, isObjectLike, startNewTrace } from '@ichnois/core';
 import type { DurableObject } from 'cloudflare:workers';
 import { setAsyncLocalStorageAsyncContextStrategyForWorker } from './utils/asyncContextStrategy';
 import type { CloudflareOptions } from './client';
@@ -415,7 +415,7 @@ export function instrumentDurableObjectWithSentry<
  * @example
  * ```ts
  * import { Agent, callable, routeAgentRequest } from 'agents';
- * import * as Sentry from '@sentry/cloudflare';
+ * import * as Sentry from '@ichnois/cloudflare';
  *
  * class MyAgentBase extends Agent<Env> {
  *   @callable()

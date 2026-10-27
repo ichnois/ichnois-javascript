@@ -1,5 +1,5 @@
-import { htmlTreeAsString } from '@sentry/browser-utils';
-import type { Breadcrumb } from '@sentry/core';
+import { htmlTreeAsString } from '@ichnois/browser-utils';
+import type { Breadcrumb } from '@ichnois/core';
 import type { RecordingOptions, ReplayContainer } from '../types';
 import { createBreadcrumb } from '../util/createBreadcrumb';
 import { getBaseDomBreadcrumb } from './handleDom';

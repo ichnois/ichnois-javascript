@@ -1,8 +1,8 @@
-import * as bundlerPlugins from '@sentry/bundler-plugins/esbuild';
+import * as bundlerPlugins from '@ichnois/bundler-plugins/esbuild';
 import { describe, expect, it } from 'vitest';
 import * as plugin from '../src/index';
 
-describe('@sentry/esbuild-plugin', () => {
+describe('@ichnois/esbuild-plugin', () => {
   it('re-exports @sentry/bundler-plugins/esbuild', () => {
     expect(plugin.sentryEsbuildPlugin).toBe(bundlerPlugins.sentryEsbuildPlugin);
     expect(Object.keys(plugin).sort()).toEqual(Object.keys(bundlerPlugins).sort());

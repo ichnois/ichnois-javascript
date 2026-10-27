@@ -1,6 +1,6 @@
-import type { SentrySpan, Span, SpanTimeInput, StartSpanOptions } from '@sentry/core';
-import { spanToStaticSpanJSON, withActiveSpan } from '@sentry/core';
-import { startInactiveSpan } from '@sentry/core/browser';
+import type { SentrySpan, Span, SpanTimeInput, StartSpanOptions } from '@ichnois/core';
+import { spanToStaticSpanJSON, withActiveSpan } from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/core/browser';
 import { WINDOW } from '../types';
 
 /**

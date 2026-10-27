@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { Client, ContinuousThreadCpuProfile, DebugImage, ProfileChunk, Span } from '@sentry/core';
+import type { Client, ContinuousThreadCpuProfile, DebugImage, ProfileChunk, Span } from '@ichnois/core';
 import {
   debug,
   getClient,
@@ -7,7 +7,7 @@ import {
   GLOBAL_OBJ,
   _INTERNAL_performanceTimeToSeconds,
   uuid4,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { BrowserOptions } from '../client';
 import { DEBUG_BUILD } from '../debug-build';
 import { WINDOW } from '../helpers';

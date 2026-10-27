@@ -1,5 +1,5 @@
 import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_OP } from '@sentry/conventions/attributes';
-import { SentrySpan, spanToStaticSpanJSON } from '@sentry/core';
+import { SentrySpan, spanToStaticSpanJSON } from '@ichnois/core';
 import { describe, expect, it } from 'vitest';
 import { createLiveRootSpanAdapter } from '../../src/common/utils/liveRootSpanAdapter';
 

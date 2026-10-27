@@ -1,7 +1,7 @@
 import { performance } from 'perf_hooks';
-import { _INTERNAL_safeDateNow, defineIntegration, metrics } from '@sentry/core';
-import { _INTERNAL_safeUnref } from '@sentry/core/server';
-import { _INTERNAL_normalizeCollectionInterval, type NodeRuntimeMetricsOptions } from '@sentry/node';
+import { _INTERNAL_safeDateNow, defineIntegration, metrics } from '@ichnois/core';
+import { _INTERNAL_safeUnref } from '@ichnois/core/server';
+import { _INTERNAL_normalizeCollectionInterval, type NodeRuntimeMetricsOptions } from '@ichnois/node';
 
 const INTEGRATION_NAME = 'BunRuntimeMetrics' as const;
 const DEFAULT_INTERVAL_MS = 30_000;

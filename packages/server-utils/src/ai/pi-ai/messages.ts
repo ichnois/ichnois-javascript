@@ -1,4 +1,4 @@
-import { isObjectLike, stringify } from '@sentry/core';
+import { isObjectLike, stringify } from '@ichnois/core';
 import type { GenAiMessage, GenAiMessagePart } from '../types';
 
 /**

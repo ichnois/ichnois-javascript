@@ -1,5 +1,5 @@
-import type { Integration } from '@sentry/core';
-import { _INTERNAL_isClientClosed, debug, getCurrentScope, safeCallback, setCurrentClient } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
+import { _INTERNAL_isClientClosed, debug, getCurrentScope, safeCallback, setCurrentClient } from '@ichnois/core';
 import {
   consoleIntegration,
   conversationIdIntegration,
@@ -12,7 +12,7 @@ import {
   linkedErrorsIntegration,
   requestDataIntegration,
   stackParserFromStackParserOptions,
-} from '@sentry/core';
+} from '@ichnois/core';
 import type { CloudflareClientOptions, CloudflareOptions } from './client';
 import { CloudflareClient } from './client';
 import { makeFlushLock } from './flush';

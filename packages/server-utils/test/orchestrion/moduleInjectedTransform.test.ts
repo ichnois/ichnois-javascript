@@ -88,7 +88,7 @@ describe('module-injected transform', () => {
     // rollup >= 4.63.0 removes it, leaving the module instrumented but unsubscribed.
     expect(result!.code).toContain('globalThis.__SENTRY_ORCHESTRION_INJECT__ = orchestrionModuleInjected(');
     // No separate @sentry/core import at the injection site — the helper owns that.
-    expect(result!.code).not.toContain('@sentry/core');
+    expect(result!.code).not.toContain('@ichnois/core');
     // It imports ONLY the mysql factory — no central dispatch pulling in others.
     expect(result!.code).not.toContain('postgresIntegration');
     // The real channel-publishing transform still ran alongside the injection.
@@ -106,7 +106,7 @@ describe('module-injected transform', () => {
     expect(result!.code).toMatch(
       /import\s*\{\s*orchestrionModuleInjected,\s*postgresIntegration\s*\}\s*from\s*["']@sentry\/server-utils["']/,
     );
-    expect(result!.code).not.toContain('@sentry/core');
+    expect(result!.code).not.toContain('@ichnois/core');
     expect(result!.code).toContain('orchestrionModuleInjected("pg", () => postgresIntegration())');
   });
 
@@ -194,6 +194,6 @@ describe('module-injected transform', () => {
     expect(result!.code).toMatch(
       /const\s*\{\s*orchestrionModuleInjected,\s*mysqlIntegration\s*\}\s*=\s*require\("\/abs\/path\/to\/server-utils\/index\.js"\)/,
     );
-    expect(result!.code).not.toContain('require("@sentry/server-utils")');
+    expect(result!.code).not.toContain('require("@ichnois/server-utils")');
   });
 });

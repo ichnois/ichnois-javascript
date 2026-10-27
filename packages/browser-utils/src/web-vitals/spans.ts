@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { Client, Span, SpanAttributes } from '@sentry/core';
+import type { Client, Span, SpanAttributes } from '@ichnois/core';
 import {
   browserPerformanceTimeOrigin,
   debug,
@@ -17,7 +17,7 @@ import {
   UI_INTERACTION_PRESS_SPAN_NAME_FALLBACK,
   UI_WEBVITAL_CLS_SPAN_NAME_FALLBACK,
   UI_WEBVITAL_LCP_SPAN_NAME_FALLBACK,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { htmlTreeAsString } from '../htmlTreeAsString';
 import { getComponentName } from '../component-name';

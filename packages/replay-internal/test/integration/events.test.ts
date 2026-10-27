@@ -3,7 +3,7 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import { getClient } from '@sentry/core';
+import { getClient } from '@ichnois/core';
 import type { MockInstance } from 'vitest';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { WINDOW } from '../../src/constants';

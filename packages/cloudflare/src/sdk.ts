@@ -1,4 +1,4 @@
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@ichnois/core';
 import { getBaseDefaultIntegrations, initWithDefaultIntegrations } from './baseSdk';
 import type { CloudflareClient, CloudflareOptions } from './client';
 import { setupOpenTelemetryTracer } from './opentelemetry/tracer';

@@ -1,6 +1,6 @@
-import { WINDOW } from '@sentry/browser';
-import type { Span } from '@sentry/core';
-import { addNonEnumerableProperty, debug, isThenable } from '@sentry/core';
+import { WINDOW } from '@ichnois/browser';
+import type { Span } from '@ichnois/core';
+import { addNonEnumerableProperty, debug, isThenable } from '@ichnois/core';
 import { DEBUG_BUILD } from '../debug-build';
 import type { Location, RouteObject } from '../types';
 import { getActiveRootSpan, getNavigationContext } from './utils';

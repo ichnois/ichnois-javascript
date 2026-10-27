@@ -1,9 +1,9 @@
 import { SENTRY_SEGMENT_NAME_SOURCE, SENTRY_OP } from '@sentry/conventions/attributes';
-import { getActiveSpan, SentrySpan } from '@sentry/core';
+import { getActiveSpan, SentrySpan } from '@ichnois/core';
 import { afterEach, describe, expect, it, type Mock, vi } from 'vitest';
 import { updateRouteBeforeResponse } from '../../../src/runtime/hooks/updateRouteBeforeResponse';
 
-vi.mock(import('@sentry/core'), async importOriginal => {
+vi.mock(import('@ichnois/core'), async importOriginal => {
   const mod = await importOriginal();
 
   return {

@@ -1,5 +1,5 @@
-import type { Integration } from '@sentry/core';
-import { browserTracingIntegration as originalBrowserTracingIntegration, isBotUserAgent } from '@sentry/react';
+import type { Integration } from '@ichnois/core';
+import { browserTracingIntegration as originalBrowserTracingIntegration, isBotUserAgent } from '@ichnois/react';
 import { settlePendingPageloadWait } from './routing/appRouterRoutingInstrumentation';
 import { nextRouterInstrumentNavigation, nextRouterInstrumentPageLoad } from './routing/nextRoutingInstrumentation';
 

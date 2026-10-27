@@ -21,8 +21,8 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE,
   setCurrentClient,
   spanToStaticSpanJSON,
-} from '@sentry/core';
-import type { DataCollection, Span } from '@sentry/core';
+} from '@ichnois/core';
+import type { DataCollection, Span } from '@ichnois/core';
 import { instrumentWorkersAiClient } from '../../../../src/ai/workers-ai';
 import { getDefaultTestClientOptions, TestClient } from '../../../mocks/client';
 

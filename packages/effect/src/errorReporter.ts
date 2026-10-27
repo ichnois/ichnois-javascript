@@ -1,5 +1,5 @@
-import type { SeverityLevel } from '@sentry/core';
-import { captureException, isObjectLike } from '@sentry/core';
+import type { SeverityLevel } from '@ichnois/core';
+import { captureException, isObjectLike } from '@ichnois/core';
 import * as Effect from 'effect';
 import type * as Cause from 'effect/Cause';
 import type * as EffectErrorReporter from 'effect/ErrorReporter';

@@ -1,6 +1,6 @@
-import type { Integration, Span, SpanAttributes } from '@sentry/core';
-import { getClient, getCurrentScope, getRootSpan, spanToJSON } from '@sentry/core';
-import { startInactiveSpan } from '@sentry/core/browser';
+import type { Integration, Span, SpanAttributes } from '@ichnois/core';
+import { getClient, getCurrentScope, getRootSpan, spanToJSON } from '@ichnois/core';
+import { startInactiveSpan } from '@ichnois/core/browser';
 import {
   SENTRY_EXCLUSIVE_TIME,
   BROWSER_NAVIGATION_ID,

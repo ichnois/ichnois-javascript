@@ -1,8 +1,8 @@
 /**
  * @vitest-environment jsdom
  */
-import type { Client, Span } from '@sentry/core';
-import { addNonEnumerableProperty, spanToJSON } from '@sentry/core';
+import type { Client, Span } from '@ichnois/core';
+import { addNonEnumerableProperty, spanToJSON } from '@ichnois/core';
 import * as React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
@@ -44,7 +44,7 @@ const mockClient = {
   getOptions: () => ({ traceLifecycle: 'stream' }),
 } as unknown as Client;
 
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@ichnois/core', async requireActual => {
   const actual = await requireActual();
   return {
     ...(actual as any),
@@ -56,7 +56,7 @@ vi.mock('@sentry/core', async requireActual => {
   };
 });
 
-vi.mock('@sentry/browser', async requireActual => {
+vi.mock('@ichnois/browser', async requireActual => {
   const actual = await requireActual();
   return {
     ...(actual as any),
@@ -931,8 +931,8 @@ describe('tryUpdateSpanNameBeforeEnd - source upgrade logic', () => {
       vi.clearAllMocks();
 
       // Import fresh modules to reset internal state
-      const coreModule = await import('@sentry/core');
-      const browserModule = await import('@sentry/browser');
+      const coreModule = await import('@ichnois/core');
+      const browserModule = await import('@ichnois/browser');
       const instrumentationModule = await import('../../src/reactrouter-compat-utils/instrumentation');
 
       // Create a mock span with end() that captures callback
@@ -978,7 +978,7 @@ describe('tryUpdateSpanNameBeforeEnd - source upgrade logic', () => {
 
     it('creates navigation span and uses computeLocationKey for tracking', async () => {
       const { handleNavigation } = await import('../../src/reactrouter-compat-utils/instrumentation');
-      const { startBrowserTracingNavigationSpan } = await import('@sentry/browser');
+      const { startBrowserTracingNavigationSpan } = await import('@ichnois/browser');
       const { resolveRouteNameAndSource } = await import('../../src/reactrouter-compat-utils/utils');
 
       // Mock to return a specific route name
@@ -1026,8 +1026,8 @@ describe('tryUpdateSpanNameBeforeEnd - source upgrade logic', () => {
 
     it('blocks duplicate navigation for exact same locationKey (pathname+query+hash)', async () => {
       const { handleNavigation } = await import('../../src/reactrouter-compat-utils/instrumentation');
-      const { startBrowserTracingNavigationSpan } = await import('@sentry/browser');
-      const { spanToJSON } = await import('@sentry/core');
+      const { startBrowserTracingNavigationSpan } = await import('@ichnois/browser');
+      const { spanToJSON } = await import('@ichnois/core');
 
       const location: Location = {
         pathname: '/search',
@@ -1075,8 +1075,8 @@ describe('tryUpdateSpanNameBeforeEnd - source upgrade logic', () => {
 
     it('allows navigation for same pathname but different query string', async () => {
       const { handleNavigation } = await import('../../src/reactrouter-compat-utils/instrumentation');
-      const { startBrowserTracingNavigationSpan } = await import('@sentry/browser');
-      const { spanToJSON } = await import('@sentry/core');
+      const { startBrowserTracingNavigationSpan } = await import('@ichnois/browser');
+      const { spanToJSON } = await import('@ichnois/core');
 
       const location1: Location = {
         pathname: '/search',
@@ -1132,8 +1132,8 @@ describe('tryUpdateSpanNameBeforeEnd - source upgrade logic', () => {
 
     it('allows navigation for same pathname but different hash', async () => {
       const { handleNavigation } = await import('../../src/reactrouter-compat-utils/instrumentation');
-      const { startBrowserTracingNavigationSpan } = await import('@sentry/browser');
-      const { spanToJSON } = await import('@sentry/core');
+      const { startBrowserTracingNavigationSpan } = await import('@ichnois/browser');
+      const { spanToJSON } = await import('@ichnois/core');
 
       const location1: Location = {
         pathname: '/page',
@@ -1189,8 +1189,8 @@ describe('tryUpdateSpanNameBeforeEnd - source upgrade logic', () => {
 
     it('updates wildcard span when better parameterized name becomes available', async () => {
       const { handleNavigation } = await import('../../src/reactrouter-compat-utils/instrumentation');
-      const { startBrowserTracingNavigationSpan } = await import('@sentry/browser');
-      const { spanToJSON } = await import('@sentry/core');
+      const { startBrowserTracingNavigationSpan } = await import('@ichnois/browser');
+      const { spanToJSON } = await import('@ichnois/core');
       const { transactionNameHasWildcard, resolveRouteNameAndSource } =
         await import('../../src/reactrouter-compat-utils/utils');
 
@@ -1260,8 +1260,8 @@ describe('tryUpdateSpanNameBeforeEnd - source upgrade logic', () => {
       // would result in a different locationKey ('/usersundefinedundefined' vs '/users')
       // causing duplicate navigation spans.
       const { handleNavigation } = await import('../../src/reactrouter-compat-utils/instrumentation');
-      const { startBrowserTracingNavigationSpan } = await import('@sentry/browser');
-      const { spanToJSON } = await import('@sentry/core');
+      const { startBrowserTracingNavigationSpan } = await import('@ichnois/browser');
+      const { spanToJSON } = await import('@ichnois/core');
       const { resolveRouteNameAndSource } = await import('../../src/reactrouter-compat-utils/utils');
 
       // Mock resolveRouteNameAndSource to return consistent route name

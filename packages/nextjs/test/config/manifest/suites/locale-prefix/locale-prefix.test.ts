@@ -1,4 +1,4 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@ichnois/core';
 import path from 'path';
 import { afterEach, describe, expect, test } from 'vitest';
 import { maybeParameterizeRoute } from '../../../../../src/client/routing/parameterization';

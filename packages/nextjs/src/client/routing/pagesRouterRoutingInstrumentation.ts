@@ -1,6 +1,6 @@
-import type { Client } from '@sentry/core';
-import { debug, hasSpanStreamingEnabled, PAGELOAD_SPAN_NAME_FALLBACK, parseBaggageHeader } from '@sentry/core';
-import { startBrowserTracingPageLoadSpan, WINDOW } from '@sentry/react';
+import type { Client } from '@ichnois/core';
+import { debug, hasSpanStreamingEnabled, PAGELOAD_SPAN_NAME_FALLBACK, parseBaggageHeader } from '@ichnois/core';
+import { startBrowserTracingPageLoadSpan, WINDOW } from '@ichnois/react';
 import type { NEXT_DATA } from 'next/dist/shared/lib/utils';
 import type { ParsedUrlQuery } from 'querystring';
 import { DEBUG_BUILD } from '../../common/debug-build';

@@ -1,4 +1,4 @@
-import { sentryVitePlugin } from '@sentry/bundler-plugins/vite';
+import { sentryVitePlugin } from '@ichnois/bundler-plugins/vite';
 import * as path from 'node:path';
 import type { Plugin, ResolvedConfig, UserConfig } from 'vite';
 import {

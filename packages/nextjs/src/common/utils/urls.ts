@@ -1,4 +1,4 @@
-import { getSanitizedUrlStringFromUrlObject, parseStringToURLObject } from '@sentry/core';
+import { getSanitizedUrlStringFromUrlObject, parseStringToURLObject } from '@ichnois/core';
 
 type ComponentRouteParams = Record<string, string> | undefined;
 type HeadersDict = Record<string, string> | undefined;

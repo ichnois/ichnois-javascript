@@ -9,7 +9,7 @@ import {
   getMainCarrier,
   setCurrentClient,
   spanToJSON,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { JSDOM } from 'jsdom';
 import { TextDecoder, TextEncoder } from 'util';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

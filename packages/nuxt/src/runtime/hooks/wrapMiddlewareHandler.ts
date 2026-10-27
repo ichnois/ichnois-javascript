@@ -9,8 +9,8 @@ import {
   SPAN_STATUS_OK,
   type SpanAttributes,
   startSpan,
-} from '@sentry/core';
-import { flushIfServerless } from '@sentry/core/server';
+} from '@ichnois/core';
+import { flushIfServerless } from '@ichnois/core/server';
 import type {
   _ResponseMiddleware as ResponseMiddleware,
   EventHandler,

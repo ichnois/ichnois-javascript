@@ -1,5 +1,5 @@
 import { context, propagation, trace } from '@opentelemetry/api';
-import { createTransport, getMainCarrier, resolvedSyncPromise } from '@sentry/core';
+import { createTransport, getMainCarrier, resolvedSyncPromise } from '@ichnois/core';
 import { init } from '../../src/sdk';
 import type { NodeClientOptions } from '../../src/types';
 

@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { wrapMiddlewareWithSentry } from '../../src/common/wrapMiddlewareWithSentry';
 

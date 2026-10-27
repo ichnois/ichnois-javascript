@@ -1,5 +1,5 @@
 import { GEN_AI_INPUT_MESSAGES } from '@sentry/conventions/attributes';
-import { getClient, getMainCarrier, setCurrentClient, spanToStaticSpanJSON } from '@sentry/core';
+import { getClient, getMainCarrier, setCurrentClient, spanToStaticSpanJSON } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { markEveGenAiRecordingDefault } from '../../../src/integrations/vercel-ai/gen-ai-recording-mode';
 import { createSpanFromMessage } from '../../../src/integrations/vercel-ai/vercel-ai-dc-subscriber';

@@ -1,4 +1,4 @@
-import * as SentryReact from '@sentry/react';
+import * as SentryReact from '@ichnois/react';
 import { render } from '@testing-library/react';
 import * as React from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';

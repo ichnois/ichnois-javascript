@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 /* eslint-disable typescript-eslint/no-deprecated */
-import { isObjectLike, stringify } from '@sentry/core';
-import type { SpanAttributeValue } from '@sentry/core';
+import { isObjectLike, stringify } from '@ichnois/core';
+import type { SpanAttributeValue } from '@ichnois/core';
 import {
   GEN_AI_AGENT_NAME,
   GEN_AI_CONVERSATION_ID,

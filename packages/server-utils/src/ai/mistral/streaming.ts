@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { SPAN_STATUS_ERROR } from '@sentry/core';
+import type { Span } from '@ichnois/core';
+import { SPAN_STATUS_ERROR } from '@ichnois/core';
 import { endStreamSpan, setOutputMessagesAttribute } from '../core/utils';
 import type { MistralCompletionChunk, MistralToolCall } from './types';
 import { contentToString } from './utils';

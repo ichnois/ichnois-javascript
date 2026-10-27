@@ -1,11 +1,11 @@
 import type { RequestOptions } from 'node:http';
 import { context, createContextKey, propagation } from '@opentelemetry/api';
-import type { Integration, IntegrationFn } from '@sentry/core';
-import { addNonEnumerableProperty, debug, getClient } from '@sentry/core';
-import type { HttpIncomingMessage, HttpServerResponse } from '@sentry/core/server';
-import { getHttpServerSubscriptions, HTTP_ON_SERVER_REQUEST, recordRequestSession } from '@sentry/core/server';
-import { subscribeDiagnosticsChannel } from '@sentry/server-utils';
-import type { RequestEventData } from '@sentry/core';
+import type { Integration, IntegrationFn } from '@ichnois/core';
+import { addNonEnumerableProperty, debug, getClient } from '@ichnois/core';
+import type { HttpIncomingMessage, HttpServerResponse } from '@ichnois/core/server';
+import { getHttpServerSubscriptions, HTTP_ON_SERVER_REQUEST, recordRequestSession } from '@ichnois/core/server';
+import { subscribeDiagnosticsChannel } from '@ichnois/server-utils';
+import type { RequestEventData } from '@ichnois/core';
 import { DEBUG_BUILD } from '../../debug-build';
 
 // Re-export so existing test imports continue to work; the implementation now lives in core.

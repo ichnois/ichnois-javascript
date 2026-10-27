@@ -1,5 +1,5 @@
-import type { EventEnvelope, EventItem, TransportMakeRequestResponse } from '@sentry/core';
-import { createEnvelope, SENTRY_BUFFER_FULL_ERROR, serializeEnvelope } from '@sentry/core';
+import type { EventEnvelope, EventItem, TransportMakeRequestResponse } from '@ichnois/core';
+import { createEnvelope, SENTRY_BUFFER_FULL_ERROR, serializeEnvelope } from '@ichnois/core';
 import { afterAll, describe, expect, it, vi } from 'vitest';
 import type { CloudflareTransportOptions } from '../src/transport';
 import { IsolatedPromiseBuffer, makeCloudflareTransport } from '../src/transport';

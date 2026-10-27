@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { CODE_FUNCTION_NAME, SENTRY_OP, SENTRY_ORIGIN } from '@sentry/conventions/attributes';
-import * as core from '@sentry/core';
+import * as core from '@ichnois/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { SentryCron, SentryExceptionCaptured, SentryTraced } from '../src/decorators';
 import * as helpers from '../src/helpers';

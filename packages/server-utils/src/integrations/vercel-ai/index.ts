@@ -1,4 +1,4 @@
-import { defineIntegration, waitForTracingChannelBinding, type IntegrationFn } from '@sentry/core';
+import { defineIntegration, waitForTracingChannelBinding, type IntegrationFn } from '@ichnois/core';
 import type { GenAiOptions } from '../../ai/core/utils';
 import { subscribeVercelAiTracingChannel } from './vercel-ai-dc-subscriber';
 import * as dc from '../../utils/diagnosticsChannel';

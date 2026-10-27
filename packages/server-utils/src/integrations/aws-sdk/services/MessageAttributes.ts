@@ -1,5 +1,5 @@
-import type { SerializedTraceData } from '@sentry/core';
-import { debug, uniq } from '@sentry/core';
+import type { SerializedTraceData } from '@ichnois/core';
+import { debug, uniq } from '@ichnois/core';
 import { DEBUG_BUILD } from '../../../debug-build';
 import type { SNS, SQS } from '../aws-sdk.types';
 

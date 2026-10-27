@@ -1,4 +1,4 @@
-import { isPlainObject } from '@sentry/core';
+import { isPlainObject } from '@ichnois/core';
 
 /**
  * Checks whether given value's type is a React `SyntheticEvent`.

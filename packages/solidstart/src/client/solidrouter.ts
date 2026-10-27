@@ -1,1 +1,1 @@
-export * from '@sentry/solid/solidrouter';
+export * from '@ichnois/solid/solidrouter';

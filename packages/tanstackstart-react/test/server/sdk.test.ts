@@ -1,5 +1,5 @@
-import * as SentryNode from '@sentry/node';
-import { SDK_VERSION } from '@sentry/node';
+import * as SentryNode from '@ichnois/node';
+import { SDK_VERSION } from '@ichnois/node';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { init } from '../../src/server';
 

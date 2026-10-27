@@ -1,5 +1,5 @@
 import * as diagnosticsChannel from '../../utils/diagnosticsChannel';
-import type { IntegrationFn, SpanAttributes } from '@sentry/core';
+import type { IntegrationFn, SpanAttributes } from '@ichnois/core';
 import {
   defineIntegration,
   getClient,
@@ -7,7 +7,7 @@ import {
   isObjectLike,
   startInactiveSpan,
   waitForTracingChannelBinding,
-} from '@sentry/core';
+} from '@ichnois/core';
 import { sanitizeSqlQueryWithSummary } from '../../utils/sql';
 import { subscribeMysql2DiagnosticChannels } from './mysql2-dc-subscriber';
 import type { OrchestrionChannelContext } from '../../orchestrion/types';

@@ -1,11 +1,11 @@
-import type * as SentryCore from '@sentry/core';
-import { createEnvelope, makeDsn, serializeEnvelope } from '@sentry/core';
+import type * as SentryCore from '@ichnois/core';
+import { createEnvelope, makeDsn, serializeEnvelope } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createSentryTunnelRoute, POST } from '../../src/tunnel';
 
 const { mockGetClient } = vi.hoisted(() => ({ mockGetClient: vi.fn() }));
 
-vi.mock('@sentry/core', async importOriginal => ({
+vi.mock('@ichnois/core', async importOriginal => ({
   ...(await importOriginal<typeof SentryCore>()),
   getClient: mockGetClient,
 }));

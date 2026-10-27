@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import * as SentryBrowser from '@sentry/browser';
-import type { Client, Event } from '@sentry/core';
+import * as SentryBrowser from '@ichnois/browser';
+import type { Client, Event } from '@ichnois/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createErrorHandler, SentryErrorHandler } from '../src/errorhandler';
 

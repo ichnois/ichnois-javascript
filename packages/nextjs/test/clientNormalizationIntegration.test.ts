@@ -1,5 +1,5 @@
-import type { StackFrame } from '@sentry/core';
-import * as SentryReact from '@sentry/react';
+import type { StackFrame } from '@ichnois/core';
+import * as SentryReact from '@ichnois/react';
 import { JSDOM } from 'jsdom';
 import { afterAll, afterEach, describe, expect, it, vi } from 'vitest';
 import { nextjsClientStackFrameNormalizationIntegration } from '../src/client/clientNormalizationIntegration';
