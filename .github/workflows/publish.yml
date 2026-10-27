@@ -1,0 +1,69 @@
+name: Publish to NPM
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      dist_tag:
+        description: 'NPM dist-tag (default: latest)'
+        required: false
+        default: 'latest'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Build & Publish Packages to NPM
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12.11.2
+
+      - name: Install Dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build Core, Browser, Node & Next.js Packages
+        run: |
+          pnpm --filter @sentry/core build
+          pnpm --filter @sentry/browser-utils build
+          pnpm --filter @sentry-internal/integration-shims build
+          pnpm --filter @sentry-internal/replay-worker build
+          pnpm --filter @sentry/replay build
+          pnpm --filter @sentry/replay-canvas build
+          pnpm --filter @sentry/feedback build
+          pnpm --filter @sentry/browser build
+          pnpm --filter @sentry/bundler-plugins build
+          pnpm --filter @sentry/server-utils build
+          pnpm --filter @sentry/server-runtime-injection build
+          pnpm --filter @sentry/opentelemetry build
+          pnpm --filter @sentry/node build
+          pnpm --filter @sentry/react build
+          pnpm --filter @sentry/vercel-edge build
+          pnpm --filter @sentry/cloudflare build
+          pnpm --filter @sentry/nextjs build
+
+      - name: Publish to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          pnpm -r publish --access public --no-git-checks --tag ${{ github.event.inputs.dist_tag || 'latest' }}
