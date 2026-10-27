@@ -9,6 +9,10 @@ on:
         description: 'NPM dist-tag (default: latest)'
         required: false
         default: 'latest'
+      otp:
+        description: 'NPM OTP (One-Time Password from Authenticator app, only if token requires 2FA)'
+        required: false
+        default: ''
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -20,7 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write
 
     steps:
       - name: Checkout Repository
@@ -65,7 +68,14 @@ jobs:
       - name: Publish to NPM
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
+          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+          OTP_ARG=""
+          if [ -n "${{ github.event.inputs.otp }}" ]; then
+            OTP_ARG="--otp=${{ github.event.inputs.otp }}"
+          fi
+
           TARGETS=(
             "@ichnois/core"
             "@ichnois/browser-utils"
@@ -85,5 +95,5 @@ jobs:
           )
           for pkg in "${TARGETS[@]}"; do
             echo "Publishing $pkg to npm..."
-            pnpm --filter "$pkg" publish --access public --no-git-checks --tag "${{ github.event.inputs.dist_tag || 'latest' }}"
+            pnpm --filter "$pkg" publish --access public --no-git-checks $OTP_ARG --tag "${{ github.event.inputs.dist_tag || 'latest' }}"
           done
