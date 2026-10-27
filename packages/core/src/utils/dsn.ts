@@ -100,7 +100,7 @@ function validateDsn(dsn: DsnComponents): boolean {
     return false;
   }
 
-  if (!projectId.match(/^\d+$/)) {
+  if (!projectId.match(/^[a-zA-Z0-9-_]+$/)) {
     debug.error(`Invalid Sentry Dsn: Invalid projectId ${projectId}`);
     return false;
   }
