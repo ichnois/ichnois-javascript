@@ -1312,8 +1312,8 @@ importers:
         version: 0.29.0
     devDependencies:
       '@effect/vitest':
-        specifier: ^4.0.0
-        version: 4.0.0(effect@4.0.0)(vitest@4.1.11)
+        specifier: ^4.0.6
+        version: 4.0.6(effect@4.0.0)(vitest@4.1.11)
       '@sentry-internal/rollup-utils':
         specifier: 1.0.0
         version: link:../../dev-packages/rollup-utils
@@ -4360,10 +4360,10 @@ packages:
     resolution: {integrity: sha512-6HiX1oSir5R+X74IzM08fCQkR5mTcOxgfFVdn335jz/CckIHVFphh7hNkIcI+XsMYhAfWOJ5b8TfBU/Hbx1EIQ==}
     engines: {node: '>=18'}
 
-  '@effect/vitest@4.0.0':
-    resolution: {integrity: sha512-kGElCPFGtP+CgMCwV/HjJWqtE3zYo6I1+8MSA54l+EI24lPU9p2Efa+TBp1jfkg9j711KKzEqgSAy3VzTsb76Q==}
+  '@effect/vitest@4.0.6':
+    resolution: {integrity: sha512-oKNbtyUHK5+0o730CXwojULEu7f3+c235pYFD4U5T//o+hHrJbYbZU4bRkcv936tPr5IOnmujeyQiC/LuJJjHw==}
     peerDependencies:
-      effect: ^4.0.0
+      effect: ^4.0.6
       vitest: '>=5.0.0 <6.0.0'
 
   '@ember-data/rfc395-data@0.0.4':
@@ -22672,7 +22672,7 @@ snapshots:
     dependencies:
       '@edge-runtime/primitives': 6.0.0
 
-  '@effect/vitest@4.0.0(effect@4.0.0)(vitest@4.1.11)':
+  '@effect/vitest@4.0.6(effect@4.0.0)(vitest@4.1.11)':
     dependencies:
       effect: 4.0.0
       vitest: 4.1.11(@opentelemetry/api@1.10.0)(@types/node@20.19.43)(@vitest/coverage-v8@4.1.11)(esbuild@0.28.1)(jiti@2.7.0)(jsdom@21.1.2(supports-color@10.0.0))(less@4.2.0(supports-color@10.0.0))(sass@1.72.0)(stylus@0.59.0(supports-color@10.0.0))(terser@5.43.1)(tsx@4.23.0)(yaml@2.9.0)
