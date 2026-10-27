@@ -4,12 +4,17 @@ import type { SdkInfo } from './types/sdkinfo';
 import { dsnToString, makeDsn } from './utils/dsn';
 
 export const SENTRY_API_VERSION = '7';
+export const ICHNOIS_API_VERSION = SENTRY_API_VERSION;
 
-/** Returns the prefix to construct Sentry ingestion API endpoints. */
+/** Returns the prefix to construct Sentry/Ichnois ingestion API endpoints. */
 function getBaseApiEndpoint(dsn: DsnComponents): string {
   const protocol = dsn.protocol ? `${dsn.protocol}:` : '';
   const port = dsn.port ? `:${dsn.port}` : '';
-  return `${protocol}//${dsn.host}${port}${dsn.path ? `/${dsn.path}` : ''}/api/`;
+  let path = dsn.path ? `/${dsn.path}` : '';
+  if (path === '/api' || path.endsWith('/api')) {
+    path = path.slice(0, -4);
+  }
+  return `${protocol}//${dsn.host}${port}${path}/api/`;
 }
 
 /** Returns the ingest API endpoint for target. */

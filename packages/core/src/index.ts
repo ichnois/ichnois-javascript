@@ -57,7 +57,7 @@ export { makeSession, closeSession, updateSession } from './session';
 export { Scope } from './scope';
 export type { CaptureContext, ScopeContext, ScopeData } from './scope';
 export { notifyEventProcessors } from './eventProcessors';
-export { getEnvelopeEndpointWithUrlEncodedAuth, getReportDialogEndpoint, SENTRY_API_VERSION } from './api';
+export { getEnvelopeEndpointWithUrlEncodedAuth, getReportDialogEndpoint, SENTRY_API_VERSION, ICHNOIS_API_VERSION } from './api';
 export { Client, isClientClosed as _INTERNAL_isClientClosed } from './client';
 export {
   getActiveClient as _INTERNAL_getActiveClient,

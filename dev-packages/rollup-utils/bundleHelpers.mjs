@@ -44,9 +44,12 @@ export function makeBaseBundleConfig(options) {
   const standAloneBundleConfig = {
     output: {
       format: 'iife',
-      name: 'Sentry',
+      name: 'Ichnois',
       intro: () => {
-        return 'exports = window.Sentry || {};';
+        return 'exports = window.Ichnois || window.Sentry || {};';
+      },
+      outro: () => {
+        return 'window.Ichnois = exports; if (typeof window !== "undefined") { window.Sentry = window.Sentry || exports; }';
       },
     },
     context: 'window',
@@ -70,11 +73,15 @@ export function makeBaseBundleConfig(options) {
       outro: () =>
         [
           '',
-          "  // Add this module's exports to the global `Sentry.Integrations`",
-          '  __window.Sentry = __window.Sentry || {};',
-          '  __window.Sentry.Integrations = __window.Sentry.Integrations || {};',
+          "  // Add this module's exports to the global `Ichnois/Sentry.Integrations`",
+          '  __window.Ichnois = __window.Ichnois || {};',
+          '  __window.Ichnois.Integrations = __window.Ichnois.Integrations || {};',
+          '  __window.Sentry = __window.Sentry || __window.Ichnois;',
+          '  __window.Sentry.Integrations = __window.Sentry.Integrations || __window.Ichnois.Integrations;',
           '  for (var key in exports) {',
           '    if (Object.prototype.hasOwnProperty.call(exports, key)) {',
+          '      __window.Ichnois.Integrations[key] = exports[key];',
+          '      __window.Ichnois[key] = exports[key];',
           '      __window.Sentry.Integrations[key] = exports[key];',
           '      __window.Sentry[key] = exports[key];',
           '    }',
